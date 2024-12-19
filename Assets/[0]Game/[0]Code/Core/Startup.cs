@@ -1,4 +1,5 @@
-﻿using Unity.Cinemachine;
+﻿using RimuruDev;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,27 @@ namespace Game
 
         [SerializeField]
         private PlayerInput _playerInput;
+
+        [SerializeField]
+        private DeviceTypeDetector _deviceTypeDetector;
+
+        [SerializeField]
+        private AssetProvider _assetProvider;
+
+        [SerializeField]
+        private CoroutineRunner _coroutineRunner;
+
+        [SerializeField]
+        private Player _player;
+
+        [SerializeField]
+        private TransitionScreen _transitionScreen;
+
+        [SerializeField]
+        private LocationsManager _locationsManager;
+
+        [SerializeField]
+        private LocationsManager.Data _initializationLocationData;
         
         private void Awake()
         {
@@ -31,11 +53,23 @@ namespace Game
 
             DontDestroyOnLoad(gameObject);
 
-            DIContainer.Register(_musicPlayerService);
-            DIContainer.Register(_soundPlayerService);
-            DIContainer.Register(_screenManager);
-            DIContainer.Register(_cinemachineConfiner2D);
-            DIContainer.Register(_playerInput);
+            ServiceLocator.Register(_musicPlayerService);
+            ServiceLocator.Register(_soundPlayerService);
+            ServiceLocator.Register(_screenManager);
+            ServiceLocator.Register(_cinemachineConfiner2D);
+            ServiceLocator.Register(_playerInput);
+            ServiceLocator.Register(_assetProvider);
+            ServiceLocator.Register(_deviceTypeDetector);
+            ServiceLocator.Register(_coroutineRunner);
+            ServiceLocator.Register(_player);
+            ServiceLocator.Register(_transitionScreen);
+            ServiceLocator.Register(_locationsManager);
+        }
+
+        private void Start()
+        {
+            _locationsManager.Init();
+            _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
         }
     }
 }

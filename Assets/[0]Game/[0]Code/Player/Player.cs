@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game
@@ -14,9 +13,12 @@ namespace Game
 
         [SerializeField]
         private CharacterView _view;
+        
+        [SerializeField]
+        private UseAreaCheacker _useAreaChecker;
 
         [SerializeField]
-        private TriggerChecker _checkArea;
+        private CameraAreaChecker _cameraAreaChecker;
         
         private ReactiveProperty<float> _currentSpeed = new();
         private ReactiveProperty<bool> _isRun = new();
@@ -27,7 +29,8 @@ namespace Game
 
         private void Awake()
         {
-            _playerInput = DIContainer.Get<PlayerInput>();
+            _playerInput = ServiceLocator.Get<PlayerInput>();
+            _cameraAreaChecker.Init();
         }
 
         private void OnEnable()
@@ -36,15 +39,9 @@ namespace Game
             //_isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
             _direction.Changed += _view.OnDirectionChange;
             _currentSpeed.Changed += _view.OnSpeedChange;
-            _checkArea.TriggerEnter = OnAreaTriggerEnter;
-        }
-
-        private void OnAreaTriggerEnter(GameObject obj)
-        {
-            if (obj.TryGetComponent(out IUsable usable))
-            {
-                
-            }
+            _useAreaChecker.Lost();
+            
+            _playerInput.actions["Submit"].performed += TryUse;
         }
 
         private void OnDisable()
@@ -53,8 +50,13 @@ namespace Game
             //_isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
             _direction.Changed -= _view.OnDirectionChange;
             _currentSpeed.Changed -= _view.OnSpeedChange;
+            
+            if (_playerInput)
+                _playerInput.actions["Submit"].performed -= TryUse;
+            
+            _mover.Stop();
         }
-        
+
         private void Update()
         {
             _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
@@ -67,6 +69,13 @@ namespace Game
             var position = transform.position;
             _currentSpeed.Value = ((Vector2)(_previousPosition - position)).magnitude;
             _previousPosition = position;
+            _useAreaChecker.Search();
+            _cameraAreaChecker.Check();
+        }
+
+        private void TryUse(InputAction.CallbackContext obj)
+        {
+            _useAreaChecker.Use();
         }
     }
 }

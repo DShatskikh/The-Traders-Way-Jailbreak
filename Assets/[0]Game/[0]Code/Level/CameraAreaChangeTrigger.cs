@@ -9,7 +9,7 @@ namespace Game
         
         private void Awake()
         {
-            _cinemachineConfiner = DIContainer.Get<CinemachineConfiner2D>();
+            _cinemachineConfiner = ServiceLocator.Get<CinemachineConfiner2D>();
         }
 
         private void OnTriggerStay2D(Collider2D other)

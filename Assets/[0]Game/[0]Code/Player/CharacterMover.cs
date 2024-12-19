@@ -19,5 +19,10 @@ namespace Game
         {
             _rigidbody.linearVelocity = direction * (isRun ? _runSpeed : _speed);
         }
+
+        public void Stop()
+        {
+            _rigidbody.linearVelocity = Vector2.zero;
+        }
     }
 }

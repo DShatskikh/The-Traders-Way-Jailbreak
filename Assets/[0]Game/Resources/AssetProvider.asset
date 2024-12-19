@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec62cc97a3b127641a2c03cd8065a010, type: 3}
+  m_Name: AssetProvider
+  m_EditorClassIdentifier: 
+  StepSoundPairsConfig: {fileID: 0}
+  TileTagConfig: {fileID: 0}
+  ClickSound: {fileID: 0}
+  SelectColor: {r: 1, g: 0.9345745, b: 0, a: 1}
+  DeselectColor: {r: 0, g: 0.49411765, b: 1, a: 1}
+  StockMarketItems:
+  - Id: Dirn
+    Icon: {fileID: -470608404, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 5
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107747166502912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Kystic
+    Icon: {fileID: -446867404522521166, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 10
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 117065085468672
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Iron
+    Icon: {fileID: 279032703, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 100
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107811171581952
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Palisos
+    Icon: {fileID: 1566003732, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 100000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107980847955968
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: GoldApple
+    Icon: {fileID: 1738838905, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 500
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107863755571200
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Diamond
+    Icon: {fileID: -1873668908, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 2000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107906008989696
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: LuckyBlock
+    Icon: {fileID: 1010850566, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 10000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107942667206656
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

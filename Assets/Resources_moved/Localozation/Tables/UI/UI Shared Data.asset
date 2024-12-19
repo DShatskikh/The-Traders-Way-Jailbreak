@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 7db3660a2b7099643a2e40a6f59d8e0d
+  m_Entries:
+  - m_Id: 147666092032
+    m_Key: Further
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107747166502912
+    m_Key: Dirn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107811171581952
+    m_Key: Iron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107863755571200
+    m_Key: GoldApple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107906008989696
+    m_Key: Diamond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107942667206656
+    m_Key: LuckyBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107980847955968
+    m_Key: Palisos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117065085468672
+    m_Key: Kystic
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4924565686014967938
+  references:
+    version: 2
+    RefIds:
+    - rid: 4924565686014967938
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1734604345924

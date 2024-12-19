@@ -14,7 +14,7 @@ namespace Game
 
         private void Awake()
         {
-            _musicPlayerService = DIContainer.Get<MusicPlayerService>();
+            _musicPlayerService = ServiceLocator.Get<MusicPlayerService>();
         }
 
         private void OnEnable()

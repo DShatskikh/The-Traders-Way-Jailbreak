@@ -1,7 +1,4 @@
 ﻿namespace Game
 {
-    public interface ICameraAreaChecker
-    {
-        
-    }
+    public interface ICameraAreaChecker { }
 }
