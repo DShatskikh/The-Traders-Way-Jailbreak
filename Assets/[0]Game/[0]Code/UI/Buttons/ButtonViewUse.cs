@@ -27,13 +27,11 @@ namespace Game
         private Image _viewImage;
 
         private AssetProvider _assetProvider;
-        private SoundPlayerService _soundPlayerService;
         private DeviceTypeDetector _deviceTypeDetector;
         
         private void Awake()
         {
-            _assetProvider = ServiceLocator.Get<AssetProvider>();
-            _soundPlayerService = ServiceLocator.Get<SoundPlayerService>();
+            _assetProvider = AssetProvider.Instance;
             _deviceTypeDetector = ServiceLocator.Get<DeviceTypeDetector>();
         }
 
@@ -70,7 +68,7 @@ namespace Game
             _viewImage.color = _assetProvider.DeselectColor;
             _label.color = _assetProvider.DeselectColor;
             
-            _soundPlayerService.Play(_assetProvider.ClickSound);
+            SoundPlayer.Play(_assetProvider.ClickSound);
         }
     }
 }

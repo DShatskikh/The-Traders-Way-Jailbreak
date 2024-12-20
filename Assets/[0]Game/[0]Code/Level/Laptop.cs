@@ -4,16 +4,16 @@ namespace Game
 {
     public class Laptop : MonoBehaviour, IUseObject
     {
-        private ScreenManager _screenManager;
+        private GameStateController _gameStateController;
         
         private void Awake()
         {
-            _screenManager = ServiceLocator.Get<ScreenManager>();
+            _gameStateController = ServiceLocator.Get<GameStateController>();
         }
 
         public void Use()
         {
-            _screenManager.Show(ScreenType.Laptop);
+            _gameStateController.OpenLaptop();
         }
     }
 }

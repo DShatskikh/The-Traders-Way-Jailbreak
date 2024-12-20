@@ -16,14 +16,12 @@ namespace Game
 
         private CoroutineRunner _coroutineRunner;
         private TransitionScreen _transitionScreen;
-        private SoundPlayerService _soundPlayerService;
         private LocationsManager _locationsManager;
         
         private void Awake()
         {
             _coroutineRunner = ServiceLocator.Get<CoroutineRunner>();
-            _transitionScreen = ServiceLocator.Get<TransitionScreen>();
-            _soundPlayerService = ServiceLocator.Get<SoundPlayerService>();
+            _transitionScreen = ServiceLocator.Get<TransitionScreen>(); ;
             _locationsManager = ServiceLocator.Get<LocationsManager>();
         }
 
@@ -41,7 +39,7 @@ namespace Game
             yield return _transitionScreen.AwaitShow();
             
             if (_audioClip)
-                _soundPlayerService.Play(_audioClip);
+                SoundPlayer.Play(_audioClip);
             
             _locationsManager.SwitchLocation(_nextLocationIndex, _pointIndex);
             yield return _transitionScreen.AwaitHide();

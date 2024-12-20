@@ -18,26 +18,26 @@ MonoBehaviour:
   SelectColor: {r: 1, g: 0.9345745, b: 0, a: 1}
   DeselectColor: {r: 0, g: 0.49411765, b: 1, a: 1}
   StockMarketItems:
-  - Id: Dirn
-    Icon: {fileID: -470608404, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+  - Id: Kystic
+    Icon: {fileID: -446867404522521166, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     Price: 5
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
       m_TableEntryReference:
-        m_KeyId: 107747166502912
+        m_KeyId: 117065085468672
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - Id: Kystic
-    Icon: {fileID: -446867404522521166, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 10
+  - Id: Watermelon
+    Icon: {fileID: -470608404, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 25
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
       m_TableEntryReference:
-        m_KeyId: 117065085468672
+        m_KeyId: 107747166502912
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -50,18 +50,6 @@ MonoBehaviour:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
       m_TableEntryReference:
         m_KeyId: 107811171581952
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - Id: Palisos
-    Icon: {fileID: 1566003732, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 100000
-    Name:
-      m_TableReference:
-        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
-      m_TableEntryReference:
-        m_KeyId: 107980847955968
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -90,9 +78,21 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  - Id: Palisos
+    Icon: {fileID: 1566003732, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 10000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107980847955968
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Id: LuckyBlock
     Icon: {fileID: 1010850566, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 10000
+    Price: 100000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d

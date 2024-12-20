@@ -20,13 +20,11 @@ namespace Game
         private float _currentStepTime;
         
         private readonly Transform _transform;
-        private readonly AssetProvider _assetProvider;
         private bool _isRun;
 
-        public StepsSoundPlayer(Transform transform, AssetProvider assetProvider)
+        public StepsSoundPlayer(Transform transform)
         {
             _transform = transform;
-            _assetProvider = assetProvider;
         }
 
         public void OnSpeedChange(float value)
@@ -59,8 +57,8 @@ namespace Game
 
         private void PlayFootstepSound(TileBase tile)
         {
-            var config = _assetProvider.StepSoundPairsConfig;
-            var pair = _assetProvider.TileTagConfig.GetPair(tile, config);
+            var config = AssetProvider.Instance.StepSoundPairsConfig;
+            var pair = AssetProvider.Instance.TileTagConfig.GetPair(tile, config);
             
             if (_isStepRight)
             {

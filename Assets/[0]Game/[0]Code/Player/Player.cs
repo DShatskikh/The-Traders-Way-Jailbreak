@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class Player : MonoBehaviour, ICameraAreaChecker
+    public class Player : MonoBehaviour, IResumeGame, IPausedGame, IUpdate, IFixedUpdate
     {
         [SerializeField]
         private CharacterMover _mover;
@@ -33,7 +33,7 @@ namespace Game
             _cameraAreaChecker.Init();
         }
 
-        private void OnEnable()
+        public void ResumeGame()
         {
             //_currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
             //_isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
@@ -44,7 +44,7 @@ namespace Game
             _playerInput.actions["Submit"].performed += TryUse;
         }
 
-        private void OnDisable()
+        public void PausedGame()
         {
             //_currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
             //_isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
@@ -55,16 +55,17 @@ namespace Game
                 _playerInput.actions["Submit"].performed -= TryUse;
             
             _mover.Stop();
+            _currentSpeed.Value = 0;
         }
 
-        private void Update()
+        public void OnUpdate()
         {
             _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
             _isRun.Value = _playerInput.actions["Cancel"].IsPressed();
             _mover.Move(_direction.Value,  _isRun.Value);
         }
 
-        private void FixedUpdate()
+        public void OnFixedUpdate()
         {
             var position = transform.position;
             _currentSpeed.Value = ((Vector2)(_previousPosition - position)).magnitude;
