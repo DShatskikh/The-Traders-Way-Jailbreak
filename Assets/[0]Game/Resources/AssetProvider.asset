@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StepSoundPairsConfig: {fileID: 0}
   TileTagConfig: {fileID: 0}
-  ClickSound: {fileID: 0}
   SelectColor: {r: 1, g: 0.9345745, b: 0, a: 1}
   DeselectColor: {r: 0, g: 0.49411765, b: 1, a: 1}
   StockMarketItems:
@@ -102,6 +101,11 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  BuySound: {fileID: 8300000, guid: 3b2f10c7a73854a458590ddde889d889, type: 3}
+  ClickSound: {fileID: 8300000, guid: 45f55c4328da0ba408b0bc02cf3253a3, type: 3}
+  BruhSound: {fileID: 8300000, guid: 4c48bbf0e1b2fef458a600c6accc61fb, type: 3}
+  SpaceDoorOpenSound: {fileID: 8300000, guid: bac6b1a6c9611f841ace99b201857f9d, type: 3}
+  SpaceDoorCloseSound: {fileID: 8300000, guid: 8befdc013bebeb9438ab19701e34cd5f, type: 3}
   references:
     version: 2
     RefIds: []

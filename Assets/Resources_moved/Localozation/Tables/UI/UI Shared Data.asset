@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: Kystic
     m_Metadata:
       m_Items: []
+  - m_Id: 2654355829669888
+    m_Key: WatchInvisibleFloor
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

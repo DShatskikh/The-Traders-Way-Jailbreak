@@ -18,9 +18,12 @@ namespace Game
         public Color SelectColor;
         public Color DeselectColor;
         public StockMarketItem[] StockMarketItems;
-        
+
         [Header("AudioClips")]
         public AudioClip BuySound;
         public AudioClip ClickSound;
+        public AudioClip BruhSound;
+        public AudioClip SpaceDoorOpenSound;
+        public AudioClip SpaceDoorCloseSound;
     }
 }

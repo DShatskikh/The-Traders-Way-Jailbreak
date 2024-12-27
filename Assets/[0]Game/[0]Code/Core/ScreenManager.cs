@@ -7,7 +7,7 @@ namespace Game
     public class ScreenManager
     {
         [SerializeField]
-        private SerializablePair<ScreenType, BaseScreen>[] _windows;
+        private SerializablePair<ScreenType, ScreenBase>[] _windows;
 
         public void Show(ScreenType type, object args = null, bool hideOther = true)
         {

@@ -1,12 +1,21 @@
-﻿using Unity.Cinemachine;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game
 {
     public class Parallax : MonoBehaviour
     {
+        private enum ParallaxDirectionType : byte
+        {
+            All,
+            Horizontal,
+            Vertical,
+        }
+
         [SerializeField]
         private float _multiplyDistance = 1f;
+
+        [SerializeField]
+        private ParallaxDirectionType _parallaxDirectionType;
         
         private Transform _camera;
         private Vector3 _startPosition;
@@ -19,8 +28,19 @@ namespace Game
 
         private void Update()
         {
-            var x = (_startPosition - _camera.position).x * _multiplyDistance;
-            transform.SetX(x);
+            var direction = (_startPosition - _camera.position) * _multiplyDistance;
+            
+            if (_parallaxDirectionType == ParallaxDirectionType.Horizontal ||
+                _parallaxDirectionType == ParallaxDirectionType.All)
+            {
+                transform.position = transform.position.SetX(direction.x);
+            }
+
+            if (_parallaxDirectionType == ParallaxDirectionType.Vertical ||
+                _parallaxDirectionType == ParallaxDirectionType.All)
+            {
+                transform.position = transform.position.SetY(direction.y);
+            }
         }
     }
 }

@@ -60,8 +60,15 @@ namespace Game
                 _currentLocation.gameObject.SetActive(false);
         }
 
-        private Location CreateLocation(Location location) => 
-            Object.Instantiate(location, _container);
+        private Location CreateLocation(Location location)
+        {
+            var createdLocation = Object.Instantiate(location, _container);
+            
+            foreach(var mb in createdLocation.GetComponentsInChildren<MonoBehaviour>(true)) 
+                Injector.Inject(mb);
+
+            return createdLocation;
+        }
 
         private Location GetLocation(string id)
         {

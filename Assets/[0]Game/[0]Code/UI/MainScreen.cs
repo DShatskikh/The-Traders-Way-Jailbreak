@@ -4,24 +4,51 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class MainScreen : MonoBehaviour, IPausedGame, IResumeGame
+    public class MainScreen : MonoBehaviour, IGameStartListener, IGameLaptopListener, IGamePauseListener, IGameResumeListener
     {
         [SerializeField]
         private Button _pauseButton;
 
         [SerializeField]
         private TMP_Text _moneyLabel;
-        
-        public void PausedGame()
+
+        private void Activate(bool isActive)
         {
-            _pauseButton.gameObject.SetActive(false);
-            _moneyLabel.gameObject.SetActive(false);
+            if (isActive)
+            {
+                _pauseButton.gameObject.SetActive(true);
+                _moneyLabel.gameObject.SetActive(true); 
+            }
+            else
+            {
+                _pauseButton.gameObject.SetActive(false);
+                _moneyLabel.gameObject.SetActive(false);
+            }
         }
 
-        public void ResumeGame()
+        public void OnStartGame()
         {
-            _pauseButton.gameObject.SetActive(true);
-            _moneyLabel.gameObject.SetActive(true);
+            Activate(true);
+        }
+
+        public void OnOpenLaptop()
+        {
+            Activate(false);
+        }
+
+        public void OnCloseLaptop()
+        {
+            Activate(true);
+        }
+
+        public void OnPauseGame()
+        {
+            Activate(false);
+        }
+
+        public void OnResumeGame()
+        {
+            Activate(true);
         }
     }
 }

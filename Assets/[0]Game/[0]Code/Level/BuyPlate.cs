@@ -5,7 +5,7 @@ using UnityEngine.Localization;
 
 namespace Game
 {
-    public class BuyPlate : MonoBehaviour
+    public class BuyPlate : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private UnityEvent _buyEvent;
@@ -23,17 +23,18 @@ namespace Game
             _walletService = ServiceLocator.Get<WalletService>();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        public void Use()
         {
-            if (other.TryGetComponent(out Player player))
+            if (_walletService.TryBuy(_price))
             {
-                if (_walletService.TryBuy(_price))
-                {
-                    SoundPlayer.Play(AssetProvider.Instance.BuySound);
-                    _buyEvent.Invoke();
-                    gameObject.SetActive(false);
-                }
+                SoundPlayer.Play(AssetProvider.Instance.BuySound);
+                _buyEvent.Invoke();
+                gameObject.SetActive(false);
             }
+            else
+            {
+                SoundPlayer.Play(AssetProvider.Instance.BruhSound);
+            } 
         }
     }
 }

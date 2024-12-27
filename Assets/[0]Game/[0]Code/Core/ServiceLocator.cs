@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Game
 {
@@ -12,5 +13,13 @@ namespace Game
 
         public static T Get<T>() => 
             (T)_container[typeof(T)];
+        
+        public static object Get(Type T)
+        {
+            if (_container.TryGetValue(T, out var value))
+                return value;
+            
+            throw new Exception($"Не хватает типа: {T}");
+        }
     }
 }

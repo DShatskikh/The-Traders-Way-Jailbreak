@@ -20,10 +20,14 @@ namespace Game
         public bool TryBuy(int price)
         {
             if (_money < price)
+            {
+                SoundPlayer.Play(AssetProvider.Instance.BruhSound);
                 return false;
+            }
             
             _money -= price;
             Changed?.Invoke(_money);
+            SoundPlayer.Play(AssetProvider.Instance.BuySound);
             return true;
         }
 

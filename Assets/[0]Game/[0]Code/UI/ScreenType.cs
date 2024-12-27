@@ -6,5 +6,7 @@
         Main,
         Pause,
         Laptop,
+        Shop,
+        ADS,
     }
 }

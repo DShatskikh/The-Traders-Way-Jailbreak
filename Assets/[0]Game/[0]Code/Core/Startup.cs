@@ -17,6 +17,22 @@ namespace Game
         private ScreenManager _screenManager;
 
         [SerializeField]
+        private LocationsManager _locationsManager;
+
+        [SerializeField]
+        private LocationsManager.Data _initializationLocationData;
+        
+        [SerializeField]
+        private WalletService _walletService;
+
+        [SerializeField]
+        private VolumeService _volumeService;
+
+        [SerializeField]
+        private ADSTimer _adsTimer;
+        
+        [Header("Links")]
+        [SerializeField]
         private CinemachineConfiner2D _cinemachineConfiner2D;
 
         [SerializeField]
@@ -38,22 +54,15 @@ namespace Game
         private TransitionScreen _transitionScreen;
 
         [SerializeField]
-        private LocationsManager _locationsManager;
-
-        [SerializeField]
-        private LocationsManager.Data _initializationLocationData;
-
-        [SerializeField]
-        private GameStateController _game;
-
-        [SerializeField]
-        private WalletService _walletService;
+        private GameStateController _gameStateController;
 
         [SerializeField]
         private StockMarketService _stockMarketService;
 
         [SerializeField]
-        private VolumeService _volumeService;
+        private Transform[] _roots;
+        
+        private readonly TransitionService _transitionService = new();
         
         private void Awake()
         {
@@ -65,10 +74,6 @@ namespace Game
 
             DontDestroyOnLoad(gameObject);
 
-            _assetProvider.Init();
-            _soundPlayer.Init();
-            _musicPlayer.Init();
-            
             ServiceLocator.Register(_screenManager);
             ServiceLocator.Register(_cinemachineConfiner2D);
             ServiceLocator.Register(_playerInput);
@@ -77,20 +82,43 @@ namespace Game
             ServiceLocator.Register(_player);
             ServiceLocator.Register(_transitionScreen);
             ServiceLocator.Register(_locationsManager);
-            ServiceLocator.Register(_game);
+            ServiceLocator.Register(_gameStateController);
             ServiceLocator.Register(_walletService);
             ServiceLocator.Register(_stockMarketService);
             ServiceLocator.Register(_volumeService);
+            ServiceLocator.Register(_transitionService);
+            
+            Injector.Inject(_transitionService);
+            Injector.Inject(_adsTimer);
+            _gameStateController.AddListener(_adsTimer);
+            
+            var allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            
+            foreach(var mb in allMonoBehaviours) 
+                Injector.Inject(mb);
+            
+            foreach (var root in _roots)
+            {
+                foreach (var gameListener in root.GetComponentsInChildren<IGameListener>(true))
+                {
+                    _gameStateController.AddListener(gameListener);
+                }
+            }
         }
 
         private void Start()
         {
+            _assetProvider.Init();
+            _soundPlayer.Init();
+            _musicPlayer.Init();
             _stockMarketService.Init();
             _locationsManager.Init();
             _volumeService.Init();
+            _coroutineRunner.Init();
+            
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
 
-            _game.StartGame();
+            _gameStateController.StartGame();
         }
     }
 }

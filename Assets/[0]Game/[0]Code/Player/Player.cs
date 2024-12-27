@@ -3,7 +3,9 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class Player : MonoBehaviour, IResumeGame, IPausedGame, IUpdate, IFixedUpdate
+    public class Player : MonoBehaviour, IGameStartListener, IGamePauseListener, IGameResumeListener, 
+        IGameUpdateListener,IGameFixedUpdateListener, IGameTransitionListener, IGameLaptopListener,
+        IGameShopListener, IGameADSListener, IGameDialogueListener
     {
         [SerializeField]
         private CharacterMover _mover;
@@ -27,35 +29,20 @@ namespace Game
         private PlayerInput _playerInput;
         private Vector3 _previousPosition;
 
+        [Inject]
+        private void Construct(PlayerInput playerInput)
+        {
+            _playerInput = playerInput;
+        }
+        
         private void Awake()
         {
-            _playerInput = ServiceLocator.Get<PlayerInput>();
             _cameraAreaChecker.Init();
         }
 
-        public void ResumeGame()
+        private void FixedUpdate()
         {
-            //_currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
-            //_isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
-            _direction.Changed += _view.OnDirectionChange;
-            _currentSpeed.Changed += _view.OnSpeedChange;
-            _useAreaChecker.Lost();
-            
-            _playerInput.actions["Submit"].performed += TryUse;
-        }
-
-        public void PausedGame()
-        {
-            //_currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
-            //_isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
-            _direction.Changed -= _view.OnDirectionChange;
-            _currentSpeed.Changed -= _view.OnSpeedChange;
-            
-            if (_playerInput)
-                _playerInput.actions["Submit"].performed -= TryUse;
-            
-            _mover.Stop();
-            _currentSpeed.Value = 0;
+            _cameraAreaChecker.Check();
         }
 
         public void OnUpdate()
@@ -71,12 +58,106 @@ namespace Game
             _currentSpeed.Value = ((Vector2)(_previousPosition - position)).magnitude;
             _previousPosition = position;
             _useAreaChecker.Search();
-            _cameraAreaChecker.Check();
         }
 
+        public void OnStartGame()
+        {
+            Activate(true);
+        }
+
+        public void OnPauseGame()
+        {
+            Activate(false);
+        }
+
+        public void OnResumeGame()
+        {
+            Activate(true);
+        }
+
+        public void OnStartTransition()
+        {
+            Activate(false);
+        }
+
+        public void OnEndTransition()
+        {
+            Activate(true);
+        }
+
+        public void OnOpenLaptop()
+        {
+            Activate(false);
+        }
+
+        public void OnCloseLaptop()
+        {
+            Activate(true);
+        }
+
+        public void OnOpenShop()
+        {
+            Activate(false);
+        }
+
+        public void OnCloseShop()
+        {
+            Activate(true);
+        }
+
+        public void OnShowADS()
+        {
+            Activate(false);
+        }
+
+        public void OnHideADS()
+        {
+            Activate(true);
+        }
+        
+        public void OnShowDialogue()
+        {
+            Activate(false);
+        }
+
+        public void OnHideDialogue()
+        {
+            Activate(true);
+        }
+        
         private void TryUse(InputAction.CallbackContext obj)
         {
             _useAreaChecker.Use();
+        }
+
+        private void Activate(bool isActivate)
+        {
+            if (isActivate)
+            {
+                _previousPosition = transform.position;
+                
+                //_currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
+                //_isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
+                _direction.Changed += _view.OnDirectionChange;
+                _currentSpeed.Changed += _view.OnSpeedChange;
+                _useAreaChecker.Lost();
+            
+                _playerInput.actions["Submit"].performed += TryUse;
+            }
+            else
+            {
+                //_currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
+                //_isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
+                
+                if (_playerInput)
+                    _playerInput.actions["Submit"].performed -= TryUse;
+            
+                _mover.Stop();
+                _currentSpeed.Value = 0;
+                
+                _direction.Changed -= _view.OnDirectionChange;
+                _currentSpeed.Changed -= _view.OnSpeedChange;
+            }
         }
     }
 }
