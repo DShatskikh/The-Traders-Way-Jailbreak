@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 7db3660a2b7099643a2e40a6f59d8e0d
+  m_Entries:
+  - m_Id: 147666092032
+    m_Key: Further
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107747166502912
+    m_Key: Watermelon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107811171581952
+    m_Key: Star
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107863755571200
+    m_Key: GoldApple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107906008989696
+    m_Key: Diamond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107942667206656
+    m_Key: LuckyBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107980847955968
+    m_Key: Palisos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117065085468672
+    m_Key: Kystic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2654355829669888
+    m_Key: WatchInvisibleFloor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3861761356054528
+    m_Key: Open the passage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4198950895992832
+    m_Key: Stock market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4199144219852800
+    m_Key: BuyBed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4199581517987840
+    m_Key: Remove the guards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4210298086342656
+    m_Key: Pictures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4307293778067456
+    m_Key: UNESCO World Heritage Site
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4924565686014967938
+  references:
+    version: 2
+    RefIds:
+    - rid: 4924565686014967938
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1734604345924

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
@@ -16,11 +16,15 @@ namespace Game
         [SerializeField]
         private LocalizedString _name;
 
+        [SerializeField]
+        private TMP_Text _label;
+        
         private WalletService _walletService;
         
         private void Awake()
         {
             _walletService = ServiceLocator.Get<WalletService>();
+            LocalizedTextUtility.Load(_name, (result) => _label.text = $"{result}\n${_price}");
         }
 
         public void Use()

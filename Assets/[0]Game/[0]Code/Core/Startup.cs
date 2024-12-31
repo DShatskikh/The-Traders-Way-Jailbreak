@@ -111,11 +111,12 @@ namespace Game
             _assetProvider.Init();
             _soundPlayer.Init();
             _musicPlayer.Init();
+            _walletService.Init();
             _stockMarketService.Init();
             _locationsManager.Init();
             _volumeService.Init();
             _coroutineRunner.Init();
-            
+
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
 
             _gameStateController.StartGame();

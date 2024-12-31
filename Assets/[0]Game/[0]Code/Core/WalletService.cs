@@ -1,4 +1,5 @@
 ﻿using System;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Game
@@ -7,17 +8,29 @@ namespace Game
     public class WalletService
     {
         [SerializeField]
-        private int _money;
+        private float _money;
 
         private float _tax;
+        private float _maxMoney = 5;
 
-        public int GetMoney => _money;
-        public int GetTax => (int)_tax;
+        public float GetMoney => _money;
+        public float GetMaxMoney => _maxMoney;
+        public float GetTax => _tax;
 
-        public event Action<int> Changed;
-        public event Action<int> TaxChanged;
+        public event Action<float> Changed;
+        public event Action<float> TaxChanged;
+        public event Action<float> MaxMoneyChanged;
 
-        public bool TryBuy(int price)
+        public void Init()
+        {
+            Lua.RegisterFunction(nameof(IsHaveMoney), this,
+                SymbolExtensions.GetMethodInfo(() => IsHaveMoney(0d)));
+            
+            Lua.RegisterFunction(nameof(MinusMoney), this,
+                SymbolExtensions.GetMethodInfo(() => MinusMoney(0d)));
+        }
+
+        public bool TryBuy(float price)
         {
             if (_money < price)
             {
@@ -31,12 +44,18 @@ namespace Game
             return true;
         }
 
-        public void Add(int price)
+        public void Add(float price)
         {
             _money += price;
             Changed?.Invoke(_money);
             _tax += price / 100f;
-            TaxChanged?.Invoke((int)_tax);
+            TaxChanged?.Invoke(_tax);
+
+            if (_money > _maxMoney)
+            {
+                _maxMoney = _money;
+                MaxMoneyChanged?.Invoke(_maxMoney);
+            }
         }
 
         public bool TryPayTax()
@@ -51,15 +70,24 @@ namespace Game
             return false;
         }
         
-        public string GetFormatMoney(int money)
+        public string GetFormatMoney(float money)
         {
-            if (money > 1000000)
-                    return $"${money / 1000000}M";
+            if (money > 999999999)
+                return $"${999}M";
             
-            if (money > 1000)
-                return $"${money / 1000}K";
+            if (money >= 1000000)
+                    return $"${Math.Round(money / 1000000), 2}M";
             
-            return $"${money}";
+            if (money >= 1000)
+                return $"${Math.Round(money / 1000, 2)}K";
+            
+            return $"${Math.Round(money, 2)}";
         }
+        
+        private bool IsHaveMoney(double money) => 
+            _money >= money;
+        
+        private void MinusMoney(double money) => 
+            _money -= (float)money;
     }
 }

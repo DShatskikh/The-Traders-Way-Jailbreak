@@ -14,9 +14,10 @@ namespace Game
             _walletService = ServiceLocator.Get<WalletService>();
         }
 
-        private void OnTaxChanged(int tax)
+        private void OnTaxChanged(float tax)
         {
             _label.text = $"Налог: {_walletService.GetFormatMoney(tax)}";
+            Canvas.ForceUpdateCanvases();
         }
 
         private void OnEnable()

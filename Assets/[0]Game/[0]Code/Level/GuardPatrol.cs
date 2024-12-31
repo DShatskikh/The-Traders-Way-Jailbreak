@@ -60,6 +60,9 @@ namespace Game
 
         private void StartPatrol()
         {
+            Vector3 offset = ((Vector2)_targetPoint.position - (Vector2)_warningZoneTransform.position).normalized;
+            _warningZoneTransform.rotation = Quaternion.LookRotation(Vector3.forward, offset);
+            
             _coroutine = StartCoroutine(AwaitPatrol());
         }
 
@@ -76,9 +79,9 @@ namespace Game
 
             while (true)
             {
-                yield return AwaitToMove(_startPoint.position);
-                yield return new WaitForSeconds(1f);
                 yield return AwaitToMove(_targetPoint.position);
+                yield return new WaitForSeconds(1f);
+                yield return AwaitToMove(_startPoint.position);
                 yield return new WaitForSeconds(1f);
             }
         }

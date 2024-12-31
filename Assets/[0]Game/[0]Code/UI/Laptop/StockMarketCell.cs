@@ -77,7 +77,7 @@ namespace Game
 
         private void UpdatePrice()
         {
-            var text = $"{_walletService.GetFormatMoney(_slot.Config.Price)} ";
+            var text = $"{_walletService.GetFormatMoney(_slot.GetPrice)} ";
             
             var multiply = (int)(_slot.Multiply.Value * 100);
             
@@ -106,7 +106,7 @@ namespace Game
             _sellButton.interactable = count >= GetSellCount();
         }
 
-        private void WalletServiceOnChanged(int money)
+        private void WalletServiceOnChanged(float money)
         {
             _buyButton.interactable = money >= GetPrice();
         }
@@ -119,6 +119,9 @@ namespace Game
         
         private void OnSell()
         {
+            if (_slot.Count.Value < GetSellCount())
+                return;
+            
             _slot.Count.Value -= GetSellCount();
             _walletService.Add(GetPrice());
             SoundPlayer.Play(AssetProvider.Instance.BuySound);
@@ -127,7 +130,7 @@ namespace Game
         private int GetSellCount() => 
             int.Parse(_dropdown.options[_dropdown.value].text);
         
-        private int GetPrice() => 
-            _config.Price * GetSellCount();
+        private float GetPrice() => 
+            _slot.GetPrice * GetSellCount();
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Game
@@ -15,11 +16,27 @@ namespace Game
         public void Init()
         {
             Instance = this;
+            
+            Lua.RegisterFunction("PlayBuy", this,
+                SymbolExtensions.GetMethodInfo(() => PlayBuy()));
+            
+            Lua.RegisterFunction("PlayBruh", this,
+                SymbolExtensions.GetMethodInfo(() => PlayBruh()));
         }
-        
+
         public static void Play(AudioClip clip)
         {
             Instance.PlayLocal(clip);
+        }
+
+        public static void Stop()
+        {
+            Instance.StopLocal();
+        }
+        
+        public void StopLocal()
+        {
+            _audioSource.Stop();
         }
 
         private void PlayLocal(AudioClip clip)
@@ -27,10 +44,11 @@ namespace Game
             _audioSource.clip = clip;
             _audioSource.Play();
         }
+
+        private void PlayBruh() => 
+            PlayLocal(AssetProvider.Instance.BruhSound);
         
-        public void Stop()
-        {
-            _audioSource.Stop();
-        }
+        private void PlayBuy() => 
+            PlayLocal(AssetProvider.Instance.BuySound);
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
   StockMarketItems:
   - Id: Kystic
     Icon: {fileID: -446867404522521166, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 5
+    Price: 1
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
@@ -30,7 +30,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - Id: Watermelon
-    Icon: {fileID: -470608404, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Icon: {fileID: -200061493, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     Price: 25
     Name:
       m_TableReference:
@@ -41,21 +41,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - Id: Iron
-    Icon: {fileID: 279032703, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 100
-    Name:
-      m_TableReference:
-        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
-      m_TableEntryReference:
-        m_KeyId: 107811171581952
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
   - Id: GoldApple
     Icon: {fileID: 1738838905, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 500
+    Price: 100
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
@@ -65,21 +53,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - Id: Diamond
-    Icon: {fileID: -1873668908, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 2000
-    Name:
-      m_TableReference:
-        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
-      m_TableEntryReference:
-        m_KeyId: 107906008989696
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
   - Id: Palisos
     Icon: {fileID: 1566003732, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 10000
+    Price: 1000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
@@ -91,12 +67,36 @@ MonoBehaviour:
       m_LocalVariables: []
   - Id: LuckyBlock
     Icon: {fileID: 1010850566, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 100000
+    Price: 5000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
       m_TableEntryReference:
         m_KeyId: 107942667206656
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Diamond
+    Icon: {fileID: -1873668908, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 50000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107906008989696
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Id: Star
+    Icon: {fileID: 279032703, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Price: 1000000
+    Name:
+      m_TableReference:
+        m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+      m_TableEntryReference:
+        m_KeyId: 107811171581952
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

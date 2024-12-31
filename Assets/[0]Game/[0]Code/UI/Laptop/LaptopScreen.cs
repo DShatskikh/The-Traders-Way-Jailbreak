@@ -12,16 +12,17 @@ namespace Game
 
         [SerializeField]
         private Transform _container;
-
-        [SerializeField]
-        private Button _payTax;
-
+        
         [SerializeField]
         private Button _closeButton;
+        
+        [SerializeField]
+        private AudioClip _theme;
         
         private PlayerInput _playerInput;
         private GameStateController _gameStateController;
         private StockMarketService _stockMarketService;
+        private AudioClip _previousTheme;
 
         private void Awake()
         {
@@ -48,12 +49,17 @@ namespace Game
         {
             Show();
             SoundPlayer.Play(AssetProvider.Instance.ClickSound);
+            
+            _previousTheme = MusicPlayer.Instance.Clip;
+            MusicPlayer.Play(_theme);
         }
 
         public void OnCloseLaptop()
         {
             Hide();
             SoundPlayer.Play(AssetProvider.Instance.ClickSound);
+            
+            MusicPlayer.Play(_previousTheme);
         }
 
         public void OnCancel(InputAction.CallbackContext obj)

@@ -16,7 +16,7 @@ namespace Game
             print("Start");
         }
 
-        private void WalletServiceOnTaxChanged(int tax)
+        private void WalletServiceOnTaxChanged(float tax)
         {
             gameObject.SetActive(tax != 0);
         }
