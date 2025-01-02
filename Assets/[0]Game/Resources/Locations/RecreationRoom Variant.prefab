@@ -500,6 +500,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8910388226263301805}
     m_Modifications:
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _price
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _buyEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -684,6 +688,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2224844479067731148}
     m_Modifications:
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _price
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _buyEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -820,6 +828,10 @@ PrefabInstance:
     - target: {fileID: 3799868302461671115, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870255475938283662, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
+      propertyPath: _text.m_TableEntryReference.m_KeyId
+      value: 4883016762900480
       objectReference: {fileID: 0}
     - target: {fileID: 8605620901858858316, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
       propertyPath: m_Name

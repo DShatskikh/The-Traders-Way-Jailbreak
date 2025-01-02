@@ -75,6 +75,26 @@ MonoBehaviour:
     m_Key: UNESCO World Heritage Site
     m_Metadata:
       m_Items: []
+  - m_Id: 4882120012316672
+    m_Key: dining room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4882784142606336
+    m_Key: club
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4882952166424576
+    m_Key: hangar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4883016762900480
+    m_Key: hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4883468380389376
+    m_Key: Warehouse
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

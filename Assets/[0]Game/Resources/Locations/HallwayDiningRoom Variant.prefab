@@ -441,6 +441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5870255475938283662, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
+      propertyPath: _text.m_TableEntryReference.m_KeyId
+      value: 4883016762900480
+      objectReference: {fileID: 0}
     - target: {fileID: 7275900096133173953, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -8374,6 +8378,10 @@ PrefabInstance:
     - target: {fileID: 3799868302461671115, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870255475938283662, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
+      propertyPath: _text.m_TableEntryReference.m_KeyId
+      value: 4882120012316672
       objectReference: {fileID: 0}
     - target: {fileID: 8605620901858858316, guid: 67a6ec2659cf83941baf5fef658ecce0, type: 3}
       propertyPath: m_Name

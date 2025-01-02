@@ -77,6 +77,26 @@ namespace Game
             return false;
         }
 
+        public void OpenAllItems()
+        {
+            foreach (var slot in _slots) 
+                slot.IsOpen.Value = true;
+        }
+        
+        public void ResetToDefault()
+        {
+            foreach (var slot in _slots)
+            {
+                slot.IsOpen.Value = false;
+
+                if (slot.Config.Id == "Kystic")
+                {
+                    slot.IsOpen.Value = true;
+                    slot.Count.Value = 1;
+                }
+            }
+        }
+        
         private IEnumerator AwaitUpdateMultiplySlot(Slot slot)
         {
             yield return new WaitForSeconds(Random.Range(0f, 0.5f));

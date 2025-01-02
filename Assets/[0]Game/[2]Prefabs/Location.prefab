@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 1409536171279071221}
   - component: {fileID: 4029372437743788842}
   m_Layer: 0
-  m_Name: Decoration
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

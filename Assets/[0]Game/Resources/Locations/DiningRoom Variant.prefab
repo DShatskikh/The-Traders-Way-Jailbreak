@@ -22109,6 +22109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table Hanging Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8906673596484365971, guid: 3962bc4ed559b1e42a9a25e9ab138876, type: 3}
+      propertyPath: _text.m_TableEntryReference.m_KeyId
+      value: 4883468380389376
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

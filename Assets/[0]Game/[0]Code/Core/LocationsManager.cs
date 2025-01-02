@@ -16,6 +16,7 @@ namespace Game
         private Location _currentLocation;
         private Player _player;
         private CinemachineConfiner2D _camera;
+        private GameStateController _gameStateController;
 
         [Serializable]
         public class Data
@@ -30,6 +31,7 @@ namespace Game
         {
             _player = ServiceLocator.Get<Player>();
             _camera = ServiceLocator.Get<CinemachineConfiner2D>();
+            _gameStateController = ServiceLocator.Get<GameStateController>();
 
             _locations = Resources.LoadAll<Location>("Locations\\");
         }
@@ -66,6 +68,9 @@ namespace Game
             
             foreach(var mb in createdLocation.GetComponentsInChildren<MonoBehaviour>(true)) 
                 Injector.Inject(mb);
+            
+            foreach(var gameListener in createdLocation.GetComponentsInChildren<IGameListener>(true)) 
+                _gameStateController.AddListener(gameListener);
 
             return createdLocation;
         }

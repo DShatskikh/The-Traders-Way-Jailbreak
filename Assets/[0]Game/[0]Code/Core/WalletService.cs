@@ -72,16 +72,31 @@ namespace Game
         
         public string GetFormatMoney(float money)
         {
-            if (money > 999999999)
-                return $"${999}M";
+            if (money > 9999999999999)
+                return $"${999},{99}Т";
+                         
+            if (money >= 1000000000000)
+                return $"${Math.Round(money / 1000000000000, 2)}Т";
+            
+            if (money >= 1000000000)
+                return $"${Math.Round(money / 1000000000, 2)}ММ";
             
             if (money >= 1000000)
-                    return $"${Math.Round(money / 1000000), 2}M";
+                    return $"${Math.Round(money / 1000000, 2)}M";
             
             if (money >= 1000)
                 return $"${Math.Round(money / 1000, 2)}K";
             
             return $"${Math.Round(money, 2)}";
+        }
+
+        public void Reset()
+        {
+            _money = 0;
+            _tax = 0;
+            
+            Changed?.Invoke(_money);
+            TaxChanged?.Invoke(_tax);
         }
         
         private bool IsHaveMoney(double money) => 

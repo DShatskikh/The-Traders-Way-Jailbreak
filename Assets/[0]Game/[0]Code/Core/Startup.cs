@@ -116,6 +116,7 @@ namespace Game
             _locationsManager.Init();
             _volumeService.Init();
             _coroutineRunner.Init();
+            CutscenesDataStorage.Init();
 
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
 

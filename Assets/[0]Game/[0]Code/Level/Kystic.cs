@@ -1,4 +1,5 @@
 ﻿using MoreMountains.Feedbacks;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Game
@@ -10,6 +11,9 @@ namespace Game
 
         [SerializeField]
         private MMF_Player _mmfPlayer;
+
+        [SerializeField]
+        private DialogueSystemTrigger _dialogueSystemTrigger;
         
         private StockMarketService _stockMarketService;
 
@@ -25,6 +29,7 @@ namespace Game
             _particleSystem.Play();
             _mmfPlayer.PlayFeedbacks();
             _stockMarketService.AddItem("Kystic");
+            _dialogueSystemTrigger.OnUse();
         }
     }
 }
