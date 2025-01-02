@@ -3964,6 +3964,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4575934977001866920, guid: 7a46f1853b7161642a35dd789085a065, type: 3}
+      propertyPath: _saveId
+      value: Warehouse_GoldApple
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3982,6 +3986,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7300967217820994722}
     m_Modifications:
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _id
+      value: warehouse_upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _name.m_TableEntryReference.m_KeyId
+      value: 5015790891155456
+      objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _buyEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

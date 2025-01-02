@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
@@ -17,14 +18,37 @@ namespace Game
         private LocalizedString _name;
 
         [SerializeField]
+        private string _id = "default";
+        
+        [SerializeField]
         private TMP_Text _label;
         
         private WalletService _walletService;
-        
-        private void Awake()
+        private SaveData _data;
+
+        [Serializable]
+        public struct SaveData
         {
-            _walletService = ServiceLocator.Get<WalletService>();
+            public bool IsBuy;
+        }
+        
+        [Inject]
+        private void Construct(WalletService walletService)
+        {
+            _walletService = walletService;
+        }
+
+        private void Start()
+        {
             LocalizedTextUtility.Load(_name, (result) => _label.text = $"{result}\n${_price}");
+            
+            _data = CutscenesDataStorage.GetData<SaveData>(_id);
+
+            if (_data.IsBuy)
+            {
+                _buyEvent.Invoke();
+                gameObject.SetActive(false);
+            }
         }
 
         public void Use()
@@ -34,6 +58,8 @@ namespace Game
                 SoundPlayer.Play(AssetProvider.Instance.BuySound);
                 _buyEvent.Invoke();
                 gameObject.SetActive(false);
+                
+                CutscenesDataStorage.SetData(_id, new SaveData() {IsBuy = true});
             }
             else
             {

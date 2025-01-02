@@ -38,6 +38,7 @@ namespace Game
         private void Awake()
         {
             _cameraAreaChecker.Init();
+            _stepsSoundPlayer.Init(transform);
         }
 
         private void FixedUpdate()
@@ -136,8 +137,8 @@ namespace Game
             {
                 _previousPosition = transform.position;
                 
-                //_currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
-                //_isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
+                _currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
+                _isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
                 _direction.Changed += _view.OnDirectionChange;
                 _currentSpeed.Changed += _view.OnSpeedChange;
                 _useAreaChecker.Lost();
@@ -146,8 +147,8 @@ namespace Game
             }
             else
             {
-                //_currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
-                //_isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
+                _currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
+                _isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
                 
                 if (_playerInput)
                     _playerInput.actions["Submit"].performed -= TryUse;

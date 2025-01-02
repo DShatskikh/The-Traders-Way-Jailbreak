@@ -19,10 +19,10 @@ namespace Game
         private bool _isStepRight;
         private float _currentStepTime;
         
-        private readonly Transform _transform;
+        private Transform _transform;
         private bool _isRun;
 
-        public StepsSoundPlayer(Transform transform)
+        public void Init(Transform transform)
         {
             _transform = transform;
         }
@@ -42,11 +42,16 @@ namespace Game
                 
                 if (hit.collider != null)
                 {
-                    var tilemap = hit.collider.GetComponent<Tilemap>();
-                    Vector3Int cellPosition = tilemap.WorldToCell(hit.point);
-                    tile = tilemap.GetTile(cellPosition);
+                    if (hit.collider.TryGetComponent(out Tilemap tilemap))
+                    {
+                        Vector3Int cellPosition = tilemap.WorldToCell(hit.point);
+                        tile = tilemap.GetTile(cellPosition);
+                    }
                 }
 
+                if (tile == null)
+                    return;
+                
                 PlayFootstepSound(tile);
                 _isStepRight = !_isStepRight;
             }

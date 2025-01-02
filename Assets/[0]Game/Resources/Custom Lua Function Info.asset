@@ -19,6 +19,9 @@ MonoBehaviour:
   - functionName: IsHaveMoney
     parameters: 01000000
     returnValue: 1
+  - functionName: IsWorldPolice
+    parameters: 
+    returnValue: 1
   scriptFunctions:
   - functionName: AddItem
     parameters: 0200000001000000
@@ -31,4 +34,7 @@ MonoBehaviour:
     returnValue: 0
   - functionName: PlayBruh
     parameters: 
+    returnValue: 0
+  - functionName: OpenURL
+    parameters: 02000000
     returnValue: 0

@@ -39,8 +39,13 @@ namespace Game
         public void SwitchLocation(string nextLocationName, int pointIndex)
         {
             if (_currentLocation)
+            {
+                foreach(var gameListener in _currentLocation.GetComponentsInChildren<IGameListener>(true)) 
+                    _gameStateController.RemoveListener(gameListener);
+                
                 Object.Destroy(_currentLocation.gameObject);
-            
+            }
+
             _currentLocation = CreateLocation(GetLocation(nextLocationName));
                     
             if (_currentLocation.Points.Length <= pointIndex)

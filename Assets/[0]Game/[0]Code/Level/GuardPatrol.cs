@@ -26,14 +26,12 @@ namespace Game
         [SerializeField]
         private SpriteRenderer _spriteRenderer;
         
-        private GameStateController _gameStateController;
         private TransitionService _transitionService;
         private Coroutine _coroutine;
 
         [Inject]
-        private void Construct(GameStateController gameStateController, TransitionService transitionService)
+        private void Construct(TransitionService transitionService)
         {
-            _gameStateController = gameStateController;
             _transitionService = transitionService;
         }
 
@@ -41,21 +39,17 @@ namespace Game
         {
             StartPatrol();
         }
-
-        void Update()
-        {
-            
-
-        }
         
         public void OnStartTransition()
         {
-            StopPatrol();
+            if (gameObject.activeSelf)
+                StopPatrol();
         }
 
         public void OnEndTransition()
         {
-            StartPatrol();
+            if (gameObject.activeSelf)
+                StartPatrol();
         }
 
         private void StartPatrol()

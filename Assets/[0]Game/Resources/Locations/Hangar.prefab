@@ -12273,8 +12273,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 6005078572620323146}
     m_Modifications:
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _id
+      value: Hangar_FinallySpaceShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
       value: 5000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _name.m_TableEntryReference.m_KeyId
+      value: 5057802168287232
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _buyEvent.m_PersistentCalls.m_Calls.Array.size

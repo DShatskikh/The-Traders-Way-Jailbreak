@@ -9,7 +9,7 @@ namespace Game
     public class HomeCutscene : MonoBehaviour, IGameLaptopListener
     {
         [SerializeField]
-        private DialogueSystemTrigger _startDialogue, _closeLaptopDialogue;
+        private DialogueSystemTrigger _startDialogue, _closeLaptopDialogue, _tvNews, _tv;
 
         [SerializeField]
         private TargetArrow _laptopArrow, _tvArrow, _bedArrow;
@@ -83,8 +83,6 @@ namespace Game
                     return;
                 case CutsceneState.LAPTOP:
                     _startDialogue.OnUse();
-                    _stockMarketService.OpenAllItems();
-                    _walletService.Add(13741646);
                     _laptopArrow.gameObject.SetActive(true);
                     _cutsceneState = CutsceneState.LAPTOP;
                     break;
@@ -95,6 +93,8 @@ namespace Game
                     _tvArrow.gameObject.SetActive(true);
                     _cutsceneState = CutsceneState.TV;
                     _closeLaptopDialogue.OnUse();
+                    _tvNews.gameObject.SetActive(true);
+                    _tv.gameObject.SetActive(false);
                     break;
                 case CutsceneState.BED when _cutsceneState != CutsceneState.TV:
                     return;
@@ -112,7 +112,7 @@ namespace Game
                     MusicPlayer.Play(_policeClip);
                     _policeEvent.Invoke();
                     
-                    CutscenesDataStorage.SetData(new SaveData()
+                    CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
                     {
                         CutsceneState = CutsceneState.POLICE
                     });

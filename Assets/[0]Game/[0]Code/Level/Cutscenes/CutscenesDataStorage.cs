@@ -7,19 +7,19 @@ namespace Game
     public class CutscenesDataStorage
     {
         private static CutscenesDataStorage _instance;
-        private readonly Dictionary<Type, string> _dictionary = new();
+        private readonly Dictionary<string, string> _dictionary = new();
 
         public static void Init()
         {
             _instance = new CutscenesDataStorage();
         }
 
-        public static void SetData<T>(T saveData) => 
-            _instance._dictionary.Add(typeof(T), SaveSystem.Serialize(saveData));
+        public static void SetData<T>(string id, T saveData) => 
+            _instance._dictionary.Add(id, SaveSystem.Serialize(saveData));
 
-        public static T GetData<T>() where T : new()
+        public static T GetData<T>(string id) where T : new()
         {
-            if (_instance._dictionary.TryGetValue(typeof(T), out var result))
+            if (_instance._dictionary.TryGetValue(id, out var result))
                 return SaveSystem.Deserialize<T>(result);
 
             return new T();

@@ -20,6 +20,7 @@ namespace Game
         
         private StockMarketService _stockMarketService;
         private WalletService _walletService;
+        private HomeCutscene.SaveData _data;
 
         [Inject]
         private void Construct(StockMarketService stockMarketService, WalletService walletService)
@@ -30,9 +31,12 @@ namespace Game
         
         private void Start()
         {
-            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>();
+            Lua.RegisterFunction(nameof(IsWorldPolice), this,
+                SymbolExtensions.GetMethodInfo(() => IsWorldPolice()));
+            
+            _data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
 
-            if (data.CutsceneState == HomeCutscene.CutsceneState.POLICE)
+            if (_data.CutsceneState == HomeCutscene.CutsceneState.POLICE)
             {
                 StartCoroutine(AwaitCutscene());
             }
@@ -48,5 +52,8 @@ namespace Game
             _stockMarketService.ResetToDefault();
             _walletService.Reset();
         }
+
+        private bool IsWorldPolice() => 
+            _data.CutsceneState == HomeCutscene.CutsceneState.POLICE;
     }
 }

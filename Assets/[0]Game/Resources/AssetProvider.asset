@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec62cc97a3b127641a2c03cd8065a010, type: 3}
   m_Name: AssetProvider
   m_EditorClassIdentifier: 
-  StepSoundPairsConfig: {fileID: 0}
-  TileTagConfig: {fileID: 0}
+  StepSoundPairsConfig: {fileID: 11400000, guid: 4fe12d75b729a494ead6d1701f896c20, type: 2}
+  TileTagConfig: {fileID: 11400000, guid: 2190ce59229d9d247b03889ec59cc111, type: 2}
   SelectColor: {r: 1, g: 0.9345745, b: 0, a: 1}
   DeselectColor: {r: 0, g: 0.49411765, b: 1, a: 1}
   StockMarketItems:

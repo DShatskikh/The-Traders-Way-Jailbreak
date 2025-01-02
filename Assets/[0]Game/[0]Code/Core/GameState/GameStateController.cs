@@ -55,6 +55,17 @@ namespace Game
             _listeners.Add(listener);
         }
 
+        public void RemoveListener(IGameListener listener)
+        {
+            if (listener is IGameUpdateListener updateListener) 
+                _updateListeners.Remove(updateListener);
+
+            if (listener is IGameFixedUpdateListener fixedUpdateListener)
+                _fixedUpdateListeners.Remove(fixedUpdateListener);
+
+            _listeners.Remove(listener);
+        }
+
         public void StartGame() 
         {
             if (_gameState != GameState.OFF && _gameState != GameState.FINISHED)

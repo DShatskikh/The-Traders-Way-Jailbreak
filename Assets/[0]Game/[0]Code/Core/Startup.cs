@@ -7,6 +7,11 @@ namespace Game
 {
     public sealed class Startup : MonoBehaviour
     {
+        [Header("Test Data")]
+        [SerializeField]
+        private LocationsManager.Data _initializationLocationData;
+
+        [Header("Services")]
         [SerializeField]
         private MusicPlayer _musicPlayer;
 
@@ -20,9 +25,6 @@ namespace Game
         private LocationsManager _locationsManager;
 
         [SerializeField]
-        private LocationsManager.Data _initializationLocationData;
-        
-        [SerializeField]
         private WalletService _walletService;
 
         [SerializeField]
@@ -30,6 +32,9 @@ namespace Game
 
         [SerializeField]
         private ADSTimer _adsTimer;
+
+        [SerializeField]
+        private ConsoleService _consoleService;
         
         [Header("Links")]
         [SerializeField]
@@ -87,9 +92,10 @@ namespace Game
             ServiceLocator.Register(_stockMarketService);
             ServiceLocator.Register(_volumeService);
             ServiceLocator.Register(_transitionService);
-            
+
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
+            Injector.Inject(_consoleService);
             _gameStateController.AddListener(_adsTimer);
             
             var allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -117,10 +123,16 @@ namespace Game
             _volumeService.Init();
             _coroutineRunner.Init();
             CutscenesDataStorage.Init();
+            _consoleService.Init();
 
+            var luaCommandRegister = new LuaCommandRegister();
+            luaCommandRegister.Register();
+            
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
 
             _gameStateController.StartGame();
         }
+
+
     }
 }

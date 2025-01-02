@@ -95,6 +95,42 @@ MonoBehaviour:
     m_Key: Warehouse
     m_Metadata:
       m_Items: []
+  - m_Id: 5014886632767488
+    m_Key: Murzik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015186257068032
+    m_Key: Replace the furniture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015502247542784
+    m_Key: Dining_Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015621000871936
+    m_Key: Dining_VIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015790891155456
+    m_Key: warehouse_upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016567374266368
+    m_Key: Recreation_Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016726153838592
+    m_Key: Recreation_Tables
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016865400537088
+    m_Key: Recreation_DanceFloor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5057802168287232
+    m_Key: FinallySpaceShip
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

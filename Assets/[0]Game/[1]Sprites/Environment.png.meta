@@ -618,7 +618,7 @@ TextureImporter:
         x: 75
         y: 361
         width: 17
-        height: 27
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1165,9 +1165,9 @@ TextureImporter:
       name: Environment_47
       rect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 237
-        width: 33
+        width: 34
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1777,6 +1777,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Environment_75
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 385
+        width: 17
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d87eb8786e19d543ad2ebc0f650e36b
+      internalID: 496188438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1864,6 +1886,7 @@ TextureImporter:
       Environment_72: 1260301252
       Environment_73: 868274281
       Environment_74: 197104921
+      Environment_75: 496188438
       Environment_8: -1873668908
       Environment_9: 1566003732
   mipmapLimitGroupName: 

@@ -1,5 +1,6 @@
 ﻿using System;
 using PixelCrushers.DialogueSystem;
+using QFSW.QC;
 using UnityEngine;
 
 namespace Game
@@ -12,7 +13,7 @@ namespace Game
 
         private float _tax;
         private float _maxMoney = 5;
-
+        
         public float GetMoney => _money;
         public float GetMaxMoney => _maxMoney;
         public float GetTax => _tax;
