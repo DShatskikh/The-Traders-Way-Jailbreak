@@ -1720,6 +1720,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[91].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 1368089199828937367, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 18.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368089199828937367, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 18.41
+      objectReference: {fileID: 0}
     - target: {fileID: 3377942553125919741, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0.1875

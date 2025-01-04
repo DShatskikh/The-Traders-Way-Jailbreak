@@ -1,56 +1,54 @@
 using System.Collections;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class SubmitAnimatedButton : AnimatedButton
+    public class SubmitAnimatedButton : MonoBehaviour
     {
-        private bool _isDown;
         private PlayerInput _playerInput;
+        private AnimatedButton _animatedButton;
 
-        protected override void OnAwake()
+        private void Awake()
         {
-            base.OnAwake();
             _playerInput = ServiceLocator.Get<PlayerInput>();
+            _animatedButton = GetComponent<AnimatedButton>();
         }
 
-        protected override void Enable()
+        private void OnEnable()
         {
             _playerInput.actions["Submit"].started += OnSubmitDown;
-            _playerInput.actions["Submit"].performed += OnSubmitUp;
-
-            //StartCoroutine(AwaitCheck());
+            _playerInput.actions["Submit"].canceled += OnSubmitUp;
         }
 
-        protected override void Disable()
+        private void OnDisable()
         {
-            _playerInput.actions["Submit"].started -= OnSubmitDown;
-            _playerInput.actions["Submit"].performed -= OnSubmitUp;
+            //throw new Exception("wewewew");
+            
+            if (_playerInput)
+            {
+                _playerInput.actions["Submit"].started -= OnSubmitDown;
+                _playerInput.actions["Submit"].canceled -= OnSubmitUp;
+            }
+
+            CoroutineRunner.Instance.StartCoroutine(AwaitShow());
+        }
+
+        private IEnumerator AwaitShow()
+        {
+            yield return null;
+            gameObject.SetActive(true);
         }
 
         private void OnSubmitDown(InputAction.CallbackContext obj)
         {
-            _isDown = true;
-            _view.Down();
+            _animatedButton.OnPointerDown(null);
         }
 
         private void OnSubmitUp(InputAction.CallbackContext obj)
         {
-            if (!_isDown)
-                return;
-
-            _isDown = false;
-            _view.Up();
-            _button.onClick.Invoke();
-        }
-
-        public override void OnClick()
-        {
-            if (!_isDown)
-                return;
-            
-            Disable();
-            //EventBus.SubmitUp?.Invoke();
+            _animatedButton.OnPointerUp(null);
+            _animatedButton.onClick?.Invoke();
         }
     }
 }

@@ -28,7 +28,11 @@ namespace Game
         
         private PlayerInput _playerInput;
         private Vector3 _previousPosition;
+        private bool _isPause;
 
+        public ReactiveProperty<MonoBehaviour> NearestUseObject => 
+            _useAreaChecker.NearestUseObject;
+        
         [Inject]
         private void Construct(PlayerInput playerInput)
         {
@@ -58,7 +62,11 @@ namespace Game
             var position = transform.position;
             _currentSpeed.Value = ((Vector2)(_previousPosition - position)).magnitude;
             _previousPosition = position;
-            _useAreaChecker.Search();
+
+            if (!_isPause)
+            {
+                _useAreaChecker.Search();
+            }
         }
 
         public void OnStartGame()
@@ -126,13 +134,15 @@ namespace Game
             Activate(true);
         }
         
-        private void TryUse(InputAction.CallbackContext obj)
+        public void TryUse(InputAction.CallbackContext obj)
         {
             _useAreaChecker.Use();
         }
 
         private void Activate(bool isActivate)
         {
+            _isPause = !isActivate;
+            
             if (isActivate)
             {
                 _previousPosition = transform.position;
@@ -143,7 +153,7 @@ namespace Game
                 _currentSpeed.Changed += _view.OnSpeedChange;
                 _useAreaChecker.Lost();
             
-                _playerInput.actions["Submit"].performed += TryUse;
+                _playerInput.actions["Submit"].canceled += TryUse;
             }
             else
             {
@@ -151,13 +161,15 @@ namespace Game
                 _isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
                 
                 if (_playerInput)
-                    _playerInput.actions["Submit"].performed -= TryUse;
+                    _playerInput.actions["Submit"].canceled -= TryUse;
             
                 _mover.Stop();
                 _currentSpeed.Value = 0;
                 
                 _direction.Changed -= _view.OnDirectionChange;
                 _currentSpeed.Changed -= _view.OnSpeedChange;
+                
+                _useAreaChecker.Lost();
             }
         }
     }

@@ -127,12 +127,10 @@ namespace Game
 
             var luaCommandRegister = new LuaCommandRegister();
             luaCommandRegister.Register();
-            
+
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
 
             _gameStateController.StartGame();
         }
-
-
     }
 }

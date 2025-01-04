@@ -626,6 +626,10 @@ PrefabInstance:
       value: TransitionTragger
       objectReference: {fileID: 0}
     - target: {fileID: 6462730594084701254, guid: b10577662c3a65843a637bf5023ff664, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2711b7a2def15c47a41023cb9786816, type: 3}
+    - target: {fileID: 6462730594084701254, guid: b10577662c3a65843a637bf5023ff664, type: 3}
       propertyPath: _pointIndex
       value: 2
       objectReference: {fileID: 0}

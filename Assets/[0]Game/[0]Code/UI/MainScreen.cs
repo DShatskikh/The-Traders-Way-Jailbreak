@@ -12,17 +12,29 @@ namespace Game
         [SerializeField]
         private TMP_Text _moneyLabel;
 
+        private GameStateController _gameStateController;
+
+        [Inject]
+        private void Construct(GameStateController gameStateController)
+        {
+            _gameStateController = gameStateController;
+        }
+        
         private void Activate(bool isActive)
         {
             if (isActive)
             {
                 _pauseButton.gameObject.SetActive(true);
                 _moneyLabel.gameObject.SetActive(true); 
+                
+                _pauseButton.onClick.AddListener(PauseClick);
             }
             else
             {
                 _pauseButton.gameObject.SetActive(false);
                 _moneyLabel.gameObject.SetActive(false);
+                
+                _pauseButton.onClick.RemoveAllListeners();
             }
         }
 
@@ -49,6 +61,11 @@ namespace Game
         public void OnResumeGame()
         {
             Activate(true);
+        }
+
+        private void PauseClick()
+        {
+            _gameStateController.PauseGame();
         }
     }
 }

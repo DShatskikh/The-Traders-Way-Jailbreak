@@ -1,50 +1,40 @@
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class CancelAnimatedButton : AnimatedButton
+    public class CancelAnimatedButton : MonoBehaviour
     {
-        private bool _isDown;
         private PlayerInput _playerInput;
+        private AnimatedButton _animatedButton;
 
-        protected override void OnAwake()
+        private void Awake()
         {
-            base.OnAwake();
             _playerInput = ServiceLocator.Get<PlayerInput>();
+            _animatedButton = GetComponent<AnimatedButton>();
         }
-        
-        protected override void Enable()
+
+        private void OnEnable()
         {
             _playerInput.actions["Cancel"].started += OnSubmitDown;
             _playerInput.actions["Cancel"].performed += OnSubmitUp;
         }
 
-        protected override void Disable()
+        private void OnDisable()
         {
             _playerInput.actions["Cancel"].started -= OnSubmitDown;
             _playerInput.actions["Cancel"].performed -= OnSubmitUp;
         }
-        
+
         private void OnSubmitDown(InputAction.CallbackContext obj)
         {
-            _isDown = true;
-            _view.Down();
+            _animatedButton.OnPointerDown(null);
         }
 
         private void OnSubmitUp(InputAction.CallbackContext obj)
         {
-            if (!_isDown)
-                return;
-
-            _isDown = false;
-            _view.Up();
-            _button.onClick.Invoke();
-        }
-        
-        public override void OnClick()
-        {
-            Disable();
-            //_playerInput.actions["Cancel"]EventBus.CancelUp?.Invoke();
+            _animatedButton.OnPointerUp(null);
+            _animatedButton.onClick?.Invoke();
         }
     }
 }

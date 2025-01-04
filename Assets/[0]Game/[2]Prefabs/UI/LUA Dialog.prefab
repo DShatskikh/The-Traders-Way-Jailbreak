@@ -1766,7 +1766,7 @@ MonoBehaviour:
   accumulateText: 0
   maxLines: 100
   delayTypewriterUntilOpen: 0
-  continueButton: {fileID: 3952920773694059258}
+  continueButton: {fileID: 0}
   blockInputDuration: 0
   visibility: 1
   focusAnimationTrigger: 
@@ -1928,17 +1928,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8584916233568440137}
   m_SourcePrefab: {fileID: 100100000, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
---- !u!114 &1087937640906023361 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1198295238629171756, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
-  m_PrefabInstance: {fileID: 2285597352065647597}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7507747165016489734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3516773514780169681 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3419925706976204348, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
@@ -1984,12 +1973,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05399fb241106df4fbea2cb9b72f8a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1087937640906023361}
+  button: {fileID: 9165275941210534980}
   label:
     m_uiText: {fileID: 0}
     m_textMeshProUGUI: {fileID: 3516773514780169681}
   setLabelColor: 1
   defaultColor: {r: 0, g: 0.49411765, b: 1, a: 1}
+--- !u!114 &9165275941210534980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+  m_PrefabInstance: {fileID: 2285597352065647597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507747165016489734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efedc6693b534f0a902ff557d9b4565b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2772717274744967382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2130,6 +2130,34 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4289572269
       objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8158316928937438725}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFastForward
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PixelCrushers.DialogueSystem.StandardUIContinueButtonFastForward, Assembly-CSharp-firstpass
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8613401375511067883, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Name
       value: AnimatedButton
@@ -2158,17 +2186,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2626791197232843465, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
   m_PrefabInstance: {fileID: 2772717274744967382}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3952920773694059258 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1198295238629171756, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
-  m_PrefabInstance: {fileID: 2772717274744967382}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5904880201186274365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5904880201186274365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8613401375511067883, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
@@ -2360,12 +2377,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05399fb241106df4fbea2cb9b72f8a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 7870600825029573267}
+  button: {fileID: 2094531913442914070}
   label:
     m_uiText: {fileID: 0}
     m_textMeshProUGUI: {fileID: 5975936561840852611}
   setLabelColor: 1
   defaultColor: {r: 0, g: 0.49411765, b: 1, a: 1}
+--- !u!114 &2094531913442914070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+  m_PrefabInstance: {fileID: 9050210963038410943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725145519117214804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efedc6693b534f0a902ff557d9b4565b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5975936561840852611 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3419925706976204348, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
@@ -2382,14 +2410,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2626791197232843465, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
   m_PrefabInstance: {fileID: 9050210963038410943}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7870600825029573267 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1198295238629171756, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
-  m_PrefabInstance: {fileID: 9050210963038410943}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725145519117214804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

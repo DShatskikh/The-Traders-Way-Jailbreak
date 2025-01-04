@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using PixelCrushers;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.Events;
 
 namespace Game
 {
-    public class HomeCutscene : MonoBehaviour, IGameLaptopListener
+    public class HomeCutscene : MonoBehaviour, IGameLaptopListener, IGameTransitionListener, IGameStartListener
     {
         [SerializeField]
         private DialogueSystemTrigger _startDialogue, _closeLaptopDialogue, _tvNews, _tv;
@@ -50,7 +51,17 @@ namespace Game
             _walletService = walletService;
         }
 
-        private void Start()
+        public void OnStartGame()
+        {
+            StartCoroutine(AwaitUpgradeState(CutsceneState.LAPTOP));
+        }
+        
+        public void OnStartTransition()
+        {
+            
+        }
+
+        public void OnEndTransition()
         {
             UpgradeState(CutsceneState.LAPTOP);
         }
@@ -59,12 +70,12 @@ namespace Game
         {
             UpgradeState(CutsceneState.BED);
         }
-        
+
         public void Sleep()
         {
             UpgradeState(CutsceneState.POLICE);
         }
-        
+
         public void OnOpenLaptop()
         {
             
@@ -73,6 +84,12 @@ namespace Game
         public void OnCloseLaptop()
         {
             UpgradeState(CutsceneState.TV);
+        }
+
+        private IEnumerator AwaitUpgradeState(CutsceneState transitionState)
+        {
+            yield return null;
+            UpgradeState(transitionState);
         }
 
         private void UpgradeState(CutsceneState transitionState)

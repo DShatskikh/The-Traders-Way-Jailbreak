@@ -53,8 +53,8 @@ namespace Game
             _textAnimatorPlayer.onTypewriterStart.AddListener(OnTypewriterStart);
             _button.SetActive(false);
             
-            _playerInput.actions["Submit"].performed += ShowAllText;
-            _playerInput.actions["Cancel"].performed += ShowAllText;
+            _playerInput.actions["Submit"].canceled += ShowAllText;
+            _playerInput.actions["Cancel"].canceled += ShowAllText;
         }
 
         public override void OnDisable()
@@ -65,8 +65,11 @@ namespace Game
             _textAnimatorPlayer.onTypewriterStart.RemoveListener(OnTypewriterStart);
             gameObject.SetActive(false);
 
-            _playerInput.actions["Submit"].performed -= ShowAllText;
-            _playerInput.actions["Cancel"].performed -= ShowAllText;
+            if (_playerInput)
+            {
+                _playerInput.actions["Submit"].canceled -= ShowAllText;
+                _playerInput.actions["Cancel"].canceled -= ShowAllText;
+            }
             
             //GameData.InputManager.Show();
             //GameData.CharacterController.enabled = true;

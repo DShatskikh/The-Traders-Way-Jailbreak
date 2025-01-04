@@ -70,182 +70,179 @@ namespace Game
         {
             if (_gameState != GameState.OFF && _gameState != GameState.FINISHED)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners) 
             {
                 if (listener is IGameStartListener startListeners) 
                     startListeners.OnStartGame();
             }
-            
-            _gameState = GameState.PLAYING;
         }
 
         public void PauseGame()
         {
             if (_gameState != GameState.PLAYING)
                 return;
+
+            _gameState = GameState.PAUSED;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGamePauseListener pauseListeners) 
                     pauseListeners.OnPauseGame();
             }
-
-            _gameState = GameState.PAUSED;
         }
 
         public void ResumeGame()
         {
             if (_gameState != GameState.PAUSED)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameResumeListener resumeListeners) 
                     resumeListeners.OnResumeGame();
             }
-            
-            _gameState = GameState.PLAYING;
         }
 
         public void StartTransition()
         {
             if (_gameState != GameState.PLAYING)
                 return;
+
+            _gameState = GameState.TRANSITION;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameTransitionListener transitionListener) 
                     transitionListener.OnStartTransition();
             }
-            
-            _gameState = GameState.TRANSITION;
         }
 
         public void EndTransition()
         {
             if (_gameState != GameState.TRANSITION)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameTransitionListener transitionListener) 
                     transitionListener.OnEndTransition();
             }
-            
-            _gameState = GameState.PLAYING;
         }
         
         public void OpenLaptop()
         {
             if (_gameState != GameState.PLAYING)
                 return;
+
+            _gameState = GameState.LAPTOP;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameLaptopListener laptopListener) 
                     laptopListener.OnOpenLaptop();
             }
-            
-            _gameState = GameState.LAPTOP;
         }
 
         public void CloseLaptop()
         {
             if (_gameState != GameState.LAPTOP)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameLaptopListener laptopListener) 
                     laptopListener.OnCloseLaptop();
             }
-            
-            _gameState = GameState.PLAYING;
         }
         
         public void OpenShop()
         {
             if (_gameState != GameState.PLAYING)
                 return;
+
+            _gameState = GameState.SHOP;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameShopListener shopListener) 
                     shopListener.OnOpenShop();
             }
-            
-            _gameState = GameState.SHOP;
         }
 
         public void CloseShop()
         {
             if (_gameState != GameState.SHOP)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameShopListener shopListener) 
                     shopListener.OnCloseShop();
             }
-            
-            _gameState = GameState.PLAYING;
         }
         
         public void OpenADS()
         {
             if (_gameState != GameState.PLAYING)
                 return;
+
+            _gameState = GameState.ADS;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameADSListener adsListener) 
                     adsListener.OnShowADS();
             }
-            
-            _gameState = GameState.ADS;
         }
 
         public void CloseADS()
         {
             if (_gameState != GameState.ADS)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameADSListener adsListener) 
                     adsListener.OnHideADS();
             }
-            
-            _gameState = GameState.PLAYING;
         }
 
         public void OpenDialog()
         {
-            if (_gameState != GameState.PLAYING)
-                return;
+            _gameState = GameState.DIALOGUE;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameDialogueListener dialogueListener) 
                     dialogueListener.OnShowDialogue();
             }
-            
-            _gameState = GameState.DIALOGUE;
         }
 
         public void CloseDialog()
         {
             if (_gameState != GameState.DIALOGUE)
                 return;
+
+            _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners)
             {
                 if (listener is IGameDialogueListener dialogueListener) 
                     dialogueListener.OnHideDialogue();
             }
-            
-            _gameState = GameState.PLAYING;
         }
     }
 }

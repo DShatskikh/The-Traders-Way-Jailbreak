@@ -13,7 +13,7 @@ namespace Game
         [SerializeField]
         private Transform _point;
         
-        private MonoBehaviour _nearestUseObject;
+        public ReactiveProperty<MonoBehaviour> NearestUseObject = new();
 
         public void Search()
         {
@@ -48,12 +48,12 @@ namespace Game
 
             if (nearestUseObject != null)
             {
-                if (nearestUseObject != _nearestUseObject)
+                if (nearestUseObject != NearestUseObject.Value)
                 {
                     Found(nearestUseObject);
                 }
             }
-            else if (_nearestUseObject)
+            else if (NearestUseObject.Value)
                 Lost();
         }
 
@@ -71,7 +71,7 @@ namespace Game
                     GameData.UseButton.ResetText();
             }*/
 
-            _nearestUseObject = nearestUseObject;
+            NearestUseObject.Value = nearestUseObject;
         }
         
         public void Lost()
@@ -83,17 +83,17 @@ namespace Game
                 GameData.UseButton.gameObject.SetActive(false);
             }*/
 
-            _nearestUseObject = null;
+            NearestUseObject.Value = null;
         }
 
         public void Use()
         {
             //GameData.UseButton.gameObject.SetActive(false);
             
-            if (!_nearestUseObject)
+            if (!NearestUseObject.Value)
                 return;
 
-            switch (_nearestUseObject)
+            switch (NearestUseObject.Value)
             {
                 case IUseObject useObject:
                     useObject.Use();
