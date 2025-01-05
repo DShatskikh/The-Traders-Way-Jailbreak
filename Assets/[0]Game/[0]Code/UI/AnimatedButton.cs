@@ -131,6 +131,8 @@ namespace Game
             _label.color = _notPressedColor;
             _frame.color = _notPressedColor;
             _exitAnimation.PlayFeedbacks();
+            
+            SoundPlayer.Play(AssetProvider.Instance.ClickSound);
         }
     }
 }

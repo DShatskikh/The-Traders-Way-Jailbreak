@@ -35,6 +35,12 @@ namespace Game
 
         [SerializeField]
         private ConsoleService _consoleService;
+
+        [SerializeField]
+        private DialogueExtensions _dialogueExtensions;
+
+        [SerializeField]
+        private CompanionsManager _companionsManager;
         
         [Header("Links")]
         [SerializeField]
@@ -92,11 +98,13 @@ namespace Game
             ServiceLocator.Register(_stockMarketService);
             ServiceLocator.Register(_volumeService);
             ServiceLocator.Register(_transitionService);
+            ServiceLocator.Register(_companionsManager);
 
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
             Injector.Inject(_consoleService);
             _gameStateController.AddListener(_adsTimer);
+            _gameStateController.AddListener(_dialogueExtensions);
             
             var allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             
@@ -124,6 +132,7 @@ namespace Game
             _coroutineRunner.Init();
             CutscenesDataStorage.Init();
             _consoleService.Init();
+            _dialogueExtensions.Init();
 
             var luaCommandRegister = new LuaCommandRegister();
             luaCommandRegister.Register();

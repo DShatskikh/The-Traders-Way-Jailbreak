@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using PixelCrushers;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,7 +15,7 @@ namespace Game
         private TargetArrow _laptopArrow, _tvArrow, _bedArrow;
 
         [SerializeField]
-        private GameObject _nightPanel;
+        private GameObject _nightPanel, _policePanel;
 
         [SerializeField]
         private AudioClip _policeClip;
@@ -100,24 +99,36 @@ namespace Game
                     return;
                 case CutsceneState.LAPTOP:
                     _startDialogue.OnUse();
-                    _laptopArrow.gameObject.SetActive(true);
+                    DialogueExtensions.SubscriptionCloseDialog(() =>
+                    {
+                        _laptopArrow.gameObject.SetActive(true);
+                    });
+                    
                     _cutsceneState = CutsceneState.LAPTOP;
                     break;
                 case CutsceneState.TV when _cutsceneState != CutsceneState.LAPTOP:
                     return;
                 case CutsceneState.TV:
-                    _laptopArrow.gameObject.SetActive(false);
-                    _tvArrow.gameObject.SetActive(true);
-                    _cutsceneState = CutsceneState.TV;
                     _closeLaptopDialogue.OnUse();
-                    _tvNews.gameObject.SetActive(true);
+                    DialogueExtensions.SubscriptionCloseDialog(() =>
+                    {
+                        _tvArrow.gameObject.SetActive(true);
+                        _tvNews.gameObject.SetActive(true);
+                    });
+                    
+                    _laptopArrow.gameObject.SetActive(false);
                     _tv.gameObject.SetActive(false);
+                    _cutsceneState = CutsceneState.TV;
                     break;
                 case CutsceneState.BED when _cutsceneState != CutsceneState.TV:
                     return;
                 case CutsceneState.BED:
+                    DialogueExtensions.SubscriptionCloseDialog(() =>
+                    {
+                        _bedArrow.gameObject.SetActive(true);
+                    });
+                    
                     _tvArrow.gameObject.SetActive(false);
-                    _bedArrow.gameObject.SetActive(true);
                     _cutsceneState = CutsceneState.BED;
                     break;
                 case CutsceneState.POLICE when _cutsceneState != CutsceneState.BED:
@@ -125,9 +136,11 @@ namespace Game
                 case CutsceneState.POLICE:
                     _bedArrow.gameObject.SetActive(false);
                     _nightPanel.SetActive(true);
-                    _cutsceneState = CutsceneState.BED;
                     MusicPlayer.Play(_policeClip);
                     _policeEvent.Invoke();
+                    _cutsceneState = CutsceneState.BED;
+
+                    _policePanel.gameObject.SetActive(true);
                     
                     CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
                     {

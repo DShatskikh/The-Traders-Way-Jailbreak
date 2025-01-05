@@ -14,8 +14,13 @@ namespace Game
             _instance = new CutscenesDataStorage();
         }
 
-        public static void SetData<T>(string id, T saveData) => 
-            _instance._dictionary.Add(id, SaveSystem.Serialize(saveData));
+        public static void SetData<T>(string id, T saveData)
+        {
+            if (!_instance._dictionary.TryAdd(id, SaveSystem.Serialize(saveData)))
+            {
+                _instance._dictionary[id] = SaveSystem.Serialize(saveData);
+            }
+        }
 
         public static T GetData<T>(string id) where T : new()
         {

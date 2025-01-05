@@ -131,6 +131,10 @@ MonoBehaviour:
     m_Key: FinallySpaceShip
     m_Metadata:
       m_Items: []
+  - m_Id: 6181161392259072
+    m_Key: HangarDiamondTable
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

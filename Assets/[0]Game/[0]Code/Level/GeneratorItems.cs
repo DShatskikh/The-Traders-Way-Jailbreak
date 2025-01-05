@@ -4,8 +4,11 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Kystic : MonoBehaviour, IUseObject
+    public class GeneratorItems : MonoBehaviour, IUseObject
     {
+        [SerializeField]
+        private string _idItem = "Kystic";
+        
         [SerializeField]
         private ParticleSystem _particleSystem;
 
@@ -28,7 +31,7 @@ namespace Game
             SoundPlayer.Play(AssetProvider.Instance.BuySound);
             _particleSystem.Play();
             _mmfPlayer.PlayFeedbacks();
-            _stockMarketService.AddItem("Kystic");
+            _stockMarketService.AddItem(_idItem);
             _dialogueSystemTrigger.OnUse();
         }
     }

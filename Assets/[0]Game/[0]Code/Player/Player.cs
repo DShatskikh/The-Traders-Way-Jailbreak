@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game
@@ -32,6 +33,14 @@ namespace Game
 
         public ReactiveProperty<MonoBehaviour> NearestUseObject => 
             _useAreaChecker.NearestUseObject;
+
+        public Action Move
+        {
+            get { return _mover.MoveAction; }
+            set { _mover.MoveAction = value; }
+        }
+
+        public bool IsMove => _mover.IsMove;
         
         [Inject]
         private void Construct(PlayerInput playerInput)
@@ -52,9 +61,13 @@ namespace Game
 
         public void OnUpdate()
         {
-            _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
             _isRun.Value = _playerInput.actions["Cancel"].IsPressed();
-            _mover.Move(_direction.Value,  _isRun.Value);
+
+            if (_playerInput.actions["Move"].IsPressed())
+            {
+                _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
+                _mover.Move(_direction.Value,  _isRun.Value);
+            }
         }
 
         public void OnFixedUpdate()
@@ -154,6 +167,7 @@ namespace Game
                 _useAreaChecker.Lost();
             
                 _playerInput.actions["Submit"].canceled += TryUse;
+                _playerInput.actions["Move"].canceled += (_) => _mover.Stop();
             }
             else
             {
@@ -168,6 +182,7 @@ namespace Game
                 
                 _direction.Changed -= _view.OnDirectionChange;
                 _currentSpeed.Changed -= _view.OnSpeedChange;
+                _playerInput.actions["Move"].canceled -= (_) => _mover.Stop();
                 
                 _useAreaChecker.Lost();
             }

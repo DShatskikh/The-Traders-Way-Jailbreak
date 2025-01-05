@@ -15,14 +15,22 @@ namespace Game
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
+        private bool _isMove;
+        
+        public Action MoveAction;
+        public bool IsMove => _isMove;
+        
         public void Move(Vector2 direction, bool isRun)
         {
             _rigidbody.linearVelocity = direction * (isRun ? _runSpeed : _speed);
+            MoveAction?.Invoke();
+            _isMove = true;
         }
 
         public void Stop()
         {
             _rigidbody.linearVelocity = Vector2.zero;
+            _isMove = false;
         }
     }
 }

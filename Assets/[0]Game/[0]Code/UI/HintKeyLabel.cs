@@ -58,7 +58,7 @@ namespace Game
         }
 
         private IEnumerator UpdateBindingDisplay()
-        {
+        { 
             var displayString = string.Empty;
             
             var action = m_Action?.action;
