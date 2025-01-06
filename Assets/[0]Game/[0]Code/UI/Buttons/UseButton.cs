@@ -32,7 +32,7 @@ namespace Game
             if (_playerInput)
             {
                 _playerInput.actions["Submit"].started -= Onstarted;
-                _playerInput.actions["Submit"].canceled -= Onstarted; 
+                _playerInput.actions["Submit"].canceled -= Oncanceled; 
             }
         }
 

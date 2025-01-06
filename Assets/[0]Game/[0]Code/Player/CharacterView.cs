@@ -27,7 +27,12 @@ namespace Game
             if (value.x < 0) 
                 Flip(true);
         }
-        
+
+        public void Mining()
+        {
+            _animator.SetFloat(StateHash, 2);
+        }
+
         private void Flip(bool isFlip) => 
             _spriteRenderer.flipX = isFlip;
     }

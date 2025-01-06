@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
@@ -18,7 +19,14 @@ namespace Game
         
         private Sequence _animation;
         private GameStateController _gameStateController;
-
+        private SaveData _saveData;
+        
+        [Serializable]
+        public struct SaveData
+        {
+            public bool IsShow;
+        }
+        
         [Inject]
         private void Construct(GameStateController gameStateController)
         {
@@ -27,7 +35,10 @@ namespace Game
         
         public void Use()
         {
-            StartCoroutine(AwaitAnimation());
+            if (_saveData.IsShow)
+                _dialogueSystemTrigger.OnUse();
+            else
+                StartCoroutine(AwaitAnimation());
         }
 
         private IEnumerator AwaitAnimation()
@@ -38,16 +49,20 @@ namespace Game
             yield return _animation.Append(_head.DOMoveY(_upPoint.position.y, 1f)).WaitForCompletion();
             yield return new WaitForSeconds(1);
             _dialogueSystemTrigger.OnUse();
-
             var isEnd = false;
             _dialogueSystemEvents.conversationEvents.onConversationEnd.AddListener((r) => isEnd = true);
             yield return new WaitUntil(() => isEnd);
             _dialogueSystemEvents.conversationEvents.onConversationEnd.RemoveAllListeners();
-            
+
+            _saveData.IsShow = true;
+            CutscenesDataStorage.SetData("Skibidi", _saveData);
             yield return new WaitForSeconds(1);
+            _gameStateController.OpenDialog();
             yield return _animation.Append(_head.DOMoveY(_downPoint.position.y, 1f)).WaitForCompletion();
             
             _gameStateController.CloseDialog();
+            
+            _dialogueSystemTrigger.OnUse();
         }
     }
 }

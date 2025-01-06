@@ -99,6 +99,15 @@ namespace Game
             Changed?.Invoke(_money);
             TaxChanged?.Invoke(_tax);
         }
+
+        public void SetMoneyAndTax(int money, int tax)
+        {
+            _money = money;
+            _tax = tax;
+            
+            Changed?.Invoke(_money);
+            TaxChanged?.Invoke(_tax);
+        }
         
         private bool IsHaveMoney(double money) => 
             _money >= money;

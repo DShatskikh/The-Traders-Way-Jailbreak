@@ -22,6 +22,15 @@ MonoBehaviour:
   - functionName: IsWorldPolice
     parameters: 
     returnValue: 1
+  - functionName: IsBuy
+    parameters: 02000000
+    returnValue: 1
+  - functionName: IsFirstShopOpen
+    parameters: 
+    returnValue: 1
+  - functionName: IsSkibidi
+    parameters: 
+    returnValue: 1
   scriptFunctions:
   - functionName: AddItem
     parameters: 0200000001000000

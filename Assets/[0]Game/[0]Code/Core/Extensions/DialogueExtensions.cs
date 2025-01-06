@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using UnityEngine;
 
 namespace Game
 {
@@ -16,6 +18,18 @@ namespace Game
         public static void SubscriptionCloseDialog(Action action)
         {
             _instance._action += action;
+        }
+        
+        public static IEnumerator AwaitCloseDialog()
+        {
+            bool isClose = false;
+
+            SubscriptionCloseDialog(() =>
+            {
+                isClose = true;
+            });
+            
+            yield return new WaitUntil(() => isClose);
         }
 
         private static void OnClose(Action action)

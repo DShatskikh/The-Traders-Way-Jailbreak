@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4fd3b7822c4f939bae9ee1af53bca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mover:
+  _defaultMover:
     _speed: 3
     _runSpeed: 7
     _rigidbody: {fileID: 24862749}
@@ -7261,10 +7261,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initializationLocationData:
-    LocationName: WorldHome
-    PointIndex: 2
+    LocationName: RecreationRoom
+    PointIndex: 0
     CharacterPositionX: 0
     CharacterPositionY: 0
+  _homeData:
+    CutsceneState: 4
+  _startMoney: 999999999
   _musicPlayer:
     _audioSource: {fileID: 304891725}
   _soundPlayer:
@@ -7294,6 +7297,7 @@ MonoBehaviour:
   _companionsManager:
     Speed: 0.02
     ResetTargetPositionDuration: 0.5
+    FlipInterval: 0.5
     _companions:
     - {fileID: 677476793}
     - {fileID: 1356325558}

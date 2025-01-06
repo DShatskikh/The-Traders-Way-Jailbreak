@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -8,8 +9,9 @@ namespace Game
         IGameUpdateListener,IGameFixedUpdateListener, IGameTransitionListener, IGameLaptopListener,
         IGameShopListener, IGameADSListener, IGameDialogueListener
     {
+        [FormerlySerializedAs("_mover")]
         [SerializeField]
-        private CharacterMover _mover;
+        private CharacterMover _defaultMover;
 
         [SerializeField]
         private StepsSoundPlayer _stepsSoundPlayer;
@@ -30,18 +32,17 @@ namespace Game
         private PlayerInput _playerInput;
         private Vector3 _previousPosition;
         private bool _isPause;
+        private IMover _mover;
 
         public ReactiveProperty<MonoBehaviour> NearestUseObject => 
             _useAreaChecker.NearestUseObject;
 
         public Action Move
         {
-            get { return _mover.MoveAction; }
-            set { _mover.MoveAction = value; }
+            get => _mover.MoveAction;
+            set => _mover.MoveAction = value;
         }
 
-        public bool IsMove => _mover.IsMove;
-        
         [Inject]
         private void Construct(PlayerInput playerInput)
         {
@@ -50,6 +51,8 @@ namespace Game
         
         private void Awake()
         {
+            _mover = _defaultMover;
+            
             _cameraAreaChecker.Init();
             _stepsSoundPlayer.Init(transform);
         }
@@ -82,6 +85,16 @@ namespace Game
             }
         }
 
+        public void SetMover(IMover mover)
+        {
+            _mover = mover;
+        }
+        
+        public void ResetMover()
+        {
+            _mover = _defaultMover;
+        }
+        
         public void OnStartGame()
         {
             Activate(true);
@@ -155,37 +168,45 @@ namespace Game
         private void Activate(bool isActivate)
         {
             _isPause = !isActivate;
-            
+
             if (isActivate)
             {
                 _previousPosition = transform.position;
-                
+
                 _currentSpeed.Changed += _stepsSoundPlayer.OnSpeedChange;
                 _isRun.Changed += _stepsSoundPlayer.OnIsRunChange;
                 _direction.Changed += _view.OnDirectionChange;
                 _currentSpeed.Changed += _view.OnSpeedChange;
                 _useAreaChecker.Lost();
-            
+
                 _playerInput.actions["Submit"].canceled += TryUse;
-                _playerInput.actions["Move"].canceled += (_) => _mover.Stop();
+                _playerInput.actions["Move"].canceled += (_) => _defaultMover.Stop();
             }
             else
             {
                 _currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
                 _isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
-                
+
                 if (_playerInput)
                     _playerInput.actions["Submit"].canceled -= TryUse;
-            
+
                 _mover.Stop();
                 _currentSpeed.Value = 0;
-                
+
                 _direction.Changed -= _view.OnDirectionChange;
                 _currentSpeed.Changed -= _view.OnSpeedChange;
-                _playerInput.actions["Move"].canceled -= (_) => _mover.Stop();
-                
+                _playerInput.actions["Move"].canceled -= (_) => _defaultMover.Stop();
+
                 _useAreaChecker.Lost();
             }
+        }
+
+        public void SetViewState(int id)
+        {
+            if (id == 2)
+                _view.Mining();
+            else
+                _view.OnSpeedChange(0);
         }
     }
 }

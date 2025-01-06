@@ -33,6 +33,7 @@ namespace Game
         private bool _isSelect;
         private bool _isMouse;
         private BaseEventData _eventData;
+        private bool _isPress;
 
         public bool IsSelect => _isSelect;
 
@@ -121,6 +122,8 @@ namespace Game
         
         private void StartClick()
         {
+            _isPress = true;
+            
             _label.color = _pressedColor;
             _frame.color = _pressedColor;
             _enterAnimation.PlayFeedbacks();
@@ -128,6 +131,11 @@ namespace Game
         
         private void EndClick()
         {
+            if (!_isPress)
+                return;
+            
+            _isPress = false;
+            
             _label.color = _notPressedColor;
             _frame.color = _notPressedColor;
             _exitAnimation.PlayFeedbacks();

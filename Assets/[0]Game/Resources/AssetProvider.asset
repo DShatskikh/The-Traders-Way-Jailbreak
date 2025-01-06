@@ -78,7 +78,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - Id: Diamond
-    Icon: {fileID: -1873668908, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
+    Icon: {fileID: -1175944409, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     Price: 50000
     Name:
       m_TableReference:

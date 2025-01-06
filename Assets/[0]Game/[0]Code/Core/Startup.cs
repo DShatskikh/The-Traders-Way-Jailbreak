@@ -11,6 +11,12 @@ namespace Game
         [SerializeField]
         private LocationsManager.Data _initializationLocationData;
 
+        [SerializeField]
+        private HomeCutscene.SaveData _homeData;
+
+        [SerializeField]
+        private int _startMoney = 999999999;
+        
         [Header("Services")]
         [SerializeField]
         private MusicPlayer _musicPlayer;
@@ -137,7 +143,14 @@ namespace Game
             var luaCommandRegister = new LuaCommandRegister();
             luaCommandRegister.Register();
 
-            _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);
+#if UNITY_EDITOR
+            CutscenesDataStorage.SetData("HomeCutscene", _homeData);
+            _walletService.SetMoneyAndTax(_startMoney, 0);
+            
+            _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);  
+#else
+            _locationsManager.SwitchLocation("World", 0);
+#endif
 
             _gameStateController.StartGame();
         }
