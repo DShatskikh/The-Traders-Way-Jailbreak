@@ -24883,7 +24883,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 785949417155760153, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Name
-      value: DialogueUsable
+      value: Watermelon
       objectReference: {fileID: 0}
     - target: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24940,8 +24940,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 785949417155760153, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3835763269455258819}
   m_SourcePrefab: {fileID: 100100000, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
+--- !u!1 &4816790814152811751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 785949417155760153, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
+  m_PrefabInstance: {fileID: 5201918622927156478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3835763269455258819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816790814152811751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: decdb490909f4b52ad664bc081f8d8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _watermelon: {fileID: 2623161887358323769}
 --- !u!4 &5963757210152976815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}

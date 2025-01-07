@@ -17,13 +17,16 @@ namespace Game
         private void OnEnable()
         {
             _playerInput.actions["Cancel"].started += OnSubmitDown;
-            _playerInput.actions["Cancel"].performed += OnSubmitUp;
+            _playerInput.actions["Cancel"].canceled += OnSubmitUp;
         }
 
         private void OnDisable()
         {
-            _playerInput.actions["Cancel"].started -= OnSubmitDown;
-            _playerInput.actions["Cancel"].performed -= OnSubmitUp;
+            if (_playerInput)
+            {
+                _playerInput.actions["Cancel"].started -= OnSubmitDown;
+                _playerInput.actions["Cancel"].canceled -= OnSubmitUp;
+            }
         }
 
         private void OnSubmitDown(InputAction.CallbackContext obj)

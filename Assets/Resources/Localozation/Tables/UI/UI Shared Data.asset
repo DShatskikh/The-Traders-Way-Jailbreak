@@ -135,6 +135,18 @@ MonoBehaviour:
     m_Key: HangarDiamondTable
     m_Metadata:
       m_Items: []
+  - m_Id: 6985822718246912
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6997299936215040
+    m_Key: Use
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6997357368819712
+    m_Key: Close
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

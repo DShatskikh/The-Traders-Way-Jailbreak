@@ -18,6 +18,9 @@ namespace Game
             
             Lua.RegisterFunction(nameof(IsSkibidi), this,
                 SymbolExtensions.GetMethodInfo(() => IsSkibidi()));
+            
+            Lua.RegisterFunction(nameof(IsBreakVase), this,
+                SymbolExtensions.GetMethodInfo(() => IsBreakVase()));
         }
         
         private void OpenURL(string address) => 
@@ -31,5 +34,8 @@ namespace Game
         
         private bool IsSkibidi() => 
             CutscenesDataStorage.GetData<Skibidi.SaveData>("Skibidi").IsShow;
+        
+        private bool IsBreakVase() => 
+            CutscenesDataStorage.GetData<PrehistoricVase.SaveData>("Vase").IsBreak;
     }
 }

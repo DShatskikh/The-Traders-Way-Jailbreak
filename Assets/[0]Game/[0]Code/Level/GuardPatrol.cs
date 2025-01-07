@@ -48,15 +48,14 @@ namespace Game
 
         public void OnEndTransition()
         {
-            if (gameObject.activeSelf)
-                StartPatrol();
+            //if (gameObject.activeSelf)
+            //    StartPatrol();
         }
 
         private void StartPatrol()
         {
             Vector3 offset = ((Vector2)_targetPoint.position - (Vector2)_warningZoneTransform.position).normalized;
             _warningZoneTransform.rotation = Quaternion.LookRotation(Vector3.forward, offset);
-            
             _coroutine = StartCoroutine(AwaitPatrol());
         }
 

@@ -3691,7 +3691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4892,6 +4892,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 19.901978
       objectReference: {fileID: 0}
+    - target: {fileID: 2261484490881104176, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 6985822718246912
+      objectReference: {fileID: 0}
     - target: {fileID: 2626791197232843465, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5000,6 +5004,10 @@ PrefabInstance:
       propertyPath: _label
       value: 
       objectReference: {fileID: 179759752}
+    - target: {fileID: 6956244233107535785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8613401375511067883, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Name
       value: PauseButton
@@ -7261,7 +7269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initializationLocationData:
-    LocationName: RecreationRoom
+    LocationName: Hangar
     PointIndex: 0
     CharacterPositionX: 0
     CharacterPositionY: 0
@@ -8051,6 +8059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 417864177}
     m_Modifications:
+    - target: {fileID: 2261484490881104176, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 6997299936215040
+      objectReference: {fileID: 0}
     - target: {fileID: 2626791197232843465, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -8141,7 +8153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8613401375511067883, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Name
-      value: AnimatedButton
+      value: UseButton
       objectReference: {fileID: 0}
     - target: {fileID: 8613401375511067883, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_IsActive

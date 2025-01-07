@@ -1,25 +1,58 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using PixelCrushers.DialogueSystem;
+using UnityEngine;
 
 namespace Game
 {
-    public class PrehistoricVase : MonoBehaviour, IUseObject
+    public class PrehistoricVase : MonoBehaviour
     {
         [SerializeField]
-        private GameObject _vase;
+        private SpriteRenderer _spriteRenderer;
 
         [SerializeField]
-        private GameObject _replace;
+        private Sprite _replaceSprite;
 
-        private bool _isReplace;
-        
-        public void Use()
+        private SaveData _saveData;
+        private GameStateController _gameStateController;
+
+        [Serializable]
+        public struct SaveData
         {
-            
+            public bool IsBreak;
         }
 
-        public void Replace()
+        [Inject]
+        private void Construct(GameStateController gameStateController)
         {
-            
+            _gameStateController = gameStateController;
+        }
+        
+        private void Start()
+        {
+            if (CutscenesDataStorage.GetData<SaveData>("Vase").IsBreak)
+            {
+                Replace();
+            }
+        }
+
+        private void Break()
+        {
+            StartCoroutine(AwaitBreak());
+        }
+
+        private IEnumerator AwaitBreak()
+        {
+            Replace();
+            _gameStateController.OpenDialog();
+            yield return new WaitForSeconds(2);
+            Sequencer.Message("\"EndBreak\"");
+            CutscenesDataStorage.SetData("Vase", new SaveData() {IsBreak = true});
+        }
+
+        private void Replace()
+        {
+            _spriteRenderer.sprite = _replaceSprite;
         }
     }
 }

@@ -25,6 +25,8 @@ namespace Game
         {
             _playerInput.actions["Submit"].started += Onstarted;
             _playerInput.actions["Submit"].canceled += Oncanceled;
+            
+            _button.onClick.AddListener(() => _player.TryUse(new InputAction.CallbackContext()));
         }
 
         private void OnDisable()
@@ -33,6 +35,8 @@ namespace Game
             {
                 _playerInput.actions["Submit"].started -= Onstarted;
                 _playerInput.actions["Submit"].canceled -= Oncanceled; 
+                
+                _button.onClick.RemoveAllListeners();
             }
         }
 
@@ -54,7 +58,8 @@ namespace Game
         private void Oncanceled(InputAction.CallbackContext obj)
         {
             _button.OnPointerUp(null);
-            _player.TryUse(new InputAction.CallbackContext());
+            _button.onClick.Invoke();
+            //_player.TryUse(new InputAction.CallbackContext());
             gameObject.SetActive(false);
         }
     }
