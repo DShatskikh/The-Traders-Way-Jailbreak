@@ -331,7 +331,7 @@ TextureImporter:
         serializedVersion: 2
         x: 164
         y: 483
-        width: 27
+        width: 25
         height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2129,6 +2129,160 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Environment_91
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 381
+        width: 1
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f6766b79f75324e88d9fec357519fd
+      internalID: 1250241850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_92
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 372
+        width: 20
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0f1db5a50f25346902660922d81433
+      internalID: -1291553654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_93
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 348
+        width: 29
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af3ddbe829f71d4fa3710fce98bd1a1
+      internalID: 732138757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_94
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 329
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc0f3864f9aa9e4f8728c86f870bcb1
+      internalID: -603011911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_95
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 50
+        width: 50
+        height: 44
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe1d76fff092bf48be73d19f5503c59
+      internalID: -1215766624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_96
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 472
+        width: 3
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f89bb67feb503843bf5bedffaf7db68
+      internalID: -1595717257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_97
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 261
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469f1ba82e6396e4fb9558cb86850d6f
+      internalID: 1771126053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2234,6 +2388,13 @@ TextureImporter:
       Environment_89: 1529053856
       Environment_9: 1566003732
       Environment_90: -7709616
+      Environment_91: 1250241850
+      Environment_92: -1291553654
+      Environment_93: 732138757
+      Environment_94: -603011911
+      Environment_95: -1215766624
+      Environment_96: -1595717257
+      Environment_97: 1771126053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

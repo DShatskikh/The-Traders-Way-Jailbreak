@@ -50,3 +50,6 @@ MonoBehaviour:
   - functionName: OpenURL
     parameters: 02000000
     returnValue: 0
+  - functionName: PlayBreak
+    parameters: 
+    returnValue: 0

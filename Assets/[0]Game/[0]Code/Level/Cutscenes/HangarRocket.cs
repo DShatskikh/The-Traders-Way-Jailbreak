@@ -1,0 +1,74 @@
+﻿using System.Collections;
+using DG.Tweening;
+using PixelCrushers.DialogueSystem.Wrappers;
+using UnityEngine;
+
+namespace Game
+{
+    public class HangarRocket : MonoBehaviour, IUseObject
+    {
+        [SerializeField]
+        private DialogueSystemTrigger _endGameDialog;
+        
+        [SerializeField]
+        private DialogueSystemTrigger _defaultDialog;
+
+        [SerializeField]
+        private GameObject _fakePlayer;
+
+        [SerializeField]
+        private GameObject _effect;
+        
+        private LocationsManager _levelManager;
+        private Player _player;
+
+        [Inject]
+        private void Construct(LocationsManager levelManager, Player player)
+        {
+            _levelManager = levelManager;
+            _player = player;
+        }
+        
+        public void Use()
+        {
+            if (CutscenesDataStorage.GetData<SirenCutscene.SaveData>("Siren").State ==
+                SirenCutscene.State.EndSpeakMayor)
+            {
+                _endGameDialog.OnUse();
+            }
+            else
+            {
+                _defaultDialog.OnUse();
+            }
+        }
+
+        public void EndGame()
+        {
+            DialogueExtensions.SubscriptionCloseDialog(() =>
+            {
+                print("EndGame");
+                StartCoroutine(AwaitEndGame());
+            });
+        }
+
+        private IEnumerator AwaitEndGame()
+        {
+            _player.gameObject.SetActive(false);
+            _fakePlayer.SetActive(true);
+            
+            yield return new WaitForSeconds(0.5f);
+            
+            _effect.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            
+            var sequence = DOTween.Sequence();
+            yield return sequence.Append(transform.DOMoveY(transform.position.AddY(10).y, 3f)).WaitForCompletion();
+            
+            var homeCutsceneSaveData = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            homeCutsceneSaveData.CutsceneState = HomeCutscene.CutsceneState.EndGame;
+            CutscenesDataStorage.SetData("HomeCutscene", homeCutsceneSaveData);
+            
+            _levelManager.SwitchLocation("WorldHome", 3);
+        }
+    }
+}

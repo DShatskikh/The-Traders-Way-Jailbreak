@@ -1919,10 +1919,10 @@ PrefabInstance:
     - target: {fileID: 8927241094760968785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_Action
       value: 
-      objectReference: {fileID: 2426882071051437336, guid: 5dedec86905dad44480e6a3f7827b16a, type: 3}
+      objectReference: {fileID: -2012112898728323227, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
     - target: {fileID: 8927241094760968785, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_BindingId
-      value: 8060f6f8-1732-43d7-be76-afc6c1de2e04
+      value: 7e7b1ea0-7ed1-420a-90c8-97c42c5ff157
       objectReference: {fileID: 0}
     - target: {fileID: 9139543496840949607, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
       propertyPath: m_IsActive

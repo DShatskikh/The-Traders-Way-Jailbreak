@@ -35,6 +35,7 @@ namespace Game
             TV = 2, //Посмотреть телевизор
             BED = 3, //Лечь спать
             POLICE = 4, //Ломятся полицейские
+            EndGame = 5, //Игрок прилетел домой
         }
         
         [Serializable]
@@ -52,6 +53,11 @@ namespace Game
 
         public void OnStartGame()
         {
+            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            
+            if (data.CutsceneState == CutsceneState.EndGame)
+                return;
+                
             StartCoroutine(AwaitUpgradeState(CutsceneState.LAPTOP));
         }
         
@@ -62,6 +68,11 @@ namespace Game
 
         public void OnEndTransition()
         {
+            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            
+            if (data.CutsceneState == CutsceneState.EndGame)
+                return;
+            
             UpgradeState(CutsceneState.LAPTOP);
         }
 

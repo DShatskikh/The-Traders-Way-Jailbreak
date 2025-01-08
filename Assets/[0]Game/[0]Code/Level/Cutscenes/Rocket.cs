@@ -49,11 +49,11 @@ namespace Game
             
             ServiceLocator.Get<CompanionsManager>().TryDeactivateCompanion("PoliceChief");
             _chief.SetActive(true);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             
             ServiceLocator.Get<CompanionsManager>().TryDeactivateCompanion("PoliceDilleron");
             _dilleron.SetActive(true);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             
             ServiceLocator.Get<CompanionsManager>().TryDeactivateCompanion("PoliceNoobik");
             _noobik.SetActive(true);
@@ -64,7 +64,7 @@ namespace Game
             
             var sequence = DOTween.Sequence();
             yield return sequence.Append(transform.DOMoveY(transform.position.AddY(10).y, 3f)).WaitForCompletion();
-
+            
             _locationsManager.SwitchLocation("MyCell", 0);
         }
     }

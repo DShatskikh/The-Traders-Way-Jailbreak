@@ -43,6 +43,15 @@ namespace Game
             set => _mover.MoveAction = value;
         }
 
+        public Action StopMove 
+        {
+            get => _mover.StopAction;
+            set => _mover.StopAction = value;
+        }
+
+        public bool IsMove => _mover.IsMove;
+        public bool IsRun => _mover.IsRun;
+
         [Inject]
         private void Construct(PlayerInput playerInput)
         {
@@ -179,7 +188,7 @@ namespace Game
                 _currentSpeed.Changed += _view.OnSpeedChange;
                 _useAreaChecker.Lost();
 
-                _playerInput.actions["Submit"].canceled += TryUse;
+                //_playerInput.actions["Submit"].canceled += TryUse;
                 _playerInput.actions["Move"].canceled += (_) => _defaultMover.Stop();
             }
             else
@@ -187,8 +196,8 @@ namespace Game
                 _currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
                 _isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
 
-                if (_playerInput)
-                    _playerInput.actions["Submit"].canceled -= TryUse;
+                //if (_playerInput)
+                //    _playerInput.actions["Submit"].canceled -= TryUse;
 
                 _mover.Stop();
                 _currentSpeed.Value = 0;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using PixelCrushers.DialogueSystem;
+using UnityEngine;
 
 namespace Game
 {
@@ -6,10 +7,22 @@ namespace Game
     {
         [SerializeField]
         private HomeCutscene _homeCutscene;
+
+        [SerializeField]
+        private DialogueSystemTrigger _dialogTrigger;
         
         public void Use()
         {
-            _homeCutscene.Sleep();
+            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+
+            if (data.CutsceneState == HomeCutscene.CutsceneState.BED)
+            {
+                _homeCutscene.Sleep();
+            }
+            else
+            {
+                _dialogTrigger.OnUse();
+            }
         }
     }
 }

@@ -5,16 +5,30 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public sealed class CompanionsManager
+    public sealed class CompanionsManager : IGameUpdateListener
     {
-        public float Speed = 1;
-        public float ResetTargetPositionDuration = 1;
-        public float FlipInterval = 0.5f;
         [SerializeField]
         private Companion[] _companions;
         
         private List<Companion> _activeCompanions = new();
+        private Player _player;
         public List<Companion> GetAllCompanions => _activeCompanions;
+        public float Speed = 1;
+        public float RunSpeed = 2;
+        public float ResetTargetPositionDuration = 1;
+        public float FlipInterval = 0.5f;
+        public float GetSpeed => _player.IsRun ? RunSpeed : Speed;
+
+        [Inject]
+        private void Construct(Player player)
+        {
+            _player = player;
+        }
+
+        public void Init()
+        {
+            _player.StopMove += OnStop;
+        }
         
         public bool TryActivateCompanion(string id, Vector2 position, out Companion companion, bool isFlip)
         {
@@ -70,6 +84,21 @@ namespace Game
             }
 
             throw new Exception($"Not Companion: {companionName}");
+        }
+
+        public void OnUpdate()
+        {
+            if (_player.IsMove)
+            {
+                foreach (var companion in _activeCompanions) 
+                    companion.OnMove();
+            }
+        }
+
+        private void OnStop()
+        {
+            foreach (var companion in _activeCompanions) 
+                companion.OnStop();
         }
     }
 }

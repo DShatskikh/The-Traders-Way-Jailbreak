@@ -13,6 +13,12 @@ namespace Game
         [SerializeField]
         private Sprite _replaceSprite;
 
+        [SerializeField]
+        private ParticleSystem _particleSystem;
+
+        [SerializeField]
+        private Collider2D _collider2D;
+        
         private SaveData _saveData;
         private GameStateController _gameStateController;
 
@@ -44,6 +50,7 @@ namespace Game
         private IEnumerator AwaitBreak()
         {
             Replace();
+            _particleSystem.Play();
             _gameStateController.OpenDialog();
             yield return new WaitForSeconds(2);
             Sequencer.Message("\"EndBreak\"");
@@ -53,6 +60,8 @@ namespace Game
         private void Replace()
         {
             _spriteRenderer.sprite = _replaceSprite;
+            _spriteRenderer.sortingOrder = -1;
+            _collider2D.enabled = false;
         }
     }
 }

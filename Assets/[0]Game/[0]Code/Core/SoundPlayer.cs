@@ -22,6 +22,9 @@ namespace Game
             
             Lua.RegisterFunction("PlayBruh", this,
                 SymbolExtensions.GetMethodInfo(() => PlayBruh()));
+            
+            Lua.RegisterFunction("PlayBreak", this,
+                SymbolExtensions.GetMethodInfo(() => PlayBreak()));
         }
 
         public static void Play(AudioClip clip)
@@ -50,5 +53,8 @@ namespace Game
         
         private void PlayBuy() => 
             PlayLocal(AssetProvider.Instance.BuySound);
+        
+        private void PlayBreak() => 
+            PlayLocal(AssetProvider.Instance.BreakSound);
     }
 }

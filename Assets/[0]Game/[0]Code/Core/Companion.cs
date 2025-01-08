@@ -13,10 +13,8 @@ namespace Game
         [SerializeField]
         private Animator _animator;
         
-        private Player _player;
         private Transform _target;
         private Vector2 _targetPosition;
-        private Vector2 _previousPosition;
         private float _currentResetTargetPositionDuration = 0;
         private float _currentFlipDuration = 0;
         private CompanionsManager _companionsManager;
@@ -26,16 +24,9 @@ namespace Game
         public string GetId => _id;
 
         [Inject]
-        private void Construct(Player player, CompanionsManager companionsManager)
+        private void Construct(CompanionsManager companionsManager)
         {
-            _player = player;
             _companionsManager = companionsManager;
-        }
-
-        private void FixedUpdate()
-        {
-            _animator.SetFloat(SpeedHash, Vector2.Distance(_previousPosition, transform.position) > 0 ? 1 : 0);
-            _previousPosition = transform.position;
         }
 
         public void Activate(Transform target, Vector2 position, bool isFlip)
@@ -45,18 +36,14 @@ namespace Game
             _target = target;
 
             _spriteRenderer.flipX = isFlip;
-            
-            _player.Move += OnMove;
         }
 
         public void Deactivate()
         {
             gameObject.SetActive(false);
-            
-            _player.Move -= OnMove;
         }
 
-        private void OnMove()
+        public void OnMove()
         {
             _currentResetTargetPositionDuration += Time.deltaTime;
             _currentFlipDuration += Time.deltaTime;
@@ -73,7 +60,13 @@ namespace Game
                 _currentFlipDuration = 0;
             }
             
-            transform.position -= (Vector3)((Vector2)transform.position - _targetPosition).normalized * _companionsManager.Speed;
+            transform.position -= (Vector3)((Vector2)transform.position - _targetPosition).normalized * _companionsManager.GetSpeed * Time.deltaTime;
+            _animator.SetFloat(SpeedHash, 1);
+        }
+
+        public void OnStop()
+        {
+            _animator.SetFloat(SpeedHash, 0);
         }
     }
 }

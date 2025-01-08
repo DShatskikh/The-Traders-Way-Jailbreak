@@ -147,6 +147,10 @@ MonoBehaviour:
     m_Key: Close
     m_Metadata:
       m_Items: []
+  - m_Id: 7395548262154240
+    m_Key: PauseScreen
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -2,6 +2,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -15,7 +16,16 @@ namespace Game
         private HomeCutscene.SaveData _homeData;
 
         [SerializeField]
+        private MyCellCutscene.SaveData _myCellData;
+        
+        [SerializeField]
+        private SirenCutscene.SaveData _sirenData;
+        
+        [SerializeField]
         private int _startMoney = 999999999;
+
+        [SerializeField]
+        private string _playerName = "Денис";
         
         [Header("Services")]
         [SerializeField]
@@ -109,8 +119,10 @@ namespace Game
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
             Injector.Inject(_consoleService);
+            Injector.Inject(_companionsManager);
             _gameStateController.AddListener(_adsTimer);
             _gameStateController.AddListener(_dialogueExtensions);
+            _gameStateController.AddListener(_companionsManager);
             
             var allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             
@@ -139,19 +151,24 @@ namespace Game
             CutscenesDataStorage.Init();
             _consoleService.Init();
             _dialogueExtensions.Init();
-
+            _companionsManager.Init();
             var luaCommandRegister = new LuaCommandRegister();
             luaCommandRegister.Register();
 
 #if UNITY_EDITOR
             CutscenesDataStorage.SetData("HomeCutscene", _homeData);
+            CutscenesDataStorage.SetData("MyCellCutscene", _myCellData);
+            CutscenesDataStorage.SetData("Siren", _sirenData);
             _walletService.SetMoneyAndTax(_startMoney, 0);
+            
+            if (_playerName == string.Empty)
+                _screenManager.Show(ScreenType.NameSelect);
             
             _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);  
 #else
             _locationsManager.SwitchLocation("World", 0);
 #endif
-
+            
             _gameStateController.StartGame();
         }
     }

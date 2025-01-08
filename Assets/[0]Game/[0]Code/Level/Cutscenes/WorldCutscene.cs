@@ -28,13 +28,15 @@ namespace Game
         private WalletService _walletService;
         private HomeCutscene.SaveData _data;
         private CompanionsManager _companionsManager;
+        private Player _player;
 
         [Inject]
-        private void Construct(StockMarketService stockMarketService, WalletService walletService, CompanionsManager companionsManager)
+        private void Construct(StockMarketService stockMarketService, WalletService walletService, CompanionsManager companionsManager, Player player)
         {
             _stockMarketService = stockMarketService;
             _walletService = walletService;
             _companionsManager = companionsManager;
+            _player = player;
         }
         
         private void Start()
@@ -49,7 +51,8 @@ namespace Game
                 StartCoroutine(AwaitCutscene());
             }
             
-            StartCoroutine(AwaitCutscene());
+            if (_data.CutsceneState == HomeCutscene.CutsceneState.EndGame)
+                _player.gameObject.SetActive(true);
         }
 
         private IEnumerator AwaitCutscene()

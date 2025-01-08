@@ -15,23 +15,37 @@ namespace Game
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
+        private bool _isMove;
+        private bool _isRun;
+
         public Action MoveAction { get; set; }
+        public Action StopAction { get; set; }
+
+        public bool IsMove => _isMove;
+        public bool IsRun => _isRun;
 
         public void Move(Vector2 direction, bool isRun)
         {
+            _isRun = isRun;
             _rigidbody.linearVelocity = direction * (isRun ? _runSpeed : _speed);
             MoveAction?.Invoke();
+            _isMove = true;
         }
 
         public void Stop()
         {
             _rigidbody.linearVelocity = Vector2.zero;
+            _isMove = false;
+            StopAction?.Invoke();
         }
     }
 
     public interface IMover
     {
         Action MoveAction { get; set; }
+        Action StopAction { get; set; }
+        bool IsMove { get; }
+        bool IsRun { get; }
         void Move(Vector2 directionValue, bool isRunValue);
         void Stop();
     }
@@ -44,6 +58,9 @@ namespace Game
         private float _progress;
         private readonly bool _isRight;
         public Action MoveAction { get; set; }
+        public Action StopAction { get; set; }
+        public bool IsMove { get; }
+        public bool IsRun => _isRight;
 
         public CharacterLadderMover(Transform transform, Vector2 startPosition, Vector2 targetPosition, bool isRight)
         {
@@ -53,8 +70,13 @@ namespace Game
             _isRight = isRight;
 
             _progress = _isRight ? 1 : 0;
+
+            if (_isRight)
+                _targetPosition.y = transform.position.y;
+            else
+                _startPosition.y = transform.position.y;
         }
-        
+
         public void Move(Vector2 directionValue, bool isRunValue)
         {
             var speed = isRunValue ? 2 : 1;
@@ -83,7 +105,7 @@ namespace Game
 
         public void Stop()
         {
-            
+            StopAction?.Invoke();
         }
     }
 }

@@ -31,7 +31,6 @@ namespace Game
         private InputActionReference _inputAction;
         
         private bool _isSelect;
-        private bool _isMouse;
         private BaseEventData _eventData;
         private bool _isPress;
 
@@ -69,14 +68,12 @@ namespace Game
         {
             base.OnPointerEnter(eventData);
             Guided();
-            _isMouse = true;
         }
 
         public override void OnPointerExit(PointerEventData eventData)
         {
             base.OnPointerExit(eventData);
             NotGuided();
-            _isMouse = false;
         }
 
         public override void OnSelect(BaseEventData eventData)

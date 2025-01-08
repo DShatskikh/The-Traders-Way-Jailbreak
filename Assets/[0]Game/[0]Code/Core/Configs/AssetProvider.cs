@@ -23,6 +23,7 @@ namespace Game
         public AudioClip BuySound;
         public AudioClip ClickSound;
         public AudioClip BruhSound;
+        public AudioClip BreakSound;
         public AudioClip SpaceDoorOpenSound;
         public AudioClip SpaceDoorCloseSound;
     }

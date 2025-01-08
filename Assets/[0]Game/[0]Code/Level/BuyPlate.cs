@@ -26,6 +26,8 @@ namespace Game
         private WalletService _walletService;
         private SaveData _data;
 
+        public static Action BuyEvent;
+
         [Serializable]
         public struct SaveData
         {
@@ -60,6 +62,7 @@ namespace Game
                 gameObject.SetActive(false);
                 
                 CutscenesDataStorage.SetData(_id, new SaveData() {IsBuy = true});
+                BuyEvent?.Invoke();
             }
             else
             {
