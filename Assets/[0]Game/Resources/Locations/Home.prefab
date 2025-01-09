@@ -26703,7 +26703,7 @@ MonoBehaviour:
   _tvArrow: {fileID: 1067011014490529360}
   _bedArrow: {fileID: 3813304730338883110}
   _nightPanel: {fileID: 5205564666811653217}
-  _policePanel: {fileID: 4601510658161862756}
+  _policePanel: {fileID: 537689437524910601}
   _policeClip: {fileID: 8300000, guid: aac4c2c6c460bf5478ee6336371364b1, type: 3}
   _policeEvent:
     m_PersistentCalls:

@@ -49,6 +49,9 @@ namespace Game
 
         public void OnHideDialogue()
         {
+            if (!gameObject.activeSelf)
+                return;
+            
             _coroutine = StartCoroutine(AwaitMove());
         }
 

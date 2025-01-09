@@ -106,7 +106,7 @@ namespace Game
             _sellButton.interactable = count >= GetSellCount();
         }
 
-        private void WalletServiceOnChanged(float money)
+        private void WalletServiceOnChanged(double money)
         {
             _buyButton.interactable = money >= GetPrice();
         }

@@ -26,5 +26,8 @@ namespace Game
         public AudioClip BreakSound;
         public AudioClip SpaceDoorOpenSound;
         public AudioClip SpaceDoorCloseSound;
+
+        [Header("GameObjects")]
+        public NameSelectScreen NameSelectScreen;
     }
 }

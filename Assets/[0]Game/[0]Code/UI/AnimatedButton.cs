@@ -42,6 +42,12 @@ namespace Game
             _inputAction.action.canceled += ActionOncanceled;
         }
 
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _inputAction.action.canceled -= ActionOncanceled;
+        }
+
         public override void OnPointerDown(PointerEventData eventData)
         {
             if (eventData != null)

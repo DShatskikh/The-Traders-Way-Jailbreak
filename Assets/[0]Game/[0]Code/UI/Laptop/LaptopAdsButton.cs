@@ -26,7 +26,7 @@ namespace Game
             onClick.RemoveAllListeners();
         }
 
-        private void UpgradeAwardLabel(float maxMoney)
+        private void UpgradeAwardLabel(double maxMoney)
         {
             var award = (int)(maxMoney * 0.5f);
 

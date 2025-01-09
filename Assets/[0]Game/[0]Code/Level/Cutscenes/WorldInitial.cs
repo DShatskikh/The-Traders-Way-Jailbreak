@@ -1,10 +1,13 @@
-﻿using System;
+﻿using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Game
 {
     public class WorldInitial : MonoBehaviour
     {
+        [SerializeField]
+        private DialogueSystemTrigger _startMonolog;
+        
         private StockMarketService _stockMarketService;
         private WalletService _walletService;
 
@@ -19,6 +22,8 @@ namespace Game
         {
             _stockMarketService.OpenAllItems();
             _walletService.Add(13741646);
+            
+            //_startMonolog.OnUse();
         }
     }
 }

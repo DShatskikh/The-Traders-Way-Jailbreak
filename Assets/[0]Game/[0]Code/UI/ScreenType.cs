@@ -8,6 +8,5 @@
         Laptop,
         Shop,
         ADS,
-        NameSelect
     }
 }

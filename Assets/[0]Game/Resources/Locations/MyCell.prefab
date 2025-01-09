@@ -25086,7 +25086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061607299113686900, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_Name
-      value: MyCell Variant
+      value: MyCell
       objectReference: {fileID: 0}
     - target: {fileID: 7236347204460922558, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_IsActive
@@ -25505,7 +25505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ef21ea221948f8ad459572f8e7e08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _screen: {fileID: 2597738461849907556}
+  _screen: {fileID: 79355911778026348}
   _dialogue: {fileID: 8498242066188860199}
 --- !u!4 &6024885403013077122 stripped
 Transform:
@@ -26531,7 +26531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Skibidi_Alternative
+      value: MyCell_StartReplica
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}

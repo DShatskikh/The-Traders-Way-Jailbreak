@@ -151,6 +151,10 @@ MonoBehaviour:
     m_Key: PauseScreen
     m_Metadata:
       m_Items: []
+  - m_Id: 7680152713936896
+    m_Key: StartGame
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

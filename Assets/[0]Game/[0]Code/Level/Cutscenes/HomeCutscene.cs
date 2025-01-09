@@ -15,8 +15,11 @@ namespace Game
         private TargetArrow _laptopArrow, _tvArrow, _bedArrow;
 
         [SerializeField]
-        private GameObject _nightPanel, _policePanel;
+        private GameObject _nightPanel;
 
+        [SerializeField]
+        private ItNightScreen _policePanel;
+        
         [SerializeField]
         private AudioClip _policeClip;
 
@@ -141,6 +144,11 @@ namespace Game
                     
                     _tvArrow.gameObject.SetActive(false);
                     _cutsceneState = CutsceneState.BED;
+                    
+                    CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
+                    {
+                        CutsceneState = CutsceneState.BED
+                    });
                     break;
                 case CutsceneState.POLICE when _cutsceneState != CutsceneState.BED:
                     return;
@@ -152,6 +160,7 @@ namespace Game
                     _cutsceneState = CutsceneState.BED;
 
                     _policePanel.gameObject.SetActive(true);
+                    StartCoroutine(_policePanel.AwaitAnimation());
                     
                     CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
                     {

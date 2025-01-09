@@ -1,8 +1,8 @@
-﻿using RimuruDev;
+﻿using PixelCrushers.DialogueSystem;
+using RimuruDev;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -120,6 +120,7 @@ namespace Game
             Injector.Inject(_adsTimer);
             Injector.Inject(_consoleService);
             Injector.Inject(_companionsManager);
+            
             _gameStateController.AddListener(_adsTimer);
             _gameStateController.AddListener(_dialogueExtensions);
             _gameStateController.AddListener(_companionsManager);
@@ -159,17 +160,27 @@ namespace Game
             CutscenesDataStorage.SetData("HomeCutscene", _homeData);
             CutscenesDataStorage.SetData("MyCellCutscene", _myCellData);
             CutscenesDataStorage.SetData("Siren", _sirenData);
+            
             _walletService.SetMoneyAndTax(_startMoney, 0);
-            
-            if (_playerName == string.Empty)
-                _screenManager.Show(ScreenType.NameSelect);
-            
-            _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);  
-#else
-            _locationsManager.SwitchLocation("World", 0);
+
 #endif
             
-            _gameStateController.StartGame();
+            if (_playerName == string.Empty)
+            {
+                var nameScreen = Instantiate(AssetProvider.Instance.NameSelectScreen);
+                Injector.Inject(nameScreen);
+            }
+            else
+            {
+                CutscenesDataStorage.SetData("Name", _playerName);
+                Lua.Run($"Variable[\"PlayerName\"] = \"{_playerName}\"");
+#if UNITY_EDITOR
+                _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);  
+#else
+                _locationsManager.SwitchLocation("World", 0);
+#endif
+                _gameStateController.StartGame();
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Game
             _walletService = ServiceLocator.Get<WalletService>();
         }
 
-        private void WalletServiceOnChanged(float money)
+        private void WalletServiceOnChanged(double money)
         {
             _label.text = _walletService.GetFormatMoney(money);
         }

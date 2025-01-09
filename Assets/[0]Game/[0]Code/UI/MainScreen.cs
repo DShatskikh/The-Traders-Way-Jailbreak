@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class MainScreen : MonoBehaviour, IGameStartListener, IGameLaptopListener, IGamePauseListener, IGameResumeListener
+    public class MainScreen : ScreenBase, IGameStartListener, IGameLaptopListener, IGamePauseListener, IGameResumeListener
     {
         [SerializeField]
         private Button _pauseButton;

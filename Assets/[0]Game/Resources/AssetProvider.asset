@@ -107,6 +107,7 @@ MonoBehaviour:
   BreakSound: {fileID: 8300000, guid: 7dad69bc557f82044883d1f5623a0271, type: 3}
   SpaceDoorOpenSound: {fileID: 8300000, guid: bac6b1a6c9611f841ace99b201857f9d, type: 3}
   SpaceDoorCloseSound: {fileID: 8300000, guid: 8befdc013bebeb9438ab19701e34cd5f, type: 3}
+  NameSelectScreen: {fileID: 1401440766509938809, guid: 5b344c5ec9607a543a842bf10c93e682, type: 3}
   references:
     version: 2
     RefIds: []

@@ -1,6 +1,5 @@
 ﻿using System;
 using PixelCrushers.DialogueSystem;
-using QFSW.QC;
 using UnityEngine;
 
 namespace Game
@@ -9,18 +8,18 @@ namespace Game
     public class WalletService
     {
         [SerializeField]
-        private float _money;
+        private double _money;
 
-        private float _tax;
-        private float _maxMoney = 5;
+        private double _tax;
+        private double _maxMoney = 5;
         
-        public float GetMoney => _money;
-        public float GetMaxMoney => _maxMoney;
-        public float GetTax => _tax;
+        public double GetMoney => _money;
+        public double GetMaxMoney => _maxMoney;
+        public double GetTax => _tax;
 
-        public event Action<float> Changed;
-        public event Action<float> TaxChanged;
-        public event Action<float> MaxMoneyChanged;
+        public event Action<double> Changed;
+        public event Action<double> TaxChanged;
+        public event Action<double> MaxMoneyChanged;
 
         public void Init()
         {
@@ -47,7 +46,21 @@ namespace Game
 
         public void Add(float price)
         {
-            _money += price;
+            if (_money + price > double.MaxValue)
+            {
+                _money = double.MaxValue;
+                return;
+            }
+
+            if (_money + price > double.MaxValue)
+            {
+                _money = double.MaxValue;
+            }
+            else
+            {
+                _money += price;
+            }
+            
             Changed?.Invoke(_money);
             _tax += price / 100f;
             TaxChanged?.Invoke(_tax);
@@ -71,9 +84,9 @@ namespace Game
             return false;
         }
         
-        public string GetFormatMoney(float money)
+        public string GetFormatMoney(double money)
         {
-            if (money > 9999999999999)
+            if (money > 999999999999999) //999 триллионов
                 return $"${999},{99}Т";
                          
             if (money >= 1000000000000)

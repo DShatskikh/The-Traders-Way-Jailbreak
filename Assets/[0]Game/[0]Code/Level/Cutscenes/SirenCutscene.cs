@@ -120,7 +120,7 @@ namespace Game
             CutscenesDataStorage.SetData("Siren", _saveData);
         }
 
-        private void WalletServiceOnTaxChanged(float value)
+        private void WalletServiceOnTaxChanged(double value)
         {
             if (value == 0)
             {

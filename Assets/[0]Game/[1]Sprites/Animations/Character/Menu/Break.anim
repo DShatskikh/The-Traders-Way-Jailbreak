@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sit
+  m_Name: Break
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 2058990828, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+      value: {fileID: -446233168, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     - time: 0.016666668
       value: {fileID: 3542127132570728493, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     attribute: m_Sprite
@@ -46,7 +46,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 2058990828, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+    - {fileID: -446233168, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     - {fileID: 3542127132570728493, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

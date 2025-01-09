@@ -8,7 +8,7 @@ namespace Game
     public class MyCellCutscene : MonoBehaviour
     {
         [SerializeField]
-        private GameObject _screen;
+        private ItNightScreen _screen;
 
         [SerializeField]
         private DialogueSystemTrigger _dialogue;
@@ -17,6 +17,7 @@ namespace Game
         private SirenCutscene.SaveData _sirenSaveData;
         private Player _player;
         private WalletService _walletService;
+        private GameStateController _gameStateController;
 
         [Serializable]
         public struct SaveData
@@ -25,10 +26,11 @@ namespace Game
         }
 
         [Inject]
-        private void Construct(Player player, WalletService walletService)
+        private void Construct(Player player, WalletService walletService, GameStateController gameStateController)
         {
             _player = player;
             _walletService = walletService;
+            _gameStateController = gameStateController;
         }
         
         private void Start()
@@ -50,10 +52,11 @@ namespace Game
 
         private IEnumerator AwaitCutscene()
         {
-            _screen.SetActive(true);
             _walletService.Add(4);
-            yield return new WaitForSeconds(3f);
             _player.gameObject.SetActive(true);
+            _gameStateController.OpenDialog();
+            _screen.gameObject.SetActive(true);
+            yield return _screen.AwaitAnimation();
             _dialogue.OnUse();
         }
     }
