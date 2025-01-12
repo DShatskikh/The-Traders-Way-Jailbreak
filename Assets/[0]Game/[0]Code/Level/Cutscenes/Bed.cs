@@ -13,7 +13,7 @@ namespace Game
         
         public void Use()
         {
-            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
 
             if (data.CutsceneState == HomeCutscene.CutsceneState.BED)
             {

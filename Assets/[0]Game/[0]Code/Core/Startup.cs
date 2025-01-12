@@ -57,6 +57,9 @@ namespace Game
 
         [SerializeField]
         private CompanionsManager _companionsManager;
+
+        [SerializeField]
+        private TimerBeforeAdsService _timerBeforeAdsService;
         
         [Header("Links")]
         [SerializeField]

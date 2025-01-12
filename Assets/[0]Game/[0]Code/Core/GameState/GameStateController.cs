@@ -5,7 +5,7 @@ namespace Game
 {
     public class GameStateController : MonoBehaviour
     {
-        private enum GameState : byte
+        public enum GameState : byte
         {
             OFF = 0,
             PLAYING = 1,
@@ -23,6 +23,8 @@ namespace Game
         private readonly List<IGameUpdateListener> _updateListeners = new();
         private readonly List<IGameFixedUpdateListener> _fixedUpdateListeners = new();
 
+        public GameState CurrentState => _gameState;
+        
         private void Update()
         {
             if (_gameState != GameState.PLAYING)

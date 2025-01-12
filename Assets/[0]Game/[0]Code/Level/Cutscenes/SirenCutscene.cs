@@ -47,7 +47,7 @@ namespace Game
         
         private void Start()
         {
-            _saveData = CutscenesDataStorage.GetData<SaveData>("Siren");
+            _saveData = CutscenesDataStorage.GetData<SaveData>(KeyConstants.Siren);
             UpgradeState(_saveData.State);
             //UpgradeState(State.DontPayTax);
         }
@@ -117,7 +117,7 @@ namespace Game
             }
             
             _saveData.State = state;
-            CutscenesDataStorage.SetData("Siren", _saveData);
+            CutscenesDataStorage.SetData(KeyConstants.Siren, _saveData);
         }
 
         private void WalletServiceOnTaxChanged(double value)

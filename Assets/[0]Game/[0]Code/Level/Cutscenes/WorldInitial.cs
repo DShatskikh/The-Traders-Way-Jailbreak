@@ -7,6 +7,9 @@ namespace Game
     {
         [SerializeField]
         private DialogueSystemTrigger _startMonolog;
+
+        [SerializeField]
+        private GameObject _defaultTransition, _secretTransition;
         
         private StockMarketService _stockMarketService;
         private WalletService _walletService;
@@ -20,9 +23,20 @@ namespace Game
         
         private void Start()
         {
-            _stockMarketService.OpenAllItems();
-            _walletService.Add(13741646);
+            var state = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene).CutsceneState;
             
+            if (state == HomeCutscene.CutsceneState.OFF)
+            {
+                _stockMarketService.OpenAllItems();
+                _walletService.Add(13741646);
+            }
+
+            if (state == HomeCutscene.CutsceneState.EndGame)
+            {
+                _defaultTransition.SetActive(false);
+                _secretTransition.SetActive(true);
+            }
+
             //_startMonolog.OnUse();
         }
     }

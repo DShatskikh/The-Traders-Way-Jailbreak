@@ -39,6 +39,7 @@ namespace Game
             BED = 3, //Лечь спать
             POLICE = 4, //Ломятся полицейские
             EndGame = 5, //Игрок прилетел домой
+            Party = 6, //Игрок Поговорил с разработчиком
         }
         
         [Serializable]
@@ -56,7 +57,7 @@ namespace Game
 
         public void OnStartGame()
         {
-            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            var data = CutscenesDataStorage.GetData<SaveData>(KeyConstants.HomeCutscene);
             
             if (data.CutsceneState == CutsceneState.EndGame)
                 return;
@@ -145,7 +146,7 @@ namespace Game
                     _tvArrow.gameObject.SetActive(false);
                     _cutsceneState = CutsceneState.BED;
                     
-                    CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
+                    CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, new SaveData()
                     {
                         CutsceneState = CutsceneState.BED
                     });
@@ -162,7 +163,7 @@ namespace Game
                     _policePanel.gameObject.SetActive(true);
                     StartCoroutine(_policePanel.AwaitAnimation());
                     
-                    CutscenesDataStorage.SetData("HomeCutscene", new SaveData()
+                    CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, new SaveData()
                     {
                         CutsceneState = CutsceneState.POLICE
                     });

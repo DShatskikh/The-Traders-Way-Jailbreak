@@ -3135,7 +3135,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3144,6 +3144,72 @@ TextureImporter:
       bones: []
       spriteID: 10ad593a5635ffd4aa2ca018fe5c12bd
       internalID: -837878507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_138
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec863aedd0dfa949acbeae9615d0d1f
+      internalID: 486533882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_139
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 70
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3108a988aa685a47814e563d2d14d1c
+      internalID: -818359364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_140
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d89639304991694d94cce567bcbead0
+      internalID: 1945067689
       vertices: []
       indices: 
       edges: []
@@ -3206,7 +3272,10 @@ TextureImporter:
       Tiles_135: -457115404
       Tiles_136: 1981202460
       Tiles_137: -837878507
+      Tiles_138: 486533882
+      Tiles_139: -818359364
       Tiles_14: -80332412
+      Tiles_140: 1945067689
       Tiles_15: -1197499056
       Tiles_16: -1180853525
       Tiles_17: -156422593

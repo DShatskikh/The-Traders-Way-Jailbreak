@@ -22,7 +22,10 @@ namespace Game
         private TriggerChecker _followingTrigger;
 
         [SerializeField]
-        private GameObject _chief, _noobik, _dilleron;
+        private GameObject _chief, _noobik, _dilleron, _endGame, _table, _leftTransition, _rightTransition;
+
+        [SerializeField]
+        private TransitionTrigger _transitionTrigger;
         
         private StockMarketService _stockMarketService;
         private WalletService _walletService;
@@ -44,15 +47,22 @@ namespace Game
             Lua.RegisterFunction(nameof(IsWorldPolice), this,
                 SymbolExtensions.GetMethodInfo(() => IsWorldPolice()));
             
-            _data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            _data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
 
             if (_data.CutsceneState == HomeCutscene.CutsceneState.POLICE)
             {
                 StartCoroutine(AwaitCutscene());
             }
-            
-            if (_data.CutsceneState == HomeCutscene.CutsceneState.EndGame)
-                _player.gameObject.SetActive(true);
+
+            if (_data.CutsceneState is HomeCutscene.CutsceneState.EndGame or HomeCutscene.CutsceneState.Party)
+            {
+                _player.gameObject.SetActive(true);   
+                _endGame.SetActive(true);
+                _table.SetActive(true);
+                _transitionTrigger.GetComponent<BoxCollider2D>().isTrigger = false;
+                _leftTransition.SetActive(false);
+                _rightTransition.SetActive(false);
+            }
         }
 
         private IEnumerator AwaitCutscene()

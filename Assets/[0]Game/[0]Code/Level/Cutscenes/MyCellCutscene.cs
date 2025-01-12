@@ -35,16 +35,16 @@ namespace Game
         
         private void Start()
         {
-            _saveData = CutscenesDataStorage.GetData<SaveData>("MyCellCutscene");
+            _saveData = CutscenesDataStorage.GetData<SaveData>(KeyConstants.MyCellCutscene);
             
             if (!_saveData.IsNotFirstVisit)
             {
                 _saveData.IsNotFirstVisit = true;
-                CutscenesDataStorage.SetData("MyCellCutscene", _saveData);
+                CutscenesDataStorage.SetData(KeyConstants.MyCellCutscene, _saveData);
                 StartCoroutine(AwaitCutscene());
             }
             
-            _sirenSaveData = CutscenesDataStorage.GetData<SirenCutscene.SaveData>("Siren");
+            _sirenSaveData = CutscenesDataStorage.GetData<SirenCutscene.SaveData>(KeyConstants.Siren);
             
             //if (_sirenSaveData.State == SirenCutscene.State.DontPayTax)
                 

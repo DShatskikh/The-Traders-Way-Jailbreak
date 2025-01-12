@@ -31,7 +31,7 @@ namespace Game
         
         public void Use()
         {
-            if (CutscenesDataStorage.GetData<SirenCutscene.SaveData>("Siren").State ==
+            if (CutscenesDataStorage.GetData<SirenCutscene.SaveData>(KeyConstants.Siren).State ==
                 SirenCutscene.State.EndSpeakMayor)
             {
                 _endGameDialog.OnUse();
@@ -64,9 +64,9 @@ namespace Game
             var sequence = DOTween.Sequence();
             yield return sequence.Append(transform.DOMoveY(transform.position.AddY(10).y, 3f)).WaitForCompletion();
             
-            var homeCutsceneSaveData = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            var homeCutsceneSaveData = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
             homeCutsceneSaveData.CutsceneState = HomeCutscene.CutsceneState.EndGame;
-            CutscenesDataStorage.SetData("HomeCutscene", homeCutsceneSaveData);
+            CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, homeCutsceneSaveData);
             
             _levelManager.SwitchLocation("WorldHome", 3);
         }
