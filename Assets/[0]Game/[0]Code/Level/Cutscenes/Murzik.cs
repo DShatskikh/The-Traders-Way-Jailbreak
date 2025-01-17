@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Game
 {
-    public class Murzik : MonoBehaviour, IGameDialogueListener, IGameFixedUpdateListener
+    public class Murzik : MonoBehaviour, IGameFixedUpdateListener, IUseObject
     {
+        private const float SPEED = 1.5f;
         private static readonly int SpeedHash = Animator.StringToHash("Speed");
+
+        [SerializeField]
+        private DialogueSystemTrigger _dialogueSystemTrigger;
         
         private Rigidbody2D _rigidbody;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         private Coroutine _coroutine;
-
         private Vector2 _previousPosition;
 
         private void Awake()
@@ -27,7 +31,7 @@ namespace Game
         {
             _coroutine = StartCoroutine(AwaitMove());
         }
-        
+
         public void OnFixedUpdate()
         {
             if (Vector2.Distance(_previousPosition, transform.position) > 0)
@@ -38,21 +42,20 @@ namespace Game
             _previousPosition = transform.position;
         }
 
-        public void OnShowDialogue()
+        public void Use()
         {
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
             
             _previousPosition = transform.position;
             _animator.SetFloat(SpeedHash, 0);
-        }
-
-        public void OnHideDialogue()
-        {
-            if (!gameObject.activeSelf)
-                return;
             
-            _coroutine = StartCoroutine(AwaitMove());
+            _dialogueSystemTrigger.OnUse();
+            
+            DialogueExtensions.SubscriptionCloseDialog(() =>
+            {
+                _coroutine = StartCoroutine(AwaitMove());
+            });
         }
 
         private IEnumerator AwaitMove()
@@ -75,7 +78,7 @@ namespace Game
                 else
                     _spriteRenderer.flipX = Random.Range(0, 2) == 0;
                 
-                _rigidbody.linearVelocity = direction * 2;
+                _rigidbody.linearVelocity = direction * SPEED;
                 yield return new WaitForSeconds(2);
                 _rigidbody.linearVelocity = Vector2.zero;
                 yield return new WaitForSeconds(1);

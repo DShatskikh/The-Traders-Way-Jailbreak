@@ -2,7 +2,7 @@
 
 namespace Game
 {
-    public class GatewayDoor : MonoBehaviour
+    public sealed class GatewayDoor : MonoBehaviour
     {
         private const float MaxY = 2f;
         private const float Speed = 2f;

@@ -2,7 +2,7 @@
 
 namespace Game
 {
-    public class Ladder : MonoBehaviour
+    public sealed class Ladder : MonoBehaviour
     {
         [SerializeField]
         private Transform _target, _start;

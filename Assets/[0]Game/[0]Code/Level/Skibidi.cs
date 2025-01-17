@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-    public class Skibidi : MonoBehaviour, IUseObject
+    public sealed class Skibidi : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private Transform _upPoint, _downPoint, _head;
@@ -21,7 +21,8 @@ namespace Game
         private Sequence _animation;
         private GameStateController _gameStateController;
         private SaveData _saveData;
-        
+        private HatManager _hatManager;
+
         [Serializable]
         public struct SaveData
         {
@@ -29,9 +30,10 @@ namespace Game
         }
         
         [Inject]
-        private void Construct(GameStateController gameStateController)
+        private void Construct(GameStateController gameStateController, HatManager hatManager)
         {
             _gameStateController = gameStateController;
+            _hatManager = hatManager;
         }
         
         public void Use()
@@ -61,12 +63,13 @@ namespace Game
             yield return DialogueExtensions.AwaitCloseDialog();
 
             _saveData.IsShow = true;
-            CutscenesDataStorage.SetData("Skibidi", _saveData);
+            RepositoryStorage.Set("Skibidi", _saveData);
             yield return new WaitForSeconds(1);
             _gameStateController.OpenDialog();
             yield return _animation.Append(_head.DOMoveY(_downPoint.position.y, 1f)).WaitForCompletion();
             _gameStateController.CloseDialog();
             _showSkibidiDialog.OnUse();
+            _hatManager.BuyHat("UnderwaterMask");
         }
     }
 }

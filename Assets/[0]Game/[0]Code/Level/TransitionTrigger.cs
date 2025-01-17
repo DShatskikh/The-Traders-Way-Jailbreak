@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TransitionTrigger : MonoBehaviour
+    public sealed class TransitionTrigger : MonoBehaviour
     {
         [SerializeField]
         private string _nextLocationIndex = "World";

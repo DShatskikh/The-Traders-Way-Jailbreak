@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class WardenDance : MonoBehaviour
+    public sealed class WardenDance : MonoBehaviour
     {
         [SerializeField]
         private SpriteRenderer _spriteRenderer;

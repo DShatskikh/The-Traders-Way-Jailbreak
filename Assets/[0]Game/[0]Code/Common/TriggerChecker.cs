@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TriggerChecker : MonoBehaviour
+    public sealed class TriggerChecker : MonoBehaviour
     {
         public Action<GameObject> TriggerEnter;
 

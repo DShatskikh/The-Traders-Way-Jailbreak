@@ -6,6 +6,11 @@
     {
         void OnStartGame();
     }
+    
+    public interface IGameMainMenuListener : IGameListener
+    {
+        void OnOpenMainMenu();
+    }
 
     public interface IGamePauseListener : IGameListener
     {

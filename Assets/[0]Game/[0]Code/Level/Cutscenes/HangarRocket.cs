@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class HangarRocket : MonoBehaviour, IUseObject
+    public sealed class HangarRocket : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private DialogueSystemTrigger _endGameDialog;
@@ -31,8 +31,8 @@ namespace Game
         
         public void Use()
         {
-            if (CutscenesDataStorage.GetData<SirenCutscene.SaveData>(KeyConstants.Siren).State ==
-                SirenCutscene.State.EndSpeakMayor)
+            if (RepositoryStorage.Get<MyCellCutscene.SaveData>(KeyConstants.MyCellCutscene).State ==
+                MyCellCutscene.State.EndSpeakMayor)
             {
                 _endGameDialog.OnUse();
             }
@@ -64,9 +64,9 @@ namespace Game
             var sequence = DOTween.Sequence();
             yield return sequence.Append(transform.DOMoveY(transform.position.AddY(10).y, 3f)).WaitForCompletion();
             
-            var homeCutsceneSaveData = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
-            homeCutsceneSaveData.CutsceneState = HomeCutscene.CutsceneState.EndGame;
-            CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, homeCutsceneSaveData);
+            var homeCutsceneSaveData = RepositoryStorage.Get<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
+            homeCutsceneSaveData.CutsceneState = HomeCutscene.CutsceneState.ENDING;
+            RepositoryStorage.Set(KeyConstants.HomeCutscene, homeCutsceneSaveData);
             
             _levelManager.SwitchLocation("WorldHome", 3);
         }

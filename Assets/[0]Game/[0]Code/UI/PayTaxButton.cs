@@ -2,18 +2,34 @@
 
 namespace Game
 {
-    public class PayTaxButton : Button
+    public sealed class PayTaxButton : Button
     {
         private WalletService _walletService;
-        
-        protected override void Start()
+
+        [Inject]
+        private void Construct(WalletService walletService)
         {
-            base.Start();
-            _walletService = ServiceLocator.Get<WalletService>();
+            _walletService = walletService;
             _walletService.TaxChanged += WalletServiceOnTaxChanged;
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
             WalletServiceOnTaxChanged(_walletService.GetTax);
             onClick.AddListener(OnPayTax);
-            print("Start");
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            onClick.RemoveListener(OnPayTax);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _walletService.TaxChanged -= WalletServiceOnTaxChanged;
         }
 
         private void WalletServiceOnTaxChanged(double tax)

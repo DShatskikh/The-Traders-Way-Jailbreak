@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 namespace Game
 {
     [Serializable]
-    public class StepsSoundPlayer
+    public sealed class StepsSoundPlayer
     {
         [SerializeField] 
         private AudioSource _stepSource1, _stepSource2;

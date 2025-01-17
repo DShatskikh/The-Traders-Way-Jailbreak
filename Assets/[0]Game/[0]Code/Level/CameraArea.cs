@@ -2,5 +2,5 @@
 
 namespace Game
 {
-    public class CameraArea : MonoBehaviour { }
+    public sealed class CameraArea : MonoBehaviour { }
 }

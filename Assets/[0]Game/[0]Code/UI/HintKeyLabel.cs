@@ -9,7 +9,7 @@ using UnityEngine.Localization.Settings;
 
 namespace Game
 {
-    public class HintKeyLabel : MonoBehaviour
+    public sealed class HintKeyLabel : MonoBehaviour
     {
         [SerializeField]
         private InputActionReference m_Action;

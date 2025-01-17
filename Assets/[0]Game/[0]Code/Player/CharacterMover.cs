@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class CharacterMover : IMover
+    public sealed class CharacterMover : IMover
     {
         [SerializeField]
         private float _speed = 3;

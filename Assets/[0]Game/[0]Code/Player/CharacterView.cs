@@ -4,15 +4,21 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class CharacterView
+    public sealed class CharacterView
     {
+        private static readonly int StateHash = Animator.StringToHash("State");
+
         [SerializeField] 
         private SpriteRenderer _spriteRenderer;
-        
+
         [SerializeField] 
         private Animator _animator;
-        
-        private static readonly int StateHash = Animator.StringToHash("State");
+
+        [SerializeField]
+        private HatView _hatView;
+
+        public bool GetFlipX => _spriteRenderer.flipX;
+        public Sprite GetSprite => _spriteRenderer.sprite;
 
         public void OnSpeedChange(float speed)
         {
@@ -33,7 +39,10 @@ namespace Game
             _animator.SetFloat(StateHash, 2);
         }
 
-        private void Flip(bool isFlip) => 
+        private void Flip(bool isFlip)
+        {
             _spriteRenderer.flipX = isFlip;
+            _hatView.HatPoint.transform.localScale = _hatView.HatPoint.transform.localScale.SetX(isFlip ? -1 : 1);
+        }
     }
 }

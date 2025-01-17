@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class InvisiblePlatform : MonoBehaviour
+    public sealed class InvisiblePlatform : MonoBehaviour
     {
         private const float Duration = 1f;
         

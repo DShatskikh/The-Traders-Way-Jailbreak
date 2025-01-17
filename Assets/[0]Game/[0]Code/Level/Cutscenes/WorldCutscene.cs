@@ -1,116 +1,63 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Game
 {
-    public class WorldCutscene : MonoBehaviour
+    public sealed class WorldCutscene : MonoBehaviour
     {
+        private const double StartMoney = 137414948616; //137 миллиардов
+        
         [SerializeField]
-        private GameObject _root;
+        private DialogueSystemTrigger _startMonolog;
 
         [SerializeField]
-        private TargetArrow _rocketArrow;
+        private GameObject _defaultTransition, _secretTransition;
 
         [SerializeField]
-        private DialogueSystemTrigger _startDialogue;
-
-        [SerializeField]
-        private Rocket _rocket;
-
-        [SerializeField]
-        private TriggerChecker _followingTrigger;
-
-        [SerializeField]
-        private GameObject _chief, _noobik, _dilleron, _endGame, _table, _leftTransition, _rightTransition;
-
-        [SerializeField]
-        private TransitionTrigger _transitionTrigger;
+        private CanvasGroup _canvasGroup;
         
         private StockMarketService _stockMarketService;
         private WalletService _walletService;
-        private HomeCutscene.SaveData _data;
-        private CompanionsManager _companionsManager;
-        private Player _player;
+        private Sequence _sequrnce;
+        private GameStateController _gameStateController;
 
         [Inject]
-        private void Construct(StockMarketService stockMarketService, WalletService walletService, CompanionsManager companionsManager, Player player)
+        private void Construct(StockMarketService stockMarketService, WalletService walletService, GameStateController gameStateController)
         {
             _stockMarketService = stockMarketService;
             _walletService = walletService;
-            _companionsManager = companionsManager;
-            _player = player;
+            _gameStateController = gameStateController;
         }
         
         private void Start()
         {
-            Lua.RegisterFunction(nameof(IsWorldPolice), this,
-                SymbolExtensions.GetMethodInfo(() => IsWorldPolice()));
+            var state = RepositoryStorage.Get<HomeCutscene.SaveData>(KeyConstants.HomeCutscene).CutsceneState;
             
-            _data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
-
-            if (_data.CutsceneState == HomeCutscene.CutsceneState.POLICE)
+            if (state == HomeCutscene.CutsceneState.OFF)
             {
-                StartCoroutine(AwaitCutscene());
+                _canvasGroup.gameObject.SetActive(true);
+                _stockMarketService.OpenAllItems();
+                _walletService.SetMoneyAndTax(StartMoney, StartMoney * 1.5f);
+
+                _sequrnce?.Kill();
+                _sequrnce = DOTween.Sequence();
+                _gameStateController.OpenDialog();
+                
+                _sequrnce.Insert(5, _canvasGroup.DOFade(0, 1f)).OnComplete(() =>
+                {
+                    _canvasGroup.gameObject.SetActive(false);
+                    _gameStateController.CloseDialog();
+                });
             }
 
-            if (_data.CutsceneState is HomeCutscene.CutsceneState.EndGame or HomeCutscene.CutsceneState.Party)
+            if (state == HomeCutscene.CutsceneState.ENDING)
             {
-                _player.gameObject.SetActive(true);   
-                _endGame.SetActive(true);
-                _table.SetActive(true);
-                _transitionTrigger.GetComponent<BoxCollider2D>().isTrigger = false;
-                _leftTransition.SetActive(false);
-                _rightTransition.SetActive(false);
+                _defaultTransition.SetActive(false);
+                _secretTransition.SetActive(true);
             }
-        }
 
-        private IEnumerator AwaitCutscene()
-        {
-            //_followingTrigger.TriggerEnter += TriggerEnter;
-            
-            _stockMarketService.ResetToDefault();
-            _root.SetActive(true);
-            _startDialogue.OnUse();
-            _walletService.Reset();
-            yield return null;
-            
-            DialogueExtensions.SubscriptionCloseDialog(() =>
-            {
-                _rocketArrow.gameObject.SetActive(true);
-                _rocket.Activate();
-                
-                _followingTrigger.TriggerEnter += TriggerEnter;
-            });
-        }
-
-        private bool IsWorldPolice() => 
-            _data.CutsceneState == HomeCutscene.CutsceneState.POLICE;
-
-        private void TriggerEnter(GameObject obj)
-        {
-            if (obj.TryGetComponent(out Player player))
-            {
-                _followingTrigger.TriggerEnter -= TriggerEnter;
-
-                if (_companionsManager.TryActivateCompanion("PoliceChief", _chief.transform.position, 
-                        out Companion chief, _chief.GetComponent<SpriteRenderer>().flipX))
-                {
-                    _chief.SetActive(false);
-                }
-                
-                if (_companionsManager.TryActivateCompanion("PoliceNoobik", _noobik.transform.position, 
-                        out Companion noobik, _noobik.GetComponent<SpriteRenderer>().flipX))
-                {
-                    _noobik.SetActive(false);
-                }
-                
-                if (_companionsManager.TryActivateCompanion("PoliceDilleron", _dilleron.transform.position, 
-                        out Companion dilleron, _dilleron.GetComponent<SpriteRenderer>().flipX))
-                {
-                    _dilleron.SetActive(false);
-                }
-            }
+            //_startMonolog.OnUse();
         }
     }
 }

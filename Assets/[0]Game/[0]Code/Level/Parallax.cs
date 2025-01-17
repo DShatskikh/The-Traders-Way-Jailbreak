@@ -2,7 +2,7 @@
 
 namespace Game
 {
-    public class Parallax : MonoBehaviour
+    public sealed class Parallax : MonoBehaviour
     {
         private enum ParallaxDirectionType : byte
         {

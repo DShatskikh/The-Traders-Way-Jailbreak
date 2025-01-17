@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class GeneratorItems : MonoBehaviour, IUseObject
+    public sealed class GeneratorItems : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private string _idItem = "Kystic";

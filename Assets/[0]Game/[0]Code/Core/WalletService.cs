@@ -7,6 +7,8 @@ namespace Game
     [Serializable]
     public class WalletService
     {
+        private const double MaxAward = 100000000000; //100 миллиардов
+        
         [SerializeField]
         private double _money;
 
@@ -15,11 +17,12 @@ namespace Game
         
         public double GetMoney => _money;
         public double GetMaxMoney => _maxMoney;
+        public double GetMaxAward => _maxMoney > MaxAward ? MaxAward : _maxMoney * 0.5f;
         public double GetTax => _tax;
 
         public event Action<double> Changed;
         public event Action<double> TaxChanged;
-        public event Action<double> MaxMoneyChanged;
+        public event Action<double> MaxAwardChanged;
 
         public void Init()
         {
@@ -28,9 +31,12 @@ namespace Game
             
             Lua.RegisterFunction(nameof(MinusMoney), this,
                 SymbolExtensions.GetMethodInfo(() => MinusMoney(0d)));
+            
+            Lua.RegisterFunction(nameof(GetTaxString), this,
+                SymbolExtensions.GetMethodInfo(() => GetTaxString()));
         }
 
-        public bool TryBuy(float price)
+        public bool TryBuy(double price)
         {
             if (_money < price)
             {
@@ -44,7 +50,7 @@ namespace Game
             return true;
         }
 
-        public void Add(float price)
+        public void Add(double price)
         {
             if (_money + price > double.MaxValue)
             {
@@ -64,20 +70,22 @@ namespace Game
             Changed?.Invoke(_money);
             _tax += price / 100f;
             TaxChanged?.Invoke(_tax);
+            Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
 
             if (_money > _maxMoney)
             {
                 _maxMoney = _money;
-                MaxMoneyChanged?.Invoke(_maxMoney);
+                MaxAwardChanged?.Invoke(GetMaxAward);
             }
         }
 
         public bool TryPayTax()
         {
-            if (TryBuy((int)_tax))
+            if (TryBuy(_tax))
             {
                 _tax = 0;
-                TaxChanged?.Invoke((int)_tax);
+                TaxChanged?.Invoke(_tax);
+                Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
                 return true;
             }
             
@@ -87,13 +95,13 @@ namespace Game
         public string GetFormatMoney(double money)
         {
             if (money > 999999999999999) //999 триллионов
-                return $"${999},{99}Т";
+                return $"${999},{99}aa";
                          
             if (money >= 1000000000000)
-                return $"${Math.Round(money / 1000000000000, 2)}Т";
+                return $"${Math.Round(money / 1000000000000, 2)}T";
             
             if (money >= 1000000000)
-                return $"${Math.Round(money / 1000000000, 2)}ММ";
+                return $"${Math.Round(money / 1000000000, 2)}B";
             
             if (money >= 1000000)
                     return $"${Math.Round(money / 1000000, 2)}M";
@@ -111,21 +119,28 @@ namespace Game
             
             Changed?.Invoke(_money);
             TaxChanged?.Invoke(_tax);
+            
+            Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
         }
 
-        public void SetMoneyAndTax(int money, int tax)
+        public void SetMoneyAndTax(double money, double tax)
         {
             _money = money;
             _tax = tax;
             
             Changed?.Invoke(_money);
             TaxChanged?.Invoke(_tax);
+            
+            Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
         }
         
         private bool IsHaveMoney(double money) => 
             _money >= money;
         
         private void MinusMoney(double money) => 
-            _money -= (float)money;
+            _money -= money;
+
+        private string GetTaxString() => 
+            GetFormatMoney(_tax);
     }
 }

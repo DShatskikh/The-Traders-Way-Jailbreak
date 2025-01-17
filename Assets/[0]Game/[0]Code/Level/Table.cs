@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class Table : MonoBehaviour, IUseObject
+    public sealed class Table : MonoBehaviour, IUseObject
     {
         [Header("Data")]
         [SerializeField]

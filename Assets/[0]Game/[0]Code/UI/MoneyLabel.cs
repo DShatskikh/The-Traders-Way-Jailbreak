@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class MoneyLabel : MonoBehaviour
+    public sealed class MoneyLabel : MonoBehaviour
     {
         private TMP_Text _label;
         private WalletService _walletService;

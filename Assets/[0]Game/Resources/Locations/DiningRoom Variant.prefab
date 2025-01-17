@@ -9682,7 +9682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Cook
+      value: Dining/Cook
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11818,7 +11818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1409536171279071221, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.078947365
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3377942553125919741, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
@@ -23181,9 +23181,6 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9090053832386804305, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6563864906686219595}
-    - targetCorrespondingSourceObject: {fileID: 9090053832386804305, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7292905476469392083}
     - targetCorrespondingSourceObject: {fileID: 9090053832386804305, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       insertIndex: -1
@@ -23311,7 +23308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Oven_stone
+      value: Dining/Oven_stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23649,7 +23646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining_Table_1
+      value: Dining/Table_1
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x
@@ -23723,7 +23720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining_Table_1
+      value: Dining/Table_1
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x
@@ -24518,7 +24515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining_Table_1
+      value: Dining/Table_1
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x
@@ -24812,168 +24809,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8859309274904058967, guid: ca07936a101b47d4e91970d99175c74b, type: 3}
   m_PrefabInstance: {fileID: 4821241439261216620}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4892326445815259947
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8689783514743386196}
-    m_Modifications:
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4475655377881176}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 7385575755826757320}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 7333065771012410977}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 765511926374509682}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 76673984806594182, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: _dontPayTaxEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4524004315838180624, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-      propertyPath: m_Name
-      value: SirenCutscene
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
---- !u!4 &6563864906686219595 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1797640627244901984, guid: 334299e2117a89d4fa3bbdd3bdaee511, type: 3}
-  m_PrefabInstance: {fileID: 4892326445815259947}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4893483482748912120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25090,7 +24925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Shop_FivFiv
+      value: Dining/Shop_FivFiv
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x
@@ -25503,7 +25338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Hangar_Table_Lonely
+      value: Hangar/Table_Lonely
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25815,7 +25650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining_Table_1
+      value: Dining/Table_1
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x
@@ -26033,7 +25868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Watermelon
+      value: Dining/Watermelon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26103,7 +25938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Oven3000
+      value: Home/Oven3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26258,7 +26093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining_Table_1
+      value: Dining/Table_1
       objectReference: {fileID: 0}
     - target: {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_Size.x

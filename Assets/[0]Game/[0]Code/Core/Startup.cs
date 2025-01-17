@@ -8,6 +8,9 @@ namespace Game
 {
     public sealed class Startup : MonoBehaviour
     {
+        [SerializeField]
+        private bool _fullTest;
+        
         [Header("Test Data")]
         [SerializeField]
         private LocationsManager.Data _initializationLocationData;
@@ -16,14 +19,23 @@ namespace Game
         private HomeCutscene.SaveData _homeData;
 
         [SerializeField]
-        private MyCellCutscene.SaveData _myCellData;
-        
-        [SerializeField]
-        private SirenCutscene.SaveData _sirenData;
-        
-        [SerializeField]
-        private int _startMoney = 999999999;
+        private bool _isOpenStockMarket;
 
+        [SerializeField]
+        private bool _isShowMenu;
+        
+        [SerializeField]
+        private MyCellCutscene.SaveData _myCellData;
+
+        [SerializeField]
+        private NoobikSkinShop.SaveData _noobikData;
+        
+        [SerializeField]
+        private double _startMoney = 999999999;
+
+        [SerializeField]
+        private double _startTax = 999999999;
+        
         [SerializeField]
         private string _playerName = "Денис";
         
@@ -57,9 +69,12 @@ namespace Game
 
         [SerializeField]
         private CompanionsManager _companionsManager;
+        
+        [SerializeField]
+        private HatManager _hatManager;
 
         [SerializeField]
-        private TimerBeforeAdsService _timerBeforeAdsService;
+        private AllBuyCheckHandler _allBuyCheckHandler;
         
         [Header("Links")]
         [SerializeField]
@@ -93,6 +108,12 @@ namespace Game
         private Transform[] _roots;
         
         private readonly TransitionService _transitionService = new();
+        private readonly PurchasedManager _purchasedManager = new();
+        private readonly AdsManager _adsManager = new();
+        private readonly LocationLoader _locationLoader = new();
+        private readonly OpenMainMenuHandler _openMainMenuHandler = new();
+        private readonly EndingsGame _endingsGame = new();
+        private readonly LuaCommandRegister _luaCommandRegister = new();
         
         private void Awake()
         {
@@ -118,15 +139,27 @@ namespace Game
             ServiceLocator.Register(_volumeService);
             ServiceLocator.Register(_transitionService);
             ServiceLocator.Register(_companionsManager);
+            ServiceLocator.Register(_hatManager);
+            ServiceLocator.Register(_locationLoader);
+            ServiceLocator.Register(_endingsGame);
+            ServiceLocator.Register(_allBuyCheckHandler);
 
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
             Injector.Inject(_consoleService);
             Injector.Inject(_companionsManager);
+            Injector.Inject(_purchasedManager);
+            Injector.Inject(_adsManager);
+            Injector.Inject(_locationLoader);
+            Injector.Inject(_openMainMenuHandler);
+            Injector.Inject(_endingsGame);
+            Injector.Inject(_luaCommandRegister);
+            Injector.Inject(_allBuyCheckHandler);
             
             _gameStateController.AddListener(_adsTimer);
             _gameStateController.AddListener(_dialogueExtensions);
             _gameStateController.AddListener(_companionsManager);
+            _gameStateController.AddListener(_openMainMenuHandler);
             
             var allMonoBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             
@@ -152,38 +185,51 @@ namespace Game
             _locationsManager.Init();
             _volumeService.Init();
             _coroutineRunner.Init();
-            CutscenesDataStorage.Init();
+            RepositoryStorage.Init();
             _consoleService.Init();
             _dialogueExtensions.Init();
             _companionsManager.Init();
-            var luaCommandRegister = new LuaCommandRegister();
-            luaCommandRegister.Register();
+            _hatManager.Init();
+            _luaCommandRegister.Init();
 
 #if UNITY_EDITOR
-            CutscenesDataStorage.SetData("HomeCutscene", _homeData);
-            CutscenesDataStorage.SetData("MyCellCutscene", _myCellData);
-            CutscenesDataStorage.SetData("Siren", _sirenData);
-            
-            _walletService.SetMoneyAndTax(_startMoney, 0);
-
-#endif
-            
-            if (_playerName == string.Empty)
+            if (!_fullTest)
             {
-                var nameScreen = Instantiate(AssetProvider.Instance.NameSelectScreen);
-                Injector.Inject(nameScreen);
+                RepositoryStorage.Set(KeyConstants.HomeCutscene, _homeData);
+                RepositoryStorage.Set(KeyConstants.MyCellCutscene, _myCellData);
+                RepositoryStorage.Set(KeyConstants.SkinShop, _noobikData);
+            
+                _walletService.SetMoneyAndTax(_startMoney, _startTax);
+                
+                if (_isOpenStockMarket)
+                    _stockMarketService.OpenAllItems();
+            }
+#endif
+
+#if UNITY_EDITOR
+            if (!_fullTest)
+            {
+                RepositoryStorage.Set(KeyConstants.Name, new PlayerName(_playerName));
+                Lua.Run($"Variable[\"PlayerName\"] = \"{_playerName}\"");
+                
+                if (_isShowMenu)
+                {
+                    _gameStateController.OpenMainMenu();
+                }
+                else
+                {
+                    _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);   
+                    _gameStateController.StartGame();
+                }
             }
             else
             {
-                CutscenesDataStorage.SetData("Name", _playerName);
-                Lua.Run($"Variable[\"PlayerName\"] = \"{_playerName}\"");
-#if UNITY_EDITOR
-                _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);  
+                _gameStateController.OpenMainMenu();
+            }
 #else
                 _locationsManager.SwitchLocation("World", 0);
 #endif
-                _gameStateController.StartGame();
-            }
+
         }
     }
 }

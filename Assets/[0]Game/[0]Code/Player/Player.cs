@@ -5,11 +5,10 @@ using UnityEngine.Serialization;
 
 namespace Game
 {
-    public class Player : MonoBehaviour, IGameStartListener, IGamePauseListener, IGameResumeListener, 
+    public sealed class Player : MonoBehaviour, IGameStartListener, IGamePauseListener, IGameResumeListener, 
         IGameUpdateListener,IGameFixedUpdateListener, IGameTransitionListener, IGameLaptopListener,
         IGameShopListener, IGameADSListener, IGameDialogueListener
     {
-        [FormerlySerializedAs("_mover")]
         [SerializeField]
         private CharacterMover _defaultMover;
 
@@ -20,7 +19,7 @@ namespace Game
         private CharacterView _view;
         
         [SerializeField]
-        private UseAreaCheacker _useAreaChecker;
+        private UseAreaChecker _useAreaChecker;
 
         [SerializeField]
         private CameraAreaChecker _cameraAreaChecker;
@@ -51,6 +50,8 @@ namespace Game
 
         public bool IsMove => _mover.IsMove;
         public bool IsRun => _mover.IsRun;
+        public bool GetFlipX => _view.GetFlipX;
+        public Sprite GetSprite => _view.GetSprite;
 
         [Inject]
         private void Construct(PlayerInput playerInput)

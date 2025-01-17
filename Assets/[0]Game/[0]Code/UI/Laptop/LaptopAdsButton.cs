@@ -1,10 +1,11 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace Game
 {
-    public class LaptopAdsButton : Button, IGameLaptopListener
+    public sealed class LaptopAdsButton : Button, IGameLaptopListener
     {
         [SerializeField]
         private TMP_Text _awardLabel;
@@ -16,35 +17,24 @@ namespace Game
         {
             UpgradeAwardLabel(_walletService.GetMaxMoney);
 
-            _walletService.MaxMoneyChanged += UpgradeAwardLabel;
+            _walletService.MaxAwardChanged += UpgradeAwardLabel;
             onClick.AddListener(OnClicked);
         }
 
         public void OnCloseLaptop()
         {
-            _walletService.MaxMoneyChanged -= UpgradeAwardLabel;
+            _walletService.MaxAwardChanged -= UpgradeAwardLabel;
             onClick.RemoveAllListeners();
         }
 
         private void UpgradeAwardLabel(double maxMoney)
         {
-            var award = (int)(maxMoney * 0.5f);
-
-            if (award > 1000000)
-                award = 1000000;
-            
-            _awardLabel.text = $"{_walletService.GetFormatMoney(award)}";
+            _awardLabel.text = $"{_walletService.GetFormatMoney(_walletService.GetMaxAward)}";
         }
         
         private void OnClicked()
         {
-            var maxMoney = _walletService.GetMaxMoney;
-            var award = (int)(maxMoney * 0.5f);
-            
-            if (award > 1000000)
-                award = 1000000;
-            
-            _walletService.Add(award);
+            YandexGame.RewVideoShow(1);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class GuardPatrol : MonoBehaviour, IGameTransitionListener
+    public sealed class GuardPatrol : MonoBehaviour, IGameTransitionListener
     {
         [SerializeField]
         private TriggerChecker _warningZone;

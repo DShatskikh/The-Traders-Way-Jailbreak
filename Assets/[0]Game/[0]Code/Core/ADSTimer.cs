@@ -8,17 +8,23 @@ namespace Game
     [Serializable]
     public class ADSTimer : IGameStartListener
     {
+        [SerializeField]
+        private ADSScreen _adsScreen;
+        
         private CoroutineRunner _coroutineRunner;
         private GameStateController _gameStateController;
 
-        private void Construct(CoroutineRunner coroutineRunner)
+        [Inject]
+        private void Construct(CoroutineRunner coroutineRunner, GameStateController gameStateController)
         {
             _coroutineRunner = coroutineRunner;
+            _gameStateController = gameStateController;
         }
         
         public void OnStartGame()
         {
             CoroutineRunner.Instance.StartCoroutine(CheckTimerAd());
+            //CoroutineRunner.Instance.StartCoroutine(TimerAdShow());
         }
         
         private IEnumerator CheckTimerAd()
@@ -42,12 +48,18 @@ namespace Game
             while (true)
             {
                 //Тут показать отчет
+
+                _gameStateController.OpenADS();
+                _adsScreen.gameObject.SetActive(true);
+                yield return _adsScreen.AwaitShowTimer();
+                _adsScreen.gameObject.SetActive(false);
                 
                 YandexGame.FullscreenShow();
 
                 while (!YandexGame.nowFullAd)
                     yield return null;
 
+                _gameStateController.CloseADS();
                 yield break;
             }
         }

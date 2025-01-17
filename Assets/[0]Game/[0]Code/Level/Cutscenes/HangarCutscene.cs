@@ -1,21 +1,18 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game
 {
-    public class HangarCutscene : MonoBehaviour
+    public sealed class HangarCutscene : MonoBehaviour
     {
-        private SaveData _saveData;
+        [SerializeField]
+        private GameObject _mayor;
         
-        [Serializable]
-        public struct SaveData
-        {
-            public bool IsEnd;
-        }
-
         private void Start()
         {
-            
+            var saveData = RepositoryStorage.Get<MyCellCutscene.SaveData>(KeyConstants.MyCellCutscene);
+
+            if (saveData.State == MyCellCutscene.State.EndSpeakMayor) 
+                _mayor.SetActive(true);
         }
     }
 }

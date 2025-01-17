@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Bed : MonoBehaviour, IUseObject
+    public sealed class Bed : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private HomeCutscene _homeCutscene;
@@ -13,7 +13,7 @@ namespace Game
         
         public void Use()
         {
-            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
+            var data = RepositoryStorage.Get<HomeCutscene.SaveData>(KeyConstants.HomeCutscene);
 
             if (data.CutsceneState == HomeCutscene.CutsceneState.BED)
             {

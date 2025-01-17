@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Game
 {
-    public class HomeCutscene : MonoBehaviour, IGameLaptopListener, IGameTransitionListener, IGameStartListener
+    public sealed class HomeCutscene : MonoBehaviour, IGameLaptopListener
     {
         [SerializeField]
         private DialogueSystemTrigger _startDialogue, _closeLaptopDialogue, _tvNews, _tv;
@@ -24,11 +24,12 @@ namespace Game
         private AudioClip _policeClip;
 
         [SerializeField]
+        private BoxCollider2D _exitTransition;
+        
+        [SerializeField]
         private UnityEvent _policeEvent;
         
-        private StockMarketService _stockMarketService;
         private CutsceneState _cutsceneState;
-        private WalletService _walletService;
 
         [Serializable]
         public enum CutsceneState
@@ -38,8 +39,9 @@ namespace Game
             TV = 2, //Посмотреть телевизор
             BED = 3, //Лечь спать
             POLICE = 4, //Ломятся полицейские
-            EndGame = 5, //Игрок прилетел домой
-            Party = 6, //Игрок Поговорил с разработчиком
+            ENDING = 5, //Игрок прилетел домой
+            PARTY = 6, //Игрок Поговорил с разработчиком
+            SECRETENDING = 7 //Секретная концовка
         }
         
         [Serializable]
@@ -47,47 +49,28 @@ namespace Game
         {
             public CutsceneState CutsceneState;
         }
-        
-        [Inject]
-        private void Construct(StockMarketService stockMarketService, WalletService walletService)
-        {
-            _stockMarketService = stockMarketService;
-            _walletService = walletService;
-        }
 
-        public void OnStartGame()
+        private void Start()
         {
-            var data = CutscenesDataStorage.GetData<SaveData>(KeyConstants.HomeCutscene);
+            var data = RepositoryStorage.Get<SaveData>(KeyConstants.HomeCutscene);
             
-            if (data.CutsceneState == CutsceneState.EndGame)
+            if (data.CutsceneState == CutsceneState.ENDING)
                 return;
-                
-            StartCoroutine(AwaitUpgradeState(CutsceneState.LAPTOP));
-        }
-        
-        public void OnStartTransition()
-        {
-            
-        }
 
-        public void OnEndTransition()
-        {
-            var data = CutscenesDataStorage.GetData<HomeCutscene.SaveData>("HomeCutscene");
+            if (data.CutsceneState == CutsceneState.OFF)
+                data.CutsceneState = CutsceneState.LAPTOP;
             
-            if (data.CutsceneState == CutsceneState.EndGame)
-                return;
-            
-            UpgradeState(CutsceneState.LAPTOP);
+            UpgradeState(data.CutsceneState);
         }
 
         public void OffTV()
         {
-            UpgradeState(CutsceneState.BED);
+            TryUpgradeState(CutsceneState.BED);
         }
 
         public void Sleep()
         {
-            UpgradeState(CutsceneState.POLICE);
+            TryUpgradeState(CutsceneState.POLICE);
         }
 
         public void OnOpenLaptop()
@@ -97,12 +80,37 @@ namespace Game
 
         public void OnCloseLaptop()
         {
-            UpgradeState(CutsceneState.TV);
+            TryUpgradeState(CutsceneState.TV);
         }
 
         private IEnumerator AwaitUpgradeState(CutsceneState transitionState)
         {
             yield return null;
+            TryUpgradeState(transitionState);
+        }
+
+        private bool CanSwitchState(CutsceneState transitionState)
+        {
+            switch (transitionState)
+            {
+                case CutsceneState.LAPTOP when _cutsceneState != CutsceneState.OFF:
+                    return false;
+                case CutsceneState.TV when _cutsceneState != CutsceneState.LAPTOP:
+                    return false;
+                case CutsceneState.BED when _cutsceneState != CutsceneState.TV:
+                    return false;
+                case CutsceneState.POLICE when _cutsceneState != CutsceneState.BED:
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void TryUpgradeState(CutsceneState transitionState)
+        {
+            if (!CanSwitchState(transitionState))
+                return;
+
             UpgradeState(transitionState);
         }
 
@@ -110,9 +118,9 @@ namespace Game
         {
             switch (transitionState)
             {
-                case CutsceneState.LAPTOP when _cutsceneState != CutsceneState.OFF:
-                    return;
                 case CutsceneState.LAPTOP:
+                    _exitTransition.isTrigger = false;
+                    
                     _startDialogue.OnUse();
                     DialogueExtensions.SubscriptionCloseDialog(() =>
                     {
@@ -121,8 +129,6 @@ namespace Game
                     
                     _cutsceneState = CutsceneState.LAPTOP;
                     break;
-                case CutsceneState.TV when _cutsceneState != CutsceneState.LAPTOP:
-                    return;
                 case CutsceneState.TV:
                     _closeLaptopDialogue.OnUse();
                     DialogueExtensions.SubscriptionCloseDialog(() =>
@@ -135,8 +141,6 @@ namespace Game
                     _tv.gameObject.SetActive(false);
                     _cutsceneState = CutsceneState.TV;
                     break;
-                case CutsceneState.BED when _cutsceneState != CutsceneState.TV:
-                    return;
                 case CutsceneState.BED:
                     DialogueExtensions.SubscriptionCloseDialog(() =>
                     {
@@ -144,16 +148,17 @@ namespace Game
                     });
                     
                     _tvArrow.gameObject.SetActive(false);
+                    _tvNews.gameObject.SetActive(false);
+                    _tv.gameObject.SetActive(true);
                     _cutsceneState = CutsceneState.BED;
                     
-                    CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, new SaveData()
+                    RepositoryStorage.Set(KeyConstants.HomeCutscene, new SaveData()
                     {
                         CutsceneState = CutsceneState.BED
                     });
                     break;
-                case CutsceneState.POLICE when _cutsceneState != CutsceneState.BED:
-                    return;
                 case CutsceneState.POLICE:
+                    _exitTransition.isTrigger = true;
                     _bedArrow.gameObject.SetActive(false);
                     _nightPanel.SetActive(true);
                     MusicPlayer.Play(_policeClip);
@@ -163,7 +168,7 @@ namespace Game
                     _policePanel.gameObject.SetActive(true);
                     StartCoroutine(_policePanel.AwaitAnimation());
                     
-                    CutscenesDataStorage.SetData(KeyConstants.HomeCutscene, new SaveData()
+                    RepositoryStorage.Set(KeyConstants.HomeCutscene, new SaveData()
                     {
                         CutsceneState = CutsceneState.POLICE
                     });

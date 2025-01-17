@@ -91,7 +91,7 @@ MonoBehaviour:
       m_LocalVariables: []
   - Id: Star
     Icon: {fileID: 279032703, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 1000000
+    Price: 10000000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
@@ -101,13 +101,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  HatConfigs:
+  - {fileID: 11400000, guid: fc0d1914ade840a44892f62239d3042c, type: 2}
+  - {fileID: 11400000, guid: d3f70f2a0060fd74dbbecf058d9e449e, type: 2}
+  - {fileID: 11400000, guid: b292eb8014409684391a8729be334729, type: 2}
+  - {fileID: 11400000, guid: db5fbf90677cbf541a0b9ac6970ac831, type: 2}
+  - {fileID: 11400000, guid: 2cb32846e270a1342b6b7398fefaa384, type: 2}
+  - {fileID: 11400000, guid: b38003df907181446926276a7276af78, type: 2}
+  - {fileID: 11400000, guid: d6d220fdf859b584d9a4d6788c22b71d, type: 2}
+  - {fileID: 11400000, guid: 7cbcfa39598b83741915b9c9120f4b41, type: 2}
+  - {fileID: 11400000, guid: 8f5c564899d30e14e816e84e4bbbe48f, type: 2}
+  - {fileID: 11400000, guid: 2b8481204728a9c4a9879a0bc15655b0, type: 2}
+  - {fileID: 11400000, guid: 4f5f2637da356fc4a8506af4c73f5bf6, type: 2}
   BuySound: {fileID: 8300000, guid: 3b2f10c7a73854a458590ddde889d889, type: 3}
   ClickSound: {fileID: 8300000, guid: 45f55c4328da0ba408b0bc02cf3253a3, type: 3}
   BruhSound: {fileID: 8300000, guid: 4c48bbf0e1b2fef458a600c6accc61fb, type: 3}
   BreakSound: {fileID: 8300000, guid: 7dad69bc557f82044883d1f5623a0271, type: 3}
   SpaceDoorOpenSound: {fileID: 8300000, guid: bac6b1a6c9611f841ace99b201857f9d, type: 3}
   SpaceDoorCloseSound: {fileID: 8300000, guid: 8befdc013bebeb9438ab19701e34cd5f, type: 3}
-  NameSelectScreen: {fileID: 1401440766509938809, guid: 5b344c5ec9607a543a842bf10c93e682, type: 3}
+  StartGameScreen: {fileID: 2051324368041697187, guid: 5b344c5ec9607a543a842bf10c93e682, type: 3}
   references:
     version: 2
     RefIds: []

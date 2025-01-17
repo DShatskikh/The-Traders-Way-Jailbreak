@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class KeyPressedButton : MonoBehaviour
+    public sealed class KeyPressedButton : MonoBehaviour
     {
         [SerializeField]
         private InputActionReference m_Action;
@@ -31,15 +31,13 @@ namespace Game
 
         private void ActionOnstarted(InputAction.CallbackContext obj)
         {
-            _animatedButton.OnPointerDown(null);
-            print("ActionOnstarted");
+            _animatedButton.OnPointerDown(null);;
         }
 
         private void ActionOncanceled(InputAction.CallbackContext obj)
         {
             _animatedButton.OnPointerUp(null);
             _animatedButton.onClick.Invoke();
-            print("ActionOncanceled");
         }
     }
 }

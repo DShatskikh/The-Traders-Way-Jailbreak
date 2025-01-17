@@ -2,7 +2,7 @@
 
 namespace Game
 {
-    public class Watermelon : MonoBehaviour
+    public sealed class Watermelon : MonoBehaviour
     {
         [SerializeField]
         private GameObject _watermelon;

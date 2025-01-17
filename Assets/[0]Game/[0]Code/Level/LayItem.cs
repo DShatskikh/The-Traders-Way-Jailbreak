@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class LayItem : MonoBehaviour, IUseObject
+    public sealed class LayItem : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private string _id;
@@ -32,7 +32,7 @@ namespace Game
 
         private void Start()
         {
-            _data = CutscenesDataStorage.GetData<SaveData>(_id);
+            _data = RepositoryStorage.Get<SaveData>(_id);
 
             if (_data.IsUse)
             {
@@ -46,7 +46,7 @@ namespace Game
             _dialogueSystemTrigger.OnUse();
             gameObject.SetActive(false);
             
-            CutscenesDataStorage.SetData(_id, new SaveData() {IsUse = true});
+            RepositoryStorage.Set(_id, new SaveData() {IsUse = true});
         }
     }
 }

@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-    public class StockMarketService : MonoBehaviour
+    public sealed class StockMarketService : MonoBehaviour
     {
         private const float MultiplyStepPercent = 50f;
         private const float MinTarget = 0.3f;

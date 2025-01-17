@@ -6,7 +6,7 @@ using UnityEngine.Localization;
 
 namespace Game
 {
-    public class BuyPlate : MonoBehaviour, IUseObject
+    public sealed class BuyPlate : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private UnityEvent _buyEvent;
@@ -44,7 +44,7 @@ namespace Game
         {
             LocalizedTextUtility.Load(_name, (result) => _label.text = $"{result}\n${_price}");
             
-            _data = CutscenesDataStorage.GetData<SaveData>(_id);
+            _data = RepositoryStorage.Get<SaveData>(_id);
 
             if (_data.IsBuy)
             {
@@ -61,7 +61,7 @@ namespace Game
                 _buyEvent.Invoke();
                 gameObject.SetActive(false);
                 
-                CutscenesDataStorage.SetData(_id, new SaveData() {IsBuy = true});
+                RepositoryStorage.Set(_id, new SaveData() {IsBuy = true});
                 BuyEvent?.Invoke();
             }
             else

@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class TextAnimatorTypewriterEffect : AbstractTypewriterEffect
+    public sealed class TextAnimatorTypewriterEffect : AbstractTypewriterEffect
     {
         [Header("TextAnimator")]
         [SerializeField]

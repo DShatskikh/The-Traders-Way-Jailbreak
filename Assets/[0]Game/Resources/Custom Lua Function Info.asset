@@ -34,6 +34,18 @@ MonoBehaviour:
   - functionName: IsBreakVase
     parameters: 
     returnValue: 1
+  - functionName: IsBuyHat
+    parameters: 02000000
+    returnValue: 1
+  - functionName: GetTaxString
+    parameters: 
+    returnValue: 3
+  - functionName: IsSpeakDeveloper
+    parameters: 
+    returnValue: 1
+  - functionName: IsCompleteStandardEnding
+    parameters: 
+    returnValue: 1
   scriptFunctions:
   - functionName: AddItem
     parameters: 0200000001000000
@@ -51,5 +63,14 @@ MonoBehaviour:
     parameters: 02000000
     returnValue: 0
   - functionName: PlayBreak
+    parameters: 
+    returnValue: 0
+  - functionName: BuyHat
+    parameters: 02000000
+    returnValue: 0
+  - functionName: EndingGameStandard
+    parameters: 
+    returnValue: 0
+  - functionName: EndingGameSecret
     parameters: 
     returnValue: 0

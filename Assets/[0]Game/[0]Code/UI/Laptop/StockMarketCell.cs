@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class StockMarketCell : MonoBehaviour
+    public sealed class StockMarketCell : MonoBehaviour
     {
         [SerializeField]
         private Image _frame;

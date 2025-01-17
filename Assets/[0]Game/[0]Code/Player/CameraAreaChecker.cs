@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class CameraAreaChecker
+    public sealed class CameraAreaChecker
     {
         [SerializeField]
         private Transform _point;

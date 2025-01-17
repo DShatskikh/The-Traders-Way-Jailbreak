@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class PrehistoricVase : MonoBehaviour
+    public sealed class PrehistoricVase : MonoBehaviour
     {
         [SerializeField]
         private SpriteRenderer _spriteRenderer;
@@ -36,7 +36,7 @@ namespace Game
         
         private void Start()
         {
-            if (CutscenesDataStorage.GetData<SaveData>("Vase").IsBreak)
+            if (RepositoryStorage.Get<SaveData>("Vase").IsBreak)
             {
                 Replace();
             }
@@ -54,7 +54,7 @@ namespace Game
             _gameStateController.OpenDialog();
             yield return new WaitForSeconds(2);
             Sequencer.Message("\"EndBreak\"");
-            CutscenesDataStorage.SetData("Vase", new SaveData() {IsBreak = true});
+            RepositoryStorage.Set("Vase", new SaveData() {IsBreak = true});
         }
 
         private void Replace()

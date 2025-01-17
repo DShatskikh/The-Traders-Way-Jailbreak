@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TargetArrow : MonoBehaviour
+    public sealed class TargetArrow : MonoBehaviour
     {
         [SerializeField]
         private Transform _targetPosition, _arrow;

@@ -38,13 +38,7 @@ namespace Game
         
         public void SwitchLocation(string nextLocationName, int pointIndex)
         {
-            if (_currentLocation)
-            {
-                foreach(var gameListener in _currentLocation.GetComponentsInChildren<IGameListener>(true)) 
-                    _gameStateController.RemoveListener(gameListener);
-                
-                Object.Destroy(_currentLocation.gameObject);
-            }
+            DestroyCurrentLocation();
 
             _currentLocation = CreateLocation(GetLocation(nextLocationName));
                     
@@ -61,10 +55,15 @@ namespace Game
             Analytics.CustomEvent("Location " + _currentLocation.gameObject.name);
         }
 
-        public void CloseCurrentLocation()
+        public void DestroyCurrentLocation()
         {
-            if (_currentLocation) 
-                _currentLocation.gameObject.SetActive(false);
+            if (!_currentLocation)
+                return;
+            
+            foreach(var gameListener in _currentLocation.GetComponentsInChildren<IGameListener>(true)) 
+                _gameStateController.RemoveListener(gameListener);
+                
+            Object.Destroy(_currentLocation.gameObject);
         }
 
         private Location CreateLocation(Location location)

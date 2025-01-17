@@ -15,8 +15,8 @@ namespace Game
         public List<Companion> GetAllCompanions => _activeCompanions;
         public float Speed = 1;
         public float RunSpeed = 2;
-        public float ResetTargetPositionDuration = 1;
         public float FlipInterval = 0.5f;
+        public float ResetTargetPositionDuration => _player.IsRun ? 0.5f / 2 : 0.5f;
         public float GetSpeed => _player.IsRun ? RunSpeed : Speed;
 
         [Inject]

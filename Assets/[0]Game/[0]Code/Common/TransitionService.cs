@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TransitionService
+    public sealed class TransitionService
     {
         private GameStateController _gameStateController;
         private TransitionScreen _transitionScreen;

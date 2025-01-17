@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Rocket : MonoBehaviour, IUseObject
+    public sealed class Rocket : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private DialogueSystemTrigger _dialogueSystemTrigger;

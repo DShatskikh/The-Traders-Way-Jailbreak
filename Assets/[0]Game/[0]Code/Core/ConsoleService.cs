@@ -39,5 +39,11 @@ namespace Game
         {
             _instance._walletService.Add(money);
         }
+        
+        [Command()]
+        public static void ResetTax()
+        {
+            _instance._walletService.SetMoneyAndTax(_instance._walletService.GetMoney, 0);
+        }
     }
 }

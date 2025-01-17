@@ -10,7 +10,7 @@ namespace Game
             OFF = 0,
             PLAYING = 1,
             PAUSED = 2,
-            FINISHED = 3,
+            MAINMENU = 3,
             TRANSITION = 4,
             LAPTOP = 5,
             SHOP = 6,
@@ -68,9 +68,20 @@ namespace Game
             _listeners.Remove(listener);
         }
 
+        public void OpenMainMenu()
+        {
+            _gameState = GameState.MAINMENU;
+            
+            foreach (var listener in _listeners) 
+            {
+                if (listener is IGameMainMenuListener startListeners) 
+                    startListeners.OnOpenMainMenu();
+            }
+        }
+        
         public void StartGame() 
         {
-            if (_gameState != GameState.OFF && _gameState != GameState.FINISHED)
+            if (_gameState != GameState.OFF && _gameState != GameState.MAINMENU)
                 return;
 
             _gameState = GameState.PLAYING;

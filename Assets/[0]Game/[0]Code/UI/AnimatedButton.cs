@@ -10,10 +10,10 @@ namespace Game
     public class AnimatedButton : Button
     {
         [SerializeField]
-        private Color _pressedColor;
+        protected Color _pressedColor;
         
         [SerializeField]
-        private Color _notPressedColor;
+        protected Color _notPressedColor;
         
         [SerializeField]
         private TMP_Text _label;
@@ -39,13 +39,17 @@ namespace Game
         protected override void Start()
         {
             base.Start();
-            _inputAction.action.canceled += ActionOncanceled;
+            
+            if (_inputAction)
+                _inputAction.action.canceled += ActionOncanceled;
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            _inputAction.action.canceled -= ActionOncanceled;
+            
+            if (_inputAction)
+                _inputAction.action.canceled -= ActionOncanceled;
         }
 
         public override void OnPointerDown(PointerEventData eventData)
@@ -111,13 +115,13 @@ namespace Game
             EndClick();
         }
 
-        private void Guided()
+        protected virtual void Guided()
         {
             _label.color = _pressedColor;
             _frame.color = _pressedColor;
         }
         
-        private void NotGuided()
+        protected virtual void NotGuided()
         {
             _label.color = _notPressedColor;
             _frame.color = _notPressedColor;
@@ -126,9 +130,8 @@ namespace Game
         private void StartClick()
         {
             _isPress = true;
-            
-            _label.color = _pressedColor;
-            _frame.color = _pressedColor;
+
+            Guided();
             _enterAnimation.PlayFeedbacks();
         }
         
@@ -139,8 +142,7 @@ namespace Game
             
             _isPress = false;
             
-            _label.color = _notPressedColor;
-            _frame.color = _notPressedColor;
+            NotGuided();
             _exitAnimation.PlayFeedbacks();
             
             SoundPlayer.Play(AssetProvider.Instance.ClickSound);

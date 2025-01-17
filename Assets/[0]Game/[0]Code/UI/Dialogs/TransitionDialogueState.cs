@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game
 {
-    public class TransitionDialogueState : MonoBehaviour
+    public sealed class TransitionDialogueState : MonoBehaviour
     {
         private GameStateController _gameStateController;
         private bool _isInit;

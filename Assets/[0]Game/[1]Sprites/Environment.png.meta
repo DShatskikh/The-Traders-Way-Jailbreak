@@ -2578,7 +2578,7 @@ TextureImporter:
         width: 20
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2587,6 +2587,28 @@ TextureImporter:
       bones: []
       spriteID: 335129480acd6e24388ef6eb6325cdbe
       internalID: -2127683426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment_112
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 214
+        width: 13
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fb4cd52edb1a947884ce34b95e52eb
+      internalID: 102783600
       vertices: []
       indices: 
       edges: []
@@ -2621,6 +2643,7 @@ TextureImporter:
       Environment_11: 279032703
       Environment_110: 1207443562
       Environment_111: -2127683426
+      Environment_112: 102783600
       Environment_12: -2011422474
       Environment_13: -1513746988
       Environment_14: -1340220179

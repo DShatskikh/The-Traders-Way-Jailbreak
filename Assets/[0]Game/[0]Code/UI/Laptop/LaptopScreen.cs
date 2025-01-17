@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class LaptopScreen : ScreenBase, IGameLaptopListener
+    public sealed class LaptopScreen : ScreenBase, IGameLaptopListener
     {
         [SerializeField]
         private StockMarketCell _cellPrefab;
@@ -37,7 +37,8 @@ namespace Game
 
         private void OnDisable()
         {
-            _playerInput.actions["Cancel"].canceled -= OnCancel;
+            if (_playerInput)
+                _playerInput.actions["Cancel"].canceled -= OnCancel;
         }
 
         public void Start()

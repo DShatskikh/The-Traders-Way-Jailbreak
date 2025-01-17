@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 namespace Game
 {
     [CustomEditor(typeof(HintKeyLabel))]
-    public class HintKeyLabelEditor : Editor
+    public class HintKeyLabelEditor : UnityEditor.Editor
 {
         protected void OnEnable()
         {

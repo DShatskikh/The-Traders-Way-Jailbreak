@@ -4,7 +4,7 @@ using UnityEngine.Localization;
 
 namespace Game
 {
-    public class Laptop : MonoBehaviour, IUseObject
+    public sealed class Laptop : MonoBehaviour, IUseObject
     {
         [SerializeField]
         private LocalizedString _localizedString;

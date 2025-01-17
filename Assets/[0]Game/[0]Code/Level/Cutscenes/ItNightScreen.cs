@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class ItNightScreen : MonoBehaviour
+    public sealed class ItNightScreen : MonoBehaviour
     {
         [SerializeField]
         private TMP_Text _label;

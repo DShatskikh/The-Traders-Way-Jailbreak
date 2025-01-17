@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Barrier : MonoBehaviour
+    public sealed class Barrier : MonoBehaviour
     {
         private SpriteRenderer _spriteRenderer;
         private Player _player;

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class SubmitAnimatedButton : MonoBehaviour
+    public sealed class SubmitAnimatedButton : MonoBehaviour
     {
         private PlayerInput _playerInput;
         private AnimatedButton _animatedButton;
@@ -31,7 +31,8 @@ namespace Game
                 _playerInput.actions["Submit"].canceled -= OnSubmitUp;
             }
 
-            CoroutineRunner.Instance.StartCoroutine(AwaitShow());
+            if (CoroutineRunner.Instance)
+                CoroutineRunner.Instance.StartCoroutine(AwaitShow());
         }
 
         private IEnumerator AwaitShow()

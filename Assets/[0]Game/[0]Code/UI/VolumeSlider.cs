@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public class VolumeSlider : MonoBehaviour
+    public sealed class VolumeSlider : MonoBehaviour
     {
         [SerializeField]
         private TMP_Text _label;

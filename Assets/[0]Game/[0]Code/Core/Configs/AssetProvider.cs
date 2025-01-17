@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -18,7 +19,8 @@ namespace Game
         public Color SelectColor;
         public Color DeselectColor;
         public StockMarketItem[] StockMarketItems;
-
+        public HatBaseConfig[] HatConfigs;
+        
         [Header("AudioClips")]
         public AudioClip BuySound;
         public AudioClip ClickSound;
@@ -28,6 +30,6 @@ namespace Game
         public AudioClip SpaceDoorCloseSound;
 
         [Header("GameObjects")]
-        public NameSelectScreen NameSelectScreen;
+        public GameObject StartGameScreen;
     }
 }

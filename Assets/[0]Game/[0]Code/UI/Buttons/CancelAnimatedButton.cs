@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public class CancelAnimatedButton : MonoBehaviour
+    public sealed class CancelAnimatedButton : MonoBehaviour
     {
         private PlayerInput _playerInput;
         private AnimatedButton _animatedButton;
