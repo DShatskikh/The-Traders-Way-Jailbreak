@@ -235,6 +235,18 @@ MonoBehaviour:
     m_Key: Secret_Table_Console
     m_Metadata:
       m_Items: []
+  - m_Id: 11049734791086080
+    m_Key: SecretCommand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11049833336258560
+    m_Key: HelpCommand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11147164677160960
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

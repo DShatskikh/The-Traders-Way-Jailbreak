@@ -16,19 +16,25 @@ namespace Game
         private LocationsManager.Data _initializationLocationData;
 
         [SerializeField]
-        private HomeCutscene.SaveData _homeData;
-
-        [SerializeField]
         private bool _isOpenStockMarket;
 
         [SerializeField]
         private bool _isShowMenu;
-        
+
+        [SerializeField]
+        private HomeCutscene.SaveData _homeData;
+
         [SerializeField]
         private MyCellCutscene.SaveData _myCellData;
 
         [SerializeField]
         private NoobikSkinShop.SaveData _noobikData;
+
+        [SerializeField]
+        private EndsData _endsData;
+        
+        [SerializeField]
+        private VolumeData _volume;
         
         [SerializeField]
         private double _startMoney = 999999999;
@@ -106,7 +112,7 @@ namespace Game
 
         [SerializeField]
         private Transform[] _roots;
-        
+
         private readonly TransitionService _transitionService = new();
         private readonly PurchasedManager _purchasedManager = new();
         private readonly AdsManager _adsManager = new();
@@ -114,6 +120,7 @@ namespace Game
         private readonly OpenMainMenuHandler _openMainMenuHandler = new();
         private readonly EndingsGame _endingsGame = new();
         private readonly LuaCommandRegister _luaCommandRegister = new();
+        private readonly IAnalyticsService _analyticsService = new YandexAnalytics();
         
         private void Awake()
         {
@@ -143,6 +150,7 @@ namespace Game
             ServiceLocator.Register(_locationLoader);
             ServiceLocator.Register(_endingsGame);
             ServiceLocator.Register(_allBuyCheckHandler);
+            ServiceLocator.Register(_analyticsService);
 
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
@@ -155,6 +163,7 @@ namespace Game
             Injector.Inject(_endingsGame);
             Injector.Inject(_luaCommandRegister);
             Injector.Inject(_allBuyCheckHandler);
+            Injector.Inject(_hatManager);
             
             _gameStateController.AddListener(_adsTimer);
             _gameStateController.AddListener(_dialogueExtensions);
@@ -183,7 +192,6 @@ namespace Game
             _walletService.Init();
             _stockMarketService.Init();
             _locationsManager.Init();
-            _volumeService.Init();
             _coroutineRunner.Init();
             RepositoryStorage.Init();
             _consoleService.Init();
@@ -198,6 +206,8 @@ namespace Game
                 RepositoryStorage.Set(KeyConstants.HomeCutscene, _homeData);
                 RepositoryStorage.Set(KeyConstants.MyCellCutscene, _myCellData);
                 RepositoryStorage.Set(KeyConstants.SkinShop, _noobikData);
+                RepositoryStorage.Set(KeyConstants.Ending, _endsData);
+                RepositoryStorage.Set(KeyConstants.Volume, _volume);
             
                 _walletService.SetMoneyAndTax(_startMoney, _startTax);
                 
@@ -206,6 +216,8 @@ namespace Game
             }
 #endif
 
+            _volumeService.Init();
+            
 #if UNITY_EDITOR
             if (!_fullTest)
             {

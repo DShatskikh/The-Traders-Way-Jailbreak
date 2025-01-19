@@ -51,7 +51,7 @@ namespace Game
                 });
             }
 
-            if (state == HomeCutscene.CutsceneState.ENDING)
+            if (state is HomeCutscene.CutsceneState.ENDING or HomeCutscene.CutsceneState.PARTY)
             {
                 _defaultTransition.SetActive(false);
                 _secretTransition.SetActive(true);

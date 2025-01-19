@@ -49,6 +49,7 @@ namespace Game
             
             _previousPosition = transform.position;
             _animator.SetFloat(SpeedHash, 0);
+            _rigidbody.linearVelocity = Vector2.zero;
             
             _dialogueSystemTrigger.OnUse();
             

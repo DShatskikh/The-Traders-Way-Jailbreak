@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using YG;
+﻿using UnityEngine;
 
 namespace Game
 {
@@ -8,25 +6,35 @@ namespace Game
     {
         private GameStateController _gameStateController;
         private HatManager _hatManager;
+        private IAnalyticsService _analyticsService;
 
         [Inject]
-        private void Constructor(GameStateController gameStateController, HatManager hatManager)
+        private void Constructor(GameStateController gameStateController, HatManager hatManager, IAnalyticsService analyticsService)
         {
             _gameStateController = gameStateController;
             _hatManager = hatManager;
+            _analyticsService = analyticsService;
         }
         
         public void EndingGameStandard()
         {
+            var data = RepositoryStorage.Get<EndsData>(KeyConstants.Ending);
+            data.IsDefaultEnding = true;
+            RepositoryStorage.Set(KeyConstants.Ending, data);
+            
             Debug.Log("EndGameStandard");
-            YandexMetrica.Send("Ending", new Dictionary<string, string>() { {"Ending", "Standard"} });
+            _analyticsService.Send("Ending", "Standard");
             _gameStateController.OpenMainMenu();
         }
         
         public void EndingGameSecret()
         {
+            var data = RepositoryStorage.Get<EndsData>(KeyConstants.Ending);
+            data.IsSecretEnding = true;
+            RepositoryStorage.Set(KeyConstants.Ending, data);
+            
             Debug.Log("EndGameSecret");
-            YandexMetrica.Send("Ending", new Dictionary<string, string>() { {"Ending", "Secret"} });
+            _analyticsService.Send("Ending", "Secret");
             _hatManager.BuyHat("HackerMask");
             _gameStateController.OpenMainMenu();
         }

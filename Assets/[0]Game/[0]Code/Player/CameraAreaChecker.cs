@@ -22,25 +22,17 @@ namespace Game
         
         public void Check()
         {
-            Collider2D[] colliders = Physics2D.OverlapPointAll(_point.position, _mask);
-
-            float minDistance = float.MaxValue;
+            RaycastHit2D hit = Physics2D.Raycast(_point.position, Vector2.down, 0.1f, _mask);
             CameraArea nearestUseObject = null;
-
-            foreach (Collider2D collider in colliders)
+            
+            if (hit.collider != null)
             {
-                if (collider.TryGetComponent(out CameraArea cameraArea))
+                if (hit.collider.TryGetComponent(out CameraArea cameraArea))
                 {
-                    var currentDistance = Vector2.Distance(_point.position, cameraArea.transform.position);
-                    
-                    if (minDistance > currentDistance)
-                    {
-                        minDistance = currentDistance;
-                        nearestUseObject = cameraArea;
-                    }
+                    nearestUseObject = cameraArea;
                 }
             }
-
+            
             _cinemachineConfiner2D.BoundingShape2D = nearestUseObject 
                 ? nearestUseObject.GetComponent<PolygonCollider2D>() : null;
         }

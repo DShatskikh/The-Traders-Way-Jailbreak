@@ -31,6 +31,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12afd03cb1a025c4488bb9ba59d96adb, type: 2}
   - {fileID: 11400000, guid: 30c3ebc6a43b74e4ca03b35bc4d1d85f, type: 2}
   - {fileID: 11400000, guid: c08c54de41926934b8047371b4beb9e6, type: 2}
-  Wood: []
+  Wood:
+  - {fileID: 11400000, guid: 64de1a9d854561e40b5ac5e9bc1efb23, type: 2}
+  - {fileID: 11400000, guid: 0c79701a32542b643ab745b7518f440f, type: 2}
+  - {fileID: 11400000, guid: 653094e61ac45d240ab6846543a69a71, type: 2}
+  - {fileID: 11400000, guid: 5f05a69af0b533049a7b6e1b8a2997e5, type: 2}
+  - {fileID: 11400000, guid: f8e9769d662867749b2134601bb491cb, type: 2}
+  - {fileID: 11400000, guid: 2e40c45efcd436245b9ee8fdb65684b3, type: 2}
+  - {fileID: 11400000, guid: fac06ed912bfd634bb3aea5976d353a8, type: 2}
+  - {fileID: 11400000, guid: b4377a3fb82e74847ac1def9b5495ec2, type: 2}
+  - {fileID: 11400000, guid: 01b758eb6e6d2514ea466c5cd9742309, type: 2}
+  - {fileID: 11400000, guid: e3b37b5fbee99854c95f29c4a735bb49, type: 2}
   Sponge: []
   Sand: []

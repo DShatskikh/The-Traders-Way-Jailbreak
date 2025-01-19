@@ -10,7 +10,7 @@ namespace Game
         private const string DefaultName = "Денис";
 
         [SerializeField]
-        private Button _button;
+        private Button _button, _backButton;
 
         [SerializeField]
         private TMP_InputField _inputField;
@@ -20,28 +20,35 @@ namespace Game
 
         [SerializeField]
         private GameObject _mainScreen;
+
+        [SerializeField]
+        private StartGameScreenBackground _screenBackground;
+
+        [SerializeField]
+        private StartGameScreen _startGameScreen;
         
-        private ScreenManager _screenManager;
-        private LocationsManager _locationsManager;
-        private GameStateController _gameStateController;
-        private Player _player;
         private LocationLoader _locationLoader;
 
         [Inject]
-        private void Construct(ScreenManager screenManager, LocationsManager locationsManager,
-            GameStateController gameStateController, Player player, LocationLoader locationLoader)
+        private void Construct(LocationLoader locationLoader)
         {
-            _screenManager = screenManager;
-            _locationsManager = locationsManager;
-            _gameStateController = gameStateController;
-            _player = player;
             _locationLoader = locationLoader;
         }
         
-        private void Start()
+        private void OnEnable()
         {
             _button.onClick.AddListener(OnClick);
+            _backButton.onClick.AddListener(OnClickBackButton);
             _character.gameObject.SetActive(true);
+            _screenBackground.StartPlayerAnimation();
+        }
+
+        private void OnDisable()
+        {
+            _button.onClick.RemoveAllListeners();
+            _backButton.onClick.RemoveAllListeners();
+            _character.gameObject.SetActive(false);
+            _screenBackground.StartPlayerAnimation();
         }
 
         private void OnClick()
@@ -58,6 +65,12 @@ namespace Game
 
             Destroy(_mainScreen);
             _locationLoader.Load();
+        }
+
+        private void OnClickBackButton()
+        {
+            _startGameScreen.gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

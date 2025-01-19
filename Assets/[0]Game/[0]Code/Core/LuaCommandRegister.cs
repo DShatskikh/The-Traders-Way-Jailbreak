@@ -76,6 +76,6 @@ namespace Game
             _endingsGame.EndingGameSecret();
 
         private bool IsCompleteStandardEnding() => 
-            false;
+            RepositoryStorage.Get<EndsData>(KeyConstants.Ending).IsDefaultEnding;
     }
 }

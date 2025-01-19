@@ -2623,7 +2623,7 @@ PrefabInstance:
     - target: {fileID: 879844002146504488, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: _music
       value: 
-      objectReference: {fileID: 8300000, guid: 2637f73507947d748981d2ef3b748434, type: 3}
+      objectReference: {fileID: 8300000, guid: 90339d4bb3287bb4fb68184b24b18dab, type: 3}
     - target: {fileID: 2240964058482191375, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: m_Name
       value: MusicPlayer

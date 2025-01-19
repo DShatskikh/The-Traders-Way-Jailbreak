@@ -21,12 +21,14 @@ namespace Game
         
         private LocationsManager _levelManager;
         private Player _player;
+        private GameStateController _gameStateController;
 
         [Inject]
-        private void Construct(LocationsManager levelManager, Player player)
+        private void Construct(LocationsManager levelManager, Player player, GameStateController gameStateController)
         {
             _levelManager = levelManager;
             _player = player;
+            _gameStateController = gameStateController;
         }
         
         public void Use()
@@ -53,6 +55,7 @@ namespace Game
 
         private IEnumerator AwaitEndGame()
         {
+            _gameStateController.OpenDialog();
             _player.gameObject.SetActive(false);
             _fakePlayer.SetActive(true);
             
@@ -68,6 +71,8 @@ namespace Game
             homeCutsceneSaveData.CutsceneState = HomeCutscene.CutsceneState.ENDING;
             RepositoryStorage.Set(KeyConstants.HomeCutscene, homeCutsceneSaveData);
             
+            _player.gameObject.SetActive(true);
+            _gameStateController.CloseDialog();
             _levelManager.SwitchLocation("WorldHome", 3);
         }
     }

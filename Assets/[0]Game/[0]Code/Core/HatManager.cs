@@ -12,9 +12,16 @@ namespace Game
         
         public event Action<HatData> OnHatUpgrade;
 
+        private IAnalyticsService _analyticsService;
         private HatData _currentHat;
         private List<HatData> _hats = new();
 
+        [Inject]
+        private void Construct(IAnalyticsService analyticsService)
+        {
+            _analyticsService = analyticsService;
+        }
+        
         public void Init()
         {
             _currentHat = null;
@@ -47,6 +54,7 @@ namespace Game
                 {
                     _hats[i].IsBuy = true;
                     UpgradeHat(_hats[i]);
+                    _analyticsService.Send("Buy", id);
                     return;
                 }
             }

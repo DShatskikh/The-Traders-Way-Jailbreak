@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -25,12 +24,20 @@ namespace Game
 
         private Sequence _sequence;
         private Sequence _rocketSequence;
+        private Coroutine _coroutine;
 
         private void Start()
         {
-            StartCoroutine(AwaitPlayerAnimation());
             StartCoroutine(AwaitRocketAnimation());
             StartCoroutine(AwaitLuckyBlockAnimation());
+        }
+
+        public void StartPlayerAnimation()
+        {
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+            
+            _coroutine = StartCoroutine(AwaitPlayerAnimation());
         }
         
         private IEnumerator AwaitPlayerAnimation()
@@ -41,7 +48,7 @@ namespace Game
             {
                 yield return new WaitForSeconds(2);
                 var state = Random.Range(0, states.Length);
-                _animator.SetFloat("State", state);
+                _animator.SetFloat("State", states[state]);
                 _spriteRenderer.flipX = Random.Range(0, 2) == 0;
             }
         }

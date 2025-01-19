@@ -49,10 +49,14 @@ namespace Game
 
         private IEnumerator AwaitBreak()
         {
+            var theme = MusicPlayer.Instance.Clip;
+            var climTime = MusicPlayer.Instance.GetTime();
+            MusicPlayer.Instance.Stop();
             Replace();
             _particleSystem.Play();
             _gameStateController.OpenDialog();
             yield return new WaitForSeconds(2);
+            MusicPlayer.Play(theme, climTime);
             Sequencer.Message("\"EndBreak\"");
             RepositoryStorage.Set("Vase", new SaveData() {IsBreak = true});
         }

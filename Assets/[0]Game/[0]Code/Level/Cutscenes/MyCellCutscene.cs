@@ -22,6 +22,9 @@ namespace Game
 
         [SerializeField]
         private GameObject _mayor;
+
+        [SerializeField]
+        private AudioClip _mayorTheme;
         
         private SaveData _saveData;
         private Player _player;
@@ -92,23 +95,26 @@ namespace Game
         {
             _saveData = RepositoryStorage.Get<SaveData>(KeyConstants.MyCellCutscene);
 
-            if (_saveData.State == State.DontPayTax)
-            {
-                _saveData.State = State.PayTax;
-                _mayor.SetActive(true);
-                _payDialogue.OnUse();
+            if (_saveData.State != State.DontPayTax) 
+                return;
+            
+            _saveData.State = State.PayTax;
+            _mayor.SetActive(true);
+            var standardTheme = MusicPlayer.Instance.Clip;
+            MusicPlayer.Play(_mayorTheme);
+            _payDialogue.OnUse();
 
-                DialogueExtensions.SubscriptionCloseDialog(() =>
-                {
-                    _saveData.State = State.EndSpeakMayor;
+            DialogueExtensions.SubscriptionCloseDialog(() =>
+            {
+                _saveData.State = State.EndSpeakMayor;
                     
-                    var sequence = DOTween.Sequence();
-                    sequence.Append(_mayor.transform.DOMoveY(_mayor.transform.position.y + 15, 3))
-                        .SetEase(Ease.Linear)
-                        .OnComplete(() => { _mayor.SetActive(false);});
-                    RepositoryStorage.Set(KeyConstants.MyCellCutscene, _saveData);
-                });
-            }
+                var sequence = DOTween.Sequence();
+                sequence.Append(_mayor.transform.DOMoveY(_mayor.transform.position.y + 15, 3))
+                    .SetEase(Ease.Linear)
+                    .OnComplete(() => { _mayor.SetActive(false);});
+                MusicPlayer.Play(standardTheme);
+                RepositoryStorage.Set(KeyConstants.MyCellCutscene, _saveData);
+            });
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Game
         [SerializeField]
         private TargetArrow _laptopArrow, _tvArrow, _bedArrow;
 
+        [Header("Police")]
         [SerializeField]
         private GameObject _nightPanel;
 
@@ -28,6 +29,13 @@ namespace Game
         
         [SerializeField]
         private UnityEvent _policeEvent;
+        
+        [Header("Party")]
+        [SerializeField]
+        private UnityEvent _partyEvent;
+
+        [SerializeField]
+        private AudioClip _partyTheme;
         
         private CutsceneState _cutsceneState;
 
@@ -48,6 +56,7 @@ namespace Game
         public struct SaveData
         {
             public CutsceneState CutsceneState;
+            public bool IsShowLandedScreen;
         }
 
         private void Start()
@@ -61,6 +70,12 @@ namespace Game
                 data.CutsceneState = CutsceneState.LAPTOP;
             
             UpgradeState(data.CutsceneState);
+
+            if (data.CutsceneState == CutsceneState.PARTY)
+            {
+                _partyEvent.Invoke();
+                StartCoroutine(AwaitStartParty());
+            }
         }
 
         public void OffTV()
@@ -174,6 +189,12 @@ namespace Game
                     });
                     break;
             }
+        }
+
+        private IEnumerator AwaitStartParty()
+        {
+            yield return null;
+            MusicPlayer.Play(_partyTheme);
         }
     }
 }

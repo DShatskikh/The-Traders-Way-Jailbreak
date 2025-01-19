@@ -62,6 +62,7 @@ namespace Game
             _player.SetViewState(0);
             _spriteRenderer.enabled = false;
             _effect.Play();
+            SoundPlayer.Play(AssetProvider.Instance.BreakSound);
             
             yield return new WaitForSeconds(0.5f);
             

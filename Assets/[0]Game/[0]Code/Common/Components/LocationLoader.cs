@@ -20,7 +20,12 @@
         public void Load()
         {
             _locationsManager.SwitchLocation("World", 0);
-            _gameStateController.StartGame();
+            
+            if (_gameStateController.CurrentState == GameStateController.GameState.PAUSED)
+                _gameStateController.ResumeGame();
+            else if (_gameStateController.CurrentState == GameStateController.GameState.DIALOGUE)
+                _gameStateController.CloseDialog();
+            
             _screenManager.Show(ScreenType.Main);
             _player.gameObject.SetActive(true);
         }

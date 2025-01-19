@@ -10,7 +10,9 @@ namespace Game
 
         private void Start()
         {
-            if (false)
+            var data = RepositoryStorage.Get<EndsData>(KeyConstants.Ending);
+            
+            if (data.IsDefaultEnding)
             {
                 var pigPoint = _pigSpriteRenderer.transform.position;
                 var slimePoint = _slimeSpriteRenderer.transform.position;

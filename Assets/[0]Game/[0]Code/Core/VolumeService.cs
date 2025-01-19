@@ -15,10 +15,13 @@ namespace Game
         public void Init()
         {
             Volume.Changed += OnChangeVolume;
-            Volume.Value = 1f;
+            Volume.Value = RepositoryStorage.Get<VolumeData>(KeyConstants.Volume).Volume;
         }
         
-        private void OnChangeVolume(float volume) => 
+        private void OnChangeVolume(float volume)
+        {
             _audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0, volume));
+            RepositoryStorage.Set(KeyConstants.Volume, new VolumeData() { Volume = volume });
+        }
     }
 }

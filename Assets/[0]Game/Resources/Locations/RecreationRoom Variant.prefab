@@ -427,7 +427,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+  m_Sprite: {fileID: -594888614, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -960,7 +960,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+  m_Sprite: {fileID: 265358074, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1182,7 +1182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+  m_Sprite: {fileID: -676803687, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -7640,7 +7640,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+  m_Sprite: {fileID: 112551887, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -8198,7 +8198,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.07929754, y: 0.201442}
+  m_Offset: {x: -0.07929754, y: 0.39891723}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -8208,7 +8208,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8414049, y: 0.402884}
+  m_Size: {x: 0.8414049, y: 0.79783446}
   m_EdgeRadius: 0
 --- !u!1 &7419063970089931238
 GameObject:
@@ -8672,7 +8672,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
+  m_Sprite: {fileID: 265358074, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9290,10 +9290,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1292566047162677450, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1284546240, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     - target: {fileID: 6104730685132480466, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
       propertyPath: m_Name
       value: WardenDance_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6320734483365341413, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: _danceSprite
+      value: 
+      objectReference: {fileID: -179541033, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9322,7 +9330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.33
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9358,7 +9366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining/Table_1
+      value: Recreation/Tables/Firamir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9528,10 +9536,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1292566047162677450, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1284546240, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     - target: {fileID: 6104730685132480466, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
       propertyPath: m_Name
       value: WardenDance_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6320734483365341413, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: _danceSprite
+      value: 
+      objectReference: {fileID: -179541033, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9867,10 +9883,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1292566047162677450, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1284546240, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     - target: {fileID: 6104730685132480466, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
       propertyPath: m_Name
       value: WardenDance
       objectReference: {fileID: 0}
+    - target: {fileID: 6320734483365341413, guid: 800ffceea32872645809b7d01e7f49a0, type: 3}
+      propertyPath: _danceSprite
+      value: 
+      objectReference: {fileID: -179541033, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20663,7 +20687,7 @@ PrefabInstance:
     - target: {fileID: 879844002146504488, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: _music
       value: 
-      objectReference: {fileID: 8300000, guid: 2637f73507947d748981d2ef3b748434, type: 3}
+      objectReference: {fileID: 8300000, guid: 90339d4bb3287bb4fb68184b24b18dab, type: 3}
     - target: {fileID: 2240964058482191375, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
@@ -23292,7 +23316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1942011282510591313, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23332,7 +23356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining/Table_1
+      value: Recreation/Tables/Frost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23460,7 +23484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: Dining/Table_1
+      value: Recreation/Tables/Trolls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

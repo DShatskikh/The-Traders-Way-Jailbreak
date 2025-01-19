@@ -63,7 +63,7 @@ namespace Game
             yield return DialogueExtensions.AwaitCloseDialog();
 
             _saveData.IsShow = true;
-            RepositoryStorage.Set("Skibidi", _saveData);
+            RepositoryStorage.Set(KeyConstants.Skibidi, _saveData);
             yield return new WaitForSeconds(1);
             _gameStateController.OpenDialog();
             yield return _animation.Append(_head.DOMoveY(_downPoint.position.y, 1f)).WaitForCompletion();

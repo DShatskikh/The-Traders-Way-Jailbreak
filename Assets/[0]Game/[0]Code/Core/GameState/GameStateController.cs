@@ -10,7 +10,7 @@ namespace Game
             OFF = 0,
             PLAYING = 1,
             PAUSED = 2,
-            MAINMENU = 3,
+            MAIN_MENU = 3,
             TRANSITION = 4,
             LAPTOP = 5,
             SHOP = 6,
@@ -70,7 +70,7 @@ namespace Game
 
         public void OpenMainMenu()
         {
-            _gameState = GameState.MAINMENU;
+            _gameState = GameState.MAIN_MENU;
             
             foreach (var listener in _listeners) 
             {
@@ -81,9 +81,6 @@ namespace Game
         
         public void StartGame() 
         {
-            if (_gameState != GameState.OFF && _gameState != GameState.MAINMENU)
-                return;
-
             _gameState = GameState.PLAYING;
             
             foreach (var listener in _listeners) 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using YG;
 
@@ -10,12 +9,16 @@ namespace Game
     {
         private HatManager _hatManager;
         private GameStateController _gameStateController;
-
+        private IAnalyticsService _analyticsService;
+        
         [Inject]
-        private void Construct(HatManager hatManager, GameStateController gameStateController)
+        private void Construct(HatManager hatManager, GameStateController gameStateController, IAnalyticsService analyticsService)
         {
             _hatManager = hatManager;
             _gameStateController = gameStateController;
+            _analyticsService = analyticsService;
+            
+            
             YandexGame.PurchaseSuccessEvent += PurchaseSuccessEvent;
         }
 
@@ -33,7 +36,7 @@ namespace Game
                 case "Herobrine":
                     _hatManager.BuyHat("Herobrine");
                     _gameStateController.OpenShop();
-                    YandexMetrica.Send("Buy", new Dictionary<string, string>() { {"Buy", "Herobrine"} });
+                    _analyticsService.Send("Purchased", "Herobrine");
                     break;
                 default:
                     break;

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game
 {
@@ -11,7 +13,8 @@ namespace Game
 
         [SerializeField]
         private Sprite _danceSprite;
-        
+
+        private Sequence _sequence;
         private Coroutine _coroutine;
         private bool _isFlipX;
         private float _startY;
@@ -74,25 +77,31 @@ namespace Game
                         
                         break;
                     case 1:
+                        _sequence?.Kill();
+                        _sequence = DOTween.Sequence();
+
                         int countJump = Random.Range(1, 3);
-                        var sequence = DOTween.Sequence();
                         
                         for (int i = 0; i < countJump; i++)
                         {
-                            _spriteRenderer.sprite = _startSprite;
-                            yield return sequence.Append(_spriteRenderer.transform.DOMoveY(_startY + 1f, 0.75f)).WaitForCompletion();
-                            _spriteRenderer.sprite = _danceSprite;
-                            yield return sequence.Append(_spriteRenderer.transform.DOMoveY(_startY, 0.75f)).WaitForCompletion();
-                            _spriteRenderer.sprite = _startSprite;
+                            _sequence.Append(_spriteRenderer.transform.DOMoveY(_startY + 1f, 0.5f).OnStart(() => 
+                                    _spriteRenderer.sprite = _startSprite))
+                                .Append(_spriteRenderer.transform.DOMoveY(_startY, 0.5f).OnStart(() => 
+                                    _spriteRenderer.sprite = _danceSprite));
                         }
                         
-                        break;
-                    default:
+                        yield return _sequence.WaitForCompletion();
+                        _spriteRenderer.sprite = _startSprite;
                         break;
                 }
             
                 yield return new WaitForSeconds(Random.Range(0.5f, 2f));
             }
+        }
+
+        private void OnDestroy()
+        {
+            _sequence?.Kill();
         }
     }
 }

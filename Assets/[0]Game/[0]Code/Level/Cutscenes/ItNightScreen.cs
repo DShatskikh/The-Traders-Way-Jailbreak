@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Game
         [SerializeField]
         private Image _image;
         
-        public IEnumerator AwaitAnimation()
+        public IEnumerator AwaitAnimation(Action action = null)
         {
             _label.color = _label.color.SetA(0);
             yield return new WaitForSeconds(0.5f);
@@ -27,6 +28,14 @@ namespace Game
                 .Append(_image.DOColor(Color.clear, 1f))
                 .Insert(0, _label.DOColor(Color.clear, 1f)).WaitForCompletion();
             gameObject.SetActive(false);
+            
+            action?.Invoke();
+        }
+
+        public void Show(Action action = null)
+        {
+            gameObject.SetActive(true);
+            StartCoroutine(AwaitAnimation(action));
         }
     }
 }

@@ -10,13 +10,16 @@ namespace Game
         private HatManager _hatManager;
         private GameStateController _gameStateController;
         private WalletService _walletService;
+        private IAnalyticsService _analyticsService;
 
         [Inject]
-        private void Construct(HatManager hatManager, GameStateController gameStateController, WalletService walletService)
+        private void Construct(HatManager hatManager, GameStateController gameStateController, WalletService walletService, IAnalyticsService analyticsService)
         {
             _hatManager = hatManager;
             _gameStateController = gameStateController;
             _walletService = walletService;
+            _analyticsService = analyticsService;
+            
             YandexGame.RewardVideoEvent += RewardVideoEvent;
         }
 
@@ -32,12 +35,11 @@ namespace Game
                 case 0: // Лицо нубика
                     _hatManager.BuyHat("FaceNoob");
                     _gameStateController.OpenShop();
-                    YandexMetrica.Send("Ads", new Dictionary<string, string>() { {"Ads", "FaceNoob"} });
+                    _analyticsService.Send("Ads", "FaceNoob");
                     break;
                 case 1: // Деньги за рекламу
-                    YandexMetrica.Send("Ads", new Dictionary<string, string>() { {"Ads", 
-                        $"Money: {_walletService.GetFormatMoney(_walletService.GetMaxAward)}"} });
                     _walletService.Add(_walletService.GetMaxAward);
+                    _analyticsService.Send("Ads",  $"Money: {_walletService.GetFormatMoney(_walletService.GetMaxAward)}");
                     break;
                 default:
                     break;

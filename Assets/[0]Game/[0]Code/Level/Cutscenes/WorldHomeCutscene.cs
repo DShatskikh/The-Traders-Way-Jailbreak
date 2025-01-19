@@ -29,6 +29,13 @@ namespace Game
         [SerializeField]
         private TransitionTrigger _transitionTrigger;
         
+        [Header("Ending Default")]
+        [SerializeField]
+        private ItNightScreen _landedScreen;
+        
+        [SerializeField]
+        private GameObject _party;
+        
         [Header("Secret")]
         [SerializeField]
         private DialogueSystemTrigger _secretEndingDialogue;
@@ -42,16 +49,18 @@ namespace Game
         private CompanionsManager _companionsManager;
         private Player _player;
         private HatManager _hatManager;
+        private GameStateController _gameStateController;
 
         [Inject]
         private void Construct(StockMarketService stockMarketService, WalletService walletService,
-            CompanionsManager companionsManager, Player player, HatManager hatManager)
+            CompanionsManager companionsManager, Player player, HatManager hatManager, GameStateController gameStateController)
         {
             _stockMarketService = stockMarketService;
             _walletService = walletService;
             _companionsManager = companionsManager;
             _player = player;
             _hatManager = hatManager;
+            _gameStateController = gameStateController;
         }
         
         private void Start()
@@ -81,14 +90,33 @@ namespace Game
                 });
             }
 
-            if (_data.CutsceneState is HomeCutscene.CutsceneState.ENDING or HomeCutscene.CutsceneState.PARTY)
+            if (_data.CutsceneState is HomeCutscene.CutsceneState.ENDING)
             {
-                _player.gameObject.SetActive(true);   
+                if (!_data.IsShowLandedScreen)
+                {
+                    _gameStateController.OpenDialog(); 
+                    _landedScreen.Show(() =>
+                    {
+                        _player.gameObject.SetActive(true);   
+                        _gameStateController.CloseDialog(); 
+                        _data.IsShowLandedScreen = true;
+                        RepositoryStorage.Set(KeyConstants.HomeCutscene, _data);
+                    });
+                }
+                
                 _endGame.SetActive(true);
                 _table.SetActive(true);
                 _transitionTrigger.GetComponent<BoxCollider2D>().isTrigger = false;
                 _leftTransition.SetActive(false);
                 _rightTransition.SetActive(false);
+            }
+
+            if (_data.CutsceneState is HomeCutscene.CutsceneState.PARTY)
+            {
+                _endGame.SetActive(true);
+                _leftTransition.SetActive(false);
+                _rightTransition.SetActive(false);
+                _party.SetActive(true);
             }
         }
 

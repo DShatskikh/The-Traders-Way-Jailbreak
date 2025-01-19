@@ -34,7 +34,7 @@ namespace Game
             
             _currentStepTime += Time.deltaTime;
                 
-            if (_currentStepTime >= (_isRun ? _intervalStep / 2 : _intervalStep))
+            if (_currentStepTime >= (_isRun ? _intervalStep / 1.5f : _intervalStep))
             {
                 _currentStepTime = 0;
                 RaycastHit2D hit = Physics2D.Raycast(_transform.position, Vector2.down, 0.1f, _layerMask);

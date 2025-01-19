@@ -11,9 +11,6 @@ namespace Game
         
         [SerializeField]
         private DialogueSystemTrigger _dialogueSystemTrigger;
-
-        [SerializeField]
-        private string _saveId = "default";
         
         private StockMarketService _stockMarketService;
         private SaveData _data;

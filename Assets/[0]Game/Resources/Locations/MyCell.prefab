@@ -5507,6 +5507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3993891197540295438}
     m_Modifications:
+    - target: {fileID: 169196745862105754, guid: b9768a2bacf006c41bb9f201e4dc6200, type: 3}
+      propertyPath: conversation
+      value: MyCell/Mayor
+      objectReference: {fileID: 0}
     - target: {fileID: 659553195693031729, guid: b9768a2bacf006c41bb9f201e4dc6200, type: 3}
       propertyPath: m_Name
       value: UsableObject
@@ -25616,6 +25620,7 @@ MonoBehaviour:
   _dontPayDialogue: {fileID: 5875045082531029902}
   _payDialogue: {fileID: 6797375863111924767}
   _mayor: {fileID: 1596940679745197627}
+  _mayorTheme: {fileID: 8300000, guid: be049b27738fbf74ca9c7db96b90dded, type: 3}
 --- !u!4 &6024885403013077122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 472333063981354246, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
@@ -28279,7 +28284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3133985404581581872, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
       propertyPath: conversation
-      value: MyCell/PayDialogue
+      value: MyCell/Mayor
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8281299529806759866, guid: 2c9add72efd3f644cb506deac7491d9c, type: 3}
@@ -28564,7 +28569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970976118208223794, guid: 2c608ff312507cb4a9a38ca34773c731, type: 3}
       propertyPath: conversation
-      value: Skibidi
+      value: MyCell/Skibidi
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6746432122793459350, guid: 2c608ff312507cb4a9a38ca34773c731, type: 3}
@@ -28826,7 +28831,7 @@ PrefabInstance:
     - target: {fileID: 879844002146504488, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: _music
       value: 
-      objectReference: {fileID: 8300000, guid: 2637f73507947d748981d2ef3b748434, type: 3}
+      objectReference: {fileID: 8300000, guid: 90339d4bb3287bb4fb68184b24b18dab, type: 3}
     - target: {fileID: 2240964058482191375, guid: 61c311a1416a3604ca61bd8e26fe890f, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
