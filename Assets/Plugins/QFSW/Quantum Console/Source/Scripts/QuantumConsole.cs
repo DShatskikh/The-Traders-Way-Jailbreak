@@ -47,14 +47,9 @@ namespace QFSW.QC
             get => _localization;
             set => _localization = value;
         }
-
-        [Command("verbose-errors", "If errors caused by the Quantum Console Processor or commands should be logged in verbose mode.", MonoTargetType.Registry)]
+        
         [SerializeField] private bool _verboseErrors = false;
-
-        [Command("verbose-logging", "The minimum log severity required to use verbose logging.", MonoTargetType.Registry)]
         [SerializeField] private LoggingThreshold _verboseLogging = LoggingThreshold.Never;
-
-        [Command("logging-level", "The minimum log severity required to intercept and display the log.", MonoTargetType.Registry)]
         [SerializeField] private LoggingThreshold _loggingLevel = LoggingThreshold.Always;
 
         [SerializeField] private LoggingThreshold _openOnLogLevel = LoggingThreshold.Never;
@@ -101,8 +96,6 @@ namespace QFSW.QC
         /// <summary>
         /// The maximum number of logs that may be stored in the log storage before old logs are removed.
         /// </summary>
-        [Command("max-logs", MonoTargetType.Registry)]
-        [CommandDescription("The maximum number of logs that may be stored in the log storage before old logs are removed.")]
         public int MaxStoredLogs
         {
             get => _maxStoredLogs;
@@ -656,7 +649,6 @@ namespace QFSW.QC
             return commandResult;
         }
 
-        [Command("qc-script-extern", "Executes an external source of QC script file, where each line is a separate QC command.", MonoTargetType.Registry, Platform.AllPlatforms ^ Platform.WebGLPlayer)]
         public async Task InvokeExternalCommandsAsync(string filePath)
         {
             using (StreamReader reader = new StreamReader(filePath))
@@ -983,7 +975,6 @@ namespace QFSW.QC
         /// <summary>
         /// Clears the Quantum Console.
         /// </summary>
-        [Command("clear", "Clears the Quantum Console", MonoTargetType.Registry)]
         public void ClearConsole()
         {
             _logStorage.Clear();

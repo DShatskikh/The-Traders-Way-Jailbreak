@@ -10,6 +10,11 @@ namespace Game
         [SerializeField]
         private AudioSource _audioSource;
         
+        [SerializeField]
+        private AudioSource _audioSource_2;
+
+        private bool _isFirst;
+        
         public AudioClip Clip => _audioSource.clip;
         public static SoundPlayer Instance { get; private set; }
 
@@ -40,12 +45,23 @@ namespace Game
         public void StopLocal()
         {
             _audioSource.Stop();
+            _audioSource_2.Stop();
         }
 
         private void PlayLocal(AudioClip clip)
         {
-            _audioSource.clip = clip;
-            _audioSource.Play();
+            if (_isFirst)
+            {
+                _audioSource.clip = clip;
+                _audioSource.Play();  
+            }
+            else
+            {
+                _audioSource_2.clip = clip;
+                _audioSource_2.Play();   
+            }
+
+            _isFirst = !_isFirst;
         }
 
         private void PlayBruh() => 

@@ -10,14 +10,16 @@ namespace Game
         private HatManager _hatManager;
         private GameStateController _gameStateController;
         private IAnalyticsService _analyticsService;
-        
+        private ISaveLoadService _saveLoadService;
+
         [Inject]
-        private void Construct(HatManager hatManager, GameStateController gameStateController, IAnalyticsService analyticsService)
+        private void Construct(HatManager hatManager, GameStateController gameStateController, 
+            IAnalyticsService analyticsService, ISaveLoadService saveLoadService)
         {
             _hatManager = hatManager;
             _gameStateController = gameStateController;
             _analyticsService = analyticsService;
-            
+            _saveLoadService = saveLoadService;
             
             YandexGame.PurchaseSuccessEvent += PurchaseSuccessEvent;
         }
@@ -41,6 +43,8 @@ namespace Game
                 default:
                     break;
             }
+            
+            _saveLoadService.Save();
         }
     }
 }

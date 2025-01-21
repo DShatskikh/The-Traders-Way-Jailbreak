@@ -38,7 +38,6 @@ namespace QFSW.QC
         public static bool TableGenerated { get; private set; }
         public static bool TableIsGenerating { get; private set; }
 
-        [Command("command-count", "Gets the number of loaded commands")]
         public static int LoadedCommandCount => _loadedCommandCount;
         private static int _loadedCommandCount = 0;
         private static bool _commandCacheDirty = true;

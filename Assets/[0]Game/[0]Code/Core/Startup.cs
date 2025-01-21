@@ -3,6 +3,7 @@ using RimuruDev;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using YG;
 
 namespace Game
 {
@@ -10,40 +11,19 @@ namespace Game
     {
         [SerializeField]
         private bool _fullTest;
-        
+
         [Header("Test Data")]
         [SerializeField]
-        private LocationsManager.Data _initializationLocationData;
-
+        private AllInitData _initData;
+        
+        [SerializeField]
+        private bool _isUseSaving;
+        
         [SerializeField]
         private bool _isOpenStockMarket;
 
         [SerializeField]
         private bool _isShowMenu;
-
-        [SerializeField]
-        private HomeCutscene.SaveData _homeData;
-
-        [SerializeField]
-        private MyCellCutscene.SaveData _myCellData;
-
-        [SerializeField]
-        private NoobikSkinShop.SaveData _noobikData;
-
-        [SerializeField]
-        private EndsData _endsData;
-        
-        [SerializeField]
-        private VolumeData _volume;
-        
-        [SerializeField]
-        private double _startMoney = 999999999;
-
-        [SerializeField]
-        private double _startTax = 999999999;
-        
-        [SerializeField]
-        private string _playerName = "Денис";
         
         [Header("Services")]
         [SerializeField]
@@ -81,6 +61,9 @@ namespace Game
 
         [SerializeField]
         private AllBuyCheckHandler _allBuyCheckHandler;
+
+        [SerializeField]
+        private SaveLoadService _saveLoadService;
         
         [Header("Links")]
         [SerializeField]
@@ -120,8 +103,8 @@ namespace Game
         private readonly OpenMainMenuHandler _openMainMenuHandler = new();
         private readonly EndingsGame _endingsGame = new();
         private readonly LuaCommandRegister _luaCommandRegister = new();
-        private readonly IAnalyticsService _analyticsService = new YandexAnalytics();
-        
+        private IAnalyticsService _analyticsService;
+
         private void Awake()
         {
             if (FindObjectsByType<Startup>(FindObjectsSortMode.None).Length > 1)
@@ -132,6 +115,12 @@ namespace Game
 
             DontDestroyOnLoad(gameObject);
 
+#if UNITY_EDITOR
+            _analyticsService = new YandexAnalytics();
+#else
+            _analyticsService = new TestAnalyticsService();
+#endif
+            
             ServiceLocator.Register(_screenManager);
             ServiceLocator.Register(_cinemachineConfiner2D);
             ServiceLocator.Register(_playerInput);
@@ -152,6 +141,10 @@ namespace Game
             ServiceLocator.Register(_allBuyCheckHandler);
             ServiceLocator.Register(_analyticsService);
 
+            ISaveLoadService saveLoadService = _saveLoadService;
+            ServiceLocator.Register(saveLoadService);
+            var repositoryStorage = new RepositoryStorage(YandexGame.savesData.Container);
+
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
             Injector.Inject(_consoleService);
@@ -164,7 +157,9 @@ namespace Game
             Injector.Inject(_luaCommandRegister);
             Injector.Inject(_allBuyCheckHandler);
             Injector.Inject(_hatManager);
-            
+            Injector.Inject(saveLoadService);
+            Injector.Inject(_locationsManager);
+
             _gameStateController.AddListener(_adsTimer);
             _gameStateController.AddListener(_dialogueExtensions);
             _gameStateController.AddListener(_companionsManager);
@@ -186,6 +181,32 @@ namespace Game
 
         private void Start()
         {
+#if UNITY_EDITOR
+            if (!_fullTest)
+            {
+                if (!_isUseSaving)
+                {
+                    print("Full Test");
+                    RepositoryStorage.Set(KeyConstants.HomeCutscene, _initData.HomeData);
+                    RepositoryStorage.Set(KeyConstants.MyCellCutscene, _initData.MyCellData);
+                    RepositoryStorage.Set(KeyConstants.SkinShop, _initData.NoobikData);
+                    RepositoryStorage.Set(KeyConstants.Ending, _initData.EndsData);
+                    RepositoryStorage.Set(KeyConstants.Volume, _initData.Volume);
+            
+                    _walletService.SetMoneyAndTax(_initData.StartMoney, _initData.StartTax);
+                
+                    if (_isOpenStockMarket)
+                        _stockMarketService.OpenAllItems(); 
+                }
+            }
+            else
+            {
+                RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen { IsNotFirstOpen = false });
+            }
+#else
+            
+#endif
+            
             _assetProvider.Init();
             _soundPlayer.Init();
             _musicPlayer.Init();
@@ -193,36 +214,26 @@ namespace Game
             _stockMarketService.Init();
             _locationsManager.Init();
             _coroutineRunner.Init();
-            RepositoryStorage.Init();
             _consoleService.Init();
             _dialogueExtensions.Init();
             _companionsManager.Init();
             _hatManager.Init();
             _luaCommandRegister.Init();
-
-#if UNITY_EDITOR
-            if (!_fullTest)
-            {
-                RepositoryStorage.Set(KeyConstants.HomeCutscene, _homeData);
-                RepositoryStorage.Set(KeyConstants.MyCellCutscene, _myCellData);
-                RepositoryStorage.Set(KeyConstants.SkinShop, _noobikData);
-                RepositoryStorage.Set(KeyConstants.Ending, _endsData);
-                RepositoryStorage.Set(KeyConstants.Volume, _volume);
-            
-                _walletService.SetMoneyAndTax(_startMoney, _startTax);
-                
-                if (_isOpenStockMarket)
-                    _stockMarketService.OpenAllItems();
-            }
-#endif
-
             _volumeService.Init();
-            
+
+
+
 #if UNITY_EDITOR
             if (!_fullTest)
             {
-                RepositoryStorage.Set(KeyConstants.Name, new PlayerName(_playerName));
-                Lua.Run($"Variable[\"PlayerName\"] = \"{_playerName}\"");
+                if (_isUseSaving)
+                {
+                    _saveLoadService.Load();
+                    return;
+                }
+                
+                RepositoryStorage.Set(KeyConstants.Name, new PlayerName(_initData.PlayerName));
+                Lua.Run($"Variable[\"PlayerName\"] = \"{_initData.PlayerName}\"");
                 
                 if (_isShowMenu)
                 {
@@ -230,16 +241,16 @@ namespace Game
                 }
                 else
                 {
-                    _locationsManager.SwitchLocation(_initializationLocationData.LocationName, _initializationLocationData.PointIndex);   
+                    _locationsManager.SwitchLocation(_initData.LocationData.LocationName, _initData.LocationData.PointIndex);   
                     _gameStateController.StartGame();
                 }
             }
             else
             {
-                _gameStateController.OpenMainMenu();
+                _saveLoadService.Load();
             }
 #else
-                _locationsManager.SwitchLocation("World", 0);
+            _saveLoadService.Load();
 #endif
 
         }

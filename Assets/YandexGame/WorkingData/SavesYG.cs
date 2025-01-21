@@ -1,4 +1,8 @@
 ﻿
+using System.Collections.Generic;
+using Game;
+using SKUnityToolkit.SerializableDictionary;
+
 namespace YG
 {
     [System.Serializable]
@@ -15,9 +19,10 @@ namespace YG
         public int money = 1;                       // Можно задать полям значения по умолчанию
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
-
+        
         // Ваши сохранения
 
+        public SerializableDictionary<string, string> Container = new();
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

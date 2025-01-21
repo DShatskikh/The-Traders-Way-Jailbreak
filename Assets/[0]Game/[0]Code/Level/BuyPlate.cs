@@ -27,6 +27,7 @@ namespace Game
         private SaveData _data;
 
         public static Action BuyEvent;
+        private ISaveLoadService _saveLoadService;
 
         [Serializable]
         public struct SaveData
@@ -35,14 +36,16 @@ namespace Game
         }
         
         [Inject]
-        private void Construct(WalletService walletService)
+        private void Construct(WalletService walletService, ISaveLoadService saveLoadService)
         {
             _walletService = walletService;
+            _saveLoadService = saveLoadService;
         }
 
         private void Start()
         {
-            LocalizedTextUtility.Load(_name, (result) => _label.text = $"{result}\n${_price}");
+            var price = _walletService.GetFormatMoney(_price);
+            LocalizedTextUtility.Load(_name, (result) => _label.text = $"{result}\n{price}");
             
             _data = RepositoryStorage.Get<SaveData>(_id);
 
@@ -63,6 +66,8 @@ namespace Game
                 
                 RepositoryStorage.Set(_id, new SaveData() {IsBuy = true});
                 BuyEvent?.Invoke();
+                
+                _saveLoadService.Save();
             }
             else
             {

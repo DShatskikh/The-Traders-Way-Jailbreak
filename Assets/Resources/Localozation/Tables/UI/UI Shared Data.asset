@@ -148,7 +148,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7395548262154240
-    m_Key: PauseScreen
+    m_Key: PauseScreen_PC
     m_Metadata:
       m_Items: []
   - m_Id: 7680152713936896
@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10333259293900800
-    m_Key: Secret_Table_Console
+    m_Key: Secret_Table_Console_PC
     m_Metadata:
       m_Items: []
   - m_Id: 11049734791086080
@@ -245,6 +245,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11147164677160960
     m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469283210412032
+    m_Key: Input_PC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469337254019072
+    m_Key: Input_Modile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469914314752000
+    m_Key: PauseScreen_Mobile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470714835419136
+    m_Key: Exit_Laptop_PC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470811757395968
+    m_Key: Exit_Laptop_Mobile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11512621758267392
+    m_Key: Run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11514153719414784
+    m_Key: Secret_Table_Console_Mobile
     m_Metadata:
       m_Items: []
   m_Metadata:

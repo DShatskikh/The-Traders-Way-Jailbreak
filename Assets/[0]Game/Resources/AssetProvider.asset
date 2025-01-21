@@ -79,7 +79,7 @@ MonoBehaviour:
       m_LocalVariables: []
   - Id: Diamond
     Icon: {fileID: -1175944409, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 50000
+    Price: 100000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
@@ -91,7 +91,7 @@ MonoBehaviour:
       m_LocalVariables: []
   - Id: Star
     Icon: {fileID: 279032703, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
-    Price: 10000000
+    Price: 50000000
     Name:
       m_TableReference:
         m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d

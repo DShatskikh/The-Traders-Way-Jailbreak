@@ -17,16 +17,25 @@ namespace Game
         private Player _player;
         private CinemachineConfiner2D _camera;
         private GameStateController _gameStateController;
+        private ISaveLoadService _saveLoadService;
+        private IAnalyticsService _analyticsService;
 
         [Serializable]
         public class Data
         {
-            public string LocationName = "BavWorld";
+            public string LocationName = "World";
             public int PointIndex;
             public float CharacterPositionX;
             public float CharacterPositionY;
         }
 
+        [Inject]
+        private void Construct(ISaveLoadService saveLoadService, IAnalyticsService analyticsService)
+        {
+            _saveLoadService = saveLoadService;
+            _analyticsService = analyticsService;
+        }
+        
         public void Init()
         {
             _player = ServiceLocator.Get<Player>();
@@ -51,8 +60,10 @@ namespace Game
             var targetPosition = _currentLocation.Points[pointIndex].position;
             _player.transform.position = targetPosition;
             _camera.ForceCameraPosition(targetPosition, Quaternion.identity);
-
-            Analytics.CustomEvent("Location " + _currentLocation.gameObject.name);
+            
+            RepositoryStorage.Set(KeyConstants.Location, new Data { LocationName = nextLocationName, PointIndex = pointIndex });
+            _saveLoadService.Save();
+            _analyticsService.Send("Location ", _currentLocation.gameObject.name);
         }
 
         public void DestroyCurrentLocation()

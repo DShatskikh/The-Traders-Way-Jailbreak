@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Game
 {
@@ -7,17 +8,26 @@ namespace Game
         private ScreenManager _screenManager;
         private Player _player;
         private LocationsManager _levelManager;
+        private CoroutineRunner _coroutineRunner;
 
         [Inject]
-        private void Construct(ScreenManager screenManager, Player player, LocationsManager levelManager)
+        private void Construct(ScreenManager screenManager, Player player, LocationsManager levelManager,
+            CoroutineRunner coroutineRunner)
         {
             _screenManager = screenManager;
             _player = player;
             _levelManager = levelManager;
+            _coroutineRunner = coroutineRunner;
         }
 
         public void OnOpenMainMenu()
         {
+            _coroutineRunner.StartCoroutine(AwaitOpenMenu());
+        }
+
+        private IEnumerator AwaitOpenMenu()
+        {
+            yield return null;
             _levelManager.DestroyCurrentLocation();
             _screenManager.Hide(ScreenType.Main);
             _screenManager.Hide(ScreenType.Pause);

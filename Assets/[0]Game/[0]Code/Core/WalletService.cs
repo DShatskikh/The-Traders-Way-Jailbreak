@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class WalletService
+    public class WalletService : IDisposable
     {
         private const double MaxAward = 100000000000; //100 миллиардов
         
@@ -24,6 +24,20 @@ namespace Game
         public event Action<double> TaxChanged;
         public event Action<double> MaxAwardChanged;
 
+        public struct Data
+        {
+            public double Money;
+            public double Tax;
+            public double MaxAward;
+
+            public Data(double money, double tax, double maxAward)
+            {
+                Money = money;
+                Tax = tax;
+                MaxAward = maxAward;
+            }
+        }
+
         public void Init()
         {
             Lua.RegisterFunction(nameof(IsHaveMoney), this,
@@ -34,6 +48,17 @@ namespace Game
             
             Lua.RegisterFunction(nameof(GetTaxString), this,
                 SymbolExtensions.GetMethodInfo(() => GetTaxString()));
+
+            Changed += Save;
+            TaxChanged += Save;
+            MaxAwardChanged += Save;
+        }
+
+        public void Dispose()
+        {
+            Changed -= Save;
+            TaxChanged -= Save;
+            MaxAwardChanged -= Save;
         }
 
         public bool TryBuy(double price)
@@ -91,7 +116,7 @@ namespace Game
             
             return false;
         }
-        
+
         public string GetFormatMoney(double money)
         {
             if (money > 999999999999999) //999 триллионов
@@ -133,14 +158,20 @@ namespace Game
             
             Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
         }
-        
+
         private bool IsHaveMoney(double money) => 
             _money >= money;
-        
-        private void MinusMoney(double money) => 
+
+        private void MinusMoney(double money)
+        {
             _money -= money;
+            Changed?.Invoke(_money);
+        }
 
         private string GetTaxString() => 
             GetFormatMoney(_tax);
+
+        private void Save(double obj) => 
+            RepositoryStorage.Set(KeyConstants.Wallet, new Data(_money, _tax, _maxMoney));
     }
 }

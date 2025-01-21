@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,9 +7,6 @@ namespace Game
 {
     public sealed class StockMarketCell : MonoBehaviour
     {
-        [SerializeField]
-        private Image _frame;
-
         [SerializeField]
         private Image _icon;
 
@@ -35,7 +31,6 @@ namespace Game
         [SerializeField]
         private TMP_Dropdown _dropdown;
         
-        private StockMarketItem _config;
         private WalletService _walletService;
         private StockMarketService.Slot _slot;
 
@@ -53,7 +48,6 @@ namespace Game
             slot.Multiply.Changed += MultiplyOnChanged;
             
             var item = slot.Config;
-            _config = item;
             _icon.sprite = item.Icon;
 
             UpdatePrice();
@@ -69,8 +63,11 @@ namespace Game
             _dropdown.onValueChanged.AddListener(OnDropdownValueChanged);
         }
 
-        private void OnDropdownValueChanged(int count) => 
+        private void OnDropdownValueChanged(int count)
+        {
             SoundPlayer.Play(AssetProvider.Instance.ClickSound);
+            CountOnChanged(_slot.Count.Value);
+        }
 
         private void MultiplyOnChanged(float multiply) => 
             UpdatePrice();
@@ -91,8 +88,9 @@ namespace Game
             else
                 text += $"<sprite name=\"Down\">";
             
-            //print(text);
             _priceLabel.text = text;
+            
+            CountOnChanged(_slot.Count.Value);
         }
         
         private void IsOpenOnChanged(bool isOpen)
@@ -104,6 +102,7 @@ namespace Game
         {
             _haveLabel.text = $"У ВАС: {count} ШТ";
             _sellButton.interactable = count >= GetSellCount();
+            WalletServiceOnChanged(_walletService.GetMoney);
         }
 
         private void WalletServiceOnChanged(double money)

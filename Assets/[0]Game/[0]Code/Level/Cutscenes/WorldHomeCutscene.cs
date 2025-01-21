@@ -80,6 +80,9 @@ namespace Game
 
             if (_data.CutsceneState == HomeCutscene.CutsceneState.SECRETENDING)
             {
+                _leftTransition.GetComponent<BoxCollider2D>().isTrigger = false;
+                _rightTransition.GetComponent<BoxCollider2D>().isTrigger = false;
+                
                 _secretEndingDialogue.OnUse();
                 
                 DialogueExtensions.SubscriptionCloseDialog(() =>

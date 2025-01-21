@@ -16744,7 +16744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
-      value: 5000000
+      value: 250000000
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId
@@ -17670,7 +17670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
-      value: 1000000
+      value: 20000000
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId

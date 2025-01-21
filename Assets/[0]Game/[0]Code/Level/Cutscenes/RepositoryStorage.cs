@@ -6,19 +6,19 @@ namespace Game
     public sealed class RepositoryStorage
     {
         private static RepositoryStorage _instance;
-        private readonly Dictionary<string, string> _dictionary = new();
+        public static IReadOnlyDictionary<string, string> Container => _instance._dictionary;
+        private readonly Dictionary<string, string> _dictionary;
 
-        public static void Init()
+        public RepositoryStorage(Dictionary<string, string> dictionary)
         {
-            _instance = new RepositoryStorage();
+            _dictionary = dictionary;
+            _instance = this;
         }
 
         public static void Set<T>(string id, T saveData)
         {
             if (!_instance._dictionary.TryAdd(id, SaveSystem.Serialize(saveData)))
-            {
                 _instance._dictionary[id] = SaveSystem.Serialize(saveData);
-            }
         }
 
         public static T Get<T>(string id) where T : new()

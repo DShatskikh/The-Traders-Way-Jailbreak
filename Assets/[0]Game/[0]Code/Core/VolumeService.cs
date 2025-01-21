@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 namespace Game
 {
     [Serializable]
-    public class VolumeService
+    public class VolumeService : IDisposable
     {
         [SerializeField]
         private AudioMixer _audioMixer;
@@ -15,13 +15,16 @@ namespace Game
         public void Init()
         {
             Volume.Changed += OnChangeVolume;
-            Volume.Value = RepositoryStorage.Get<VolumeData>(KeyConstants.Volume).Volume;
         }
-        
+
+        public void Dispose()
+        {
+            Volume.Changed -= OnChangeVolume;
+        }
+
         private void OnChangeVolume(float volume)
         {
             _audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0, volume));
-            RepositoryStorage.Set(KeyConstants.Volume, new VolumeData() { Volume = volume });
         }
     }
 }

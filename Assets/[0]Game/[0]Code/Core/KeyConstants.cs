@@ -9,5 +9,9 @@
         public const string Ending = "Ending";
         public const string Skibidi = "Skibidi";
         public const string Volume = "Volume";
+        public const string IsNotFirstOpen = "IsNotFirstOpen";
+        public const string Location = "Location";
+        public const string Wallet = "Wallet";
+        public const string StockMarket = "StockMarket";
     }
 }

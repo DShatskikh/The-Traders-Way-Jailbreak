@@ -14477,6 +14477,10 @@ PrefabInstance:
       value: HallwayHangar_guard
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
+      propertyPath: _price
+      value: 5000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId
       value: 4199581517987840
       objectReference: {fileID: 0}

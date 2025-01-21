@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,12 +14,14 @@ namespace Game
         private const float MinTarget = 0.3f;
         private const float MaxTarget = 2f;
         
-        [SerializeField]
-        private DataSlot[] _initSlots;
-
         private List<Slot> _slots = new();
         public List<Slot> GetSlots => _slots;
 
+        public struct Data
+        {
+            public List<DataSlot> Slots;
+        }
+        
         public void Init()
         {
             Lua.RegisterFunction(nameof(AddItem), this,
@@ -27,11 +30,13 @@ namespace Game
             Lua.RegisterFunction(nameof(IsOpenItem), this, 
                 SymbolExtensions.GetMethodInfo(() => IsOpenItem(string.Empty)));
             
+            var loadSlots = RepositoryStorage.Get<Data>(KeyConstants.StockMarket).Slots;
+            
             foreach (var config in AssetProvider.Instance.StockMarketItems)
             {
                 var dataSlot = new DataSlot();
 
-                foreach (var item in _initSlots)
+                foreach (var item in loadSlots)
                 {
                     if (item.Id == config.Id)
                     {
@@ -121,6 +126,16 @@ namespace Game
             }
         }
 
+        public Data GetData()
+        {
+            return new Data() { Slots = _slots.Select(slot => new DataSlot()
+            {
+                Id = slot.Config.Id,
+                Count = slot.Count.Value, 
+                IsOpen = slot.IsOpen.Value
+            }).ToList() };
+        }
+        
         public class Slot
         {
             private StockMarketItem _config;

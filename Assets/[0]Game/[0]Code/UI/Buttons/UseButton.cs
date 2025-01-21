@@ -58,7 +58,6 @@ namespace Game
         private void Oncanceled(InputAction.CallbackContext obj)
         {
             _button.OnPointerUp(null);
-            //_button.onClick.Invoke();
             Click();
         }
 

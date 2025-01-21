@@ -65,6 +65,10 @@ MonoBehaviour:
       value: '[var=PlayerName]'
       type: 4
       typeString: CustomFieldType_Localization
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 3542127132570728493, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -91,6 +95,10 @@ MonoBehaviour:
       value: Text
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     - title: Display Name
       value: 
       type: 0
@@ -125,6 +133,22 @@ MonoBehaviour:
       value: snd_txtund_ch1
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1223952080, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -151,10 +175,26 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     - title: Display Name
       value: "\u0412\u043E\u0440"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1776324682, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -181,10 +221,26 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     - title: Display Name
       value: "\u0410\u0440\u0431\u0443\u0437"
       type: 0
       typeString: 
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -200061493, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -215,6 +271,22 @@ MonoBehaviour:
       value: "\u041C\u0443\u0440\u0437\u0438\u043A"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1151239374, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -244,7 +316,23 @@ MonoBehaviour:
     - title: Display Name
       value: "\u0422\u0412"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -603011911, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -274,7 +362,23 @@ MonoBehaviour:
     - title: Display Name
       value: "\u041F\u044B\u043B\u0435\u0441\u043E\u0441"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -81888312, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -304,7 +408,23 @@ MonoBehaviour:
     - title: Display Name
       value: "\u041D\u0443\u0431\u0438\u043A"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 115972425246325791, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -335,6 +455,22 @@ MonoBehaviour:
       value: "\u0428\u0435\u0444"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 3112702236248781428, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -364,7 +500,23 @@ MonoBehaviour:
     - title: Display Name
       value: "\u041F\u043E\u043B\u0438\u0446\u0435\u0439\u0441\u043A\u0438\u0439"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1808964706522467271, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -392,9 +544,25 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: "\u041D\u0430\u0434\u0437\u0438\u0440\u0430\u0442\u0435\u043B\u044C"
+      value: "\u041E\u0445\u0440\u0430\u043D\u0438\u043A"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1046493779, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -425,6 +593,22 @@ MonoBehaviour:
       value: ???
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1548321911, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -455,6 +639,22 @@ MonoBehaviour:
       value: "\u0423\u0447\u0435\u043D\u044B\u0439"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1928775759, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -485,6 +685,22 @@ MonoBehaviour:
       value: "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1963319484, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -515,6 +731,22 @@ MonoBehaviour:
       value: "\u0414\u0438\u0434\u0436\u0435\u0439"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1144461604, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -545,6 +777,22 @@ MonoBehaviour:
       value: "\u041C\u044D\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 1788954292, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -574,7 +822,15 @@ MonoBehaviour:
     - title: Display Name
       value: "\u041C\u0443\u0440\u0437\u0438\u043A"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name en
+      value: WWWWWW
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -494936513, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -605,6 +861,22 @@ MonoBehaviour:
       value: "\u041A\u0430\u043A\u0442\u0443\u0441\u043E\u0432\u0438\u043A"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 856451009, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -635,6 +907,22 @@ MonoBehaviour:
       value: "\u0421\u043B\u0438\u0437\u0435\u043D\u044C"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 36505298, guid: e4758cc2716b2714fafacf237ea75b63, type: 3}
     alternatePortraits: []
@@ -665,6 +953,22 @@ MonoBehaviour:
       value: "\u0414\u0435\u0432\u0443\u0448\u043A\u0430"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 250288179, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -695,6 +999,22 @@ MonoBehaviour:
       value: "\u0413\u0440\u0438\u0444\u0435\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1040045814, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -725,6 +1045,22 @@ MonoBehaviour:
       value: "\u0424\u0438\u0440\u0430\u043C\u0438\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 112551887, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -755,6 +1091,22 @@ MonoBehaviour:
       value: "\u0413\u0440\u0438\u0444\u0435\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 2014051743, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -785,6 +1137,22 @@ MonoBehaviour:
       value: "\u0413\u0440\u0438\u0444\u0435\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -949636836, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -815,6 +1183,22 @@ MonoBehaviour:
       value: "\u0413\u0440\u0438\u0444\u0435\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1040045814, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -845,6 +1229,22 @@ MonoBehaviour:
       value: "\u0411\u0430\u043D\u0434\u0438\u0442"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1284546240, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -875,6 +1275,22 @@ MonoBehaviour:
       value: "\u0413\u0440\u0438\u0444\u0435\u0440"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -1537774995, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -905,6 +1321,22 @@ MonoBehaviour:
       value: "\u041A\u0438\u0440\u0438\u043B\u043B"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 380119186, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -935,6 +1367,22 @@ MonoBehaviour:
       value: "\u0421\u043E\u0441\u0438\u0441\u043A\u0430"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 256532140, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -965,6 +1413,22 @@ MonoBehaviour:
       value: "\u0411\u0430\u043D\u0430\u043D"
       type: 0
       typeString: 
+    - title: Display Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Name en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name es
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: -676803687, guid: 6ae806afd479e2348a7b26cc0857424c, type: 3}
     alternatePortraits: []
@@ -1097,6 +1561,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1168,6 +1636,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1286,6 +1758,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1363,6 +1839,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1434,6 +1914,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1507,6 +1991,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1578,6 +2066,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1650,6 +2142,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1727,6 +2223,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1804,6 +2304,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1871,6 +2375,10 @@ MonoBehaviour:
         value: SendMessage(Hide, , Watermelon);
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1946,6 +2454,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -2011,6 +2523,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -2083,6 +2599,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -2201,6 +2721,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -2273,6 +2797,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -2346,6 +2874,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -2464,6 +2996,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2541,6 +3077,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2613,6 +3153,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2684,6 +3228,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2761,6 +3309,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2832,6 +3384,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2904,6 +3460,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -2969,6 +3529,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -3040,6 +3604,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -3107,6 +3675,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -3225,6 +3797,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -3297,6 +3873,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -3368,6 +3948,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -3440,6 +4024,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -3558,6 +4146,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -3630,6 +4222,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -3701,6 +4297,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -3767,6 +4367,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -3891,6 +4495,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -3964,6 +4572,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -4035,6 +4647,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -4153,12 +4769,16 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 8
       isRoot: 0
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 8
@@ -4225,6 +4845,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -4343,6 +4967,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 9
       isRoot: 0
       isGroup: 0
@@ -4421,6 +5049,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 9
       isRoot: 0
       isGroup: 0
@@ -4487,6 +5119,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 9
       isRoot: 0
       isGroup: 0
@@ -4605,6 +5241,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -4676,6 +5316,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -4794,6 +5438,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -4865,6 +5513,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -4983,6 +5635,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -5054,6 +5710,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -5172,6 +5832,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -5243,6 +5907,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -5314,6 +5982,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -5385,6 +6057,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -5503,6 +6179,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -5574,6 +6254,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -5692,6 +6376,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -5764,6 +6452,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -5882,6 +6574,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -5954,6 +6650,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -6072,6 +6772,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -6143,6 +6847,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -6261,6 +6969,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 18
       isRoot: 0
       isGroup: 0
@@ -6333,6 +7045,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 18
       isRoot: 0
       isGroup: 0
@@ -6451,6 +7167,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6528,6 +7248,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6605,6 +7329,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6682,6 +7410,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6754,6 +7486,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6823,6 +7559,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6894,6 +7634,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6940,8 +7684,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0427\u0443\u0432\u0430\u043A, \u044F \u043E\u0442\u0434\u0430\u043C
-          \u0442\u0435\u0431\u0435 \u0432\u0441\u0435\u0433\u043E \u0437\u0430 -$5000"
+        value: "\u041C\u044B \u0432 \u043F\u044B\u043B\u0435\u0441\u043E\u0441\u0435!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -6960,6 +7703,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -6967,13 +7714,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 7
-        destinationConversationID: 19
-        destinationDialogueID: 10
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -7031,6 +7772,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -7102,6 +7847,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -7121,219 +7870,8 @@ MonoBehaviour:
         y: 402
         width: 160
         height: 30
-    - id: 10
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 [em1]\u041F\u044B\u043B\u0435\u0441\u043E\u0441[/em1]"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 19
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 10
-        destinationConversationID: 19
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 'PlayBuy();
-
-        AddItem("Palisos", 1)'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 492.59088
-        y: 319.13638
-        width: 160
-        height: 30
-    - id: 11
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 $5000"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 19
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 11
-        destinationConversationID: 19
-        destinationDialogueID: 12
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 'PlayBuy();
-
-        MinusMoney(5000)'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 492.59088
-        y: 369.13638
-        width: 160
-        height: 30
-    - id: 12
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 9
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "\u0427\u0435\u0440\u0442, 2 \u0440\u0430\u0437 \u0437\u0430 \u0434\u0435\u043D\u044C"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 19
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 492.59088
-        y: 419.13638
-        width: 160
-        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 21.17646}
+    canvasScrollPosition: {x: 0, y: 62.352905}
     canvasZoom: 0.85000014
   - id: 20
     fields:
@@ -7431,6 +7969,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 20
       isRoot: 0
       isGroup: 0
@@ -7503,6 +8045,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 20
       isRoot: 0
       isGroup: 0
@@ -7621,6 +8167,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 21
       isRoot: 0
       isGroup: 0
@@ -7693,6 +8243,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 21
       isRoot: 0
       isGroup: 0
@@ -7811,6 +8365,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 22
       isRoot: 0
       isGroup: 0
@@ -7884,6 +8442,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 22
       isRoot: 0
       isGroup: 0
@@ -7956,6 +8518,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 22
       isRoot: 0
       isGroup: 0
@@ -8074,6 +8640,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -8146,6 +8716,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -8264,6 +8838,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -8336,6 +8914,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -8409,6 +8991,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -8527,6 +9113,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8602,6 +9192,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8675,6 +9269,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8748,6 +9346,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8820,6 +9422,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8889,6 +9495,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -8961,6 +9571,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -9085,6 +9699,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 26
       isRoot: 0
       isGroup: 0
@@ -9157,6 +9775,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 26
       isRoot: 0
       isGroup: 0
@@ -9275,6 +9897,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 27
       isRoot: 0
       isGroup: 0
@@ -9347,6 +9973,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 27
       isRoot: 0
       isGroup: 0
@@ -9465,6 +10095,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 28
       isRoot: 0
       isGroup: 0
@@ -9538,6 +10172,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 28
       isRoot: 0
       isGroup: 0
@@ -9612,6 +10250,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 28
       isRoot: 0
       isGroup: 0
@@ -9679,6 +10321,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 28
       isRoot: 0
       isGroup: 0
@@ -9750,6 +10396,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 28
       isRoot: 0
       isGroup: 0
@@ -9874,6 +10524,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 29
       isRoot: 0
       isGroup: 0
@@ -9945,6 +10599,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 29
       isRoot: 0
       isGroup: 0
@@ -10018,6 +10676,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 29
       isRoot: 0
       isGroup: 0
@@ -10136,6 +10798,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 30
       isRoot: 0
       isGroup: 0
@@ -10207,6 +10873,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 30
       isRoot: 0
       isGroup: 0
@@ -10279,6 +10949,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 30
       isRoot: 0
       isGroup: 0
@@ -10397,6 +11071,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10469,6 +11147,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10542,6 +11224,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10614,6 +11300,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10685,6 +11375,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10757,6 +11451,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10828,6 +11526,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10900,6 +11602,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -10971,6 +11677,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -11043,6 +11753,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -11161,6 +11875,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -11233,6 +11951,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -11304,6 +12026,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -11377,6 +12103,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -11495,6 +12225,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 33
       isRoot: 0
       isGroup: 0
@@ -11572,6 +12306,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 33
       isRoot: 0
       isGroup: 0
@@ -11643,6 +12381,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 33
       isRoot: 0
       isGroup: 0
@@ -11718,6 +12460,10 @@ MonoBehaviour:
           SetDialoguePanel(true)@Message("EndBreak");'
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 33
       isRoot: 0
       isGroup: 0
@@ -11783,6 +12529,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 33
       isRoot: 0
       isGroup: 0
@@ -11901,6 +12651,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 34
       isRoot: 0
       isGroup: 0
@@ -11972,6 +12726,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 34
       isRoot: 0
       isGroup: 0
@@ -12043,6 +12801,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 34
       isRoot: 0
       isGroup: 0
@@ -12161,6 +12923,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -12232,6 +12998,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -12350,6 +13120,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -12421,6 +13195,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 36
       isRoot: 0
       isGroup: 0
@@ -12539,6 +13317,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 37
       isRoot: 0
       isGroup: 0
@@ -12610,6 +13392,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 37
       isRoot: 0
       isGroup: 0
@@ -12682,6 +13468,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 37
       isRoot: 0
       isGroup: 0
@@ -12800,6 +13590,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 38
       isRoot: 0
       isGroup: 0
@@ -12871,6 +13665,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 38
       isRoot: 0
       isGroup: 0
@@ -12944,6 +13742,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 38
       isRoot: 0
       isGroup: 0
@@ -13062,6 +13864,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 39
       isRoot: 0
       isGroup: 0
@@ -13134,6 +13940,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 39
       isRoot: 0
       isGroup: 0
@@ -13252,6 +14062,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 40
       isRoot: 0
       isGroup: 0
@@ -13323,6 +14137,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 40
       isRoot: 0
       isGroup: 0
@@ -13441,6 +14259,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 41
       isRoot: 0
       isGroup: 0
@@ -13512,6 +14334,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 41
       isRoot: 0
       isGroup: 0
@@ -13584,6 +14410,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 41
       isRoot: 0
       isGroup: 0
@@ -13702,6 +14532,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 42
       isRoot: 0
       isGroup: 0
@@ -13773,6 +14607,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 42
       isRoot: 0
       isGroup: 0
@@ -13891,6 +14729,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 43
       isRoot: 0
       isGroup: 0
@@ -13964,6 +14806,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 43
       isRoot: 0
       isGroup: 0
@@ -14035,6 +14881,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 43
       isRoot: 0
       isGroup: 0
@@ -14153,6 +15003,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 44
       isRoot: 0
       isGroup: 0
@@ -14224,6 +15078,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 44
       isRoot: 0
       isGroup: 0
@@ -14342,6 +15200,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 45
       isRoot: 0
       isGroup: 0
@@ -14413,6 +15275,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 45
       isRoot: 0
       isGroup: 0
@@ -14485,6 +15351,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 45
       isRoot: 0
       isGroup: 0
@@ -14603,6 +15473,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 46
       isRoot: 0
       isGroup: 0
@@ -14675,6 +15549,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 46
       isRoot: 0
       isGroup: 0
@@ -14793,6 +15671,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 47
       isRoot: 0
       isGroup: 0
@@ -14864,6 +15746,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 47
       isRoot: 0
       isGroup: 0
@@ -14982,6 +15868,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 48
       isRoot: 0
       isGroup: 0
@@ -15055,6 +15945,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 48
       isRoot: 0
       isGroup: 0
@@ -15173,6 +16067,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 49
       isRoot: 0
       isGroup: 0
@@ -15244,6 +16142,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 49
       isRoot: 0
       isGroup: 0
@@ -15362,6 +16264,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 50
       isRoot: 0
       isGroup: 0
@@ -15433,6 +16339,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 50
       isRoot: 0
       isGroup: 0
@@ -15505,6 +16415,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 50
       isRoot: 0
       isGroup: 0
@@ -15576,6 +16490,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 50
       isRoot: 0
       isGroup: 0
@@ -15694,6 +16612,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 51
       isRoot: 0
       isGroup: 0
@@ -15766,6 +16688,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 51
       isRoot: 0
       isGroup: 0
@@ -15884,6 +16810,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 52
       isRoot: 0
       isGroup: 0
@@ -15957,6 +16887,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 52
       isRoot: 0
       isGroup: 0
@@ -16029,6 +16963,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 52
       isRoot: 0
       isGroup: 0
@@ -16147,6 +17085,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16225,6 +17167,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16296,6 +17242,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16368,6 +17318,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16439,6 +17393,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16510,6 +17468,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16582,6 +17544,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16653,6 +17619,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16718,6 +17688,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 53
       isRoot: 0
       isGroup: 0
@@ -16836,6 +17810,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 54
       isRoot: 0
       isGroup: 0
@@ -16909,6 +17887,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 54
       isRoot: 0
       isGroup: 0
@@ -16980,6 +17962,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 54
       isRoot: 0
       isGroup: 0
@@ -17098,6 +18084,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17176,6 +18166,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17229,7 +18223,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u0415\u0444\u0451 \u044F \u0443\u0431\u043E\u0440\u0449\u0438\u043A,
-          \u0433\u0440\u0443\u0437\u0447\u0438\u043A \u0438 \u043D\u0430\u0434\u0437\u0438\u0440\u0430\u0442\u0435\u043B\u044C"
+          \u0433\u0440\u0443\u0437\u0447\u0438\u043A \u0438 \u043E\u0445\u044C\u044F\u043D\u0438\u043A"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -17248,6 +18242,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17321,6 +18319,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17393,6 +18395,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17458,6 +18464,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 55
       isRoot: 0
       isGroup: 0
@@ -17478,8 +18488,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.90999997
+    canvasScrollPosition: {x: 0, y: 209.14288}
+    canvasZoom: 0.9999999
   - id: 56
     fields:
     - title: Title
@@ -17576,6 +18586,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 56
       isRoot: 0
       isGroup: 0
@@ -17647,6 +18661,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 56
       isRoot: 0
       isGroup: 0
@@ -17719,6 +18737,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 56
       isRoot: 0
       isGroup: 0
@@ -17837,6 +18859,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 57
       isRoot: 0
       isGroup: 0
@@ -17909,6 +18935,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 57
       isRoot: 0
       isGroup: 0
@@ -17981,6 +19011,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 57
       isRoot: 0
       isGroup: 0
@@ -18052,6 +19086,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 57
       isRoot: 0
       isGroup: 0
@@ -18170,6 +19208,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 58
       isRoot: 0
       isGroup: 0
@@ -18243,6 +19285,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 58
       isRoot: 0
       isGroup: 0
@@ -18315,6 +19361,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 58
       isRoot: 0
       isGroup: 0
@@ -18433,6 +19483,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 59
       isRoot: 0
       isGroup: 0
@@ -18505,6 +19559,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 59
       isRoot: 0
       isGroup: 0
@@ -18623,6 +19681,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 60
       isRoot: 0
       isGroup: 0
@@ -18696,6 +19758,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 60
       isRoot: 0
       isGroup: 0
@@ -18814,6 +19880,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 61
       isRoot: 0
       isGroup: 0
@@ -18887,6 +19957,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 61
       isRoot: 0
       isGroup: 0
@@ -18958,6 +20032,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 61
       isRoot: 0
       isGroup: 0
@@ -19032,6 +20110,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 61
       isRoot: 0
       isGroup: 0
@@ -19150,6 +20232,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 62
       isRoot: 0
       isGroup: 0
@@ -19223,6 +20309,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 62
       isRoot: 0
       isGroup: 0
@@ -19300,6 +20390,10 @@ MonoBehaviour:
         value: SendMessage(EndGame, , Rocket);
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 62
       isRoot: 0
       isGroup: 0
@@ -19365,6 +20459,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 62
       isRoot: 0
       isGroup: 0
@@ -19436,6 +20534,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 62
       isRoot: 0
       isGroup: 0
@@ -19554,6 +20656,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 63
       isRoot: 0
       isGroup: 0
@@ -19625,6 +20731,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 63
       isRoot: 0
       isGroup: 0
@@ -19697,6 +20807,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 63
       isRoot: 0
       isGroup: 0
@@ -19815,6 +20929,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 64
       isRoot: 0
       isGroup: 0
@@ -19887,6 +21005,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: wewewewew
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 64
       isRoot: 0
       isGroup: 0
@@ -19958,6 +21080,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: ewewew
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 64
       isRoot: 0
       isGroup: 0
@@ -20030,6 +21156,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: ewewew
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 64
       isRoot: 0
       isGroup: 0
@@ -20148,6 +21278,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20219,6 +21353,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20291,6 +21429,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20363,6 +21505,10 @@ MonoBehaviour:
         value: SendMessage(ShowPanel, , HackerStatue);
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20435,6 +21581,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20507,6 +21657,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20578,6 +21732,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20652,6 +21810,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20729,6 +21891,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20801,6 +21967,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20866,6 +22036,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -20938,6 +22112,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -21009,6 +22187,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -21083,6 +22265,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 65
       isRoot: 0
       isGroup: 0
@@ -21207,6 +22393,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21278,6 +22468,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21353,6 +22547,10 @@ MonoBehaviour:
           SetDialoguePanel(true)@Delay(2);'
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21424,6 +22622,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21495,6 +22697,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21568,6 +22774,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 66
       isRoot: 0
       isGroup: 0
@@ -21686,6 +22896,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -21763,6 +22977,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -21836,6 +23054,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -21909,6 +23131,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -21982,6 +23208,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22056,6 +23286,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22129,6 +23363,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22201,6 +23439,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22278,6 +23520,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22349,6 +23595,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22421,6 +23671,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22486,6 +23740,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22560,6 +23818,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22632,6 +23894,10 @@ MonoBehaviour:
         value: SendMessage(ShowPanel, , Developer);
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22703,6 +23969,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22769,6 +24039,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22841,6 +24115,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22916,6 +24194,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -22988,6 +24270,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23059,6 +24345,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23132,6 +24422,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23206,6 +24500,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23279,6 +24577,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23345,6 +24647,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23420,6 +24726,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23495,6 +24805,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23567,6 +24881,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23643,6 +24961,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23716,6 +25038,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23788,6 +25114,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 67
       isRoot: 0
       isGroup: 0
@@ -23912,6 +25242,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 68
       isRoot: 0
       isGroup: 0
@@ -23985,6 +25319,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 68
       isRoot: 0
       isGroup: 0
@@ -24057,6 +25395,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 68
       isRoot: 0
       isGroup: 0
@@ -24175,6 +25517,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 69
       isRoot: 0
       isGroup: 0
@@ -24249,6 +25595,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 69
       isRoot: 0
       isGroup: 0
@@ -24321,6 +25671,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 69
       isRoot: 0
       isGroup: 0
@@ -24439,6 +25793,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 70
       isRoot: 0
       isGroup: 0
@@ -24510,6 +25868,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 70
       isRoot: 0
       isGroup: 0
@@ -24628,6 +25990,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -24707,6 +26073,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -24778,6 +26148,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -24849,6 +26223,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -24921,6 +26299,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -24993,6 +26375,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -25064,6 +26450,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 71
       isRoot: 0
       isGroup: 0
@@ -25182,6 +26572,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25266,6 +26660,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25337,6 +26735,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25410,6 +26812,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25477,6 +26883,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25552,6 +26962,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25624,6 +27038,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25698,6 +27116,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25771,6 +27193,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25843,6 +27269,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -25910,6 +27340,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 72
       isRoot: 0
       isGroup: 0
@@ -26028,6 +27462,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 73
       isRoot: 0
       isGroup: 0
@@ -26101,6 +27539,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 73
       isRoot: 0
       isGroup: 0
@@ -26175,6 +27617,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 73
       isRoot: 0
       isGroup: 0
@@ -26247,6 +27693,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 73
       isRoot: 0
       isGroup: 0
@@ -26318,6 +27768,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 73
       isRoot: 0
       isGroup: 0
@@ -26436,6 +27890,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 74
       isRoot: 0
       isGroup: 0
@@ -26510,6 +27968,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 74
       isRoot: 0
       isGroup: 0
@@ -26628,6 +28090,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 75
       isRoot: 0
       isGroup: 0
@@ -26700,6 +28166,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 75
       isRoot: 0
       isGroup: 0
@@ -26771,6 +28241,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 75
       isRoot: 0
       isGroup: 0
@@ -26889,6 +28363,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 76
       isRoot: 0
       isGroup: 0
@@ -26962,6 +28440,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 76
       isRoot: 0
       isGroup: 0
@@ -27080,6 +28562,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 77
       isRoot: 0
       isGroup: 0
@@ -27151,6 +28637,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 77
       isRoot: 0
       isGroup: 0
@@ -27222,6 +28712,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 77
       isRoot: 0
       isGroup: 0
@@ -27294,6 +28788,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 77
       isRoot: 0
       isGroup: 0
@@ -27366,6 +28864,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 77
       isRoot: 0
       isGroup: 0
@@ -27484,6 +28986,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 78
       isRoot: 0
       isGroup: 0
@@ -27555,6 +29061,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 78
       isRoot: 0
       isGroup: 0
@@ -27673,6 +29183,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 79
       isRoot: 0
       isGroup: 0
@@ -27744,6 +29258,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 79
       isRoot: 0
       isGroup: 0
@@ -27815,6 +29333,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 79
       isRoot: 0
       isGroup: 0
@@ -27933,6 +29455,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 80
       isRoot: 0
       isGroup: 0
@@ -28010,6 +29536,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 80
       isRoot: 0
       isGroup: 0
@@ -28063,7 +29593,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u0422\u043E\u0433\u0434\u0430 \u044F \u0431\u0443\u0434\u0443 \u0434\u0438\u0440\u0435\u043A\u0442\u043E\u0440\u043E\u043C,
-          \u0430 \u0411\u0430\u043D\u0434\u0438\u043A...\n\u0411\u0430\u043D\u0434\u0438\u0442
+          \u0430 \u0411\u0430\u043D\u0434\u0438\u0442...\n\u0411\u0430\u043D\u0434\u0438\u0442
           \u0431\u0443\u0434\u0435\u0442 \u043E\u0445\u0440\u0430\u043D\u0438\u043A\u043E\u043C"
         type: 0
         typeString: CustomFieldType_Text
@@ -28083,6 +29613,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 80
       isRoot: 0
       isGroup: 0
@@ -28154,6 +29688,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 80
       isRoot: 0
       isGroup: 0
@@ -28272,6 +29810,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 81
       isRoot: 0
       isGroup: 0
@@ -28345,6 +29887,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 81
       isRoot: 0
       isGroup: 0
@@ -28417,6 +29963,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 81
       isRoot: 0
       isGroup: 0
@@ -28535,6 +30085,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 82
       isRoot: 0
       isGroup: 0
@@ -28606,6 +30160,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 82
       isRoot: 0
       isGroup: 0
@@ -28678,6 +30236,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 82
       isRoot: 0
       isGroup: 0
@@ -28796,6 +30358,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 83
       isRoot: 0
       isGroup: 0
@@ -28868,6 +30434,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 83
       isRoot: 0
       isGroup: 0
@@ -28939,6 +30509,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 83
       isRoot: 0
       isGroup: 0
@@ -29057,6 +30631,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 84
       isRoot: 0
       isGroup: 0
@@ -29132,6 +30710,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 84
       isRoot: 0
       isGroup: 0
@@ -29203,6 +30785,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 84
       isRoot: 0
       isGroup: 0
@@ -29276,6 +30862,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 84
       isRoot: 0
       isGroup: 0
@@ -29347,6 +30937,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 84
       isRoot: 0
       isGroup: 0
@@ -29465,6 +31059,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 85
       isRoot: 0
       isGroup: 0
@@ -29537,6 +31135,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 85
       isRoot: 0
       isGroup: 0
@@ -29608,6 +31210,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 85
       isRoot: 0
       isGroup: 0
@@ -29680,6 +31286,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 85
       isRoot: 0
       isGroup: 0
@@ -29798,6 +31408,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 86
       isRoot: 0
       isGroup: 0
@@ -29870,6 +31484,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 86
       isRoot: 0
       isGroup: 0
@@ -29988,6 +31606,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 87
       isRoot: 0
       isGroup: 0
@@ -30060,6 +31682,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 87
       isRoot: 0
       isGroup: 0
@@ -30131,6 +31757,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 87
       isRoot: 0
       isGroup: 0
@@ -30249,6 +31879,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30301,7 +31935,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0424\u0440\u0435\u0434\u0436 \u0447\u0442\u043E \u043C\u044B \u0434\u0435\u043B\u0430\u0435\u043C
+        value: "\u0424\u0440\u0435\u0434\u0436, \u0447\u0442\u043E \u043C\u044B \u0434\u0435\u043B\u0430\u0435\u043C
           \u0432 \u0442\u044E\u0440\u044C\u043C\u0435?\n\u0422\u044B \u0432\u0435\u0434\u044C
           \u0433\u043E\u0432\u043E\u0440\u0438\u043B \u0447\u0442\u043E \u0432\u0441\u0435
           \u0441\u0445\u0432\u0430\u0447\u0435\u043D\u043E?"
@@ -30323,6 +31957,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30397,6 +32035,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30469,6 +32111,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30541,6 +32187,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30616,6 +32266,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30687,6 +32341,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 88
       isRoot: 0
       isGroup: 0
@@ -30707,7 +32365,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 137.00854}
+    canvasScrollPosition: {x: 33.92859, y: 0}
     canvasZoom: 1.1199999
   - id: 89
     fields:
@@ -30805,6 +32463,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 89
       isRoot: 0
       isGroup: 0
@@ -30876,6 +32538,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 89
       isRoot: 0
       isGroup: 0
@@ -30947,6 +32613,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 89
       isRoot: 0
       isGroup: 0
@@ -31065,6 +32735,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 90
       isRoot: 0
       isGroup: 0
@@ -31136,6 +32810,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 90
       isRoot: 0
       isGroup: 0
@@ -31254,6 +32932,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 91
       isRoot: 0
       isGroup: 0
@@ -31326,6 +33008,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 91
       isRoot: 0
       isGroup: 0
@@ -31444,6 +33130,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31518,6 +33208,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31589,6 +33283,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31660,6 +33358,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31734,6 +33436,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31809,6 +33515,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31820,7 +33530,7 @@ MonoBehaviour:
       - originConversationID: 92
         originDialogueID: 5
         destinationConversationID: 92
-        destinationDialogueID: 6
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -31884,6 +33594,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31906,7 +33620,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 554
+        y: 638
         width: 160
         height: 30
     - id: 7
@@ -31959,6 +33673,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -31981,7 +33699,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 638
+        y: 722
         width: 160
         height: 30
     - id: 8
@@ -32034,6 +33752,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -32056,7 +33778,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 722
+        y: 806
         width: 160
         height: 30
     - id: 9
@@ -32107,6 +33829,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -32129,7 +33855,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 890
+        y: 974
         width: 160
         height: 30
     - id: 10
@@ -32178,6 +33904,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -32200,7 +33930,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 974
+        y: 1058
         width: 160
         height: 30
     - id: 11
@@ -32250,6 +33980,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -32266,7 +34000,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 1058
+        y: 1142
         width: 160
         height: 30
     - id: 12
@@ -32315,6 +34049,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 92
       isRoot: 0
       isGroup: 0
@@ -32337,12 +34075,87 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 806
+        y: 890
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 18
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u0425\u0430\u0445"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 92
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 92
+        originDialogueID: 13
+        destinationConversationID: 92
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 80
+        y: 554
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 789.10535}
-    canvasZoom: 1.0299999
+    canvasScrollPosition: {x: 0, y: 518.47314}
+    canvasZoom: 0.9999999
   - id: 93
     fields:
     - title: Title
@@ -32439,6 +34252,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 93
       isRoot: 0
       isGroup: 0
@@ -32511,6 +34328,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 93
       isRoot: 0
       isGroup: 0
@@ -32584,6 +34405,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 93
       isRoot: 0
       isGroup: 0
@@ -32702,6 +34527,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 94
       isRoot: 0
       isGroup: 0
@@ -32776,6 +34605,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 94
       isRoot: 0
       isGroup: 0
@@ -32851,6 +34684,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 94
       isRoot: 0
       isGroup: 0
@@ -32923,6 +34760,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 94
       isRoot: 0
       isGroup: 0
@@ -33041,6 +34882,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 95
       isRoot: 0
       isGroup: 0
@@ -33113,6 +34958,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 95
       isRoot: 0
       isGroup: 0
@@ -33186,6 +35035,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 95
       isRoot: 0
       isGroup: 0
@@ -33258,6 +35111,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 95
       isRoot: 0
       isGroup: 0
@@ -33376,6 +35233,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 96
       isRoot: 0
       isGroup: 0
@@ -33448,6 +35309,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 96
       isRoot: 0
       isGroup: 0
@@ -33520,6 +35385,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 96
       isRoot: 0
       isGroup: 0
@@ -33591,6 +35460,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 96
       isRoot: 0
       isGroup: 0
@@ -33662,6 +35535,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 96
       isRoot: 0
       isGroup: 0
@@ -33780,6 +35657,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 97
       isRoot: 0
       isGroup: 0
@@ -33852,6 +35733,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 97
       isRoot: 0
       isGroup: 0
@@ -33970,6 +35855,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 98
       isRoot: 0
       isGroup: 0
@@ -34044,6 +35933,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 98
       isRoot: 0
       isGroup: 0
@@ -34162,6 +36055,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 99
       isRoot: 0
       isGroup: 0
@@ -34235,6 +36132,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 99
       isRoot: 0
       isGroup: 0
@@ -34353,6 +36254,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 100
       isRoot: 0
       isGroup: 0
@@ -34425,6 +36330,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 100
       isRoot: 0
       isGroup: 0
@@ -34543,6 +36452,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 101
       isRoot: 0
       isGroup: 0
@@ -34616,6 +36529,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 101
       isRoot: 0
       isGroup: 0
@@ -34734,6 +36651,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 102
       isRoot: 0
       isGroup: 0
@@ -34808,6 +36729,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 102
       isRoot: 0
       isGroup: 0
@@ -34879,6 +36804,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 102
       isRoot: 0
       isGroup: 0
@@ -34997,6 +36926,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 103
       isRoot: 0
       isGroup: 0
@@ -35073,6 +37006,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 103
       isRoot: 0
       isGroup: 0
@@ -35144,6 +37081,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 103
       isRoot: 0
       isGroup: 0
@@ -35262,6 +37203,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 104
       isRoot: 0
       isGroup: 0
@@ -35333,6 +37278,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 104
       isRoot: 0
       isGroup: 0
@@ -35364,7 +37313,8 @@ MonoBehaviour:
     syncItemsDatabase: {fileID: 0}
     syncLocationsDatabase: {fileID: 0}
     syncVariablesDatabase: {fileID: 0}
-  templateJson: '{"treatItemsAsQuests":true,"actorFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"AudioClip","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"IsPlayer","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"itemFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":""},{"title":"Is
+  templateJson: '{"treatItemsAsQuests":true,"actorFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Display
+    Name en","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"AudioClip","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"IsPlayer","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"itemFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Is
     Item","value":"True","type":2,"typeString":"CustomFieldType_Boolean"}],"questFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Pictures","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Success
     Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Failure
     Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"State","value":"unassigned","type":0,"typeString":"CustomFieldType_QuestState"},{"title":"Is
@@ -35373,4 +37323,5 @@ MonoBehaviour:
     Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Dialogue
     Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Parenthetical","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Audio
     Files","value":"[]","type":3,"typeString":"CustomFieldType_Files"},{"title":"Video
-    File","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"}],"actorPrimaryFieldTitles":["AudioClip"],"itemPrimaryFieldTitles":[],"questPrimaryFieldTitles":[],"locationPrimaryFieldTitles":[],"variablePrimaryFieldTitles":[],"conversationPrimaryFieldTitles":[],"dialogueEntryPrimaryFieldTitles":[],"npcLineColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"pcLineColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0},"repeatLineColor":{"r":0.5,"g":0.5,"b":0.5,"a":1.0}}'
+    File","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"en","value":"","type":4,"typeString":"CustomFieldType_Localization"}],"actorPrimaryFieldTitles":["AudioClip","Display
+    Name en"],"itemPrimaryFieldTitles":[],"questPrimaryFieldTitles":[],"locationPrimaryFieldTitles":[],"variablePrimaryFieldTitles":[],"conversationPrimaryFieldTitles":[],"dialogueEntryPrimaryFieldTitles":[],"npcLineColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"pcLineColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0},"repeatLineColor":{"r":0.5,"g":0.5,"b":0.5,"a":1.0}}'

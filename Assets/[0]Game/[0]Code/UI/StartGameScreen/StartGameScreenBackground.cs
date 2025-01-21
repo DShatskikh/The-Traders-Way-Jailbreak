@@ -44,6 +44,9 @@ namespace Game
         {
             var states = new[] { 0, 1, 3 };
             
+            _animator.SetFloat("State", states[1]);
+            yield return new WaitForSeconds(2);
+            
             while (true)
             {
                 yield return new WaitForSeconds(2);

@@ -23,11 +23,14 @@ namespace Game
         private GameStateController _gameStateController;
         private StockMarketService _stockMarketService;
         private AudioClip _previousTheme;
+        private ISaveLoadService _saveLoadService;
 
-        private void Awake()
+        [Inject]
+        private void Construct(ISaveLoadService saveLoadService, PlayerInput playerInput, StockMarketService stockMarketService)
         {
-            _playerInput = ServiceLocator.Get<PlayerInput>();
-            _stockMarketService = ServiceLocator.Get<StockMarketService>();
+            _saveLoadService = saveLoadService;
+            _playerInput = playerInput;
+            _stockMarketService = stockMarketService;
         }
 
         private void OnEnable()
@@ -59,8 +62,10 @@ namespace Game
         {
             Hide();
             SoundPlayer.Play(AssetProvider.Instance.ClickSound);
-            
             MusicPlayer.Play(_previousTheme);
+            
+            RepositoryStorage.Set(KeyConstants.StockMarket, _stockMarketService.GetData());
+            _saveLoadService.Save();
         }
 
         public void OnCancel(InputAction.CallbackContext obj)

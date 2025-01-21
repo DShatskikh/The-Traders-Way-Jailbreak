@@ -182,7 +182,6 @@ namespace QFSW.QC
         /// <summary>
         /// Resets the namespace table to its initial state.
         /// </summary>
-        [Command("reset-namespaces", "Resets the namespace table to its initial state")]
         public static void ResetNamespaceTable()
         {
             _namespaceTable.Clear();
@@ -192,7 +191,6 @@ namespace QFSW.QC
         /// <summary>
         /// Adds a namespace to the table so that it can be used to type resolution.
         /// </summary>
-        [Command("use-namespace", "Adds a namespace to the table so that it can be used to type resolution")]
         public static void AddNamespace(string namespaceName)
         {
             if (!_namespaceTable.Contains(namespaceName))
@@ -204,7 +202,6 @@ namespace QFSW.QC
         /// <summary>
         /// Removes a namespace to the table so that it is no longer used to type resolution.
         /// </summary>
-        [Command("remove-namespace", "Removes a namespace from the table")]
         public static void RemoveNamespace(string namespaceName)
         {
             if (_namespaceTable.Contains(namespaceName))
@@ -217,7 +214,6 @@ namespace QFSW.QC
             }
         }
 
-        [Command("all-namespaces", "Displays all of the namespaces currently in use by the namespace table")]
         private static string ShowNamespaces()
         {
             _namespaceTable.Sort();

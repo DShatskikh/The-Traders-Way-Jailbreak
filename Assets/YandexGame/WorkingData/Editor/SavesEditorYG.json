@@ -1,0 +1,57 @@
+{
+    "idSave": 172,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "Container": {
+        "m_pairs": [
+            {
+                "m_key": "HomeCutscene",
+                "m_value": "{\"CutsceneState\":0,\"IsShowLandedScreen\":false}"
+            },
+            {
+                "m_key": "MyCellCutscene",
+                "m_value": "{\"IsNotFirstVisit\":false,\"State\":0}"
+            },
+            {
+                "m_key": "SkinShop",
+                "m_value": "{\"IsNotFirstOpen\":false}"
+            },
+            {
+                "m_key": "Name",
+                "m_value": "{\"Name\":\"Денис\"}"
+            },
+            {
+                "m_key": "Location",
+                "m_value": "{\"LocationName\":\"Home\",\"PointIndex\":0,\"CharacterPositionX\":0.0,\"CharacterPositionY\":0.0}"
+            },
+            {
+                "m_key": "Wallet",
+                "m_value": "{\"Money\":2.1884851455688478,\"Tax\":0.021884851455688478,\"MaxAward\":5.0}"
+            },
+            {
+                "m_key": "Volume",
+                "m_value": "{\"Volume\":0.6722595691680908}"
+            },
+            {
+                "m_key": "Ending",
+                "m_value": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":false}"
+            },
+            {
+                "m_key": "IsNotFirstOpen",
+                "m_value": "{\"IsNotFirstOpen\":true}"
+            },
+            {
+                "m_key": "StockMarket",
+                "m_value": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Watermelon\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"GoldApple\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Palisos\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"LuckyBlock\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Diamond\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Star\",\"Count\":0,\"IsOpen\":false}]}"
+            }
+        ]
+    }
+}

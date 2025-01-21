@@ -1,6 +1,8 @@
-﻿using TMPro;
+﻿using RimuruDev;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -12,12 +14,20 @@ namespace Game
         [SerializeField]
         private TMP_Text _moneyLabel;
 
+        [SerializeField]
+        private JoystickView _joystick;
+        
+        [SerializeField]
+        private Button _runButton;
+        
         private GameStateController _gameStateController;
+        private DeviceTypeDetector _deviceTypeDetector;
 
         [Inject]
-        private void Construct(GameStateController gameStateController)
+        private void Construct(GameStateController gameStateController, DeviceTypeDetector deviceTypeDetector)
         {
             _gameStateController = gameStateController;
+            _deviceTypeDetector = deviceTypeDetector;
         }
         
         private void Activate(bool isActive)
@@ -28,6 +38,12 @@ namespace Game
                 _moneyLabel.gameObject.SetActive(true); 
                 
                 _pauseButton.onClick.AddListener(PauseClick);
+
+                if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
+                {
+                    _runButton.gameObject.SetActive(true);
+                    _joystick.gameObject.SetActive(true);
+                }
             }
             else
             {
@@ -35,6 +51,12 @@ namespace Game
                 _moneyLabel.gameObject.SetActive(false);
                 
                 _pauseButton.onClick.RemoveAllListeners();
+
+                if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
+                {
+                    _runButton.gameObject.SetActive(false);
+                    _joystick.gameObject.SetActive(false);
+                }
             }
         }
 

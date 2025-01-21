@@ -6,28 +6,31 @@
         private GameStateController _gameStateController;
         private ScreenManager _screenManager;
         private Player _player;
+        private CoroutineRunner _coroutineRunner;
 
         [Inject]
         private void Construct(LocationsManager locationsManager, GameStateController gameStateController, 
-            ScreenManager screenManager, Player player)
+            ScreenManager screenManager, Player player, CoroutineRunner coroutineRunner)
         {
             _locationsManager = locationsManager;
             _gameStateController = gameStateController;
             _screenManager = screenManager;
             _player = player;
+            _coroutineRunner = coroutineRunner;
         }
 
         public void Load()
         {
-            _locationsManager.SwitchLocation("World", 0);
-            
-            if (_gameStateController.CurrentState == GameStateController.GameState.PAUSED)
-                _gameStateController.ResumeGame();
-            else if (_gameStateController.CurrentState == GameStateController.GameState.DIALOGUE)
-                _gameStateController.CloseDialog();
-            
+            _gameStateController.StartGame();
             _screenManager.Show(ScreenType.Main);
             _player.gameObject.SetActive(true);
+
+            var locationData = RepositoryStorage.Get<LocationsManager.Data>(KeyConstants.Location);
+
+            if (locationData.LocationName == "") 
+                locationData.LocationName = "World";
+
+            _locationsManager.SwitchLocation(locationData.LocationName, 0);
         }
     }
 }

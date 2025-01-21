@@ -98,16 +98,20 @@ namespace Game
             if (_saveData.State != State.DontPayTax) 
                 return;
             
+            if (_walletService.GetTax != 0) 
+                return;
+            
             _saveData.State = State.PayTax;
             _mayor.SetActive(true);
             var standardTheme = MusicPlayer.Instance.Clip;
             MusicPlayer.Play(_mayorTheme);
+            _player.SetFlipX(false);
             _payDialogue.OnUse();
 
             DialogueExtensions.SubscriptionCloseDialog(() =>
             {
                 _saveData.State = State.EndSpeakMayor;
-                    
+
                 var sequence = DOTween.Sequence();
                 sequence.Append(_mayor.transform.DOMoveY(_mayor.transform.position.y + 15, 3))
                     .SetEase(Ease.Linear)

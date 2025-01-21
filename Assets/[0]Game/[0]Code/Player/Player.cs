@@ -31,7 +31,7 @@ namespace Game
         private Vector3 _previousPosition;
         private bool _isPause;
         private IMover _mover;
-
+        
         public ReactiveProperty<MonoBehaviour> NearestUseObject => 
             _useAreaChecker.NearestUseObject;
 
@@ -51,6 +51,7 @@ namespace Game
         public bool IsRun => _mover.IsRun;
         public bool GetFlipX => _view.GetFlipX;
         public Sprite GetSprite => _view.GetSprite;
+        public bool IsPause => _isPause;
 
         [Inject]
         private void Construct(PlayerInput playerInput)
@@ -187,26 +188,19 @@ namespace Game
                 _direction.Changed += _view.OnDirectionChange;
                 _currentSpeed.Changed += _view.OnSpeedChange;
                 _useAreaChecker.Lost();
-
-                //_playerInput.actions["Submit"].canceled += TryUse;
-                _playerInput.actions["Move"].canceled += (_) => _defaultMover.Stop();
+                _playerInput.actions["Move"].canceled += OnInputMove;
             }
             else
             {
+                _currentSpeed.Value = 0;
+                _mover.Stop();
+                _useAreaChecker.Lost();
+                
                 _currentSpeed.Changed -= _stepsSoundPlayer.OnSpeedChange;
                 _isRun.Changed -= _stepsSoundPlayer.OnIsRunChange;
-
-                //if (_playerInput)
-                //    _playerInput.actions["Submit"].canceled -= TryUse;
-
-                _mover.Stop();
-                _currentSpeed.Value = 0;
-
                 _direction.Changed -= _view.OnDirectionChange;
                 _currentSpeed.Changed -= _view.OnSpeedChange;
-                _playerInput.actions["Move"].canceled -= (_) => _defaultMover.Stop();
-
-                _useAreaChecker.Lost();
+                _playerInput.actions["Move"].canceled -= OnInputMove;
             }
         }
 
@@ -216,6 +210,16 @@ namespace Game
                 _view.Mining();
             else
                 _view.OnSpeedChange(0);
+        }
+
+        public void SetFlipX(bool isFlipX)
+        {
+            _view.SetFlipX(isFlipX);
+        }
+
+        private void OnInputMove(InputAction.CallbackContext obj)
+        {
+            _defaultMover.Stop();
         }
     }
 }

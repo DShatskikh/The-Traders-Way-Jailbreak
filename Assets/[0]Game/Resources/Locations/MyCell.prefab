@@ -7270,7 +7270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970976118208223794, guid: 2c608ff312507cb4a9a38ca34773c731, type: 3}
       propertyPath: conversation
-      value: BreakBed
+      value: MyCell/BreakBed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26503,7 +26503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
-      value: 250
+      value: 30000
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId
@@ -27308,7 +27308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
-      value: 2000
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId
@@ -27916,7 +27916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _price
-      value: 1000
+      value: 150000
       objectReference: {fileID: 0}
     - target: {fileID: 2730687311077648208, guid: 86c2310b5d4dd4f45ae3d4394e314c1f, type: 3}
       propertyPath: _name.m_TableEntryReference.m_KeyId

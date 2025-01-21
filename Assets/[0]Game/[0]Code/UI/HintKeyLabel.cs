@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using RimuruDev;
 using TMPro;
@@ -6,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -37,6 +37,12 @@ namespace Game
 
         private void OnEnable()
         {
+            if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+
             _coroutineRunner.StartCoroutine(UpdateBindingDisplay());
             LocalizationSettings.SelectedLocaleChanged += LocalizationSettingsOnSelectedLocaleChanged;
         }
@@ -44,12 +50,6 @@ namespace Game
         private void OnDisable()
         {
             LocalizationSettings.SelectedLocaleChanged -= LocalizationSettingsOnSelectedLocaleChanged;
-        }
-
-        private void Start()
-        {
-            if (_deviceTypeDetector.CurrentDeviceType == CurrentDeviceType.WebMobile)
-                return;
         }
 
         private void LocalizationSettingsOnSelectedLocaleChanged(Locale obj)

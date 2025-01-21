@@ -28,10 +28,10 @@ namespace Game
         public void OnDirectionChange(Vector2 value)
         {
             if (value.x > 0) 
-                Flip(false);
+                SetFlipX(false);
                 
             if (value.x < 0) 
-                Flip(true);
+                SetFlipX(true);
         }
 
         public void Mining()
@@ -39,7 +39,7 @@ namespace Game
             _animator.SetFloat(StateHash, 2);
         }
 
-        private void Flip(bool isFlip)
+        public void SetFlipX(bool isFlip)
         {
             _spriteRenderer.flipX = isFlip;
             _hatView.HatPoint.transform.localScale = _hatView.HatPoint.transform.localScale.SetX(isFlip ? -1 : 1);

@@ -3,6 +3,7 @@ using RimuruDev;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -37,7 +38,7 @@ namespace Game
 
         private void Start()
         {
-            if (_deviceTypeDetector.CurrentDeviceType == CurrentDeviceType.WebMobile)
+            if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
                 _hint.gameObject.SetActive(false);
         }
 

@@ -24,15 +24,24 @@ namespace Game
         private WalletService _walletService;
         private AllBuyCheckHandler _allBuyCheckHandler;
         private GameStateController _gameStateController;
+        private Player _player;
+        private LocationsManager _locationsManager;
+        private ISaveLoadService _saveLoadService;
+        private StockMarketService _stockMarketService;
 
         [Inject]
         private void Construct(PlayerInput playerInput, WalletService walletService,
-            AllBuyCheckHandler allBuyCheckHandler, GameStateController gameStateController)
+            AllBuyCheckHandler allBuyCheckHandler, GameStateController gameStateController, Player player, 
+            LocationsManager locationsManager, ISaveLoadService saveLoadService, StockMarketService stockMarketService)
         {
             _playerInput = playerInput;
             _walletService = walletService;
             _allBuyCheckHandler = allBuyCheckHandler;
             _gameStateController = gameStateController;
+            _player = player;
+            _locationsManager = locationsManager;
+            _saveLoadService = saveLoadService;
+            _stockMarketService = stockMarketService;
         }
 
         public void Init()
@@ -138,6 +147,63 @@ namespace Game
                 default:
                     throw new ArgumentOutOfRangeException(nameof(status), status, null);
             }
+        }
+        
+        [Command()]
+        public static void PlayerActivate(bool isActivate)
+        {
+            _instance._player.gameObject.SetActive(isActivate);
+        }
+        
+        [Command()]
+        public static void SwitchLocation(string id)
+        {
+            _instance._locationsManager.SwitchLocation(id, 0);
+        }
+        
+        [Command()]
+        public static void SwitchLocation(string id, int point)
+        {
+            _instance._locationsManager.SwitchLocation(id, point);
+        }
+        
+        [Command()]
+        public static void PlayerState()
+        {
+            Debug.Log(_instance._player.IsPause);
+        }
+        
+        [Command()]
+        public static void Save()
+        {
+            _instance._saveLoadService.Save();
+            
+            foreach (var note in RepositoryStorage.Container) 
+                Debug.Log($"SaveData: {note.Key} {note.Value}");
+        }
+        
+        [Command()]
+        public static void Load()
+        {
+            _instance._saveLoadService.Load();
+
+            foreach (var note in RepositoryStorage.Container) 
+                Debug.Log($"SaveData: {note.Key} {note.Value}");
+        }
+        
+        [Command()]
+        public static void ResetSave()
+        {
+            _instance._saveLoadService.Reset();
+
+            foreach (var note in RepositoryStorage.Container) 
+                Debug.Log($"SaveData: {note.Key} {note.Value}");
+        }
+        
+        [Command()]
+        public static void OpenAllSlots()
+        {
+            _instance._stockMarketService.OpenAllItems();
         }
     }
 }

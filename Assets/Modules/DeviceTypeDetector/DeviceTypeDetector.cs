@@ -18,12 +18,11 @@ using UnityEditor.DeviceSimulation;
 
 namespace RimuruDev
 {
-    [Flags]
     [Serializable]
-    public enum CurrentDeviceType : byte
+    public enum DeviceType : byte
     {
         WebPC = 0,
-        WebMobile = 2,
+        WebMobile = 1,
     }
 
     [SelectionBase]
@@ -32,22 +31,28 @@ namespace RimuruDev
     [HelpURL("https://github.com/RimuruDev/Unity-WEBGL-DeviceTypeDetector")]
     public sealed class DeviceTypeDetector : MonoBehaviour
     {
-        [field: SerializeField] public CurrentDeviceType CurrentDeviceType { get; private set; }
+        [field: SerializeField] public DeviceType DeviceType { get; private set; }
 
+        [SerializeField] private bool isTest = true;
 #if UNITY_2020_1_OR_NEWER
         [SerializeField] private bool enableDeviceSimulator = true;
 #endif
         private void Awake()
         {
+#if UNITY_EDITOR
+            if (isTest)
+                return;
+#endif
+            
             if (IsMobile() && enableDeviceSimulator)
             {
                 Debug.Log("WEBGL -> Mobile");
-                CurrentDeviceType = CurrentDeviceType.WebMobile;
+                DeviceType = DeviceType.WebMobile;
             }
             else
             {
                 Debug.Log("WEBGL -> PC");
-                CurrentDeviceType = CurrentDeviceType.WebPC;
+                DeviceType = DeviceType.WebPC;
             }
         }
 

@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
@@ -35,13 +34,20 @@ namespace Game
 
         private void Start()
         {
-            _slider.value = _volumeService.Volume.Value;
+            _slider.value = RepositoryStorage.Get<VolumeData>(KeyConstants.Volume).Volume;
+            _volumeService.Volume.Value = _slider.value;
         }
 
         private void OnChanged(float value)
         {
             _volumeService.Volume.Value = value;
             _label.text = $"Громкость {(int)(value * 100)}%";
+            RepositoryStorage.Set(KeyConstants.Volume, new VolumeData() { Volume = value });
+        }
+
+        private void OnInit()
+        {
+            OnChanged(_volumeService.Volume.Value);
         }
     }
 }

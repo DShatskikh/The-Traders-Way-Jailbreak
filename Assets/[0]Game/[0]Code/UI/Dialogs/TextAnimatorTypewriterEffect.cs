@@ -1,9 +1,11 @@
 using Febucci.UI;
 using MoreMountains.Feedbacks;
 using PixelCrushers.DialogueSystem;
+using RimuruDev;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -33,6 +35,7 @@ namespace Game
         
         private bool _isPlaying;
         private PlayerInput _playerInput;
+        private DeviceTypeDetector _deviceTypeDetector;
 
         public override bool isPlaying => _isPlaying;
 
@@ -40,6 +43,7 @@ namespace Game
         {
             base.Awake();
             _playerInput = ServiceLocator.Get<PlayerInput>();
+            _deviceTypeDetector = ServiceLocator.Get<DeviceTypeDetector>();
         }
 
         public override void OnEnable()
@@ -113,7 +117,10 @@ namespace Game
         {
             _isPlaying = true;
             _button.SetActive(false);
-            _hint.SetActive(true);
+            
+            if (_deviceTypeDetector.DeviceType == DeviceType.WebPC)
+                _hint.SetActive(true);
+            
             _iconMmfPlayer.PlayFeedbacks();
         }
 

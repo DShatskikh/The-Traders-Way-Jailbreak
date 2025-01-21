@@ -29,7 +29,6 @@ namespace QFSW.QC
         /// <summary>Adds the object to the registry.</summary>
         /// <param name="obj">The object to add to the registry.</param>
         /// <typeparam name="T">The type of the object to add to the registry.</typeparam>
-        [Command("register-object", "Adds the object to the registry to be used by commands with MonoTargetType = Registry")]
         public static void RegisterObject<T>(T obj) where T : class { RegisterObject(typeof(T), obj); }
 
         /// <summary>Adds the object to the registry.</summary>
@@ -59,7 +58,6 @@ namespace QFSW.QC
         /// <summary>Removes the object from the registry.</summary>
         /// <param name="obj">The object to remove from the registry.</param>
         /// <typeparam name="T">The type of the object to remove from the registry.</typeparam>
-        [Command("deregister-object", "Removes the object to the registry to be used by commands with MonoTargetType = Registry")]
         public static void DeregisterObject<T>(T obj) where T : class { DeregisterObject(typeof(T), obj); }
 
         /// <summary>Removes the object to the registry.</summary>
@@ -126,7 +124,6 @@ namespace QFSW.QC
 
         /// <summary>clears the contents of the specified registry.</summary>
         /// <typeparam name="T">The registry to clear.</typeparam>
-        [Command("clear-registry", "Clears the contents of the specified registry")]
         public static void ClearRegistryContents<T>() where T : class
         {
             ClearRegistryContents(typeof(T));
@@ -146,7 +143,6 @@ namespace QFSW.QC
             }
         }
 
-        [Command("display-registry", "Displays the contents of the specified registry")]
         private static IEnumerable<object> DisplayRegistry<T>() where T : class
         {
             if (GetRegistrySize<T>() <= 0) 
