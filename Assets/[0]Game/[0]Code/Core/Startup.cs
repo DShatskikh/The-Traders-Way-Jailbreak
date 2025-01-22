@@ -1,8 +1,10 @@
-﻿using PixelCrushers.DialogueSystem;
+﻿using System.Linq;
+using PixelCrushers.DialogueSystem;
 using RimuruDev;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Localization.Settings;
 using YG;
 
 namespace Game
@@ -120,6 +122,9 @@ namespace Game
 #else
             _analyticsService = new TestAnalyticsService();
 #endif
+            
+            print(YandexGame.lang);
+            SetLocale(YandexGame.lang);
             
             ServiceLocator.Register(_screenManager);
             ServiceLocator.Register(_cinemachineConfiner2D);
@@ -252,6 +257,17 @@ namespace Game
             _saveLoadService.Load();
 #endif
 
+        }
+        
+        private void SetLocale(string code)
+        {
+            var localeQuery = (from locale in LocalizationSettings.AvailableLocales.Locales where locale.Identifier.Code == code select locale).FirstOrDefault();
+            if (localeQuery == null)
+            {
+                Debug.LogError($"No locale for {code} found");
+                return;
+            }
+            LocalizationSettings.SelectedLocale = localeQuery;
         }
     }
 }

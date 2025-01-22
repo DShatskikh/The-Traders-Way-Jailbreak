@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq;
 using QFSW.QC;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 namespace Game
 {
@@ -204,6 +206,18 @@ namespace Game
         public static void OpenAllSlots()
         {
             _instance._stockMarketService.OpenAllItems();
+        }
+        
+        [Command()]
+        public static void SetLocale(string code)
+        {
+            var localeQuery = (from locale in LocalizationSettings.AvailableLocales.Locales where locale.Identifier.Code == code select locale).FirstOrDefault();
+            if (localeQuery == null)
+            {
+                Debug.LogError($"No locale for {code} found");
+                return;
+            }
+            LocalizationSettings.SelectedLocale = localeQuery;
         }
     }
 }

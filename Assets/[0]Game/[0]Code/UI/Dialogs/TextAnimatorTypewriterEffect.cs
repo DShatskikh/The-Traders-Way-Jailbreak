@@ -2,7 +2,6 @@ using Febucci.UI;
 using MoreMountains.Feedbacks;
 using PixelCrushers.DialogueSystem;
 using RimuruDev;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DeviceType = RimuruDev.DeviceType;
@@ -16,7 +15,7 @@ namespace Game
         private TextAnimatorPlayer _textAnimatorPlayer;
        
         [SerializeField]
-        private AudioSource _audioSource;
+        private AudioSource _audioSource, _audioSource_2;
 
         [SerializeField]
         private GameObject _button;
@@ -33,6 +32,7 @@ namespace Game
         private bool _isPlaying;
         private PlayerInput _playerInput;
         private DeviceTypeDetector _deviceTypeDetector;
+        private bool _isFirstAudioSource;
 
         public override bool isPlaying => _isPlaying;
 
@@ -47,8 +47,6 @@ namespace Game
         {
             base.OnEnable();
             gameObject.SetActive(true);
-            //GameData.InputManager.Hide();
-            //GameData.CharacterController.enabled = false;
             _textAnimatorPlayer.onCharacterVisible.AddListener((c) => OnWrite());
             _textAnimatorPlayer.onTextShowed.AddListener(Stop);
             _textAnimatorPlayer.onTypewriterStart.AddListener(OnTypewriterStart);
@@ -71,9 +69,6 @@ namespace Game
                 _playerInput.actions["Submit"].canceled -= ShowAllText;
                 _playerInput.actions["Cancel"].canceled -= ShowAllText;
             }
-            
-            //GameData.InputManager.Show();
-            //GameData.CharacterController.enabled = true;
         }
 
         public override void Start() { }
@@ -93,6 +88,7 @@ namespace Game
             var clipPath = "AudioClips/" + (clipName != "" ? clipName : "snd_txtlan_ch1");
             var clip = Resources.Load<AudioClip>(clipPath);
             _audioSource.clip = clip;
+            _audioSource_2.clip = clip;
 
             var useDisplayName = DialogueManager.masterDatabase.GetActor(actorName).LookupValue("Display Name");
             _namePanel.SetActive(useDisplayName != string.Empty);
@@ -107,7 +103,12 @@ namespace Game
 
         private void OnWrite()
         {
-            _audioSource.Play();
+            _isFirstAudioSource = !_isFirstAudioSource;
+            
+            if (_isFirstAudioSource)
+                _audioSource.Play();
+            else
+                _audioSource_2.Play();
         }
 
         private void OnTypewriterStart()

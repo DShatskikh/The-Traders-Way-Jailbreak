@@ -58,7 +58,7 @@ namespace Game
                 YandexGame.savesData.Container[pair.Key] = pair.Value;
             }
 
-            YandexGame.SaveProgress();
+            YandexGame.SaveCloud();
         }
 
         public void Reset()

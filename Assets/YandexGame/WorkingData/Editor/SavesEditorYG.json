@@ -1,5 +1,5 @@
 {
-    "idSave": 377,
+    "idSave": 381,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -14,15 +14,15 @@
         "m_pairs": [
             {
                 "m_key": "HomeCutscene",
-                "m_value": "{\"CutsceneState\":4,\"IsShowLandedScreen\":false}"
+                "m_value": "{\"CutsceneState\":0,\"IsShowLandedScreen\":false}"
             },
             {
                 "m_key": "MyCellCutscene",
-                "m_value": "{\"IsNotFirstVisit\":true,\"State\":0}"
+                "m_value": "{\"IsNotFirstVisit\":false,\"State\":0}"
             },
             {
                 "m_key": "SkinShop",
-                "m_value": "{\"IsNotFirstOpen\":true}"
+                "m_value": "{\"IsNotFirstOpen\":false}"
             },
             {
                 "m_key": "Name",
@@ -30,11 +30,11 @@
             },
             {
                 "m_key": "Location",
-                "m_value": "{\"LocationName\":\"MyCell\",\"PointIndex\":0,\"CharacterPositionX\":0.0,\"CharacterPositionY\":0.0}"
+                "m_value": "{\"LocationName\":\"Home\",\"PointIndex\":0,\"CharacterPositionX\":0.0,\"CharacterPositionY\":0.0}"
             },
             {
                 "m_key": "Wallet",
-                "m_value": "{\"Money\":1.8649849891662598,\"Tax\":6870747430.528649,\"MaxAward\":122344460124866030.0}"
+                "m_value": "{\"Money\":13741494861.0,\"Tax\":20612242291.5,\"MaxAward\":5.0}"
             },
             {
                 "m_key": "Volume",
@@ -42,7 +42,7 @@
             },
             {
                 "m_key": "Ending",
-                "m_value": "{\"IsDefaultEnding\":true,\"IsSecretEnding\":true}"
+                "m_value": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":false}"
             },
             {
                 "m_key": "IsNotFirstOpen",
@@ -50,7 +50,7 @@
             },
             {
                 "m_key": "StockMarket",
-                "m_value": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":true},{\"Id\":\"Watermelon\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"GoldApple\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Palisos\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"LuckyBlock\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Diamond\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Star\",\"Count\":1,\"IsOpen\":false}]}"
+                "m_value": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":true},{\"Id\":\"Watermelon\",\"Count\":1,\"IsOpen\":true},{\"Id\":\"GoldApple\",\"Count\":1,\"IsOpen\":true},{\"Id\":\"Palisos\",\"Count\":1,\"IsOpen\":true},{\"Id\":\"LuckyBlock\",\"Count\":1,\"IsOpen\":true},{\"Id\":\"Diamond\",\"Count\":1,\"IsOpen\":true},{\"Id\":\"Star\",\"Count\":1,\"IsOpen\":true}]}"
             },
             {
                 "m_key": "hub_bed",
@@ -58,7 +58,7 @@
             },
             {
                 "m_key": "hub_first",
-                "m_value": "{\"IsBuy\":true}"
+                "m_value": "{\"IsBuy\":false}"
             },
             {
                 "m_key": "hub_murzik",
