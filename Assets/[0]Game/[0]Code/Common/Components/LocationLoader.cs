@@ -21,16 +21,15 @@
 
         public void Load()
         {
-            _gameStateController.StartGame();
-            _screenManager.Show(ScreenType.Main);
-            _player.gameObject.SetActive(true);
-
             var locationData = RepositoryStorage.Get<LocationsManager.Data>(KeyConstants.Location);
 
-            if (locationData.LocationName == "") 
+            if (locationData.LocationName == string.Empty) 
                 locationData.LocationName = "World";
 
-            _locationsManager.SwitchLocation(locationData.LocationName, 0);
+            _screenManager.Show(ScreenType.Main);
+            _player.gameObject.SetActive(true);
+            _gameStateController.StartGame();
+            _locationsManager.SwitchLocation(locationData.LocationName, locationData.PointIndex);
         }
     }
 }

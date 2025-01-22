@@ -15903,9 +15903,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3601009921519363313, guid: ca778fe8b2e85ed4796214e84f6fc913, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4890662431391081916, guid: ca778fe8b2e85ed4796214e84f6fc913, type: 3}
       propertyPath: _text.m_TableEntryReference.m_KeyId
       value: 6181161392259072
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904027758095379946, guid: ca778fe8b2e85ed4796214e84f6fc913, type: 3}
+      propertyPath: m_text
+      value: "\u041D\u0443\u0431\u0438\u043A, \u043E\u0442\u043D\u0435\u0441\u0438
+        \u0430\u043B\u043C\u0430\u0437\u044B \u043D\u0430 \u0441\u043A\u043B\u0430\u0434,
+        \u043F\u043E\u043A\u0430 \u0432\u0441\u044F\u043A\u0438\u0435 \u043D\u0435\u0433\u043E\u0434\u044F\u0438
+        \u043D\u0435 \u0440\u0430\u0437\u0432\u043E\u0440\u043E\u0432\u0430\u043B\u0438!!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904027758095379946, guid: ca778fe8b2e85ed4796214e84f6fc913, type: 3}
+      propertyPath: m_fontSize
+      value: 143.65
       objectReference: {fileID: 0}
     - target: {fileID: 7333275594287177854, guid: ca778fe8b2e85ed4796214e84f6fc913, type: 3}
       propertyPath: m_Name

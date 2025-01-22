@@ -66,7 +66,7 @@ namespace Game
             if (data.CutsceneState == CutsceneState.ENDING)
                 return;
 
-            if (data.CutsceneState == CutsceneState.OFF)
+            if (data.CutsceneState is not (CutsceneState.PARTY or CutsceneState.SECRETENDING))
                 data.CutsceneState = CutsceneState.LAPTOP;
             
             UpgradeState(data.CutsceneState);

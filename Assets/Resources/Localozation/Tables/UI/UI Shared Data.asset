@@ -275,6 +275,34 @@ MonoBehaviour:
     m_Key: Secret_Table_Console_Mobile
     m_Metadata:
       m_Items: []
+  - m_Id: 11995949007486976
+    m_Key: Secrets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12035713391771648
+    m_Key: Hat_UnderwaterMask_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036454672089088
+    m_Key: SecretEnding
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036516370300928
+    m_Key: SecretEnding_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036862954029056
+    m_Key: SecretRoom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036906767728640
+    m_Key: SecretRoom_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12196350575099904
+    m_Key: Hat_CoolGlasses_Description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

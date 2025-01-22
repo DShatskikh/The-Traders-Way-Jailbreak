@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
-    public sealed class SubmitAnimatedButton : MonoBehaviour
+    public sealed class DialogueSubmitAnimatedButton : MonoBehaviour
     {
         private PlayerInput _playerInput;
         private AnimatedButton _animatedButton;
@@ -23,10 +23,11 @@ namespace Game
 
         private void OnDisable()
         {
-            //throw new Exception("wewewew");
-            
             if (_playerInput)
             {
+                _playerInput.actions["Submit"].started -= OnSubmitDown;
+                _playerInput.actions["Submit"].canceled -= OnSubmitUp;
+                
                 _playerInput.actions["Submit"].started -= OnSubmitDown;
                 _playerInput.actions["Submit"].canceled -= OnSubmitUp;
             }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29dfac9a5d8b4199b894762cf7765e25, type: 3}
   m_Name: HakerMask
   m_EditorClassIdentifier: 
-  _id: HakerMask
+  _id: HackerMask
   _name:
     m_TableReference:
       m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d

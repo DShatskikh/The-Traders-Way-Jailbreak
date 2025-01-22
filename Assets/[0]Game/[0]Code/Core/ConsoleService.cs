@@ -57,7 +57,7 @@ namespace Game
         }
 
         [Command()]
-        public static void AddMoney(int money)
+        public static void AddMoney(double money)
         {
             _instance._walletService.Add(money);
         }

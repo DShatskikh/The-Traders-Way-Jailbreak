@@ -2965,10 +2965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5972cd216324a29965aabb89ea1b58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initSlots:
-  - Id: Kystic
-    Count: 1
-    IsOpen: 1
 --- !u!114 &499891486 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 134749712585928092, guid: 61f98f5201d194b4599f37c0dd5ce559, type: 3}
@@ -6171,9 +6167,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 0}
   Damping: 0
-  SlowingDistance: 5
+  SlowingDistance: 0
   OversizeWindow:
-    Enabled: 0
+    Enabled: 1
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
@@ -7367,7 +7363,6 @@ MonoBehaviour:
   _frame: {fileID: 384985678}
   _enterAnimation: {fileID: 205067838}
   _exitAnimation: {fileID: 784160842}
-  _inputAction: {fileID: 0}
   _arrow: {fileID: 1442967832}
 --- !u!1 &1320262897
 GameObject:
@@ -8564,7 +8559,6 @@ MonoBehaviour:
   _frame: {fileID: 212836493}
   _enterAnimation: {fileID: 351392656}
   _exitAnimation: {fileID: 499891486}
-  _inputAction: {fileID: 0}
   _arrow: {fileID: 1878335368}
 --- !u!1 &1643192565
 GameObject:
@@ -9096,12 +9090,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d49555e80d4425a465c1d8ea73d6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fullTest: 0
+  _fullTest: 1
+  _isUseSaving: 0
   _initData:
     PlayerName: "\u0414\u0435\u043D\u0438\u0441"
     LocationData:
-      LocationName: Secret
-      PointIndex: 0
+      LocationName: HallwayRecreationRoom
+      PointIndex: 1
       CharacterPositionX: 0
       CharacterPositionY: 0
     HomeData:
@@ -9119,8 +9114,7 @@ MonoBehaviour:
       IsSecretEnding: 0
     Volume:
       Volume: 1
-  _isUseSaving: 1
-  _isOpenStockMarket: 1
+  _isOpenStockMarket: 0
   _isShowMenu: 0
   _musicPlayer:
     _audioSource: {fileID: 304891725}

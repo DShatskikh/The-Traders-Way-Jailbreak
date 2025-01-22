@@ -28,11 +28,13 @@ namespace Game
         private StartGameScreen _startGameScreen;
         
         private LocationLoader _locationLoader;
+        private ISaveLoadService _saveLoadService;
 
         [Inject]
-        private void Construct(LocationLoader locationLoader)
+        private void Construct(LocationLoader locationLoader, ISaveLoadService saveLoadService)
         {
             _locationLoader = locationLoader;
+            _saveLoadService = saveLoadService;
         }
         
         private void OnEnable()
@@ -60,10 +62,13 @@ namespace Game
             if (playerName == string.Empty)
                 playerName = DefaultName;
             
+            _saveLoadService.Reset();
+            
             RepositoryStorage.Set(KeyConstants.Name, new PlayerName(playerName));
             Lua.Run($"Variable[\"PlayerName\"] = \"{playerName}\"");
 
             Destroy(_mainScreen);
+            
             _locationLoader.Load();
         }
 

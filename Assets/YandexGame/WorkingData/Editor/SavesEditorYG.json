@@ -1,5 +1,5 @@
 {
-    "idSave": 172,
+    "idSave": 377,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -14,15 +14,15 @@
         "m_pairs": [
             {
                 "m_key": "HomeCutscene",
-                "m_value": "{\"CutsceneState\":0,\"IsShowLandedScreen\":false}"
+                "m_value": "{\"CutsceneState\":4,\"IsShowLandedScreen\":false}"
             },
             {
                 "m_key": "MyCellCutscene",
-                "m_value": "{\"IsNotFirstVisit\":false,\"State\":0}"
+                "m_value": "{\"IsNotFirstVisit\":true,\"State\":0}"
             },
             {
                 "m_key": "SkinShop",
-                "m_value": "{\"IsNotFirstOpen\":false}"
+                "m_value": "{\"IsNotFirstOpen\":true}"
             },
             {
                 "m_key": "Name",
@@ -30,27 +30,131 @@
             },
             {
                 "m_key": "Location",
-                "m_value": "{\"LocationName\":\"Home\",\"PointIndex\":0,\"CharacterPositionX\":0.0,\"CharacterPositionY\":0.0}"
+                "m_value": "{\"LocationName\":\"MyCell\",\"PointIndex\":0,\"CharacterPositionX\":0.0,\"CharacterPositionY\":0.0}"
             },
             {
                 "m_key": "Wallet",
-                "m_value": "{\"Money\":2.1884851455688478,\"Tax\":0.021884851455688478,\"MaxAward\":5.0}"
+                "m_value": "{\"Money\":1.8649849891662598,\"Tax\":6870747430.528649,\"MaxAward\":122344460124866030.0}"
             },
             {
                 "m_key": "Volume",
-                "m_value": "{\"Volume\":0.6722595691680908}"
+                "m_value": "{\"Volume\":1.0}"
             },
             {
                 "m_key": "Ending",
-                "m_value": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":false}"
+                "m_value": "{\"IsDefaultEnding\":true,\"IsSecretEnding\":true}"
             },
             {
                 "m_key": "IsNotFirstOpen",
-                "m_value": "{\"IsNotFirstOpen\":true}"
+                "m_value": "{\"IsNotFirstOpen\":false}"
             },
             {
                 "m_key": "StockMarket",
-                "m_value": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Watermelon\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"GoldApple\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Palisos\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"LuckyBlock\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Diamond\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Star\",\"Count\":0,\"IsOpen\":false}]}"
+                "m_value": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":true},{\"Id\":\"Watermelon\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"GoldApple\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Palisos\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"LuckyBlock\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Diamond\",\"Count\":1,\"IsOpen\":false},{\"Id\":\"Star\",\"Count\":1,\"IsOpen\":false}]}"
+            },
+            {
+                "m_key": "hub_bed",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "hub_first",
+                "m_value": "{\"IsBuy\":true}"
+            },
+            {
+                "m_key": "hub_murzik",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "hub_left",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "hub_right",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "dining_vip",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "dining_next",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "dining_replaceFurniture",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "dining_upgrade",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "HallwayDining_Pictures",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "HallwayDining_Guard",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "HallwayHangar_guard",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "HallwayRecreation_Guard",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "HallwayRecreation_Pictures",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Hangar_Barrier",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Hangar_FinallySpaceShip",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "RecreationRoom_Pictures",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Recreation_Bar",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Recreation_DanceFloor",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Recreation_Tables",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "warehouse_upgrade",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "hub_up",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "hub_hallwayHangar",
+                "m_value": "{\"IsBuy\":false}"
+            },
+            {
+                "m_key": "Star",
+                "m_value": "{\"IsUse\":true}"
+            },
+            {
+                "m_key": "Skibidi",
+                "m_value": "{\"IsShow\":true}"
+            },
+            {
+                "m_key": "GoldApple",
+                "m_value": "{\"IsUse\":true}"
             }
         ]
     }

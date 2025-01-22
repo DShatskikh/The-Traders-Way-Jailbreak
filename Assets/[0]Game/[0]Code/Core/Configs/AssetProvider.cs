@@ -20,6 +20,7 @@ namespace Game
         public Color DeselectColor;
         public StockMarketItem[] StockMarketItems;
         public HatBaseConfig[] HatConfigs;
+        public string[] PlatesId;
         
         [Header("AudioClips")]
         public AudioClip BuySound;

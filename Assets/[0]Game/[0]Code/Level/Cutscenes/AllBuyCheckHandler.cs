@@ -5,14 +5,11 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class AllBuyCheckHandler : IDisposable
+    public sealed class AllBuyCheckHandler : IDisposable
     {
         [SerializeField]
         private DialogueSystemTrigger _allBuyDialogue;
         
-        [SerializeField]
-        private string[] _allId;
-
         public event Action AllBuy;
 
         [Inject]
@@ -31,7 +28,7 @@ namespace Game
             bool isAllBuy = true;
             int countBuy = 0;
             
-            foreach (var id in _allId)
+            foreach (var id in AssetProvider.Instance.PlatesId)
             {
                 var data = RepositoryStorage.Get<BuyPlate.SaveData>(id);
 
@@ -55,12 +52,12 @@ namespace Game
                 AllBuy?.Invoke();
             }
 
-            Debug.Log($"Куплено {countBuy} из {_allId.Length}");
+            Debug.Log($"Куплено {countBuy} из {AssetProvider.Instance.PlatesId.Length}");
         }
         
         public void AllBuyTest()
         {
-            foreach (var id in _allId)
+            foreach (var id in AssetProvider.Instance.PlatesId)
             {
                 var data = RepositoryStorage.Get<BuyPlate.SaveData>(id);
                 data.IsBuy = true;

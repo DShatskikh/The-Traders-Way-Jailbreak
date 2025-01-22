@@ -24,12 +24,13 @@ namespace Game
             var data = RepositoryStorage.Get<EndsData>(KeyConstants.Ending);
             data.IsDefaultEnding = true;
             RepositoryStorage.Set(KeyConstants.Ending, data);
-            
+
             _saveLoadService.Reset();
             
             Debug.Log("EndGameStandard");
             _analyticsService.Send("Ending", "Standard");
             _gameStateController.OpenMainMenu();
+            _saveLoadService.Save();
         }
         
         public void EndingGameSecret()
@@ -44,6 +45,7 @@ namespace Game
             _analyticsService.Send("Ending", "Secret");
             _hatManager.BuyHat("HackerMask");
             _gameStateController.OpenMainMenu();
+            _saveLoadService.Save();
         }
     }
 }

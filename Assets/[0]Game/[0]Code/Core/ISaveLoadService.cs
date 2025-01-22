@@ -13,7 +13,7 @@ namespace Game
     }
 
     [Serializable]
-    public class SaveLoadService : ISaveLoadService
+    public sealed class SaveLoadService : ISaveLoadService
     {
         [SerializeField]
         private AllInitData _initData;
@@ -71,6 +71,11 @@ namespace Game
             RepositoryStorage.Set(KeyConstants.Name, _initData.PlayerName);
             RepositoryStorage.Set(KeyConstants.Location, _initData.LocationData);
             RepositoryStorage.Set(KeyConstants.Wallet, new WalletService.Data(_initData.StartMoney, _initData.StartTax, _initData.StartMoney));
+            RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen() { IsNotFirstOpen = false });
+            RepositoryStorage.Set(KeyConstants.StockMarket, new StockMarketService.Data());
+
+            foreach (var id in AssetProvider.Instance.PlatesId)
+                RepositoryStorage.Set(id, new BuyPlate.SaveData() { IsBuy = false });
         }
     }
 

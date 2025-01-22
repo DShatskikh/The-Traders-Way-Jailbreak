@@ -29,10 +29,7 @@ namespace Game
 
         [SerializeField]
         private GameObject _namePanel;
-        
-        [SerializeField]
-        private TMP_Text _nameLabel;
-        
+
         private bool _isPlaying;
         private PlayerInput _playerInput;
         private DeviceTypeDetector _deviceTypeDetector;

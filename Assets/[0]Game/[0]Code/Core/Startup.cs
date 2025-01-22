@@ -14,10 +14,10 @@ namespace Game
 
         [Header("Test Data")]
         [SerializeField]
-        private AllInitData _initData;
+        private bool _isUseSaving;
         
         [SerializeField]
-        private bool _isUseSaving;
+        private AllInitData _initData;
         
         [SerializeField]
         private bool _isOpenStockMarket;
@@ -115,7 +115,7 @@ namespace Game
 
             DontDestroyOnLoad(gameObject);
 
-#if UNITY_EDITOR
+#if PLATFORM_WEBGL
             _analyticsService = new YandexAnalytics();
 #else
             _analyticsService = new TestAnalyticsService();
@@ -192,11 +192,7 @@ namespace Game
                     RepositoryStorage.Set(KeyConstants.SkinShop, _initData.NoobikData);
                     RepositoryStorage.Set(KeyConstants.Ending, _initData.EndsData);
                     RepositoryStorage.Set(KeyConstants.Volume, _initData.Volume);
-            
-                    _walletService.SetMoneyAndTax(_initData.StartMoney, _initData.StartTax);
-                
-                    if (_isOpenStockMarket)
-                        _stockMarketService.OpenAllItems(); 
+                    RepositoryStorage.Set(KeyConstants.StockMarket, new StockMarketService.Data());
                 }
             }
             else
@@ -221,8 +217,6 @@ namespace Game
             _luaCommandRegister.Init();
             _volumeService.Init();
 
-
-
 #if UNITY_EDITOR
             if (!_fullTest)
             {
@@ -231,6 +225,11 @@ namespace Game
                     _saveLoadService.Load();
                     return;
                 }
+                
+                _walletService.SetMoneyAndTax(_initData.StartMoney, _initData.StartTax);
+                
+                if (_isOpenStockMarket)
+                    _stockMarketService.OpenAllItems(); 
                 
                 RepositoryStorage.Set(KeyConstants.Name, new PlayerName(_initData.PlayerName));
                 Lua.Run($"Variable[\"PlayerName\"] = \"{_initData.PlayerName}\"");

@@ -30,8 +30,8 @@ namespace Game
             Lua.RegisterFunction(nameof(IsOpenItem), this, 
                 SymbolExtensions.GetMethodInfo(() => IsOpenItem(string.Empty)));
             
-            var loadSlots = RepositoryStorage.Get<Data>(KeyConstants.StockMarket).Slots;
-            
+            var loadSlots = RepositoryStorage.Get<Data>(KeyConstants.StockMarket).Slots ?? new List<DataSlot>();
+
             foreach (var config in AssetProvider.Instance.StockMarketItems)
             {
                 var dataSlot = new DataSlot();

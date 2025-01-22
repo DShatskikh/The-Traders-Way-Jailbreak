@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Game
@@ -12,14 +13,23 @@ namespace Game
         private NameSelectScreen _nameSelectScreen;
         
         [SerializeField]
-        private Button _startGameButton, _newGameButton;
+        private Button _startGameButton, _newGameButton, _secretButton;
 
+        [SerializeField]
+        private SecretView _secretView;
+
+        [SerializeField]
+        private SecretSlotView _secretSlotView;
+        
         private LocationLoader _locationLoader;
+        private ISecretPresenter _secretPresenter;
 
         [Inject]
-        private void Construct(LocationLoader locationLoader)
+        private void Construct(LocationLoader locationLoader, PlayerInput playerInput)
         {
             _locationLoader = locationLoader;
+            var slots = Resources.LoadAll<SecretSlotData>("SecretSlotData");
+            _secretPresenter = new SecretPresenter(_secretView, slots, _secretSlotView, this, playerInput);
         }
         
         private void OnEnable()
@@ -27,13 +37,19 @@ namespace Game
             _newGameButton.onClick.AddListener(OpenNameSelectScreen);
             _startGameButton.onClick.AddListener(OnContinueButtonClicked);
 
+            var endingsData = RepositoryStorage.Get<EndsData>(KeyConstants.Ending);
+            _secretButton.gameObject.SetActive(endingsData.IsDefaultEnding);
+            
+            _secretButton.onClick.AddListener(OnSecretButtonClicked);
+
             _startGameButton.gameObject.SetActive(RepositoryStorage.Get<PlayerName>(KeyConstants.Name).Name != null);
         }
 
         private void OnDisable()
         {
-            _newGameButton.onClick.RemoveListener(OpenNameSelectScreen);
-            _startGameButton.onClick.RemoveListener(OnContinueButtonClicked);
+            _newGameButton.onClick.RemoveAllListeners();
+            _startGameButton.onClick.RemoveAllListeners();
+            _secretButton.onClick.RemoveAllListeners();
         }
 
         private void OpenNameSelectScreen()
@@ -46,6 +62,12 @@ namespace Game
         {
             _locationLoader.Load();
             Destroy(_mainScreen);
+        }
+
+        private void OnSecretButtonClicked()
+        {
+            Hide();
+            _secretPresenter.Show();
         }
     }
 }

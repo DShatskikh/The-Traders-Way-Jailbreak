@@ -13,18 +13,11 @@ namespace Game
 
         [SerializeField]
         private Image _timerIcon;
-        
-        private GameStateController _gameStateController;
-
-        [Inject]
-        private void Construct(GameStateController gameStateController)
-        {
-            _gameStateController = gameStateController;
-        }
 
         public IEnumerator AwaitShowTimer()
         {
             yield return _mmfPlayer.PlayFeedbacksCoroutine(Vector3.zero);
+            _timerIcon.fillAmount = 1;
             yield return _timerIcon.DOFillAmount(0, 3).WaitForCompletion();
         }
     }

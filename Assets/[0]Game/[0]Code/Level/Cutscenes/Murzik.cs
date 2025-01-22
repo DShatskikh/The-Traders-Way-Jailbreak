@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-    public class Murzik : MonoBehaviour, IGameFixedUpdateListener, IUseObject
+    public class Murzik : MonoBehaviour, IUseObject
     {
         private const float SPEED = 1.5f;
         private static readonly int SpeedHash = Animator.StringToHash("Speed");
@@ -32,13 +32,9 @@ namespace Game
             _coroutine = StartCoroutine(AwaitMove());
         }
 
-        public void OnFixedUpdate()
+        private void FixedUpdate()
         {
-            if (Vector2.Distance(_previousPosition, transform.position) > 0)
-                _animator.SetFloat(SpeedHash, 1);
-            else
-                _animator.SetFloat(SpeedHash, 0);
-            
+            _animator.SetFloat(SpeedHash, Vector2.Distance(_previousPosition, transform.position) > 0 ? 1 : 0);
             _previousPosition = transform.position;
         }
 

@@ -27,33 +27,13 @@ namespace Game
         [SerializeField]
         private MMF_Player _exitAnimation;
 
-        [SerializeField]
-        private InputActionReference _inputAction;
-        
-        private bool _isSelect;
-        private BaseEventData _eventData;
         private bool _isPress;
-
-        public bool IsSelect => _isSelect;
-
-        protected override void Start()
-        {
-            base.Start();
-            
-            if (_inputAction)
-                _inputAction.action.canceled += ActionOncanceled;
-        }
-
-        protected override void OnDestroy()
-        {
-            base.OnDestroy();
-            
-            if (_inputAction)
-                _inputAction.action.canceled -= ActionOncanceled;
-        }
-
+        
         public override void OnPointerDown(PointerEventData eventData)
         {
+            if (_isPress)
+                return;
+            
             if (eventData != null)
                 base.OnPointerDown(eventData);
             
@@ -62,6 +42,9 @@ namespace Game
 
         public override void OnPointerUp(PointerEventData eventData)
         {
+            if (!_isPress)
+                return;
+            
             if (eventData != null)
                 base.OnPointerUp(eventData);
 
@@ -90,29 +73,17 @@ namespace Game
         {
             base.OnSelect(eventData);
             Guided();
-            _isSelect = true;
         }
 
         public override void OnDeselect(BaseEventData eventData)
         {
             base.OnDeselect(eventData);
             NotGuided();
-            _isSelect = false;
         }
 
         public override void OnSubmit(BaseEventData eventData)
         {
             StartClick();
-            _eventData = eventData;
-        }
-        
-        private void ActionOncanceled(InputAction.CallbackContext obj)
-        {
-            if (!_isSelect)
-                return;
-
-            base.OnSubmit(_eventData);
-            EndClick();
         }
 
         protected virtual void Guided()
