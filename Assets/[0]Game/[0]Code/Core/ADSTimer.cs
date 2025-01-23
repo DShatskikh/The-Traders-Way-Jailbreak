@@ -31,7 +31,7 @@ namespace Game
         {
             while (true)
             {
-                if (YandexGame.timerShowAd >= YandexGame.Instance.infoYG.fullscreenAdInterval
+                if (YG2.timerInterAdv >= YG2.infoYG.InterstitialAdv.interAdvInterval
                     && Time.timeScale != 0 && _gameStateController.CurrentState == GameStateController.GameState.PLAYING)
                 {
                     _coroutineRunner.StartCoroutine(TimerAdShow());
@@ -54,9 +54,9 @@ namespace Game
                 yield return _adsScreen.AwaitShowTimer();
                 _adsScreen.gameObject.SetActive(false);
                 
-                YandexGame.FullscreenShow();
+                YG2.InterstitialAdvShow();
 
-                while (!YandexGame.nowFullAd)
+                while (!YG2.nowInterAdv)
                     yield return null;
 
                 _gameStateController.CloseADS();

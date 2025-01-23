@@ -34,7 +34,7 @@ namespace Game
         
         private void OnClicked()
         {
-            YandexGame.RewVideoShow(1);
+            YG2.RewardedAdvShow("Laptop");
         }
     }
 }

@@ -134,7 +134,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: FivFiv
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -176,7 +176,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name en
-      value: 
+      value: Thief
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -222,7 +222,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name en
-      value: 
+      value: Watermelon
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -272,7 +272,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Murzik
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -318,7 +318,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: TV
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -364,7 +364,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: Palisos
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -410,7 +410,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: Noobik
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -456,7 +456,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Chief
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -502,7 +502,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: Policeman
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -544,11 +544,11 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: "\u041E\u0445\u0440\u0430\u043D\u0438\u043A"
+      value: "\u0428\u0442\u0443\u0440\u043C\u043E\u0432\u0438\u043A"
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Stormtrooper
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -640,7 +640,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Scientist
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -686,7 +686,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Developer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -732,7 +732,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: DJ
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -778,7 +778,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Mayor
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -824,7 +824,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: WWWWWW
+      value: Murzik
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name es
@@ -862,7 +862,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Cactus
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -908,7 +908,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Slime
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1000,7 +1000,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Grifer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1046,7 +1046,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Firamir
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1092,7 +1092,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Grifer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1138,7 +1138,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Grifer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1184,7 +1184,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Grifer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1230,7 +1230,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Bandit
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1276,7 +1276,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Grifer
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1322,7 +1322,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Kirill
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Sosiska
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1414,7 +1414,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Banana
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -1440,7 +1440,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: Troll8915
       type: 4
       typeString: CustomFieldType_Localization
     - title: Pictures
@@ -1474,7 +1474,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: 
+      value: Troll8916
       type: 4
       typeString: CustomFieldType_Localization
     - title: Pictures
@@ -1723,7 +1723,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 79
         width: 160
         height: 30
@@ -1908,7 +1908,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Buy a watermelon
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1983,7 +1983,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Not interested, thank you.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2060,7 +2060,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Buy a watermelon
+
+          The prison economy is collapsing because
+          of you.'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2211,7 +2214,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's a good watermelon. He was in the video.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2292,7 +2295,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Buy
+
+          ($100)'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2444,7 +2449,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have unlocked a new product on the exchange [em1]Watermelon[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2523,7 +2528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Give me 5 stars.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2592,7 +2597,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I don't have $100.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2668,7 +2673,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Come as soon as you can, you beggar
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -2691,8 +2696,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 7.09581, y: 131}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.76000017
   - id: 3
     fields:
     - title: Title
@@ -2866,7 +2871,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have received [em1]Golden Apple[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 3
@@ -2890,8 +2895,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 166.57137
-        y: 103.85712
+        x: 165.67848
+        y: 104.74997
         width: 160
         height: 30
     - id: 5
@@ -2943,7 +2948,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Now you can trade [em1]Golden apples[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 3
@@ -3146,7 +3151,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: What will you order?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3222,7 +3227,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We have some kind of green slush.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3297,7 +3302,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'There''s something else...
+
+          uh...'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3378,7 +3385,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Give me a drink
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3529,7 +3536,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I wouldn't order either.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3598,7 +3605,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Now...
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3673,7 +3680,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's over
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3744,7 +3751,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you, this place has become a better place thanks to you.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 4
@@ -3942,7 +3949,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Watermelon-watermelon give me an autograph
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 5
@@ -4093,7 +4100,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Get away from the celebrity, you junkie!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 5
@@ -4270,7 +4277,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u042D\u0442\u043E \u0441\u0430\u043C\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u043E\u0430\u044F
+        value: "\u042D\u0442\u043E \u0441\u0430\u043C\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u0430\u044F
           \u043C\u0430\u0448\u0438\u043D\u0430 \u0432 \u043C\u0438\u0440\u0435"
         type: 0
         typeString: CustomFieldType_Text
@@ -4291,7 +4298,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is the most expensive car in the world.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 6
@@ -4436,7 +4443,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's made of pure gold
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 6
@@ -4461,7 +4468,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 153
-        y: 143
+        y: 144
         width: 160
         height: 30
     entryGroups: []
@@ -4641,7 +4648,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This car is the second most expensive in the world.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 7
@@ -4716,7 +4723,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And she's yours
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 7
@@ -4914,7 +4921,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: An invaluable work of art
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 8
@@ -5118,7 +5125,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No, I have to go home.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 9
@@ -5188,7 +5195,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: The police won't let me leave
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 9
@@ -5206,7 +5213,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 347
+        x: 348
         y: 78
         width: 160
         height: 30
@@ -5385,7 +5392,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's a bench
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 10
@@ -5582,7 +5589,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: A pathetic fake
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 11
@@ -5779,7 +5786,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Indoor Fountain
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 12
@@ -5798,7 +5805,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 79
         width: 160
         height: 30
     entryGroups: []
@@ -5976,7 +5983,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ooty is my little one
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 13
@@ -6001,7 +6008,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 158
-        y: 80
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -6051,7 +6058,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Meow
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 13
@@ -6126,7 +6133,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I love you too
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 13
@@ -6323,7 +6330,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Your personal rocket
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 14
@@ -6521,7 +6528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Police car
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 15
@@ -6719,7 +6726,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I wouldn't sleep here
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 16
@@ -6916,7 +6923,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: That's better
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 17
@@ -7114,7 +7121,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have received [em1]A dry bush[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 18
@@ -7297,8 +7304,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0427\u0423\u0412\u0410\u0410\u0410\u041A, \u043A\u0443\u043F\u0438
-          \u043F\u044B\u043B\u0435\u0441\u043E\u0441"
+        value: "\u0427\u0423\u0412\u0410\u0410\u0410\u041A, \u043C\u044B \u0432 \u043F\u044B\u043B\u0435\u0441\u043E\u0441\u0435,
+          \u0430\u0445\u0430\u0445\u0430"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7318,7 +7325,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Dude, we're in the vacuum cleaner, ahaha
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7393,7 +7400,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Buy $1k
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7423,7 +7430,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170.81317
+        x: 172.12897
         y: 379.43954
         width: 160
         height: 30
@@ -7474,7 +7481,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'll think
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7484,7 +7491,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 3
+        destinationConversationID: 19
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -7494,79 +7507,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 482.81317
         y: 378.43954
-        width: 160
-        height: 30
-    - id: 4
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 9
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "1 \u0432 \u043F\u043E\u0434\u0430\u0440\u043E\u043A"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      conversationID: 19
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 'AddItem("Palisos", 1);
-
-        PlayBuy();
-
-        MinusMoney(1000)'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 39.926376
-        y: 581.52026
         width: 160
         height: 30
     - id: 5
@@ -7616,7 +7556,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'll come back later.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7626,7 +7566,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 19
+        originDialogueID: 5
+        destinationConversationID: 19
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -7634,7 +7580,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 278.47168
+        x: 282.13022
         y: 440.4883
         width: 160
         height: 30
@@ -7685,7 +7631,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We're in the vacuum cleaner!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7734,7 +7680,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041F\u043E\u0447\u0435\u043C\u0443?"
+        value: ...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7809,10 +7755,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041E\u043D \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0443\u0431\u0438\u0440\u0430\u044E\u0442
-          \u043F\u044B\u043B\u044C, \u0430 \u0434\u0435\u043B\u0430\u0435\u0442 \u044D\u0442\u043E
-          \u0441 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043E\u043D\u043D\u044B\u043C
-          \u043F\u043E\u0434\u0445\u043E\u0434\u043E\u043C!"
+        value: "\u041A\u0443\u043F\u0438 \u043F\u044B\u043B\u0435\u0441\u043E\u0441"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7832,7 +7775,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Buy a vacuum cleaner
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7862,7 +7805,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 287
         y: 230.98781
         width: 160
         height: 30
@@ -7913,7 +7856,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We're in the vacuum cleaner!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -7923,21 +7866,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 12
-        destinationConversationID: 19
-        destinationDialogueID: 13
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: IsHaveMoney(1000)  == true
-      userScript: 
+      userScript: 'AddItem("Palisos", 1);
+
+        PlayBuy();
+
+        MinusMoney(1000)'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 44.81315
+        x: 43.54734
         y: 440.43954
         width: 160
         height: 30
@@ -7956,11 +7897,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 9
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 9
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7968,9 +7909,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 2 \u043F\u044B\u043B\u0435\u0441\u043E\u0441\u0430,
-          \u0432\u044B \u043E\u0442\u043A\u0440\u044B\u043B\u0438 \u043D\u043E\u0432\u044B\u0439
-          \u0442\u043E\u0432\u0430\u0440 \u043D\u0430 \u0431\u0438\u0440\u0436\u0435"
+        value: "\u041C\u044B \u0432 \u043F\u044B\u043B\u0435\u0441\u043E\u0441\u0435!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7990,7 +7929,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We're in the vacuum cleaner!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 19
@@ -8000,13 +7939,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 13
-        destinationConversationID: 19
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -8014,13 +7947,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 46.648018
-        y: 504.20102
+        x: 481.4433
+        y: 516.1107
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 125.46841, y: 33.832565}
-    canvasZoom: 1.2399998
+    canvasScrollPosition: {x: 116.02196, y: 35.3674}
+    canvasZoom: 0.7900003
   - id: 20
     fields:
     - title: Title
@@ -8194,7 +8127,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Run-of-the-mill [em1]Golden toilet bowl[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 20
@@ -8392,7 +8325,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's just an Indoor Amazonian Rosewood
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 21
@@ -8591,7 +8524,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This stove can heat up to 10,000 degrees per second
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 22
@@ -8667,7 +8600,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: However, I still didn't understand why
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 22
@@ -8865,7 +8798,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is my personal coffee machine
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 23
@@ -9063,7 +8996,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is a column made of pure marble
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 24
@@ -9140,7 +9073,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: what did I put here, but it's worth it and it's worth it
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 24
@@ -9158,7 +9091,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 161
+        x: 160
         y: 130
         width: 160
         height: 30
@@ -9286,7 +9219,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 184
+        x: 80
         y: 50
         width: 160
         height: 30
@@ -9321,7 +9254,7 @@ MonoBehaviour:
           \u043D\u0430\u043B\u043E\u0433\u043E\u0432 \u0441\u043D\u0438\u0437\u0438\u043B\u043E\u0441\u044C
           \u0444\u0438\u043D\u0430\u043D\u0441\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435
           \u0433\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
-          \u0443\u0447\u0435\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0439"
+          \u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0439"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -9341,7 +9274,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Due to non-payment of taxes, the financing of public institutions
+          has decreased
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9365,7 +9299,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 80
         y: 302
         width: 160
         height: 30
@@ -9418,7 +9352,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: The Space Prison got the most
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9442,7 +9376,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 80
         y: 386
         width: 160
         height: 30
@@ -9495,7 +9429,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Our mayor Darth Vader promised to deal with the situation
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9519,7 +9453,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 80
         y: 470
         width: 160
         height: 30
@@ -9571,7 +9505,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm going to bed, this news is so exhausting
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9589,7 +9523,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 80
         y: 554
         width: 160
         height: 30
@@ -9644,7 +9578,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Price [em1]Dry bush[/em1] dropped by 10% while [em1]Golden apples[/em1]
+          on the contrary have risen in price
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9668,7 +9603,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288.86957
+        x: 80
         y: 134
         width: 160
         height: 30
@@ -9720,7 +9655,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And now the news about the city
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 25
@@ -9744,13 +9679,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 80
         y: 218
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 253.21103}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 0, y: 328.2912}
+    canvasZoom: 1.06
   - id: 26
     fields:
     - title: Title
@@ -9924,7 +9859,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Now is not the time to watch TV
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 26
@@ -10122,7 +10057,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: These are stone stoves, just stone ones.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 27
@@ -10299,7 +10234,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041D\u0430 \u0441\u0430\u043C\u043E\u043C\u043E \u0434\u0435\u043B\u0435
+        value: "\u041D\u0430 \u0441\u0430\u043C\u043E\u043C \u0434\u0435\u043B\u0435
           \u044D\u0442\u043E \u043C\u043E\u044F \u043D\u0435 \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u0430\u044F
           \u0438\u0433\u0440\u0430"
         type: 0
@@ -10321,7 +10256,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: In fact, this is not my only game.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 28
@@ -10399,7 +10334,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Actually, you don't have to play right now ;)
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 28
@@ -10470,7 +10405,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'I recommend playing [em1]ChickenTale[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 28
@@ -10545,7 +10480,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Look at this
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 28
@@ -10748,7 +10683,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Here I am at home
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 29
@@ -10825,7 +10760,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Now is the time to check the exchange
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 29
@@ -11002,7 +10937,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0424\u0443\u0445, \u0432\u0441\u0435 \u0432\u043F\u043E\u0440\u044F\u0434\u043A\u0435"
+        value: "\u0424\u0443\u0445, \u0432\u0441\u0435 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -11022,7 +10957,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Phew, it's okay
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 30
@@ -11046,7 +10981,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 159
         y: 79
         width: 160
         height: 30
@@ -11098,7 +11033,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Now, we need to watch the news
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 30
@@ -11296,7 +11231,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Hello, [var=PlayerName]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11373,7 +11308,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have not paid the tax in the amount of [vat=Tax]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11449,7 +11384,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Is there anything I can help you with?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11524,7 +11459,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You're under arrest
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11600,7 +11535,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Noobik, put handcuffs on him.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11675,7 +11610,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I ate them.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11751,7 +11686,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Oh, my God!
+
+          Your first day at work?'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11775,7 +11712,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159
+        x: 160.06384
         y: 398
         width: 160
         height: 30
@@ -11826,7 +11763,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11902,7 +11839,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], let''s go to your rocket'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11925,7 +11862,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 189.36171}
     canvasZoom: 0.94000006
   - id: 32
     fields:
@@ -12100,7 +12037,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have received [em1]Lucky block[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 32
@@ -12175,7 +12112,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Expected
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 32
@@ -12252,7 +12189,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Now you can trade [em1]Varnishes in blocks[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 32
@@ -12455,7 +12392,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This vase is 1000 years old
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 33
@@ -12530,7 +12467,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: There are only 2 of them on the planet
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 33
@@ -12609,7 +12546,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'll buy another one
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 33
@@ -12678,7 +12615,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Just fragments
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 33
@@ -12875,7 +12812,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I've missed you
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 34
@@ -12950,7 +12887,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Meow
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 34
@@ -13344,7 +13281,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You got the [em2]Diamond[/em2]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 36
@@ -13814,7 +13751,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is your rocket
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 38
@@ -13891,7 +13828,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I could leave now, but I still have things to do.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 38
@@ -14089,7 +14026,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], let''s go to the rocket'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 39
@@ -14286,7 +14223,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You're under arrest
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 40
@@ -14483,7 +14420,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Oh, this Noobik
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 41
@@ -14559,7 +14496,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I remember being like that myself
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 41
@@ -14756,7 +14693,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is your bed
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 42
@@ -14934,7 +14871,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u042D\u0442\u043E \u0431\u043E\u0447\u043A\u0430 \u0438\u0437 \u043F\u043E\u0434
-          \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u0437\u0435\u043B\u0435\u043D\u043D\u043E\u0439
+          \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u0437\u0435\u043B\u0435\u043D\u043E\u0439
           \u0436\u0438\u0436\u0438"
         type: 0
         typeString: CustomFieldType_Text
@@ -14955,7 +14892,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's a barrel of some kind of green sludge.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 43
@@ -15030,7 +14967,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u043E\u043D\u0430 \u043F\u0443\u0441\u0442\u0430"
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 43
@@ -16488,7 +16425,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And I tell him that
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 50
@@ -16564,7 +16501,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And he tells me so
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 50
@@ -16639,7 +16576,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ahahaha
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 50
@@ -16837,7 +16774,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: There's a lot of food on the table
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 51
@@ -17316,7 +17253,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Here passes [em1]A party[/em1]?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17391,7 +17328,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: What are you talking about?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17467,7 +17404,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I think I'm getting ahead of myself
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17542,7 +17479,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: A party, a mask?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17617,7 +17554,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I think we'll meet again
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17693,7 +17630,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You have received [em1]Underwater mask[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17768,7 +17705,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Wait, what are you talking about?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17837,7 +17774,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: What is he talking about?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 53
@@ -17860,7 +17797,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 53.608246}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.97
   - id: 54
     fields:
@@ -18036,7 +17973,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I came up with an invisible floor so that the prisoners wouldn't escape
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 54
@@ -18112,7 +18049,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: So why are you here?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 54
@@ -18316,7 +18253,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: But I work here part-time
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 55
@@ -18392,7 +18329,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm a janitor, loader, and security guard
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 55
@@ -18469,7 +18406,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm not supposed to sell clothes to prisoners.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 55
@@ -18545,7 +18482,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Let it be a naf secret
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 55
@@ -18563,7 +18500,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.13635
         y: 386
         width: 160
         height: 30
@@ -18614,7 +18551,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It suits you
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 55
@@ -18637,8 +18574,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 209.14288}
-    canvasZoom: 0.9999999
+    canvasScrollPosition: {x: 0, y: 122.727295}
+    canvasZoom: 0.88
   - id: 56
     fields:
     - title: Title
@@ -18811,7 +18748,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'This is [em1]Lucky block[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 56
@@ -18887,7 +18824,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I wonder what I'll get out of it
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 56
@@ -19085,7 +19022,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You put on a great show
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 57
@@ -19109,7 +19046,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 159
         y: 80
         width: 160
         height: 30
@@ -19161,7 +19098,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Just look at them
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 57
@@ -19236,7 +19173,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: They're having fun
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 57
@@ -19435,7 +19372,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I am constantly being asked if I am a human being or a banana...
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 58
@@ -19511,7 +19448,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I haven't decided yet
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 58
@@ -19529,7 +19466,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159
+        x: 162
         y: 130
         width: 160
         height: 30
@@ -19887,7 +19824,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u041A\u0430\u043A \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0441\u044F
-          \u0433\u043B\u0430\u0432\u043D\u043E\u0435 \u044D\u0442\u043E \u043F\u0440\u043E\u0433\u0440\u0435\u0433\u0441\u0441\n\u0421\u043A\u0438\u0431\u0438\u0434\u0438
+          \u0433\u043B\u0430\u0432\u043D\u043E\u0435 \u044D\u0442\u043E \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\n\u0421\u043A\u0438\u0431\u0438\u0434\u0438
           \u0434\u043E\u043F-\u0434\u043E\u043F \u0435\u0441-\u0435\u0441"
         type: 0
         typeString: CustomFieldType_Text
@@ -19908,7 +19845,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'As they say, the main thing is progress
+
+          Skibidi dop-dop
+          EU-EU'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 60
@@ -20107,7 +20047,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ugh... I somehow managed to get a laptop
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 61
@@ -20182,7 +20122,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We need to upgrade
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 61
@@ -20207,7 +20147,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 128.96907
+        y: 128.05164
         width: 160
         height: 30
     - id: 3
@@ -20260,7 +20200,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: But first, collect [em1]Dried bushes[/em1] to sell them on the stock
+          exchange
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 61
@@ -20881,7 +20822,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm so tired.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 63
@@ -20957,7 +20898,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I have to go home.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 63
@@ -20975,7 +20916,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 130
         width: 160
         height: 30
@@ -21503,7 +21444,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This mask
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21579,7 +21520,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Why is there a mask on this statue?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21655,7 +21596,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You got a Hacker mask
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21731,7 +21672,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'This is [em1]The secret ending[/em1]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21803,7 +21744,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], the richest man in the world, was able to escape
+          from the shackles of fate'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21880,7 +21822,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], escaped jail and did not go his way'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -21904,7 +21846,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.21951
         y: 470
         width: 160
         height: 30
@@ -21958,7 +21900,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: He was not destined to meet any of his future friends.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22016,7 +21958,7 @@ MonoBehaviour:
         value: "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u043E\u043D
           \u0442\u043E\u043B\u044C\u043A\u043E \u0438 \u0434\u0435\u043B\u0430\u043B
           \u0447\u0442\u043E \u0442\u043E\u0440\u0433\u043E\u0432\u0430\u043B \u043D\u0430
-          \u0431\u0438\u0440\u0436\u0435 \u0438 \u0432\u0441\u0442\u0440\u0430\u0445\u0435
+          \u0431\u0438\u0440\u0436\u0435 \u0438 \u0432 \u0441\u0442\u0440\u0430\u0445\u0435
           \u0441\u043C\u043E\u0442\u0440\u0435\u043B \u043D\u043E\u0432\u043E\u0441\u0442\u0438
           \u0431\u043E\u044F\u0441\u044C \u0447\u0442\u043E \u0440\u044B\u043D\u043E\u043A
           \u043D\u0435 \u043E\u0431\u0432\u0430\u043B\u0438\u0442\u0441\u044F"
@@ -22039,7 +21981,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Every day he did nothing but trade on the stock exchange and watch
+          the news in fear, fearing that the market would not collapse
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22115,7 +22058,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: But was it the right choice?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22192,7 +22135,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], and will continue to play on the stock exchange
+          all day long.'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22267,7 +22211,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: He was lonely
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22322,8 +22266,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0411\u0443\u0434\u0443\u0447\u0435 \u0441\u0430\u043C\u044B\u043C
-          \u0431\u043E\u0433\u0430\u0442\u044B \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u043E\u043C
+        value: "\u0411\u0443\u0434\u0443\u0447\u0438 \u0441\u0430\u043C\u044B\u043C
+          \u0431\u043E\u0433\u0430\u0442\u044B\u043C \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u043E\u043C
           \u0432 \u043C\u0438\u0440\u0435, [var=PlayerName] \u043D\u0435 \u0441\u043C\u043E\u0433
           \u0441\u0442\u0430\u0442\u044C \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u043C"
         type: 0
@@ -22345,7 +22289,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Being the richest man in the world, [var=PlayerName] could not become
+          happy
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22421,7 +22366,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], will never know about it'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 65
@@ -22450,8 +22395,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 311.0453}
-    canvasZoom: 0.52000016
+    canvasScrollPosition: {x: 0, y: 837.0198}
+    canvasZoom: 0.9399999
   - id: 66
     fields:
     - title: Title
@@ -28596,7 +28541,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'The mayor is already here
+
+          I need to pay the tax'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 76
@@ -28793,7 +28740,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I did it
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 77
@@ -28868,7 +28815,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I bought everything
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 77
@@ -28944,7 +28891,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: He'll be here any minute
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 77
@@ -29020,7 +28967,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I need to pay the tax urgently
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 77
@@ -29217,7 +29164,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Hi
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 78
@@ -29240,8 +29187,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 19.772568, y: 2.9121706}
+    canvasZoom: 1.2699997
   - id: 79
     fields:
     - title: Title
@@ -29414,7 +29361,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ooh... What kind of woman
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 79
@@ -29489,7 +29436,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: (She is shy)
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 79
@@ -29667,12 +29614,12 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u041B\u0430\u0434\u043D\u043E, \u044F \u043F\u0435\u0440\u0435\u0434\u0443\u043C\u0430\u043B
-          \u0432\u0441\u0435\u0445 \u0433\u0440\u0438\u0444\u0435\u0440\u0435\u0442\u044C
+          \u0432\u0441\u0435\u0445 \u0433\u0440\u0438\u0444\u0435\u0440\u0438\u0442\u044C
           \u0442\u0435\u043F\u0435\u0440\u044C \u044F \u0445\u043E\u0447\u0443 \u0441\u0442\u0430\u0442\u044C
           \u0431\u0438\u0437\u043D\u0435\u0441\u043C\u0435\u043D\u043E\u043C \u0447\u0442\u043E\u0431\u044B
           \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0435\u0441\u0442\u044C
           \u0442\u0430\u043A\u0443\u044E \u043A\u0430\u0440\u0442\u043E\u0448\u043A\u0443
-          \u043F\u043E-\u0444\u0440\u0430\u043D\u0446\u0443\u0437\u043A\u0438"
+          \u043F\u043E-\u0444\u0440\u0430\u043D\u0446\u0443\u0437\u0441\u043A\u0438"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -29692,7 +29639,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Okay, I've changed my mind about cheating on everyone. Now I want
+          to become a businessman so that I can eat French fries every day.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 80
@@ -29749,7 +29697,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "\u0422\u043E\u0433\u0434\u0430 \u044F \u0431\u0443\u0434\u0443 \u0434\u0438\u0440\u0435\u043A\u0442\u043E\u0440\u043E\u043C,
           \u0430 \u0411\u0430\u043D\u0434\u0438\u0442...\n\u0411\u0430\u043D\u0434\u0438\u0442
-          \u0431\u0443\u0434\u0435\u0442 \u043E\u0445\u0440\u0430\u043D\u0438\u043A\u043E\u043C"
+          \u0431\u0443\u0434\u0435\u0442 \u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A\u043E\u043C"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -29769,7 +29717,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Then I''ll be the director, and the Bandit...
+
+          the Bandit
+          will be the guard.'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 80
@@ -29794,7 +29745,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 161
-        y: 130
+        y: 129
         width: 160
         height: 30
     - id: 3
@@ -30043,7 +29994,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Guys, I'm so touched that you decided to congratulate me.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 81
@@ -30119,7 +30070,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes, that's all friends are for.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 81
@@ -30316,7 +30267,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Good evening
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 82
@@ -30392,7 +30343,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No, I'm not the founder of the KFC
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 82
@@ -30590,7 +30541,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Why is everyone avoiding me?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 83
@@ -30615,7 +30566,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 79
+        y: 78.05661
         width: 160
         height: 30
     - id: 2
@@ -30645,7 +30596,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041D\u0435\u0443\u0436\u0435\u043B\u0435 \u044F \u043D\u0435\u043A\u0440\u0430\u0441\u0438\u0432\u0430\u044F?"
+        value: "\u041D\u0435\u0443\u0436\u0435\u043B\u0438 \u044F \u043D\u0435\u043A\u0440\u0430\u0441\u0438\u0432\u0430\u044F?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -30665,7 +30616,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Am I really ugly?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 83
@@ -30866,7 +30817,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I suggest we assemble the most dangerous gang of griefers and griefer
+          the whole world as soon as we get out
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 84
@@ -30941,7 +30893,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm in business
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 84
@@ -30997,7 +30949,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u0410 \u0435\u0441\u043B\u0438 \u043F\u043E\u0439\u043C\u0430\u044E\u0442
-          \u0432\u0441\u044E \u0432\u0435\u043D\u0443 \u0441\u043A\u0438\u043D\u0435\u043C
+          \u0432\u0441\u044E \u0432\u0435\u0441\u043D\u0443 \u0441\u043A\u0438\u043D\u0435\u043C
           \u043D\u0430 \u0411\u0430\u043D\u0434\u0438\u0442\u0430"
         type: 0
         typeString: CustomFieldType_Text
@@ -31018,7 +30970,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And if they catch us, we'll spend the whole spring on a Bandit.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 84
@@ -31291,7 +31243,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And I'm like, yes, we're on fire!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 85
@@ -31366,7 +31318,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ahaha
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 85
@@ -31442,7 +31394,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is the most unexpected ending.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 85
@@ -31640,7 +31592,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: When will they bring you something to eat?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 86
@@ -31838,7 +31790,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You bought all this stuff, didn't you?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 87
@@ -32113,7 +32065,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Fredge, what are we doing in prison?
+
+          Didn''t you say that
+          everything was captured?'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 88
@@ -32191,7 +32146,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Aha, it's been captured, the lawyer set up such a table with balloons
+          at the trial
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 88
@@ -32246,7 +32202,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0422\u044B \u0421\u043E\u0441\u0438\u043A\u0430 \u0432\u043E\u043E\u0431\u0449\u0435
+        value: "\u0422\u044B \u0421\u043E\u0441\u0438\u0441\u043A\u0430 \u0432\u043E\u043E\u0431\u0449\u0435
           \u0441\u0443\u0434\u044C\u044E \u043E\u0441\u043A\u043E\u0440\u0431\u0438\u043B"
         type: 0
         typeString: CustomFieldType_Text
@@ -32267,7 +32223,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You Sausage insulted the judge at all
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 88
@@ -32343,7 +32299,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Who knew it was a girl!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 88
@@ -32477,7 +32433,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0416\u0430\u043B\u044C \u0431\u0435\u0434\u0430\u043B\u0430\u0433\u0443"
+        value: "\u0416\u0430\u043B\u044C \u0431\u0435\u0434\u043E\u043B\u0430\u0433\u0443"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -32497,7 +32453,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sorry for the poor guy
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 88
@@ -32520,7 +32476,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 33.92859, y: 0}
+    canvasScrollPosition: {x: 4.4642944, y: 92.85716}
     canvasZoom: 1.1199999
   - id: 89
     fields:
@@ -32694,7 +32650,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is the service
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 89
@@ -32769,7 +32725,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Even though we're in prison.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 89
@@ -32966,7 +32922,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: A living legend
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 90
@@ -33163,7 +33119,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And I tell him that...
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 91
@@ -33239,7 +33195,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And he tells me that...
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 91
@@ -33314,7 +33270,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ahahaha
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 91
@@ -33332,7 +33288,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 163
         y: 180
         width: 160
         height: 30
@@ -33514,7 +33470,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], do you believe that even the worst person in the
+          world can change?'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -33664,7 +33621,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I have always believed
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -33719,7 +33676,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041A\u043E\u0433\u0434\u0430 \u044F \u0431\u0430\u043B\u043E\u0442\u0438\u0440\u043E\u0432\u0430\u043B\u0441\u044F
+        value: "\u041A\u043E\u0433\u0434\u0430 \u044F \u0431\u0430\u043B\u043B\u043E\u0442\u0438\u0440\u043E\u0432\u0430\u043B\u0441\u044F
           \u0432 \u043C\u044D\u0440\u044B, \u0442\u043E \u043F\u043E\u043E\u0431\u0435\u0449\u0430\u043B
           \u0447\u0442\u043E \u0440\u0435\u0448\u0443 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0443
           \u043F\u0440\u0435\u0441\u0442\u0443\u043F\u043D\u043E\u0441\u0442\u0438"
@@ -33742,7 +33699,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: When I ran for mayor, I promised that I would solve the crime problem.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -33821,7 +33778,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: That's why I was chosen, and also because I'm cosplaying Darth Vader
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -33845,7 +33802,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.17648
         y: 470
         width: 160
         height: 30
@@ -33900,7 +33857,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You were able to fulfill my dream, you showed criminals an alternative
+          life
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -33979,7 +33937,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You showed them the reason why they need to change and stop committing
+          crimes
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34058,7 +34017,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], you paid the tax and improved the prison, it makes
+          no sense for me to keep you here anymore'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34135,7 +34095,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'You''re free, come home.
+
+          Your rocket is waiting for you
+          in the hangar'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34210,7 +34173,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I have to go now
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34286,7 +34249,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Don't break the law anymore
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34430,7 +34393,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Heh
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 92
@@ -34454,13 +34417,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 83.52942
         y: 554
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 518.47314}
-    canvasZoom: 0.9999999
+    canvasScrollPosition: {x: 19.999985, y: 814.1177}
+    canvasZoom: 0.85
   - id: 93
     fields:
     - title: Title
@@ -34891,7 +34854,7 @@ MonoBehaviour:
         value: "\u0417\u043D\u0430\u0435\u0448\u044C \u044F \u0432\u0441\u0435\u0433\u0434\u0430
           \u0434\u0443\u043C\u0430\u043B \u0447\u0442\u043E \u043F\u043E\u0434\u043B\u0438\u043D\u043D\u043E\u0435
           \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u043E \u0434\u043E\u043B\u0436\u043D\u043E
-          \u0431\u044B\u0442\u044C \u043F\u0440\u0438\u0437\u043D\u0430\u043D\u044B\u043C"
+          \u0431\u044B\u0442\u044C \u043F\u0440\u0438\u0437\u043D\u0430\u043D\u043D\u044B\u043C"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -34911,7 +34874,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You know, I've always thought that authentic art should be recognized.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 94
@@ -34968,7 +34931,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "\u041D\u043E \u043F\u0440\u0430\u0432\u0434\u0430 \u0432 \u0442\u043E\u043C
           \u0447\u0442\u043E \u043C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u043E\u0442\u0431\u0440\u043E\u0441\u0438\u0442\u044C
-          \u043F\u0440\u0435\u0434\u0440\u0430\u0441\u0441\u0443\u0442\u043A\u0438
+          \u043F\u0440\u0435\u0434\u0440\u0430\u0441\u0441\u0443\u0434\u043A\u0438
           \u0438 \u043D\u0430\u0441\u043B\u0430\u0436\u0434\u0430\u0442\u044C\u0441\u044F
           \u0442\u0435\u043C \u0447\u0442\u043E \u043D\u0430\u043C \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F"
         type: 0
@@ -34990,7 +34953,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: But the truth is that we have to put aside prejudice and enjoy what
+          we like.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 94
@@ -35066,7 +35030,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: So I chose the right picture.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 94
@@ -35264,7 +35228,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Dude, this party is awesome.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 95
@@ -35341,7 +35305,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Just look at those dudes in the fountain.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 95
@@ -35365,7 +35329,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 162
         y: 130
         width: 160
         height: 30
@@ -35417,7 +35381,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: This is the best party of all time!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 95
@@ -35615,7 +35579,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: FiveFive, are you normal again?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 96
@@ -35691,7 +35655,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[var=PlayerName], I''m sorry I was rude'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 96
@@ -35766,7 +35730,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes, nothing
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 96
@@ -35841,7 +35805,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Hooray, he's back!
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 96
@@ -36039,7 +36003,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: They're just watching TV
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 97
@@ -36239,7 +36203,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I'm so glad he invited me to stand with him
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 98
@@ -36438,7 +36402,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: They just eat and enjoy life
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 99
@@ -36636,7 +36600,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Yoo-hoo!
+
+          I haven''t had this much fun in a long time'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 100
@@ -36835,7 +36801,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Nothing criminal, he's just using the toilet as a chair.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 101
@@ -37035,7 +37001,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Don't think we asked for it, it's just that Noobick wanted to hang
+          out with you.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 102
@@ -37110,7 +37077,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Cool party
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 102
@@ -37288,11 +37255,11 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u042F \u043F\u043E\u0434\u0443\u043C\u0430\u043B \u0447\u0442\u043E
-          \u0431\u0443\u0434\u0435\u0442 \u043D\u0435 \u0445\u043E\u0440\u043E\u0448\u043E
-          \u0435\u0441\u043B\u0438 \u0442\u044B \u043D\u0435 \u043E\u0442\u043F\u0440\u0430\u0437\u043D\u0443\u0435\u0448\u044C
+          \u0431\u0443\u0434\u0435\u0442 \u043D\u0435\u0445\u043E\u0440\u043E\u0448\u043E
+          \u0435\u0441\u043B\u0438 \u0442\u044B \u043D\u0435 \u043E\u0442\u043F\u0440\u0430\u0437\u0434\u043D\u0443\u0435\u0448\u044C
           \u0441\u0432\u043E\u0435 \u043E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0435\u043D\u0438\u0435,
           \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u044F \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u043E\u0432\u0430\u043B
-          \u044D\u0442\u043E \u0432\u0435\u0447\u0435\u0440\u0438\u043D\u043A\u0443"
+          \u044D\u0442\u0443 \u0432\u0435\u0447\u0435\u0440\u0438\u043D\u043A\u0443"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -37312,7 +37279,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: I thought it would be bad if you didn't celebrate your release, so
+          I organized this party.
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 103
@@ -37367,7 +37335,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0420\u0430\u0437\u0432\u043B\u0435\u043A\u0430\u0439\u0441\u044F"
+        value: "\u0422\u044B \u0432\u0435\u0434\u044C \u043D\u0435 \u043F\u0440\u043E\u0442\u0438\u0432?)"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -37387,7 +37355,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You don't mind, do you?)
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 103
@@ -37584,7 +37552,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: It's not my rocket
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 104

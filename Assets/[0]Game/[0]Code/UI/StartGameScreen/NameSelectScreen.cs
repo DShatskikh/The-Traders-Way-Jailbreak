@@ -1,14 +1,13 @@
 ﻿using PixelCrushers.DialogueSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Game
 {
     public sealed class NameSelectScreen : ScreenBase
     {
-        private const string DefaultName = "Денис";
-
         [SerializeField]
         private Button _button, _backButton;
 
@@ -60,11 +59,12 @@ namespace Game
             var playerName = _inputField.text;
 
             if (playerName == string.Empty)
-                playerName = DefaultName;
+                playerName = _inputField.placeholder.GetComponent<TMP_Text>().text;
             
             _saveLoadService.Reset();
             
             RepositoryStorage.Set(KeyConstants.Name, new PlayerName(playerName));
+            RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen { IsNotFirstOpen = true });
             Lua.Run($"Variable[\"PlayerName\"] = \"{playerName}\"");
 
             Destroy(_mainScreen);

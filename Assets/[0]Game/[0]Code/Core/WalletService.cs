@@ -24,6 +24,7 @@ namespace Game
         public event Action<double> TaxChanged;
         public event Action<double> MaxAwardChanged;
 
+        [Serializable]
         public struct Data
         {
             public double Money;

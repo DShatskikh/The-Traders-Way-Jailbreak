@@ -1,31 +1,47 @@
 ﻿using System.Collections.Generic;
 using PixelCrushers;
+using YG;
 
 namespace Game
 {
-    public sealed class RepositoryStorage
+    public static class RepositoryStorage
     {
-        private static RepositoryStorage _instance;
-        public static IReadOnlyDictionary<string, string> Container => _instance._dictionary;
-        private readonly Dictionary<string, string> _dictionary;
-
-        public RepositoryStorage(Dictionary<string, string> dictionary)
-        {
-            _dictionary = dictionary;
-            _instance = this;
-        }
+        public static List<SerializablePair<string, string>> Container => YG2.saves.Container;
 
         public static void Set<T>(string id, T saveData)
         {
-            if (!_instance._dictionary.TryAdd(id, SaveSystem.Serialize(saveData)))
-                _instance._dictionary[id] = SaveSystem.Serialize(saveData);
+            if (Container == null)
+                YG2.saves.Container = new List<SerializablePair<string, string>>();
+
+            var value = SaveSystem.Serialize(saveData);
+            
+            for (int i = 0; i < Container.Count; i++)
+            {
+                var pair = Container[i];
+
+                if (id == pair.Key)
+                {
+                    YG2.saves.Container[i] = new SerializablePair<string, string>(id, value);  
+                    return;
+                }
+            }
+            
+            YG2.saves.Container.Add(new SerializablePair<string, string>(id, value));
         }
 
         public static T Get<T>(string id) where T : new()
         {
-            if (_instance._dictionary.TryGetValue(id, out var result))
-                return SaveSystem.Deserialize<T>(result);
+            if (Container == null)
+                YG2.saves.Container = new List<SerializablePair<string, string>>();
+            
+            for (int i = 0; i < Container.Count; i++)
+            {
+                var pair = Container[i];
 
+                if (id == pair.Key)
+                    return SaveSystem.Deserialize<T>(YG2.saves.Container[i].Value);
+            }
+            
             return new T();
         }
     }

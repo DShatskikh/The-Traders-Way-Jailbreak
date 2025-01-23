@@ -8,7 +8,7 @@ namespace SKUnityToolkit.SerializableDictionary
     public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
     {
         [SerializeField]
-        SerializableKeyValuePair<TKey, TValue>[] m_pairs;
+        List<SerializableKeyValuePair<TKey, TValue>> m_pairs;
 
         public SerializableDictionary() : base() { }
         public SerializableDictionary(IDictionary<TKey, TValue> dictionary) : base(dictionary) { }
@@ -37,7 +37,7 @@ namespace SKUnityToolkit.SerializableDictionary
         {
             int n = this.Count;
 
-            this.m_pairs = new SerializableKeyValuePair<TKey, TValue>[n];
+            this.m_pairs = new List<SerializableKeyValuePair<TKey, TValue>>(n);
 
             int i = 0;
             foreach (var pair in this)

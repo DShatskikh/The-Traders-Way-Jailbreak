@@ -1,5 +1,8 @@
-﻿namespace Game
+﻿using System;
+
+namespace Game
 {
+    [Serializable]
     public struct PlayerName
     {
         public string Name;

@@ -9,12 +9,9 @@ namespace Game
         [SerializeField]
         private LocalizedString _ads;
 
-        [SerializeField]
-        private int _adsIndex;
-        
         private string _adsString;
         public override string GetPriceText => _adsString;
-        public int GetAdsIndex => _adsIndex;
+        public string GetAdsIndex => GetId;
 
         public override void Init()
         {

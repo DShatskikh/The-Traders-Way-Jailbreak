@@ -1,0 +1,153 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 63,
+    "Container": [
+        {
+            "<Key>k__BackingField": "HomeCutscene",
+            "<Value>k__BackingField": "{\"CutsceneState\":0,\"IsShowLandedScreen\":false}"
+        },
+        {
+            "<Key>k__BackingField": "MyCellCutscene",
+            "<Value>k__BackingField": "{\"IsNotFirstVisit\":false,\"State\":0}"
+        },
+        {
+            "<Key>k__BackingField": "SkinShop",
+            "<Value>k__BackingField": "{\"IsNotFirstOpen\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Name",
+            "<Value>k__BackingField": "{\"Name\":\"Vlad\"}"
+        },
+        {
+            "<Key>k__BackingField": "Location",
+            "<Value>k__BackingField": "{\"LocationName\":\"World\",\"PointIndex\":0}"
+        },
+        {
+            "<Key>k__BackingField": "Wallet",
+            "<Value>k__BackingField": "{\"Money\":0.0,\"Tax\":0.0,\"MaxAward\":0.0}"
+        },
+        {
+            "<Key>k__BackingField": "IsNotFirstOpen",
+            "<Value>k__BackingField": "{\"IsNotFirstOpen\":true}"
+        },
+        {
+            "<Key>k__BackingField": "StockMarket",
+            "<Value>k__BackingField": "{\"Slots\":[]}"
+        },
+        {
+            "<Key>k__BackingField": "Vase",
+            "<Value>k__BackingField": "{\"IsBreak\":false}"
+        },
+        {
+            "<Key>k__BackingField": "dining_vip",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "dining_next",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "dining_replaceFurniture",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "dining_upgrade",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "HallwayDining_Pictures",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "HallwayDining_Guard",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "HallwayHangar_guard",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "HallwayRecreation_Guard",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "HallwayRecreation_Pictures",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Hangar_Barrier",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Hangar_FinallySpaceShip",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "RecreationRoom_Pictures",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Recreation_Bar",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Recreation_DanceFloor",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Recreation_Tables",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "warehouse_upgrade",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_murzik",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_bed",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_first",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_left",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_right",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_up",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "hub_hallwayHangar",
+            "<Value>k__BackingField": "{\"IsBuy\":false}"
+        },
+        {
+            "<Key>k__BackingField": "Volume",
+            "<Value>k__BackingField": "{\"Volume\":0.7793728709220886}"
+        },
+        {
+            "<Key>k__BackingField": "Ending",
+            "<Value>k__BackingField": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":true}"
+        },
+        {
+            "<Key>k__BackingField": "IsNotFirst",
+            "<Value>k__BackingField": "{\"IsNotFirstOpen\":false}"
+        }
+    ]
+}

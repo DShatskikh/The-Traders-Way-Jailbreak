@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using YG;
 
 namespace Game
 {
@@ -209,15 +210,23 @@ namespace Game
         }
         
         [Command()]
-        public static void SetLocale(string code)
+        public static void SetLocale(string lang)
         {
-            var localeQuery = (from locale in LocalizationSettings.AvailableLocales.Locales where locale.Identifier.Code == code select locale).FirstOrDefault();
-            if (localeQuery == null)
-            {
-                Debug.LogError($"No locale for {code} found");
-                return;
-            }
-            LocalizationSettings.SelectedLocale = localeQuery;
+            CorrectLang.OnСhangeLang(lang);
+        }
+
+        [Command()]
+        public static void GetLocale()
+        {
+            Debug.Log($"YG: {YG2.lang}");
+            Debug.Log($"System: {LocalizationSettings.SelectedLocale}");
+        }
+
+        [Command()]
+        public static void GetServerSaves()
+        {
+            foreach (var pair in YG2.saves.Container) 
+                Debug.Log($"{pair.Key}: {pair.Value}");
         }
     }
 }

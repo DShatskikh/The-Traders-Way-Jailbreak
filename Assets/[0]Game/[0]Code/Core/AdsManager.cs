@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using YG;
 
 namespace Game
@@ -20,24 +19,24 @@ namespace Game
             _walletService = walletService;
             _analyticsService = analyticsService;
             
-            YandexGame.RewardVideoEvent += RewardVideoEvent;
+            YG2.onRewardAdv += RewardVideoEvent;
         }
 
         ~AdsManager()
         {
-            YandexGame.RewardVideoEvent -= RewardVideoEvent;
+            YG2.onRewardAdv -= RewardVideoEvent;
         }
 
-        private void RewardVideoEvent(int index)
+        private void RewardVideoEvent(string index)
         {
             switch (index)
             {
-                case 0: // Лицо нубика
+                case "FaceNoob": // Лицо нубика
                     _hatManager.BuyHat("FaceNoob");
                     _gameStateController.OpenShop();
                     _analyticsService.Send("Ads", "FaceNoob");
                     break;
-                case 1: // Деньги за рекламу
+                case "Laptop": // Деньги за рекламу
                     _walletService.Add(_walletService.GetMaxAward);
                     _analyticsService.Send("Ads",  $"Money: {_walletService.GetFormatMoney(_walletService.GetMaxAward)}");
                     break;

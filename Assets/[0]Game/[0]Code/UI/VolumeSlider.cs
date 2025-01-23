@@ -25,6 +25,7 @@ namespace Game
         private void OnEnable()
         {
             _slider.onValueChanged.AddListener(OnChanged);
+            _slider.value = _volumeService.Volume.Value;
         }
 
         private void OnDisable()
@@ -34,20 +35,18 @@ namespace Game
 
         private void Start()
         {
-            _slider.value = RepositoryStorage.Get<VolumeData>(KeyConstants.Volume).Volume;
-            _volumeService.Volume.Value = _slider.value;
+            _slider.value = _volumeService.Volume.Value;
         }
 
         private void OnChanged(float value)
         {
             _volumeService.Volume.Value = value;
-            _label.text = $"Громкость {(int)(value * 100)}%";
+            LocalizedTextUtility.Load(_localizedString, loadText =>
+            {
+                _label.text = $"{loadText} {(int)(value * 100)}%";
+            });
+            
             RepositoryStorage.Set(KeyConstants.Volume, new VolumeData() { Volume = value });
-        }
-
-        private void OnInit()
-        {
-            OnChanged(_volumeService.Volume.Value);
         }
     }
 }

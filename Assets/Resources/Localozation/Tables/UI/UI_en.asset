@@ -23,15 +23,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107747166502912
-    m_Localized: 
+    m_Localized: Watermelon
     m_Metadata:
       m_Items: []
   - m_Id: 107811171581952
-    m_Localized: 
+    m_Localized: Star
     m_Metadata:
       m_Items: []
   - m_Id: 107863755571200
-    m_Localized: 
+    m_Localized: Gold apple
     m_Metadata:
       m_Items: []
   - m_Id: 107906008989696
@@ -39,11 +39,368 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107942667206656
-    m_Localized: 
+    m_Localized: Lucky block
     m_Metadata:
       m_Items: []
   - m_Id: 107980847955968
-    m_Localized: Palisos
+    m_Localized: Vacuum cleaner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12525898462248960
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12526120085078016
+    m_Localized: Money is just a tool. They will take you wherever you want, but
+      they will not replace you as a driver...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12526124568788992
+    m_Localized: '- Ayn Rand'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10291847986790400
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10292621848461312
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10292808079753216
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10333259293900800
+    m_Localized: 'To open the console, click "\"
+
+      (For advanced users only)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9596004665245696
+    m_Localized: The secret condition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11049734791086080
+    m_Localized: Do you like secrets?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11049833336258560
+    m_Localized: '--"What are you doing here?"---
+
+      AddMoney - issues money
+
+      ResetTax
+      - resets the tax
+
+      BuyAll - buy everything
+
+      GameStatus - find out
+      the status of the game'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11147164677160960
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469283210412032
+    m_Localized: '[WASD]-Walk
+
+      [[Z]-Use
+
+      [X]-Running
+
+      [C]-Pause
+
+
+      Trade
+      on the stock exchange and upgrade the prison
+
+
+      Good luck!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469337254019072
+    m_Localized: 'Joystick-Walk
+
+      Buttons-Use, Pause, Run
+
+
+
+
+      Trade on
+      the stock exchange and upgrade the prison
+
+
+      Good luck!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11469914314752000
+    m_Localized: Click to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470714835419136
+    m_Localized: 'Exit [X]'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470811757395968
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11512621758267392
+    m_Localized: Running
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11514153719414784
+    m_Localized: 'To open the console, click "\"
+
+      (But you need to play from
+      a computer)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11995949007486976
+    m_Localized: Secrets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12035713391771648
+    m_Localized: It accidentally falls out if you interact with the toilet bowl in
+      the camera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036454672089088
+    m_Localized: The secret ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036516370300928
+    m_Localized: You have to pay the tax before you go to jail.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036862954029056
+    m_Localized: The Secret Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12036906767728640
+    m_Localized: You need to walk on the invisible floor near the pond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12196350575099904
+    m_Localized: They fall out with <Color="Yellow">Varnishes of the block</Color>
+      in the secret room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117065085468672
+    m_Localized: A Dry Bush
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2654355829669888
+    m_Localized: Watch out for the invisible floor!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3861761356054528
+    m_Localized: Open the passage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4198950895992832
+    m_Localized: Stock market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4199144219852800
+    m_Localized: New bed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4199581517987840
+    m_Localized: Remove the guards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4210298086342656
+    m_Localized: Posters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4307293778067456
+    m_Localized: UNESCO World Heritage Site
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4882120012316672
+    m_Localized: Canteen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4882784142606336
+    m_Localized: Club
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4882952166424576
+    m_Localized: Hangar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4883468380389376
+    m_Localized: Warehouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4883016762900480
+    m_Localized: Main Hall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5014886632767488
+    m_Localized: Murzik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015186257068032
+    m_Localized: Replace the furniture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015502247542784
+    m_Localized: Upgrade the kitchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015621000871936
+    m_Localized: VIP Zone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5015790891155456
+    m_Localized: Improve the warehouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016567374266368
+    m_Localized: Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016726153838592
+    m_Localized: Tables
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5016865400537088
+    m_Localized: Dance floor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5057802168287232
+    m_Localized: Buy a ship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6181161392259072
+    m_Localized: Nubik, take the diamonds to the warehouse before any scoundrels
+      steal!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6985822718246912
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6997299936215040
+    m_Localized: Use
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6997357368819712
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7395548262154240
+    m_Localized: Press [C] to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7680152713936896
+    m_Localized: Start game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8555070376755200
+    m_Localized: I'm waiting for you by the pond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9083409856315392
+    m_Localized: Buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9164662664183808
+    m_Localized: The Thief's Mask
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9164832088899584
+    m_Localized: Watermelon hat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9164997730353152
+    m_Localized: Stormtrooper Helmet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9165238764421120
+    m_Localized: Darth Vader's Helmet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9165344557350912
+    m_Localized: Cool glasses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9165597234806784
+    m_Localized: Moustache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9165702092406784
+    m_Localized: Hacker's Mask
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9165921890713600
+    m_Localized: Nubik's Face
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9166053084348416
+    m_Localized: Underwater mask
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9166284265996288
+    m_Localized: Cylinder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9166430026448896
+    m_Localized: The eyes of Herobrine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170479824093184
+    m_Localized: It will open after the Secret Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9183147318427648
+    m_Localized: For advertising
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12530843345338368
+    m_Localized: Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531038393057280
+    m_Localized: '- Developer'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531342081638400
+    m_Localized: SOLD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531658218913792
+    m_Localized: That same night...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531933222649856
+    m_Localized: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0432\u0440\u0435\u043C\u044F
+      \u0441\u043F\u0443\u0441\u0442\u044F\n\u041A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u0442\u044E\u0440\u044C\u043C\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12532371418365952
+    m_Localized: (Ads)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12533102661713920
+    m_Localized: 'Tax:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12534205071605760
+    m_Localized: Denis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12536052821901312
+    m_Localized: What is the name of the richest man in the world?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12536293608505344
+    m_Localized: 'Skip [X]'
     m_Metadata:
       m_Items: []
   references:

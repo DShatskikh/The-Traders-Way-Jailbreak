@@ -303,6 +303,58 @@ MonoBehaviour:
     m_Key: Hat_CoolGlasses_Description
     m_Metadata:
       m_Items: []
+  - m_Id: 12525898462248960
+    m_Key: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12526120085078016
+    m_Key: Quote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12526124568788992
+    m_Key: Quote_Autor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12530843345338368
+    m_Key: Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531038393057280
+    m_Key: Developer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531342081638400
+    m_Key: Sold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531658218913792
+    m_Key: That same night
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12531933222649856
+    m_Key: Some time later
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12532371418365952
+    m_Key: Ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12533102661713920
+    m_Key: Tax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12534205071605760
+    m_Key: DefaultName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12536052821901312
+    m_Key: What is the name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12536293608505344
+    m_Key: 'Skip [X]'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

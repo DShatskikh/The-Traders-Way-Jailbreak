@@ -1,5 +1,6 @@
 ﻿using PixelCrushers.DialogueSystem;
 using UnityEngine;
+using YG;
 
 namespace Game
 {
@@ -46,8 +47,8 @@ namespace Game
                 SymbolExtensions.GetMethodInfo(() => IsCompleteStandardEnding()));
         }
 
-        private void OpenURL(string address) => 
-            Application.OpenURL(address);
+        private void OpenURL(string address) =>
+            YG2.OnDeveloperURL();
 
         private bool IsBuy(string id) => 
             RepositoryStorage.Get<BuyPlate.SaveData>(id).IsBuy;

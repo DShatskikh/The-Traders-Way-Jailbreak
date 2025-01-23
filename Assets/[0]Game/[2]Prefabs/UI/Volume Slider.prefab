@@ -540,9 +540,9 @@ MonoBehaviour:
   _label: {fileID: 2074083352651007873}
   _localizedString:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 12525898462248960
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

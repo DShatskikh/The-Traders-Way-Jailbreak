@@ -15,7 +15,7 @@ namespace Game
         private TextAnimatorPlayer _textAnimatorPlayer;
        
         [SerializeField]
-        private AudioSource _audioSource, _audioSource_2;
+        private AudioSource[] _audioSources;
 
         [SerializeField]
         private GameObject _button;
@@ -32,7 +32,7 @@ namespace Game
         private bool _isPlaying;
         private PlayerInput _playerInput;
         private DeviceTypeDetector _deviceTypeDetector;
-        private bool _isFirstAudioSource;
+        private int _indexAudioSource;
 
         public override bool isPlaying => _isPlaying;
 
@@ -87,8 +87,9 @@ namespace Game
             var clipName = DialogueManager.masterDatabase.GetActor(actorName).LookupValue("AudioClip");
             var clipPath = "AudioClips/" + (clipName != "" ? clipName : "snd_txtlan_ch1");
             var clip = Resources.Load<AudioClip>(clipPath);
-            _audioSource.clip = clip;
-            _audioSource_2.clip = clip;
+
+            foreach (var source in _audioSources) 
+                source.clip = clip;
 
             var useDisplayName = DialogueManager.masterDatabase.GetActor(actorName).LookupValue("Display Name");
             _namePanel.SetActive(useDisplayName != string.Empty);
@@ -103,12 +104,11 @@ namespace Game
 
         private void OnWrite()
         {
-            _isFirstAudioSource = !_isFirstAudioSource;
-            
-            if (_isFirstAudioSource)
-                _audioSource.Play();
-            else
-                _audioSource_2.Play();
+            _audioSources[_indexAudioSource].Play();
+            //_indexAudioSource++;
+
+            if (_indexAudioSource >= _audioSources.Length) 
+                _indexAudioSource = 0;
         }
 
         private void OnTypewriterStart()

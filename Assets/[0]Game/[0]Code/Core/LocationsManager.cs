@@ -21,12 +21,10 @@ namespace Game
         private IAnalyticsService _analyticsService;
 
         [Serializable]
-        public class Data
+        public struct Data
         {
-            public string LocationName = "World";
+            public string LocationName;
             public int PointIndex;
-            public float CharacterPositionX;
-            public float CharacterPositionY;
         }
 
         [Inject]

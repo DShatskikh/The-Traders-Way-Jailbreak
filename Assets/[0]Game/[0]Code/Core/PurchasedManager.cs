@@ -21,12 +21,12 @@ namespace Game
             _analyticsService = analyticsService;
             _saveLoadService = saveLoadService;
             
-            YandexGame.PurchaseSuccessEvent += PurchaseSuccessEvent;
+            YG2.onPurchaseSuccess += PurchaseSuccessEvent;
         }
 
         ~PurchasedManager()
         {
-            YandexGame.PurchaseSuccessEvent -= PurchaseSuccessEvent;
+            YG2.onPurchaseSuccess -= PurchaseSuccessEvent;
         }
 
         private void PurchaseSuccessEvent(string obj)

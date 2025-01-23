@@ -36,7 +36,7 @@ namespace Game
         
         private void Start()
         {
-            if (RepositoryStorage.Get<SaveData>("Vase").IsBreak)
+            if (RepositoryStorage.Get<SaveData>(KeyConstants.Vase).IsBreak)
             {
                 Replace();
             }
@@ -58,7 +58,7 @@ namespace Game
             yield return new WaitForSeconds(2);
             MusicPlayer.Play(theme, climTime);
             Sequencer.Message("\"EndBreak\"");
-            RepositoryStorage.Set("Vase", new SaveData() {IsBreak = true});
+            RepositoryStorage.Set(KeyConstants.Vase, new SaveData() { IsBreak = true });
         }
 
         private void Replace()

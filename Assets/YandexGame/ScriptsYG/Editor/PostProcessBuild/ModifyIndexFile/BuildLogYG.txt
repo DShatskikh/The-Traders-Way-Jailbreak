@@ -1,2 +1,0 @@
-Build path: C:/xampp/htdocs/Game/Traders/Traders
-Build number: 4

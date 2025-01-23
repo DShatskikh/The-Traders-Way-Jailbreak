@@ -13,5 +13,6 @@
         public const string Location = "Location";
         public const string Wallet = "Wallet";
         public const string StockMarket = "StockMarket";
+        public const string Vase = "Vase";
     }
 }

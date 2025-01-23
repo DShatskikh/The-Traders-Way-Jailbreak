@@ -1,0 +1,10 @@
+Authorization v1.0
+EnvirData v1.002
+Fullscreen v1.0
+InterstitialAdv v1.001
+Localization v1.001
+Metrica v1.01
+OpenURL v1.002
+Payments v1.0
+RewardedAdv v1.001
+Storage v1.0

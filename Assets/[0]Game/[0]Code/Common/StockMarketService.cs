@@ -17,6 +17,7 @@ namespace Game
         private List<Slot> _slots = new();
         public List<Slot> GetSlots => _slots;
 
+        [Serializable]
         public struct Data
         {
             public List<DataSlot> Slots;

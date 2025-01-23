@@ -7,12 +7,12 @@ namespace Game
     {
         public void Send(string id)
         {
-            YandexMetrica.Send(id);
+            YG2.MetricaSend(id);
         }
 
         public void Send(string id, string arg)
         {
-            YandexMetrica.Send(id, new Dictionary<string, string>() { {id, arg} });
-        } 
+            YG2.MetricaSend(id, new Dictionary<string, string>() { { id, arg } });
+        }
     }
 }

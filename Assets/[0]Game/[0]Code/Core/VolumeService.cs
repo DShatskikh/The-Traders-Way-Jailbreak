@@ -15,6 +15,7 @@ namespace Game
         public void Init()
         {
             Volume.Changed += OnChangeVolume;
+            Volume.Value = RepositoryStorage.Get<VolumeData>(KeyConstants.Volume).Volume;
         }
 
         public void Dispose()

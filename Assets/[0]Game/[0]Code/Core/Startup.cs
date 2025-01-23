@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using PixelCrushers.DialogueSystem;
 using RimuruDev;
 using Unity.Cinemachine;
@@ -6,6 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
 using YG;
+using YG.Insides;
 
 namespace Game
 {
@@ -122,10 +124,7 @@ namespace Game
 #else
             _analyticsService = new TestAnalyticsService();
 #endif
-            
-            print(YandexGame.lang);
-            SetLocale(YandexGame.lang);
-            
+
             ServiceLocator.Register(_screenManager);
             ServiceLocator.Register(_cinemachineConfiner2D);
             ServiceLocator.Register(_playerInput);
@@ -148,7 +147,6 @@ namespace Game
 
             ISaveLoadService saveLoadService = _saveLoadService;
             ServiceLocator.Register(saveLoadService);
-            var repositoryStorage = new RepositoryStorage(YandexGame.savesData.Container);
 
             Injector.Inject(_transitionService);
             Injector.Inject(_adsTimer);
@@ -182,10 +180,16 @@ namespace Game
                     _gameStateController.AddListener(gameListener);
                 }
             }
+            
+            YGInsides.LoadProgress();
+            YG2.onGetSDKData += Load;
         }
-
-        private void Start()
+        
+        private void Load()
         {
+            YG2.onGetSDKData -= Load;
+            CorrectLang.OnСhangeLang(YG2.lang);
+            
 #if UNITY_EDITOR
             if (!_fullTest)
             {
@@ -227,7 +231,7 @@ namespace Game
             {
                 if (_isUseSaving)
                 {
-                    _saveLoadService.Load();
+                    _gameStateController.OpenMainMenu();
                     return;
                 }
                 
@@ -251,23 +255,11 @@ namespace Game
             }
             else
             {
-                _saveLoadService.Load();
+                _gameStateController.OpenMainMenu();
             }
 #else
-            _saveLoadService.Load();
+            _gameStateController.OpenMainMenu();
 #endif
-
-        }
-        
-        private void SetLocale(string code)
-        {
-            var localeQuery = (from locale in LocalizationSettings.AvailableLocales.Locales where locale.Identifier.Code == code select locale).FirstOrDefault();
-            if (localeQuery == null)
-            {
-                Debug.LogError($"No locale for {code} found");
-                return;
-            }
-            LocalizationSettings.SelectedLocale = localeQuery;
         }
     }
 }

@@ -1,10 +1,14 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Game
 {
     public class TaxLabel : MonoBehaviour
     {
+        [SerializeField]
+        private LocalizedString _localizedString;
+        
         private TMP_Text _label;
         private WalletService _walletService;
 
@@ -16,8 +20,11 @@ namespace Game
 
         private void OnTaxChanged(double tax)
         {
-            _label.text = $"Налог: {_walletService.GetFormatMoney(tax)}";
-            Canvas.ForceUpdateCanvases();
+            LocalizedTextUtility.Load(_localizedString, loadText =>
+            {
+                _label.text = $"{loadText} {_walletService.GetFormatMoney(tax)}";
+                Canvas.ForceUpdateCanvases();
+            });
         }
 
         private void OnEnable()

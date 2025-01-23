@@ -131,11 +131,11 @@ namespace Game
                         }
                         case HatRubleConfig rubleConfig:
                             _gameStateController.CloseShop();
-                            YandexGame.BuyPayments(rubleConfig.GetId);
+                            YG2.BuyPayments(rubleConfig.GetId);
                             break;
                         case HatAdsConfig adsConfig:
                             _gameStateController.CloseShop();
-                            YandexGame.RewVideoShow(adsConfig.GetAdsIndex);
+                            YG2.RewardedAdvShow(adsConfig.GetAdsIndex);
                             break;  
                     }
                 }

@@ -31,7 +31,7 @@ namespace Game
         public void Load()
         {
             Debug.Log("Load");
-            
+
             if (RepositoryStorage.Get<FirstOpen>(KeyConstants.IsNotFirstOpen).IsNotFirstOpen)
             {
                 _locationLoader.Load();
@@ -41,7 +41,7 @@ namespace Game
                 Reset();
                 RepositoryStorage.Set(KeyConstants.Volume, _initData.Volume);
                 RepositoryStorage.Set(KeyConstants.Ending, _initData.EndsData);
-                RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen { IsNotFirstOpen = true});
+                RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen { IsNotFirstOpen = true });
                 
                 _gameStateController.OpenMainMenu();
             }
@@ -50,15 +50,7 @@ namespace Game
         public void Save()
         {
             Debug.Log("Save");
-
-            var data = new Dictionary<string, string>(RepositoryStorage.Container);
-            
-            foreach (var pair in data)
-            {
-                YandexGame.savesData.Container[pair.Key] = pair.Value;
-            }
-
-            YandexGame.SaveCloud();
+            YG2.SaveProgress();
         }
 
         public void Reset()
@@ -73,6 +65,7 @@ namespace Game
             RepositoryStorage.Set(KeyConstants.Wallet, new WalletService.Data(_initData.StartMoney, _initData.StartTax, _initData.StartMoney));
             RepositoryStorage.Set(KeyConstants.IsNotFirstOpen, new FirstOpen() { IsNotFirstOpen = false });
             RepositoryStorage.Set(KeyConstants.StockMarket, new StockMarketService.Data());
+            RepositoryStorage.Set(KeyConstants.Vase, new PrehistoricVase.SaveData() { IsBreak = false});
 
             foreach (var id in AssetProvider.Instance.PlatesId)
                 RepositoryStorage.Set(id, new BuyPlate.SaveData() { IsBuy = false });

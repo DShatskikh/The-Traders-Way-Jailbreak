@@ -12,7 +12,7 @@ namespace Game
 
         public override void Init()
         {
-            foreach (var purchase in YandexGame.purchases)
+            foreach (var purchase in YG2.purchases)
             {
                 if (purchase.id == GetId)
                 {
