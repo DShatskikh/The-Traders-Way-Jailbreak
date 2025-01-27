@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 using YG;
 
@@ -23,6 +24,18 @@ namespace Game
         [SerializeField]
         private Button _exitButton;
 
+        [SerializeField]
+        private LocalizedString _selectedLocalizedString; //Выбрано
+        
+        [SerializeField]
+        private LocalizedString _standardLocalizedString; //Стандартный
+        
+        [SerializeField]
+        private LocalizedString _chooseLocalizedString; //Выбрать
+        
+        [SerializeField]
+        private LocalizedString _buyLocalizedString; //Купить
+        
         private GameStateController _gameStateController;
         private HatManager _hatManager;
         private HatData _reallyCurrentHat;
@@ -156,8 +169,8 @@ namespace Game
             
             if (data == null)
             {
-                _priceLabel.text = "Выбрано";
-                _nameLabel.text = "Стандартный";
+                LocalizedTextUtility.Load(_selectedLocalizedString, loadText => _priceLabel.text = loadText);
+                LocalizedTextUtility.Load(_standardLocalizedString, loadText => _nameLabel.text = loadText);
             }
             else
             {
@@ -167,20 +180,20 @@ namespace Game
             
             if (_reallyCurrentHat == data)
             {
-                _priceLabel.text = "Выбрано";
+                LocalizedTextUtility.Load(_selectedLocalizedString, loadText => _priceLabel.text = loadText);
                 _buyButton.gameObject.SetActive(false);
             }
             else if (data == null)
             {
                 _priceLabel.text = string.Empty;
-                _buyLabel.text = "Выбрать";
+                LocalizedTextUtility.Load(_chooseLocalizedString, loadText => _buyLabel.text = loadText);
             }
             else
             {
                 if (data.IsBuy)
                 {
                     _priceLabel.text = string.Empty;
-                    _buyLabel.text = "Выбрать";
+                    LocalizedTextUtility.Load(_chooseLocalizedString, loadText => _buyLabel.text = loadText);
                 }
                 else
                 {
@@ -190,7 +203,7 @@ namespace Game
                     }
                     else
                     {
-                        _buyLabel.text = "Купить";
+                        LocalizedTextUtility.Load(_buyLocalizedString, loadText => _buyLabel.text = loadText);
                     }
                 }
             }

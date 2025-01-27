@@ -1,8 +1,10 @@
-﻿using PixelCrushers.DialogueSystem;
+﻿using System.Collections;
+using PixelCrushers.DialogueSystem;
+using RimuruDev;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization;
 using UnityEngine.UI;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -12,13 +14,13 @@ namespace Game
         private Button _button, _backButton;
 
         [SerializeField]
-        private TMP_InputField _inputField;
+        private TMP_InputField _inputField, _mobileInputField;
 
         [SerializeField]
         private Transform _character;
 
         [SerializeField]
-        private GameObject _mainScreen;
+        private GameObject _mainScreen, _normal;
 
         [SerializeField]
         private StartGameScreenBackground _screenBackground;
@@ -28,12 +30,14 @@ namespace Game
         
         private LocationLoader _locationLoader;
         private ISaveLoadService _saveLoadService;
+        private DeviceTypeDetector _deviceTypeDetector;
 
         [Inject]
-        private void Construct(LocationLoader locationLoader, ISaveLoadService saveLoadService)
+        private void Construct(LocationLoader locationLoader, ISaveLoadService saveLoadService, DeviceTypeDetector deviceTypeDetector)
         {
             _locationLoader = locationLoader;
             _saveLoadService = saveLoadService;
+            _deviceTypeDetector = deviceTypeDetector;
         }
         
         private void OnEnable()
@@ -42,6 +46,11 @@ namespace Game
             _backButton.onClick.AddListener(OnClickBackButton);
             _character.gameObject.SetActive(true);
             _screenBackground.StartPlayerAnimation();
+
+            if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
+            {
+                _inputField.onSelect.AddListener(OnSelectMobileInputField);
+            }
         }
 
         private void OnDisable()
@@ -49,7 +58,32 @@ namespace Game
             _button.onClick.RemoveAllListeners();
             _backButton.onClick.RemoveAllListeners();
             _character.gameObject.SetActive(false);
-            _screenBackground.StartPlayerAnimation();
+            
+            _inputField.onSelect.RemoveAllListeners();
+        }
+
+        private void OnSelectMobileInputField(string arg0)
+        {
+            _normal.SetActive(false);
+            _mobileInputField.gameObject.SetActive(true);
+            StartCoroutine(AwaitSelectMobileInputField());
+        }
+
+        private IEnumerator AwaitSelectMobileInputField()
+        {
+            yield return null;
+            _mobileInputField.OnSelect(null);
+            yield return new WaitForSeconds(0.5f);
+            _mobileInputField.onEndEdit.AddListener(OnDeSelectMobileInputField);
+        }
+
+        private void OnDeSelectMobileInputField(string arg0)
+        {
+            _mobileInputField.onEndEdit.RemoveAllListeners();
+            _normal.SetActive(true);
+            _mobileInputField.gameObject.SetActive(false);
+
+            _inputField.text = _mobileInputField.text;
         }
 
         private void OnClick()

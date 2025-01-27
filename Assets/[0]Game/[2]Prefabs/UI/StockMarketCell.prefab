@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 102159117794520270}
   - component: {fileID: 9144043734823529863}
   - component: {fileID: 3927028007954780919}
+  - component: {fileID: 6597166706965451140}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -434,6 +435,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6597166706965451140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281599845058562916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+    m_TableEntryReference:
+      m_KeyId: 14176262676660224
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3927028007954780919}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1554013245845067740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,15 +1402,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b7118b1af64bb8a1ef09f1e0bae189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frame: {fileID: 6083391919382713514}
   _icon: {fileID: 9050380201747185052}
   _nameLabel: {fileID: 7761646668389070784}
   _priceLabel: {fileID: 3597886501929404451}
   _haveLabel: {fileID: 8610496611989502417}
+  _haveString:
+    m_TableReference:
+      m_TableCollectionName: GUID:7db3660a2b7099643a2e40a6f59d8e0d
+    m_TableEntryReference:
+      m_KeyId: 12892244152795136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _close: {fileID: 3709507062155129101}
   _buyButton: {fileID: 7067976842792379451}
   _sellButton: {fileID: 5355411069129261693}
   _dropdown: {fileID: 8054552361041076324}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &4533264130168833132
 GameObject:
   m_ObjectHideFlags: 0

@@ -355,6 +355,42 @@ MonoBehaviour:
     m_Key: 'Skip [X]'
     m_Metadata:
       m_Items: []
+  - m_Id: 12690017752563712
+    m_Key: Advertising via
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12717251351658496
+    m_Key: To pay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12718724085039104
+    m_Key: Other games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12718865802182656
+    m_Key: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12892244152795136
+    m_Key: Have
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13093942200745984
+    m_Key: Selected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13094000535126016
+    m_Key: Standard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13094047075123200
+    m_Key: Choose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14176262676660224
+    m_Key: Unavailable
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -954,7 +954,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Display Name en
-      value: 
+      value: Girl
       type: 4
       typeString: CustomFieldType_Localization
     - title: Name en
@@ -4373,7 +4373,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And she's yours
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 6
@@ -11308,7 +11308,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 'You have not paid the tax in the amount of [vat=Tax]'
+        value: 'You have not paid the tax in the amount of [var=Tax]'
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11408,7 +11408,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160.15598
+        x: 161.21982
         y: 137.91743
         width: 160
         height: 30
@@ -11535,7 +11535,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Noobik, put handcuffs on him.
+        value: Noobik, put handcuffs on him
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11610,7 +11610,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I ate them.
+        value: I ate them
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 31
@@ -11862,7 +11862,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 189.36171}
+    canvasScrollPosition: {x: 29.459896, y: 329.78717}
     canvasZoom: 0.94000006
   - id: 32
     fields:
@@ -37964,7 +37964,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Huh, Zhiza
+        value: Huh, it's about me
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 106

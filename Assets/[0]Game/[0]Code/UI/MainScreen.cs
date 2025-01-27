@@ -16,10 +16,7 @@ namespace Game
 
         [SerializeField]
         private JoystickView _joystick;
-        
-        [SerializeField]
-        private Button _runButton;
-        
+
         private GameStateController _gameStateController;
         private DeviceTypeDetector _deviceTypeDetector;
 
@@ -41,7 +38,6 @@ namespace Game
 
                 if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
                 {
-                    _runButton.gameObject.SetActive(true);
                     _joystick.gameObject.SetActive(true);
                 }
             }
@@ -54,7 +50,6 @@ namespace Game
 
                 if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
                 {
-                    _runButton.gameObject.SetActive(false);
                     _joystick.gameObject.SetActive(false);
                 }
             }

@@ -63,7 +63,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -524,6 +524,17 @@
                     "name": "",
                     "id": "1fc32f98-5e84-48ac-ae66-01af7d9ccc63",
                     "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37229722-b2f3-4391-b105-2c9a0118ff94",
+                    "path": "<Sensor>/{Forward}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

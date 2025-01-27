@@ -14,5 +14,6 @@
         public const string Wallet = "Wallet";
         public const string StockMarket = "StockMarket";
         public const string Vase = "Vase";
+        public const string CurrentHat = "CurrentHat";
     }
 }

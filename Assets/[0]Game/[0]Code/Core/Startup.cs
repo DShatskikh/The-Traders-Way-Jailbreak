@@ -1,11 +1,9 @@
 ﻿using System.Collections;
-using System.Linq;
 using PixelCrushers.DialogueSystem;
 using RimuruDev;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Localization.Settings;
 using YG;
 using YG.Insides;
 
@@ -181,6 +179,8 @@ namespace Game
                 }
             }
             
+            _assetProvider.Init();
+            
             YGInsides.LoadProgress();
             YG2.onGetSDKData += Load;
         }
@@ -188,13 +188,15 @@ namespace Game
         private void Load()
         {
             YG2.onGetSDKData -= Load;
-            CorrectLang.OnСhangeLang(YG2.lang);
-            
+            StartCoroutine(AwaitSetLocale());
+
 #if UNITY_EDITOR
             if (!_fullTest)
             {
                 if (!_isUseSaving)
                 {
+                    _saveLoadService.Reset();
+                    
                     print("Full Test");
                     RepositoryStorage.Set(KeyConstants.HomeCutscene, _initData.HomeData);
                     RepositoryStorage.Set(KeyConstants.MyCellCutscene, _initData.MyCellData);
@@ -211,8 +213,6 @@ namespace Game
 #else
             
 #endif
-            
-            _assetProvider.Init();
             _soundPlayer.Init();
             _musicPlayer.Init();
             _walletService.Init();
@@ -222,10 +222,14 @@ namespace Game
             _consoleService.Init();
             _dialogueExtensions.Init();
             _companionsManager.Init();
-            _hatManager.Init();
             _luaCommandRegister.Init();
             _volumeService.Init();
 
+            var savedName = RepositoryStorage.Get<PlayerName>(KeyConstants.Name).Name;
+            
+            if (savedName != string.Empty)
+                Lua.Run($"Variable[\"PlayerName\"] = \"{savedName}\"");
+            
 #if UNITY_EDITOR
             if (!_fullTest)
             {
@@ -249,6 +253,7 @@ namespace Game
                 }
                 else
                 {
+                    _screenManager.Show(ScreenType.Main);
                     _locationsManager.SwitchLocation(_initData.LocationData.LocationName, _initData.LocationData.PointIndex);   
                     _gameStateController.StartGame();
                 }
@@ -260,6 +265,14 @@ namespace Game
 #else
             _gameStateController.OpenMainMenu();
 #endif
+        }
+
+        private IEnumerator AwaitSetLocale()
+        {
+            yield return new WaitForSeconds(0.5f);
+            CorrectLang.OnСhangeLang(YG2.lang);
+            DialogueManager.SetLanguage(YG2.lang);
+            _hatManager.Init();
         }
     }
 }

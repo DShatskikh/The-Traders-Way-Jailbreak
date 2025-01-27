@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Game;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
@@ -41,14 +37,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     private Camera cam;
 
     private Vector2 input = Vector2.zero;
-    private PlayerInput _playerInput;
 
-    [Inject]
-    private void Construct(PlayerInput playerInput)
-    {
-        _playerInput = playerInput;
-    }
-    
     protected virtual void Start()
     {
         HandleRange = handleRange;

@@ -53,6 +53,11 @@ namespace Game
             Changed += Save;
             TaxChanged += Save;
             MaxAwardChanged += Save;
+            
+            var data = RepositoryStorage.Get<Data>(KeyConstants.Wallet);
+            _money = data.Money;
+            _tax = data.Tax;
+            _maxMoney = data.MaxAward;
         }
 
         public void Dispose()
@@ -142,9 +147,11 @@ namespace Game
         {
             _money = 0;
             _tax = 0;
+            _maxMoney = _money;
             
             Changed?.Invoke(_money);
             TaxChanged?.Invoke(_tax);
+            MaxAwardChanged?.Invoke(GetMaxAward);
             
             Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
         }
@@ -153,9 +160,11 @@ namespace Game
         {
             _money = money;
             _tax = tax;
+            _maxMoney = _money;
             
             Changed?.Invoke(_money);
             TaxChanged?.Invoke(_tax);
+            MaxAwardChanged?.Invoke(GetMaxAward);
             
             Lua.Run($"Variable[\"Tax\"] = \"{GetTaxString()}\"");
         }

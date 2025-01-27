@@ -28484,7 +28484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061607299113686900, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_Name
-      value: DiningRoom Variant
+      value: DiningRoom
       objectReference: {fileID: 0}
     - target: {fileID: 8194098742346931031, guid: 7a5abe53aaf74734e8047c5a29f5716c, type: 3}
       propertyPath: m_LocalPosition.x

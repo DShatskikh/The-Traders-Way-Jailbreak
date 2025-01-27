@@ -1,6 +1,8 @@
 ﻿using System;
+using RimuruDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DeviceType = RimuruDev.DeviceType;
 
 namespace Game
 {
@@ -22,6 +24,9 @@ namespace Game
 
         [SerializeField]
         private CameraAreaChecker _cameraAreaChecker;
+
+        [SerializeField]
+        private Joystick _joystick;
         
         private ReactiveProperty<float> _currentSpeed = new();
         private ReactiveProperty<bool> _isRun = new();
@@ -31,7 +36,8 @@ namespace Game
         private Vector3 _previousPosition;
         private bool _isPause;
         private IMover _mover;
-        
+        private DeviceTypeDetector _deviceTypeDetector;
+
         public ReactiveProperty<MonoBehaviour> NearestUseObject => 
             _useAreaChecker.NearestUseObject;
 
@@ -54,9 +60,10 @@ namespace Game
         public bool IsPause => _isPause;
 
         [Inject]
-        private void Construct(PlayerInput playerInput)
+        private void Construct(PlayerInput playerInput, DeviceTypeDetector deviceTypeDetector)
         {
             _playerInput = playerInput;
+            _deviceTypeDetector = deviceTypeDetector;
         }
         
         private void Awake()
@@ -74,12 +81,30 @@ namespace Game
 
         public void OnUpdate()
         {
-            _isRun.Value = _playerInput.actions["Cancel"].IsPressed();
-
-            if (_playerInput.actions["Move"].IsPressed())
+            if (_deviceTypeDetector.DeviceType == DeviceType.WebMobile)
             {
-                _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
-                _mover.Move(_direction.Value,  _isRun.Value);
+                var direction = _joystick.Direction;
+                _isRun.Value = direction.magnitude > 0.95f;
+
+                if (direction.magnitude > 0.2f)
+                {
+                    _direction.Value = direction.normalized;
+                    _mover.Move(_direction.Value,  _isRun.Value);
+                }
+                else
+                {
+                    _defaultMover.Stop();
+                }
+            }
+            else
+            {
+                _isRun.Value = _playerInput.actions["Cancel"].IsPressed();
+
+                if (_playerInput.actions["Move"].IsPressed())
+                {
+                    _direction.Value = _playerInput.actions["Move"].ReadValue<Vector2>().normalized;
+                    _mover.Move(_direction.Value,  _isRun.Value);
+                }
             }
         }
 

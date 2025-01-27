@@ -12,22 +12,17 @@ namespace Game
         [SerializeField]
         private Color _offColor, _onColor;
 
-        private PlayerInput _playerInput;
-
-        [Inject]
-        private void Construct(PlayerInput playerInput)
-        {
-            _playerInput = playerInput;
-        }
+        [SerializeField]
+        private Joystick _joystick;
 
         private void Update()
         {
             AllOff();
-            var direction = _playerInput.actions["Move"].ReadValue<Vector2>();
+            var direction = _joystick.Direction;
             
             var image = GetImage(direction);
             
-            if (image && direction.magnitude > 0.5f)
+            if (image && direction.magnitude > 0.2f)
                 image.color = _onColor;
         }
     

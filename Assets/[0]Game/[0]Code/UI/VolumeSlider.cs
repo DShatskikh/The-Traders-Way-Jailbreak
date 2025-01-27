@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace Game
@@ -26,11 +27,15 @@ namespace Game
         {
             _slider.onValueChanged.AddListener(OnChanged);
             _slider.value = _volumeService.Volume.Value;
+            
+            LocalizationSettings.SelectedLocaleChanged += LocalizationSettingsOnSelectedLocaleChanged;
         }
 
         private void OnDisable()
         {
             _slider.onValueChanged.RemoveListener(OnChanged);
+            
+            LocalizationSettings.SelectedLocaleChanged -= LocalizationSettingsOnSelectedLocaleChanged;
         }
 
         private void Start()
@@ -47,6 +52,11 @@ namespace Game
             });
             
             RepositoryStorage.Set(KeyConstants.Volume, new VolumeData() { Volume = value });
+        }
+        
+        private void LocalizationSettingsOnSelectedLocaleChanged(Locale obj)
+        {
+            OnChanged(_volumeService.Volume.Value);
         }
     }
 }

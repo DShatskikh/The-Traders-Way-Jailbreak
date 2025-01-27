@@ -7,15 +7,15 @@
         false,
         false
     ],
-    "idSave": 63,
+    "idSave": 455,
     "Container": [
         {
             "<Key>k__BackingField": "HomeCutscene",
-            "<Value>k__BackingField": "{\"CutsceneState\":0,\"IsShowLandedScreen\":false}"
+            "<Value>k__BackingField": "{\"CutsceneState\":4,\"IsShowLandedScreen\":false}"
         },
         {
             "<Key>k__BackingField": "MyCellCutscene",
-            "<Value>k__BackingField": "{\"IsNotFirstVisit\":false,\"State\":0}"
+            "<Value>k__BackingField": "{\"IsNotFirstVisit\":true,\"State\":0}"
         },
         {
             "<Key>k__BackingField": "SkinShop",
@@ -23,23 +23,23 @@
         },
         {
             "<Key>k__BackingField": "Name",
-            "<Value>k__BackingField": "{\"Name\":\"Vlad\"}"
+            "<Value>k__BackingField": "{\"Name\":\"Denis\"}"
         },
         {
             "<Key>k__BackingField": "Location",
-            "<Value>k__BackingField": "{\"LocationName\":\"World\",\"PointIndex\":0}"
+            "<Value>k__BackingField": "{\"LocationName\":\"MyCell\",\"PointIndex\":0}"
         },
         {
             "<Key>k__BackingField": "Wallet",
-            "<Value>k__BackingField": "{\"Money\":0.0,\"Tax\":0.0,\"MaxAward\":0.0}"
+            "<Value>k__BackingField": "{\"Money\":54372808669.0,\"Tax\":7326545453.0,\"MaxAward\":54372808674.0}"
         },
         {
             "<Key>k__BackingField": "IsNotFirstOpen",
-            "<Value>k__BackingField": "{\"IsNotFirstOpen\":true}"
+            "<Value>k__BackingField": "{\"IsNotFirstOpen\":false}"
         },
         {
             "<Key>k__BackingField": "StockMarket",
-            "<Value>k__BackingField": "{\"Slots\":[]}"
+            "<Value>k__BackingField": "{\"Slots\":[{\"Id\":\"Kystic\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Watermelon\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"GoldApple\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Palisos\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"LuckyBlock\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Diamond\",\"Count\":0,\"IsOpen\":false},{\"Id\":\"Star\",\"Count\":0,\"IsOpen\":false}]}"
         },
         {
             "<Key>k__BackingField": "Vase",
@@ -119,7 +119,7 @@
         },
         {
             "<Key>k__BackingField": "hub_first",
-            "<Value>k__BackingField": "{\"IsBuy\":false}"
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
         },
         {
             "<Key>k__BackingField": "hub_left",
@@ -139,15 +139,59 @@
         },
         {
             "<Key>k__BackingField": "Volume",
-            "<Value>k__BackingField": "{\"Volume\":0.7793728709220886}"
+            "<Value>k__BackingField": "{\"Volume\":1.0}"
         },
         {
             "<Key>k__BackingField": "Ending",
-            "<Value>k__BackingField": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":true}"
+            "<Value>k__BackingField": "{\"IsDefaultEnding\":false,\"IsSecretEnding\":false}"
         },
         {
             "<Key>k__BackingField": "IsNotFirst",
             "<Value>k__BackingField": "{\"IsNotFirstOpen\":false}"
+        },
+        {
+            "<Key>k__BackingField": "CurrentHat",
+            "<Value>k__BackingField": "{\"Id\":\"CoolGlasses\"}"
+        },
+        {
+            "<Key>k__BackingField": "Herobrine",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "Cylinder",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "ThiefsMask",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "WatermelonHat",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "StormtrooperHelmet",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "DarthVadersHelmet",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "Moustache",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "FaceNoob",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
+        },
+        {
+            "<Key>k__BackingField": "Skibidi",
+            "<Value>k__BackingField": "{\"IsShow\":true}"
+        },
+        {
+            "<Key>k__BackingField": "UnderwaterMask",
+            "<Value>k__BackingField": "{\"IsBuy\":true}"
         }
     ]
 }

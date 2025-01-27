@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Game
@@ -20,6 +21,9 @@ namespace Game
         private TMP_Text _haveLabel;
 
         [SerializeField]
+        private LocalizedString _haveString;
+        
+        [SerializeField]
         private GameObject _close;
 
         [SerializeField]
@@ -37,6 +41,14 @@ namespace Game
         private void Awake()
         {
             _walletService = ServiceLocator.Get<WalletService>();
+
+            _haveString.Arguments = new object[] {0};
+            _haveString.StringChanged += ((_) => _haveLabel.text = _) ;
+        }
+
+        private void OnDestroy()
+        {
+            //_haveString.StringChanged = null;
         }
 
         public IEnumerator Init(StockMarketService.Slot slot)
@@ -100,7 +112,8 @@ namespace Game
 
         private void CountOnChanged(int count)
         {
-            _haveLabel.text = $"У ВАС: {count} ШТ";
+            _haveString.Arguments[0] = count;
+            _haveString.RefreshString();
             _sellButton.interactable = count >= GetSellCount();
             WalletServiceOnChanged(_walletService.GetMoney);
         }
